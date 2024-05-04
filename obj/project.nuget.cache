@@ -1,8 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "kXfPzeuepi0AE9mO5uCxiVSKNS8NLzTEuzgIIjFwtiAwNdNEMyZMQ0N735Ssr1fhQrk+stoYZfgcTqoUPO1JFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "s4V+OVgE6FLgLN+nm9kQ9muNh/aHJWErfTvcg5D8CF5F/r2uVgTFz5kPTCa85EZjF85MnJ6kTRwiycB6FZxzqQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+=======
+  "dgSpecHash": "dHCibcRmgpUxMp1TisC0/HUZ4/70+cj31PsOgQ0W7PXVYSWTHPxRVTa1DnGwYoHziCwUIa38haPm0B9UBzwaxw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+>>>>>>> 6beeb953cf095dc92dfd11e1caa2bf268f24ecf8
+>>>>>>> 11c186c1d0f905ec89559917fb957e98cb07954d
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,7 +1,27 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+        "projectName": "TechnicalProductsStore",
+        "projectPath": "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {}
+>>>>>>> 11c186c1d0f905ec89559917fb957e98cb07954d
   },
   "projects": {
     "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {
@@ -14,7 +34,12 @@
         "outputPath": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6beeb953cf095dc92dfd11e1caa2bf268f24ecf8
+>>>>>>> 11c186c1d0f905ec89559917fb957e98cb07954d
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
