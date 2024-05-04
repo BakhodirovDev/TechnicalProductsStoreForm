@@ -58,6 +58,7 @@ namespace TechnicalProductsStore.Manager
                 dataGridView1.ContextMenuStrip.Items[0].Visible = false;
                 dataGridView1.ContextMenuStrip.Items[1].Visible = false;
                 dataGridView1.ContextMenuStrip.Items[2].Visible = true;
+                dataGridView1.ContextMenuStrip.Items[3].Visible = false;
                 selectedRow.DefaultCellStyle.BackColor = Color.Yellow;
             }
             catch
@@ -101,6 +102,7 @@ namespace TechnicalProductsStore.Manager
                 dataGridView1.ContextMenuStrip.Items[0].Visible = true;
                 dataGridView1.ContextMenuStrip.Items[1].Visible = true;
                 dataGridView1.ContextMenuStrip.Items[2].Visible = false;
+                dataGridView1.ContextMenuStrip.Items[3].Visible = true;
                 selectedRow.DefaultCellStyle.BackColor = Color.Green;
             }
             catch 
