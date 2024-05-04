@@ -61,3 +61,24 @@ C:\Users\Behruz\OneDrive\Documents\Technical Products Store Form\obj\Debug\net8.
 C:\Users\Behruz\OneDrive\Documents\Technical Products Store Form\obj\Debug\net8.0-windows\TechnicalProductsStore.genruntimeconfig.cache
 C:\Users\Behruz\OneDrive\Documents\Technical Products Store Form\obj\Debug\net8.0-windows\ref\TechnicalProductsStore.dll
 C:\Users\Behruz\OneDrive\Documents\Technical Products Store Form\obj\Debug\net8.0-windows\TechnicalProductsStore.sourcelink.json
+C:\Users\user\source\repos\TechnicalProductsStoreForm\bin\Debug\net8.0-windows\TechnicalProductsStore.exe
+C:\Users\user\source\repos\TechnicalProductsStoreForm\bin\Debug\net8.0-windows\TechnicalProductsStore.deps.json
+C:\Users\user\source\repos\TechnicalProductsStoreForm\bin\Debug\net8.0-windows\TechnicalProductsStore.runtimeconfig.json
+C:\Users\user\source\repos\TechnicalProductsStoreForm\bin\Debug\net8.0-windows\TechnicalProductsStore.dll
+C:\Users\user\source\repos\TechnicalProductsStoreForm\bin\Debug\net8.0-windows\TechnicalProductsStore.pdb
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.LoginForm.resources
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.Manager.AddSellerForm.resources
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.Manager.ManagerForm.resources
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.Manager.SellerListForm.resources
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.Properties.Resources.resources
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.csproj.GenerateResource.cache
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.AssemblyInfo.cs
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.sourcelink.json
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.dll
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\refint\TechnicalProductsStore.dll
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.pdb
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\TechnicalProductsStore.genruntimeconfig.cache
+C:\Users\user\source\repos\TechnicalProductsStoreForm\obj\Debug\net8.0-windows\ref\TechnicalProductsStore.dll
