@@ -146,6 +146,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Name = "LoginForm";
+            Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
