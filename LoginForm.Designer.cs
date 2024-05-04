@@ -38,6 +38,7 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(tbPassword);
@@ -128,6 +130,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(321, 303);
             panel1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(258, 182);
+            button1.Name = "button1";
+            button1.Size = new Size(42, 29);
+            button1.TabIndex = 8;
+            button1.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -154,5 +164,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panel1;
+        private Button button1;
     }
 }
