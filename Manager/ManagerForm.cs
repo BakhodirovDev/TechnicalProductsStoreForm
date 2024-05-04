@@ -34,7 +34,7 @@ namespace TechnicalProductsStore.Manager
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            // Timur
         }
 
         private void button1_Click(object sender, EventArgs e)

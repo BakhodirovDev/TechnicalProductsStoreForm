@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Hp\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+        "projectName": "TechnicalProductsStore",
+        "projectPath": "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\TechnicalProductsStoreForm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6beeb953cf095dc92dfd11e1caa2bf268f24ecf8
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +51,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
