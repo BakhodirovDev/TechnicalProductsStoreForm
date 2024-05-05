@@ -42,81 +42,90 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(12, 25);
+            label1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            label1.Location = new Point(10, 20);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(94, 21);
+            label1.Size = new Size(79, 18);
             label1.TabIndex = 0;
             label1.Text = "FullName";
             // 
             // FullName
             // 
-            FullName.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            FullName.Location = new Point(12, 53);
+            FullName.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            FullName.Location = new Point(10, 42);
+            FullName.Margin = new Padding(2, 2, 2, 2);
             FullName.Name = "FullName";
-            FullName.Size = new Size(321, 29);
+            FullName.Size = new Size(258, 24);
             FullName.TabIndex = 1;
             // 
             // PhoneNumber
             // 
-            PhoneNumber.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            PhoneNumber.Location = new Point(12, 120);
+            PhoneNumber.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            PhoneNumber.Location = new Point(10, 96);
+            PhoneNumber.Margin = new Padding(2, 2, 2, 2);
             PhoneNumber.Name = "PhoneNumber";
-            PhoneNumber.Size = new Size(321, 29);
+            PhoneNumber.Size = new Size(258, 24);
             PhoneNumber.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            label2.Location = new Point(12, 92);
+            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            label2.Location = new Point(10, 74);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(181, 21);
+            label2.Size = new Size(164, 18);
             label2.TabIndex = 2;
             label2.Text = "Phone Number (998)";
             // 
             // Username
             // 
-            Username.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            Username.Location = new Point(12, 193);
+            Username.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            Username.Location = new Point(10, 154);
+            Username.Margin = new Padding(2, 2, 2, 2);
             Username.Name = "Username";
-            Username.Size = new Size(321, 29);
+            Username.Size = new Size(258, 24);
             Username.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            label3.Location = new Point(12, 165);
+            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            label3.Location = new Point(10, 132);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(100, 21);
+            label3.Size = new Size(88, 18);
             label3.TabIndex = 4;
             label3.Text = "UserName";
             // 
             // Password
             // 
-            Password.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            Password.Location = new Point(12, 266);
+            Password.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            Password.Location = new Point(10, 213);
+            Password.Margin = new Padding(2, 2, 2, 2);
             Password.Name = "Password";
-            Password.Size = new Size(321, 29);
+            Password.Size = new Size(258, 24);
             Password.TabIndex = 7;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            label4.Location = new Point(12, 238);
+            label4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            label4.Location = new Point(10, 190);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(93, 21);
+            label4.Size = new Size(83, 18);
             label4.TabIndex = 6;
             label4.Text = "Password";
             // 
             // btnAdd
             // 
-            btnAdd.Font = new Font("Bodoni MT", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnAdd.Location = new Point(87, 328);
+            btnAdd.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnAdd.Location = new Point(70, 262);
+            btnAdd.Margin = new Padding(2, 2, 2, 2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(169, 46);
+            btnAdd.Size = new Size(135, 37);
             btnAdd.TabIndex = 8;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -124,9 +133,9 @@
             // 
             // AddSellerForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(351, 410);
+            ClientSize = new Size(281, 328);
             Controls.Add(btnAdd);
             Controls.Add(Password);
             Controls.Add(label4);
@@ -136,9 +145,11 @@
             Controls.Add(label2);
             Controls.Add(FullName);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "AddSellerForm";
             Text = "AddSellerForm";
             FormClosed += AddSellerForm_FormClosed;
+            Load += AddSellerForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

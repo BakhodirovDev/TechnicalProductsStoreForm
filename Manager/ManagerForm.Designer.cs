@@ -42,9 +42,10 @@
             button1.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
             button1.FlatAppearance.MouseOverBackColor = Color.White;
             button1.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            button1.Location = new Point(19, 19);
+            button1.Location = new Point(15, 15);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(442, 155);
+            button1.Size = new Size(354, 124);
             button1.TabIndex = 0;
             button1.Text = "Create Seller";
             button1.UseVisualStyleBackColor = false;
@@ -55,9 +56,10 @@
             button2.BackColor = Color.LightGoldenrodYellow;
             button2.FlatAppearance.MouseOverBackColor = Color.White;
             button2.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            button2.Location = new Point(19, 180);
+            button2.Location = new Point(15, 144);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
-            button2.Size = new Size(442, 155);
+            button2.Size = new Size(354, 124);
             button2.TabIndex = 1;
             button2.Text = "Seller List";
             button2.UseVisualStyleBackColor = false;
@@ -68,9 +70,10 @@
             button3.BackColor = Color.LightGoldenrodYellow;
             button3.FlatAppearance.MouseOverBackColor = Color.White;
             button3.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            button3.Location = new Point(467, 19);
+            button3.Location = new Point(374, 15);
+            button3.Margin = new Padding(2, 2, 2, 2);
             button3.Name = "button3";
-            button3.Size = new Size(442, 155);
+            button3.Size = new Size(354, 124);
             button3.TabIndex = 2;
             button3.Text = "Products";
             button3.UseVisualStyleBackColor = false;
@@ -81,9 +84,10 @@
             button4.BackColor = Color.LightGoldenrodYellow;
             button4.FlatAppearance.MouseOverBackColor = Color.White;
             button4.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            button4.Location = new Point(467, 180);
+            button4.Location = new Point(374, 144);
+            button4.Margin = new Padding(2, 2, 2, 2);
             button4.Name = "button4";
-            button4.Size = new Size(442, 155);
+            button4.Size = new Size(354, 124);
             button4.TabIndex = 5;
             button4.Text = "Sales history";
             button4.UseVisualStyleBackColor = false;
@@ -94,9 +98,10 @@
             button5.BackColor = Color.LightGoldenrodYellow;
             button5.FlatAppearance.MouseOverBackColor = Color.White;
             button5.Font = new Font("Tahoma", 14F, FontStyle.Bold);
-            button5.Location = new Point(239, 341);
+            button5.Location = new Point(191, 273);
+            button5.Margin = new Padding(2, 2, 2, 2);
             button5.Name = "button5";
-            button5.Size = new Size(442, 155);
+            button5.Size = new Size(354, 124);
             button5.TabIndex = 4;
             button5.Text = "Create Product";
             button5.UseVisualStyleBackColor = false;
@@ -104,22 +109,24 @@
             // 
             // ManagerForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuBar;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(932, 511);
+            ClientSize = new Size(746, 409);
             Controls.Add(button4);
             Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "ManagerForm";
             ShowIcon = false;
             Text = "ManagerForm";
             FormClosed += ManagerForm_FormClosed;
+            Load += ManagerForm_Load;
             ResumeLayout(false);
         }
 

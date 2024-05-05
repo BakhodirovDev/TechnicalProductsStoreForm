@@ -34,7 +34,11 @@ namespace TechnicalProductsStore.Manager
 
         private void button5_Click(object sender, EventArgs e)
         {
-            // Timur
+            this.Hide();
+            CreateProduct createProduct = new CreateProduct();
+            createProduct.StartPosition = FormStartPosition.CenterScreen;
+            createProduct.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +68,11 @@ namespace TechnicalProductsStore.Manager
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
             this.Hide();
+        }
+
+        private void ManagerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

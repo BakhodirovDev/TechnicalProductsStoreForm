@@ -108,5 +108,10 @@ namespace TechnicalProductsStore.Manager
                 this.Hide();
             }
         }
+
+        private void AddSellerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
