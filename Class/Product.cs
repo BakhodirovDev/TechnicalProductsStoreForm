@@ -13,7 +13,7 @@ namespace TechnicalProductsStore.Class
         public string? ProductCountry { get; set; }
         public double ProductPrice { get; set; }
         public string? ProductDescription { get; set;}
-        public string? ProductEnterCount { get; set; }
+        public int ProductEnterCount { get; set; }
         public string? ProductEnterData { get; set; }
         public int RemainingProductCount { get; set; }
     }
