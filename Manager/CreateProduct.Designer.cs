@@ -40,6 +40,9 @@
             tbEnterProduct = new TextBox();
             AddProduct = new Button();
             label6 = new Label();
+            lbCountryError = new Label();
+            lbPriceError = new Label();
+            lbEnterProductError = new Label();
             SuspendLayout();
             // 
             // label1
@@ -144,11 +147,43 @@
             label6.TabIndex = 15;
             label6.Text = "Welcome to the manager";
             // 
+            // lbCountryError
+            // 
+            lbCountryError.AutoSize = true;
+            lbCountryError.ForeColor = Color.Red;
+            lbCountryError.Location = new Point(250, 203);
+            lbCountryError.Name = "lbCountryError";
+            lbCountryError.Size = new Size(0, 20);
+            lbCountryError.TabIndex = 16;
+            // 
+            // lbPriceError
+            // 
+            lbPriceError.AutoSize = true;
+            lbPriceError.ForeColor = Color.Red;
+            lbPriceError.Location = new Point(250, 331);
+            lbPriceError.Name = "lbPriceError";
+            lbPriceError.Size = new Size(32, 20);
+            lbPriceError.TabIndex = 17;
+            lbPriceError.Text = "fdg";
+            lbPriceError.Click += lbPriceError_Click;
+            // 
+            // lbEnterProductError
+            // 
+            lbEnterProductError.AutoSize = true;
+            lbEnterProductError.ForeColor = Color.Red;
+            lbEnterProductError.Location = new Point(250, 392);
+            lbEnterProductError.Name = "lbEnterProductError";
+            lbEnterProductError.Size = new Size(0, 20);
+            lbEnterProductError.TabIndex = 18;
+            // 
             // CreateProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(804, 549);
+            Controls.Add(lbEnterProductError);
+            Controls.Add(lbPriceError);
+            Controls.Add(lbCountryError);
             Controls.Add(label6);
             Controls.Add(AddProduct);
             Controls.Add(tbEnterProduct);
@@ -163,6 +198,7 @@
             Controls.Add(label1);
             Name = "CreateProduct";
             Text = "CreateProduct";
+            FormClosed += CreateProduct_FormClosed;
             Load += CreateProduct_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -182,5 +218,8 @@
         private TextBox tbEnterProduct;
         private Button AddProduct;
         private Label label6;
+        private Label lbCountryError;
+        private Label lbPriceError;
+        private Label lbEnterProductError;
     }
 }
