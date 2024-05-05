@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="DataBase\" />
-    <Folder Include="Seller\" />
   </ItemGroup>
 
 </Project>

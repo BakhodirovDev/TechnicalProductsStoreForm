@@ -48,9 +48,10 @@
             dataGridView1.DataSource = usersBindingSource;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(814, 450);
+            dataGridView1.Size = new Size(1118, 631);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -100,10 +101,11 @@
             // 
             // SellerListForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(814, 450);
+            ClientSize = new Size(1118, 631);
             Controls.Add(dataGridView1);
+            Margin = new Padding(2);
             Name = "SellerListForm";
             Text = "SellerListForm";
             FormClosed += SellerListForm_FormClosed;
