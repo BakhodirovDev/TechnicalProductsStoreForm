@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataBase\" />
-    <Folder Include="Seller\" />
+	  <Folder Include="DataBase\" />
+	  <Folder Include="Seller\Baskets" />
   </ItemGroup>
 
 </Project>
