@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+        "projectName": "TechnicalProductsStore",
+        "projectPath": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
     "C:\\Users\\Behruz\\OneDrive\\Documents\\Technical Products Store Form\\TechnicalProductsStore.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Behruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> a237cea7e67f84a8b21d71951e465223cf9374c1
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

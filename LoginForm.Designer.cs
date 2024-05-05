@@ -38,7 +38,7 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
-            button1 = new Button();
+            btHideEyes = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -46,12 +46,18 @@
             // 
             // btLogin
             // 
+            btLogin.BackColor = Color.FromArgb(224, 224, 224);
+            btLogin.Cursor = Cursors.Hand;
+            btLogin.FlatAppearance.BorderColor = Color.Black;
+            btLogin.FlatAppearance.MouseDownBackColor = Color.Green;
+            btLogin.FlatAppearance.MouseOverBackColor = Color.Green;
             btLogin.Location = new Point(64, 244);
             btLogin.Name = "btLogin";
             btLogin.Size = new Size(178, 44);
             btLogin.TabIndex = 0;
             btLogin.Text = "Login";
-            btLogin.UseVisualStyleBackColor = true;
+            btLogin.UseVisualStyleBackColor = false;
+            btLogin.Click += btLogin_Click;
             // 
             // label1
             // 
@@ -117,7 +123,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btHideEyes);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(tbPassword);
@@ -131,13 +137,13 @@
             panel1.Size = new Size(321, 303);
             panel1.TabIndex = 8;
             // 
-            // button1
+            // btHideEyes
             // 
-            button1.Location = new Point(258, 182);
-            button1.Name = "button1";
-            button1.Size = new Size(34, 29);
-            button1.TabIndex = 8;
-            button1.UseVisualStyleBackColor = true;
+            btHideEyes.Location = new Point(258, 182);
+            btHideEyes.Name = "btHideEyes";
+            btHideEyes.Size = new Size(34, 29);
+            btHideEyes.TabIndex = 8;
+            btHideEyes.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -171,6 +177,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panel1;
-        private Button button1;
+        private Button btHideEyes;
     }
 }
