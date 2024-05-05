@@ -34,7 +34,7 @@ namespace TechnicalProductsStore
                 MessageBox.Show("Ma'lumotlarni to'liq kiriting.Qayta urining","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
 
-            string pathUserList = @"../../../Database/User.json";
+            string pathUserList = @"../../../DataBase/Users.json";
             List<Users> userList = new List<Users>();
 
             if(File.Exists(pathUserList))
@@ -47,12 +47,15 @@ namespace TechnicalProductsStore
                 if(userList.Any(m=>m.Role.ToLower() == "manager"))
                 {
                     this.Hide();
-                    MessageBox.Show("Succesfully");
-                    new ManagerForm();
+                    ManagerForm form = new ManagerForm();
+                    form.StartPosition = FormStartPosition.CenterParent;
+                    form.Show();
+                    
                 }
                 else
                 {
                     this.Hide();
+
                 }
             }
             else
