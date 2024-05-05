@@ -40,14 +40,14 @@
             remainingProductCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productBindingSource1 = new BindingSource(components);
             panel3 = new Panel();
-            panel4 = new Panel();
-            SellerAdd = new Button();
-            SellerSale = new Button();
-            SellerCountTB = new TextBox();
-            SellerIDTB = new TextBox();
-            label1 = new Label();
-            SellerID = new Label();
             SellerAddLabel = new Label();
+            SellerID = new Label();
+            label1 = new Label();
+            SellerIDTB = new TextBox();
+            SellerCountTB = new TextBox();
+            SellerAdd = new Button();
+            panel4 = new Panel();
+            SellerSale = new Button();
             SellerSearchButton = new Button();
             SellerSearchTB = new TextBox();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
@@ -139,13 +139,47 @@
             panel3.TabIndex = 8;
             panel3.Paint += panel3_Paint;
             // 
-            // panel4
+            // SellerAddLabel
             // 
-            panel4.Controls.Add(SellerSale);
-            panel4.Location = new Point(805, 389);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(310, 210);
-            panel4.TabIndex = 9;
+            SellerAddLabel.AutoSize = true;
+            SellerAddLabel.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SellerAddLabel.Location = new Point(91, 81);
+            SellerAddLabel.Name = "SellerAddLabel";
+            SellerAddLabel.Size = new Size(90, 50);
+            SellerAddLabel.TabIndex = 5;
+            SellerAddLabel.Text = "Add";
+            // 
+            // SellerID
+            // 
+            SellerID.AutoSize = true;
+            SellerID.Location = new Point(33, 155);
+            SellerID.Name = "SellerID";
+            SellerID.Size = new Size(24, 20);
+            SellerID.TabIndex = 4;
+            SellerID.Text = "ID";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(33, 224);
+            label1.Name = "label1";
+            label1.Size = new Size(48, 20);
+            label1.TabIndex = 3;
+            label1.Text = "Count";
+            // 
+            // SellerIDTB
+            // 
+            SellerIDTB.Location = new Point(33, 178);
+            SellerIDTB.Name = "SellerIDTB";
+            SellerIDTB.Size = new Size(233, 27);
+            SellerIDTB.TabIndex = 2;
+            // 
+            // SellerCountTB
+            // 
+            SellerCountTB.Location = new Point(33, 247);
+            SellerCountTB.Name = "SellerCountTB";
+            SellerCountTB.Size = new Size(233, 27);
+            SellerCountTB.TabIndex = 1;
             // 
             // SellerAdd
             // 
@@ -157,6 +191,14 @@
             SellerAdd.UseVisualStyleBackColor = true;
             SellerAdd.Click += SellerAdd_Click;
             // 
+            // panel4
+            // 
+            panel4.Controls.Add(SellerSale);
+            panel4.Location = new Point(805, 389);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(310, 210);
+            panel4.TabIndex = 9;
+            // 
             // SellerSale
             // 
             SellerSale.Location = new Point(106, 154);
@@ -166,48 +208,6 @@
             SellerSale.Text = "Sale";
             SellerSale.UseVisualStyleBackColor = true;
             SellerSale.Click += SellerSale_Click;
-            // 
-            // SellerCountTB
-            // 
-            SellerCountTB.Location = new Point(33, 247);
-            SellerCountTB.Name = "SellerCountTB";
-            SellerCountTB.Size = new Size(233, 27);
-            SellerCountTB.TabIndex = 1;
-            // 
-            // SellerIDTB
-            // 
-            SellerIDTB.Location = new Point(33, 178);
-            SellerIDTB.Name = "SellerIDTB";
-            SellerIDTB.Size = new Size(233, 27);
-            SellerIDTB.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(33, 224);
-            label1.Name = "label1";
-            label1.Size = new Size(48, 20);
-            label1.TabIndex = 3;
-            label1.Text = "Count";
-            // 
-            // SellerID
-            // 
-            SellerID.AutoSize = true;
-            SellerID.Location = new Point(33, 155);
-            SellerID.Name = "SellerID";
-            SellerID.Size = new Size(24, 20);
-            SellerID.TabIndex = 4;
-            SellerID.Text = "ID";
-            // 
-            // SellerAddLabel
-            // 
-            SellerAddLabel.AutoSize = true;
-            SellerAddLabel.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SellerAddLabel.Location = new Point(91, 81);
-            SellerAddLabel.Name = "SellerAddLabel";
-            SellerAddLabel.Size = new Size(90, 50);
-            SellerAddLabel.TabIndex = 5;
-            SellerAddLabel.Text = "Add";
             // 
             // SellerSearchButton
             // 
@@ -241,6 +241,7 @@
             Controls.Add(dataGridView1);
             Name = "SellerForm";
             Text = "SellerForm";
+            FormClosed += SellerForm_FormClosed;
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();

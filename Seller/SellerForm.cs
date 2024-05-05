@@ -51,5 +51,13 @@ namespace TechnicalProductsStore.Seller
         {
 
         }
+
+        private void SellerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.StartPosition = FormStartPosition.CenterScreen;
+            login.Show();
+        }
     }
 }
