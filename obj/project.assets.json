@@ -8,11 +8,25 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\Behruz\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\user\\.nuget\\packages\\": {}
+>>>>>>> f09e6bce268e5daf1486ec7134b14b160dea1100
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Behruz\\OneDrive\\Documents\\Technical Products Store Form\\TechnicalProductsStore.csproj",
+      "projectName": "TechnicalProductsStore",
+      "projectPath": "C:\\Users\\Behruz\\OneDrive\\Documents\\Technical Products Store Form\\TechnicalProductsStore.csproj",
+      "packagesPath": "C:\\Users\\Behruz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Behruz\\OneDrive\\Documents\\Technical Products Store Form\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Behruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
       "projectUniqueName": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
       "projectName": "TechnicalProductsStore",
       "projectPath": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
@@ -21,6 +35,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f09e6bce268e5daf1486ec7134b14b160dea1100
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
