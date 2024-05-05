@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 using TechnicalProductsStore.Class;
 using TechnicalProductsStore.Manager;
 using TechnicalProductsStore.Seller;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TechnicalProductsStore
 {
@@ -39,15 +41,18 @@ namespace TechnicalProductsStore
             string pathUserList = @"../../../DataBase/Users.json";
             List<Users> userList = new List<Users>();
 
+
             if (File.Exists(pathUserList))
             {
                 string jsonFormat = File.ReadAllText(pathUserList);
                 userList = JsonSerializer.Deserialize<List<Users>>(jsonFormat);
             }
+            
+            var user = userList.FirstOrDefault(u => u.UserName == tbUserName.Text && u.Password == tbPassword.Text);
 
-            if (userList.Any(item => item.UserName == tbUserName.Text && item.Password == tbPassword.Text))
+            if (user != null)
             {
-                if (userList.Any(m => m.Role == $"{Role.Manager}"))
+                if (user.Role == $"{Role.Manager}")
                 {
                     this.Hide();
                     ManagerForm form = new ManagerForm();
@@ -55,7 +60,7 @@ namespace TechnicalProductsStore
                     form.Show();
 
                 }
-                else if (userList.Any(m => m.Role == $"{Role.Seller}"))
+                else if (user.Role == $"{Role.Seller}")
                 {
                     this.Hide();
                     SellerForm sellerForm = new SellerForm();
