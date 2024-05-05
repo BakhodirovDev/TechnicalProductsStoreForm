@@ -51,7 +51,7 @@
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1118, 631);
+            dataGridView1.Size = new Size(815, 435);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1118, 631);
+            ClientSize = new Size(815, 435);
             Controls.Add(dataGridView1);
             Margin = new Padding(2);
             Name = "SellerListForm";

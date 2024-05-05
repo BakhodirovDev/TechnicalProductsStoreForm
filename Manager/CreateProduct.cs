@@ -96,7 +96,7 @@ namespace TechnicalProductsStore.Manager
 
         private void CreateProduct_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
+            this.Hide();
             ManagerForm managerForm = new ManagerForm();
             managerForm.StartPosition = FormStartPosition.CenterScreen;
             managerForm.Show();
