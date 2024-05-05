@@ -25,6 +25,8 @@ namespace TechnicalProductsStore
             // Mirjahon 
         }
 
+
+        //test git folders
         private void btLogin_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(tbUserName.Text) || string.IsNullOrEmpty(tbPassword.Text)) 
