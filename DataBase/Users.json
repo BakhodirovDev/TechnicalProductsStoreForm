@@ -1,1 +1,34 @@
-[{"ID":1,"FullName":"Behruz Bahodirov","PhoneNumber":"998914050216","UserName":"bbahodirov","Password":"0216","Role":"Manager"},{"ID":2,"FullName":"Test Sellersfgh","PhoneNumber":"998912345678","UserName":"testuser","Password":"12345","Role":"Seller"},{"ID":4,"FullName":"Test3","PhoneNumber":"234563245","UserName":"ertsdf","Password":"asdfgw56","Role":"Seller"},{"ID":5,"FullName":"oytudfoluibjl","PhoneNumber":"12345678","UserName":"Mirjahon","Password":"lgvljhv","Role":"Seller"}]
+[
+  {
+    "ID": 1,
+    "FullName": "Behruz Bahodirov",
+    "PhoneNumber": "998914050216",
+    "UserName": "bbahodirov",
+    "Password": "0216",
+    "Role": "Manager"
+  },
+  {
+    "ID": 2,
+    "FullName": "Test Sellersfgh",
+    "PhoneNumber": "998912345678",
+    "UserName": "testuser",
+    "Password": "12345",
+    "Role": "Seller"
+  },
+  {
+    "ID": 4,
+    "FullName": "Test3",
+    "PhoneNumber": "234563245",
+    "UserName": "ertsdf",
+    "Password": "asdfgw56",
+    "Role": "Seller"
+  },
+  {
+    "ID": 5,
+    "FullName": "oytudfoluibjl",
+    "PhoneNumber": "12345678",
+    "UserName": "Mirjahon",
+    "Password": "lgvljhv",
+    "Role": "Seller"
+  }
+]
