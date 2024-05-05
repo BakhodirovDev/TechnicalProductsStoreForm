@@ -40,8 +40,8 @@
             panel1 = new Panel();
             btHideEyes = new Button();
             panel2 = new Panel();
-            button1 = new Button();
             label4 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -156,6 +156,7 @@
             btHideEyes.Size = new Size(34, 29);
             btHideEyes.TabIndex = 8;
             btHideEyes.UseVisualStyleBackColor = true;
+            btHideEyes.Click += btHideEyes_Click;
             // 
             // panel2
             // 
@@ -168,17 +169,6 @@
             panel2.Size = new Size(899, 35);
             panel2.TabIndex = 9;
             // 
-            // button1
-            // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(862, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(34, 29);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -189,6 +179,17 @@
             label4.Size = new Size(218, 22);
             label4.TabIndex = 1;
             label4.Text = "Technical Products Store";
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(862, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(34, 29);
+            button1.TabIndex = 0;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // LoginForm
             // 
@@ -204,7 +205,7 @@
             ForeColor = SystemColors.ActiveCaptionText;
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

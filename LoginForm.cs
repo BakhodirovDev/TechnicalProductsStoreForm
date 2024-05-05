@@ -32,6 +32,7 @@ namespace TechnicalProductsStore
             if (string.IsNullOrEmpty(tbUserName.Text) || string.IsNullOrEmpty(tbPassword.Text))
             {
                 MessageBox.Show("Ma'lumotlarni to'liq kiriting.Qayta urining", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
             string pathUserList = @"../../../DataBase/Users.json";
@@ -42,31 +43,50 @@ namespace TechnicalProductsStore
                 string jsonFormat = File.ReadAllText(pathUserList);
                 userList = JsonSerializer.Deserialize<List<Users>>(jsonFormat);
             }
+
             if (userList.Any(item => item.UserName == tbUserName.Text && item.Password == tbPassword.Text))
             {
-                if (userList.Any(m => m.Role.ToLower() == "manager"))
+                if (userList.Any(m => m.Role == $"{Role.Manager}"))
                 {
                     this.Hide();
                     ManagerForm form = new ManagerForm();
-                    form.StartPosition = FormStartPosition.CenterParent;
+                    form.StartPosition = FormStartPosition.CenterScreen;
                     form.Show();
 
                 }
-                else
+                else if (userList.Any(m => m.Role == $"{Role.Seller}"))
                 {
                     // this.Hide();
 
                 }
+                else
+                {
+                    MessageBox.Show("Role is Error");
+                }
             }
             else
             {
-                MessageBox.Show("Bunaqa foydalanuvchi topilmadi.Try again", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bunaqa foydalanuvchi topilmadi. Try again", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
+        }
+
+        private void btHideEyes_Click(object sender, EventArgs e)
+        {
+            if(tbPassword.PasswordChar == '*')
+            {
+                tbPassword.PasswordChar = '\0';
+                btHideEyes.BackgroundImage = Properties.Resources.eyehide;
+            }
+            else if(tbPassword.PasswordChar == '\0')
+            {
+                tbPassword.PasswordChar = '*';
+                btHideEyes.BackgroundImage = Properties.Resources.eyeshow;
+            }
         }
     }
 }
