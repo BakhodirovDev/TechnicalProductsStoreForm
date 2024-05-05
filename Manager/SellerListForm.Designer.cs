@@ -51,7 +51,11 @@
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
+<<<<<<< HEAD
             dataGridView1.Size = new Size(815, 435);
+=======
+            dataGridView1.Size = new Size(1398, 789);
+>>>>>>> 9ae0dc1f3cc1c3f037d74b8c127a1e981448120c
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -101,9 +105,13 @@
             // 
             // SellerListForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
             ClientSize = new Size(815, 435);
+=======
+            ClientSize = new Size(1398, 789);
+>>>>>>> 9ae0dc1f3cc1c3f037d74b8c127a1e981448120c
             Controls.Add(dataGridView1);
             Margin = new Padding(2);
             Name = "SellerListForm";

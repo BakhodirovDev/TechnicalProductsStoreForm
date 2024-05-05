@@ -29,73 +29,37 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Panel panel1;
-            button1 = new Button();
-            textBox1 = new TextBox();
-            button2 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerForm));
             productBindingSource = new BindingSource(components);
-            panel2 = new Panel();
             dataGridView1 = new DataGridView();
-            productBindingSource1 = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productCountryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productPriceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             remainingProductCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
+            productBindingSource1 = new BindingSource(components);
+            panel3 = new Panel();
+            panel4 = new Panel();
+            SellerAdd = new Button();
+            SellerSale = new Button();
+            SellerCountTB = new TextBox();
+            SellerIDTB = new TextBox();
+            label1 = new Label();
+            SellerID = new Label();
+            SellerAddLabel = new Label();
+            SellerSearchButton = new Button();
+            SellerSearchTB = new TextBox();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(243, 110);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(1125, 83);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(164, 265);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(63, 19);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(872, 27);
-            textBox1.TabIndex = 2;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(22, 18);
-            button2.Name = "button2";
-            button2.Size = new Size(35, 29);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
             // 
             // productBindingSource
             // 
             productBindingSource.DataSource = typeof(Class.Product);
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(1125, 354);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(164, 236);
-            panel2.TabIndex = 5;
-            panel2.Paint += panel2_Paint;
             // 
             // dataGridView1
             // 
@@ -103,15 +67,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productBindingSource1;
-            dataGridView1.Location = new Point(1, 53);
+            dataGridView1.Location = new Point(0, 46);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1053, 516);
+            dataGridView1.Size = new Size(803, 548);
             dataGridView1.TabIndex = 6;
-            // 
-            // productBindingSource1
-            // 
-            productBindingSource1.DataSource = typeof(Class.Product);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -161,33 +121,138 @@
             remainingProductCountDataGridViewTextBoxColumn.Name = "remainingProductCountDataGridViewTextBoxColumn";
             remainingProductCountDataGridViewTextBoxColumn.Width = 125;
             // 
+            // productBindingSource1
+            // 
+            productBindingSource1.DataSource = typeof(Class.Product);
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(SellerAddLabel);
+            panel3.Controls.Add(SellerID);
+            panel3.Controls.Add(label1);
+            panel3.Controls.Add(SellerIDTB);
+            panel3.Controls.Add(SellerCountTB);
+            panel3.Controls.Add(SellerAdd);
+            panel3.Location = new Point(804, 17);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(310, 375);
+            panel3.TabIndex = 8;
+            panel3.Paint += panel3_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(SellerSale);
+            panel4.Location = new Point(805, 389);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(310, 210);
+            panel4.TabIndex = 9;
+            // 
+            // SellerAdd
+            // 
+            SellerAdd.Location = new Point(107, 302);
+            SellerAdd.Name = "SellerAdd";
+            SellerAdd.Size = new Size(94, 29);
+            SellerAdd.TabIndex = 0;
+            SellerAdd.Text = "Add";
+            SellerAdd.UseVisualStyleBackColor = true;
+            SellerAdd.Click += SellerAdd_Click;
+            // 
+            // SellerSale
+            // 
+            SellerSale.Location = new Point(106, 154);
+            SellerSale.Name = "SellerSale";
+            SellerSale.Size = new Size(94, 29);
+            SellerSale.TabIndex = 0;
+            SellerSale.Text = "Sale";
+            SellerSale.UseVisualStyleBackColor = true;
+            SellerSale.Click += SellerSale_Click;
+            // 
+            // SellerCountTB
+            // 
+            SellerCountTB.Location = new Point(33, 247);
+            SellerCountTB.Name = "SellerCountTB";
+            SellerCountTB.Size = new Size(233, 27);
+            SellerCountTB.TabIndex = 1;
+            // 
+            // SellerIDTB
+            // 
+            SellerIDTB.Location = new Point(33, 178);
+            SellerIDTB.Name = "SellerIDTB";
+            SellerIDTB.Size = new Size(233, 27);
+            SellerIDTB.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(33, 224);
+            label1.Name = "label1";
+            label1.Size = new Size(48, 20);
+            label1.TabIndex = 3;
+            label1.Text = "Count";
+            // 
+            // SellerID
+            // 
+            SellerID.AutoSize = true;
+            SellerID.Location = new Point(33, 155);
+            SellerID.Name = "SellerID";
+            SellerID.Size = new Size(24, 20);
+            SellerID.TabIndex = 4;
+            SellerID.Text = "ID";
+            // 
+            // SellerAddLabel
+            // 
+            SellerAddLabel.AutoSize = true;
+            SellerAddLabel.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SellerAddLabel.Location = new Point(91, 81);
+            SellerAddLabel.Name = "SellerAddLabel";
+            SellerAddLabel.Size = new Size(90, 50);
+            SellerAddLabel.TabIndex = 5;
+            SellerAddLabel.Text = "Add";
+            // 
+            // SellerSearchButton
+            // 
+            SellerSearchButton.BackColor = Color.SteelBlue;
+            SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
+            SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
+            SellerSearchButton.Location = new Point(755, 11);
+            SellerSearchButton.Name = "SellerSearchButton";
+            SellerSearchButton.Size = new Size(30, 29);
+            SellerSearchButton.TabIndex = 10;
+            SellerSearchButton.UseVisualStyleBackColor = false;
+            // 
+            // SellerSearchTB
+            // 
+            SellerSearchTB.Location = new Point(12, 12);
+            SellerSearchTB.Name = "SellerSearchTB";
+            SellerSearchTB.Size = new Size(739, 27);
+            SellerSearchTB.TabIndex = 11;
+            // 
             // SellerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1289, 602);
+            BackColor = Color.SteelBlue;
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(1113, 593);
+            Controls.Add(SellerSearchTB);
+            Controls.Add(SellerSearchButton);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
             Controls.Add(dataGridView1);
-            Controls.Add(panel2);
-            Controls.Add(button2);
-            Controls.Add(textBox1);
-            Controls.Add(panel1);
             Name = "SellerForm";
             Text = "SellerForm";
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private TextBox textBox1;
-        private Button button2;
         private BindingSource productBindingSource;
-        private Panel panel2;
         private DataGridView dataGridView1;
         private BindingSource productBindingSource1;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -196,5 +261,16 @@
         private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
+        private Panel panel3;
+        private Panel panel4;
+        private Label SellerAddLabel;
+        private Label SellerID;
+        private Label label1;
+        private TextBox SellerIDTB;
+        private TextBox SellerCountTB;
+        private Button SellerAdd;
+        private Button SellerSale;
+        private Button SellerSearchButton;
+        private TextBox SellerSearchTB;
     }
 }

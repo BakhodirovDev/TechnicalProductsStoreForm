@@ -117,13 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="panel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="productBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>225, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SellerSearchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAWZJREFUSEvt
+        lWFxAjEQRpFQCUioBCTgoDgoEpCAA5CAA+qgOCgOWgfX95gvN9wchED7pzN9M99wu9ns5jaXMPnn79F1
+        3Rxt0D7y+QU9JeRxSGLyD/SFtmgVrdERfaJ5wu+HyQsky7hGMGaMC9jE1Q6TfAN5jqsH36BFxiALXV3M
+        CJMg29BP4rm0TRZx9+CbIQu17ZFJ0DFmKWCCWVwXYfwNrWLWIXCH1jG13eBqASHGxb3HrEPg4Typk/NY
+        xTmoi1mHuEFreB5t/iWcg5qL2NvT6vn1I+hbV4O40+bHrGNStI3ZTObtYtYh8PTaMI3rJsSWz7799BNs
+        y/Yxb0KsV84hZhtMcGV+ul6E1QPGuAXEDrzG3QYTpsjP2ZM+uHF9js8xY9yPwkP32BL5VgV7L/q8kS3o
+        AbbF5R67v5AkgS1Rg7OTMZN76n9WqMZZcguVL/Tx/5prkLQUcq/uPmvNpFDTLfHLTCbfUWHwJ2vS3ygA
+        AAAASUVORK5CYII=
+</value>
+  </data>
 </root>

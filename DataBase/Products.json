@@ -1,12 +1,12 @@
 [
   {
     "Id": 1,
-    "ProductName": "dda",
-    "ProductCountry": "sdaasd",
-    "ProductPrice": 10,
+    "ProductName": "Lumoy",
+    "ProductCountry": "sakoo",
+    "ProductPrice": 12000,
     "ProductDescription": null,
-    "ProductEnterCount": 100,
-    "ProductEnterData": "05.05.2024 15:42:00",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "05.05.2024 15:56:55",
     "RemainingProductCount": null
   },
   {
