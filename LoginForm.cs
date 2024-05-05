@@ -32,6 +32,7 @@ namespace TechnicalProductsStore
             if (string.IsNullOrEmpty(tbUserName.Text) || string.IsNullOrEmpty(tbPassword.Text))
             {
                 MessageBox.Show("Ma'lumotlarni to'liq kiriting.Qayta urining", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
             string pathUserList = @"../../../DataBase/Users.json";
