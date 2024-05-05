@@ -25,10 +25,7 @@
 
   <ItemGroup>
     <Folder Include="DataBase\" />
-<<<<<<< HEAD
     <Folder Include="Seller\Baskets\" />
-=======
->>>>>>> 16757ecfaf88c1a4e6c3a94b2c08521fc7bd7fe6
   </ItemGroup>
 
 </Project>
