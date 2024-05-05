@@ -30,6 +30,7 @@ namespace TechnicalProductsStore.Manager
 
         private void AddProduct_Click(object sender, EventArgs e) // object != null
         {
+            lbPriceError.Text = "Bun Faqat Double qiymatlarini qabul qiladi";
             if (string.IsNullOrWhiteSpace(tbProductName.Text) ||
                 string.IsNullOrWhiteSpace(tbDescreption.Text) ||
                 string.IsNullOrWhiteSpace(tbProductName.Text) ||
@@ -47,6 +48,7 @@ namespace TechnicalProductsStore.Manager
             if (File.Exists(pathProduct))
             {
                 var existingProductPath = File.ReadAllText(pathProduct);
+                products = JsonSerializer.Deserialize<List<Product>>(existingProductPath);
             }
 
             int IdProductNext = products.Count > 0 ? products.Max(u => u.Id) + 1 : 1; // original ID_Product
@@ -56,9 +58,11 @@ namespace TechnicalProductsStore.Manager
                 Id = IdProductNext,
                 ProductName = tbProductName.Text,
                 ProductCountry = tbCountry.Text,
+                ProductDescription = tbDescreption.Text,
                 ProductPrice = Convert.ToDouble(tbPrice.Text),
                 ProductEnterCount = Convert.ToInt32(tbEnterProduct.Text),
                 ProductEnterData = DateTime.Now.ToString(),
+                RemainingProductCount = Convert.ToInt32(tbEnterProduct.Text),
             };
 
             products.Add(product);
@@ -73,9 +77,10 @@ namespace TechnicalProductsStore.Manager
             MessageBox.Show("Successfully");
             //MessageBox.Show("Go manager = YES or create product = NO","Tanlang",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
-           
+
             this.Hide();
             ManagerForm managerForm = new ManagerForm();
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
             managerForm.Show();
 
 
@@ -86,10 +91,20 @@ namespace TechnicalProductsStore.Manager
 
         private void CreateProduct_Load(object sender, EventArgs e)
         {
-            this.Hide();
+
+        }
+
+        private void CreateProduct_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
             ManagerForm managerForm = new ManagerForm();
             managerForm.StartPosition = FormStartPosition.CenterScreen;
             managerForm.Show();
+        }
+
+        private void lbPriceError_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
