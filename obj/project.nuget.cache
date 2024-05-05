@@ -1,15 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "kXfPzeuepi0AE9mO5uCxiVSKNS8NLzTEuzgIIjFwtiAwNdNEMyZMQ0N735Ssr1fhQrk+stoYZfgcTqoUPO1JFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\TechnicalProductsStore.csproj",
+=======
+  "dgSpecHash": "DArzDaTWcpfAjUF9OanMRCqoCzvCvw8hb+rNauycpkSPnXy9l1nvpru+7WMzLhJ/32XDLEjbMMw9NodljvL3qg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Behruz\\OneDrive\\Documents\\Technical Products Store Form\\TechnicalProductsStore.csproj",
+>>>>>>> a237cea7e67f84a8b21d71951e465223cf9374c1
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ошибка чтения файла кэша C:\\Users\\user\\source\\repos\\TechnicalProductsStoreForm\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

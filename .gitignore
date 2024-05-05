@@ -25,6 +25,7 @@ Thumbs.db
 *.swo
 *.sublime-workspace
 obj/
+bin/
 # Optional npm cache directory
 .npm
 
