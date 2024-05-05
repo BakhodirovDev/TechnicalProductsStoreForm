@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TechnicalProductsStore.Class;
 using TechnicalProductsStore.Manager;
+using TechnicalProductsStore.Seller;
 
 namespace TechnicalProductsStore
 {
@@ -56,7 +57,10 @@ namespace TechnicalProductsStore
                 }
                 else if (userList.Any(m => m.Role == $"{Role.Seller}"))
                 {
-                    // this.Hide();
+                    this.Hide();
+                    SellerForm sellerForm = new SellerForm();
+                    sellerForm.StartPosition = FormStartPosition.CenterScreen;
+                    sellerForm.Show();
 
                 }
                 else
