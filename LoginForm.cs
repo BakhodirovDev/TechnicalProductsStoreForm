@@ -29,7 +29,7 @@ namespace TechnicalProductsStore
         //test git folders
         private void btLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbUserName.Text) || string.IsNullOrEmpty(tbPassword.Text))
+            if (string.IsNullOrWhiteSpace(tbUserName.Text) || string.IsNullOrWhiteSpace(tbPassword.Text))
             {
                 MessageBox.Show("Ma'lumotlarni to'liq kiriting.Qayta urining", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;

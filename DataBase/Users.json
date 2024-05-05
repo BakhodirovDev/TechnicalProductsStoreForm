@@ -9,26 +9,26 @@
   },
   {
     "ID": 2,
-    "FullName": "Test Sellersfgh",
-    "PhoneNumber": "998912345678",
-    "UserName": "testuser",
-    "Password": "12345",
+    "FullName": "Istamov Mirjahon",
+    "PhoneNumber": "998912527074",
+    "UserName": "istamovMM",
+    "Password": "08112",
+    "Role": "Seller"
+  },
+  {
+    "ID": 3,
+    "FullName": "Musayev Diyorbek",
+    "PhoneNumber": "998915593716",
+    "UserName": "diyorbek3716",
+    "Password": "3716",
     "Role": "Seller"
   },
   {
     "ID": 4,
-    "FullName": "Test3",
-    "PhoneNumber": "234563245",
-    "UserName": "ertsdf",
-    "Password": "asdfgw56",
-    "Role": "Seller"
-  },
-  {
-    "ID": 5,
-    "FullName": "oytudfoluibjl",
-    "PhoneNumber": "12345678",
-    "UserName": "Mirjahon",
-    "Password": "lgvljhv",
+    "FullName": "Savatbekov Timur",
+    "PhoneNumber": "998901182505",
+    "UserName": "teres1111",
+    "Password": "1111",
     "Role": "Seller"
   }
 ]
