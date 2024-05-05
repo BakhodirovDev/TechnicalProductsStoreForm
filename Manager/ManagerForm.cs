@@ -29,7 +29,10 @@ namespace TechnicalProductsStore.Manager
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ProductsForm productsForm = new ProductsForm();
+            productsForm.StartPosition = FormStartPosition.CenterScreen;
+            productsForm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
