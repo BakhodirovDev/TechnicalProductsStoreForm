@@ -31,5 +31,25 @@ namespace TechnicalProductsStore.Seller
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SellerSale_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellerAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
