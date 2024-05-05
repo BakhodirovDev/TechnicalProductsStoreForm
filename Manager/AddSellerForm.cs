@@ -58,7 +58,7 @@ namespace TechnicalProductsStore.Manager
                 PhoneNumber = PhoneNumber.Text,
                 Password = Password.Text,
                 UserName = Username.Text,
-                Role = "Seller"
+                Role = $"{Role.Seller}"
             };
 
             users.Add(user);
