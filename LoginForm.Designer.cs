@@ -98,7 +98,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(21, 94);
+            pictureBox1.Location = new Point(21, 86);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(32, 35);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -108,7 +108,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(21, 182);
+            pictureBox2.Location = new Point(21, 176);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(32, 35);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -135,7 +135,7 @@
             // 
             button1.Location = new Point(258, 182);
             button1.Name = "button1";
-            button1.Size = new Size(42, 29);
+            button1.Size = new Size(34, 29);
             button1.TabIndex = 8;
             button1.UseVisualStyleBackColor = true;
             // 
@@ -143,9 +143,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.SteelBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(860, 457);
             Controls.Add(panel1);
+            DoubleBuffered = true;
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterParent;
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
