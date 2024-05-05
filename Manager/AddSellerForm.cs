@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using TechnicalProductsStore.Class;
+using System.Text.Json;
 
 namespace TechnicalProductsStore.Manager
 {
@@ -40,7 +41,7 @@ namespace TechnicalProductsStore.Manager
             if (File.Exists(path))
             {
                 var existingUsersJson = File.ReadAllText(path);
-                users = System.Text.Json.JsonSerializer.Deserialize<List<Users>>(existingUsersJson);
+                users = JsonSerializer.Deserialize<List<Users>>(existingUsersJson);
             }
 
             if (users.Any(t => t.UserName == Username.Text))
@@ -63,12 +64,12 @@ namespace TechnicalProductsStore.Manager
 
             users.Add(user);
 
-            var options = new System.Text.Json.JsonSerializerOptions
+            var options = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
 
-            string json = System.Text.Json.JsonSerializer.Serialize(users, options);
+            string json = JsonSerializer.Serialize(users, options);
 
             File.WriteAllText(path, json);
             MessageBox.Show("Successfully");
