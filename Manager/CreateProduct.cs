@@ -16,9 +16,10 @@ namespace TechnicalProductsStore.Manager
     public partial class CreateProduct : Form
     {
 
-
-        public CreateProduct()
+        public int Form;
+        public CreateProduct(int FormID)
         {
+            this.Form = FormID;
             InitializeComponent();
 
         }
@@ -96,10 +97,20 @@ namespace TechnicalProductsStore.Manager
 
         private void CreateProduct_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (Form == 1)
+            {
+                
+                ManagerForm managerForm = new ManagerForm();
+                managerForm.StartPosition = FormStartPosition.CenterScreen;
+                managerForm.Show();
+            }
+            else if (Form == 2)
+            {
+                ProductsForm form = new ProductsForm();
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.Show();
+            }
             this.Hide();
-            ManagerForm managerForm = new ManagerForm();
-            managerForm.StartPosition = FormStartPosition.CenterScreen;
-            managerForm.Show();
         }
 
         private void lbPriceError_Click(object sender, EventArgs e)
