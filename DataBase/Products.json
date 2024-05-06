@@ -1,62 +1,12 @@
 [
   {
     "Id": 1,
-    "ProductName": "Lumoy",
-    "ProductCountry": "sakoo",
-    "ProductPrice": 12000,
-    "ProductDescription": null,
-    "ProductEnterCount": 12,
-    "ProductEnterData": "05.05.2024 15:56:55",
-    "RemainingProductCount": null
-  },
-  {
-    "Id": 2,
-    "ProductName": "asgfjhfdghj",
-    "ProductCountry": "dfgsgfhdsgfdghsf",
-    "ProductPrice": 1232,
-    "ProductDescription": null,
-    "ProductEnterCount": 12,
-    "ProductEnterData": "05.05.2024 16:01:32",
-    "RemainingProductCount": null
-  },
-  {
-    "Id": 3,
-    "ProductName": "dfghdgh",
-    "ProductCountry": "gtfrryh",
-    "ProductPrice": 123,
-    "ProductDescription": "tfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhety",
-    "ProductEnterCount": 12,
-    "ProductEnterData": "05.05.2024 16:03:11",
-    "RemainingProductCount": null
-  },
-  {
-    "Id": 4,
-    "ProductName": "sdhdgh",
-    "ProductCountry": "ljhgkugfv",
+    "ProductName": "Test",
+    "ProductCountry": "test",
     "ProductPrice": 5647865,
     "ProductDescription": "lhkgfvkghvk",
     "ProductEnterCount": 7465,
     "ProductEnterData": "05.05.2024 16:05:46",
-    "RemainingProductCount": 7465
-  },
-  {
-    "Id": 5,
-    "ProductName": "rtyetrwr",
-    "ProductCountry": "uygkhjvgl",
-    "ProductPrice": 765876,
-    "ProductDescription": "loghvlhgf",
-    "ProductEnterCount": 856,
-    "ProductEnterData": "05.05.2024 16:09:43",
-    "RemainingProductCount": 856
-  },
-  {
-    "Id": 6,
-    "ProductName": "dryjrujf",
-    "ProductCountry": "iyfitygfv",
-    "ProductPrice": 875764,
-    "ProductDescription": "ogfkjgfl",
-    "ProductEnterCount": 765,
-    "ProductEnterData": "05.05.2024 16:11:42",
-    "RemainingProductCount": 765
+    "RemainingProductCount": 0
   }
 ]
