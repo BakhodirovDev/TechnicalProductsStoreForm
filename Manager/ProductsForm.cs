@@ -38,20 +38,21 @@ namespace TechnicalProductsStore.Manager
             // Assign the ContextMenuStrip to the DataGridView
             dataGridView1.ContextMenuStrip = menuStrip;
 
-            
+
         }
-        
-
-        
-
-        
-
-        
 
         private void ProductsForm_Load(object sender, EventArgs e)
         {
 
 
+        }
+
+        private void ProductsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ManagerForm managerForm = new ManagerForm();
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
+            managerForm.Show();
+            this.Hide();
         }
     }
 }

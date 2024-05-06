@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
-            productBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productCountryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@
             productEnterCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productEnterDataDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             remainingProductCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             SuspendLayout();
@@ -55,10 +55,6 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1524, 450);
             dataGridView1.TabIndex = 0;
-            // 
-            // productBindingSource
-            // 
-            productBindingSource.DataSource = typeof(Class.Product);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -124,6 +120,10 @@
             remainingProductCountDataGridViewTextBoxColumn.Name = "remainingProductCountDataGridViewTextBoxColumn";
             remainingProductCountDataGridViewTextBoxColumn.Width = 220;
             // 
+            // productBindingSource
+            // 
+            productBindingSource.DataSource = typeof(Class.Product);
+            // 
             // ProductsForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -132,6 +132,7 @@
             Controls.Add(dataGridView1);
             Name = "ProductsForm";
             Text = "ProductsForm";
+            FormClosed += ProductsForm_FormClosed;
             Load += ProductsForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
