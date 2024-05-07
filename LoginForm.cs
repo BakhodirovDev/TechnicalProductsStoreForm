@@ -18,6 +18,8 @@ namespace TechnicalProductsStore
 {
     public partial class LoginForm : Form
     {
+        
+        
         public LoginForm()
         {
             InitializeComponent();
@@ -47,7 +49,7 @@ namespace TechnicalProductsStore
                 string jsonFormat = File.ReadAllText(pathUserList);
                 userList = JsonSerializer.Deserialize<List<Users>>(jsonFormat);
             }
-            
+
             var user = userList.FirstOrDefault(u => u.UserName == tbUserName.Text && u.Password == tbPassword.Text);
 
             if (user != null)
@@ -62,8 +64,9 @@ namespace TechnicalProductsStore
                 }
                 else if (user.Role == $"{Role.Seller}")
                 {
+                    
                     this.Hide();
-                    SellerForm sellerForm = new SellerForm();
+                    SellerForm sellerForm = new SellerForm(user.ID);
                     sellerForm.StartPosition = FormStartPosition.CenterScreen;
                     sellerForm.Show();
 
@@ -86,16 +89,26 @@ namespace TechnicalProductsStore
 
         private void btHideEyes_Click(object sender, EventArgs e)
         {
-            if(tbPassword.PasswordChar == '*')
+            if (tbPassword.PasswordChar == '*')
             {
                 tbPassword.PasswordChar = '\0';
                 btHideEyes.BackgroundImage = Properties.Resources.eyehide;
             }
-            else if(tbPassword.PasswordChar == '\0')
+            else if (tbPassword.PasswordChar == '\0')
             {
                 tbPassword.PasswordChar = '*';
                 btHideEyes.BackgroundImage = Properties.Resources.eyeshow;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

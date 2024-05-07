@@ -54,7 +54,7 @@
             // 
             FullName.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
             FullName.Location = new Point(10, 42);
-            FullName.Margin = new Padding(2, 2, 2, 2);
+            FullName.Margin = new Padding(2);
             FullName.Name = "FullName";
             FullName.Size = new Size(258, 24);
             FullName.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             PhoneNumber.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
             PhoneNumber.Location = new Point(10, 96);
-            PhoneNumber.Margin = new Padding(2, 2, 2, 2);
+            PhoneNumber.Margin = new Padding(2);
             PhoneNumber.Name = "PhoneNumber";
             PhoneNumber.Size = new Size(258, 24);
             PhoneNumber.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             Username.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
             Username.Location = new Point(10, 154);
-            Username.Margin = new Padding(2, 2, 2, 2);
+            Username.Margin = new Padding(2);
             Username.Name = "Username";
             Username.Size = new Size(258, 24);
             Username.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             Password.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
             Password.Location = new Point(10, 213);
-            Password.Margin = new Padding(2, 2, 2, 2);
+            Password.Margin = new Padding(2);
             Password.Name = "Password";
             Password.Size = new Size(258, 24);
             Password.TabIndex = 7;
@@ -123,7 +123,7 @@
             // 
             btnAdd.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Italic);
             btnAdd.Location = new Point(70, 262);
-            btnAdd.Margin = new Padding(2, 2, 2, 2);
+            btnAdd.Margin = new Padding(2);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(135, 37);
             btnAdd.TabIndex = 8;
@@ -145,7 +145,7 @@
             Controls.Add(label2);
             Controls.Add(FullName);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "AddSellerForm";
             Text = "AddSellerForm";
             FormClosed += AddSellerForm_FormClosed;

@@ -30,12 +30,12 @@
         {
             components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
+            usersBindingSource = new BindingSource(components);
             iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             fullNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             phoneNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             userNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            usersBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)usersBindingSource).BeginInit();
             SuspendLayout();
@@ -51,10 +51,13 @@
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-
-            dataGridView1.Size = new Size(1398, 789);
+            dataGridView1.Size = new Size(1034, 789);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // usersBindingSource
+            // 
+            usersBindingSource.DataSource = typeof(Class.Users);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -70,7 +73,7 @@
             fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
             fullNameDataGridViewTextBoxColumn.MinimumWidth = 8;
             fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            fullNameDataGridViewTextBoxColumn.Width = 150;
+            fullNameDataGridViewTextBoxColumn.Width = 220;
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
@@ -78,7 +81,7 @@
             phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
             phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 8;
             phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            phoneNumberDataGridViewTextBoxColumn.Width = 150;
+            phoneNumberDataGridViewTextBoxColumn.Width = 200;
             // 
             // userNameDataGridViewTextBoxColumn
             // 
@@ -86,7 +89,7 @@
             userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
             userNameDataGridViewTextBoxColumn.MinimumWidth = 8;
             userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            userNameDataGridViewTextBoxColumn.Width = 150;
+            userNameDataGridViewTextBoxColumn.Width = 200;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
@@ -94,17 +97,13 @@
             passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             passwordDataGridViewTextBoxColumn.MinimumWidth = 8;
             passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            passwordDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // usersBindingSource
-            // 
-            usersBindingSource.DataSource = typeof(Class.Users);
+            passwordDataGridViewTextBoxColumn.Width = 200;
             // 
             // SellerListForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1398, 789);
+            ClientSize = new Size(1034, 789);
             Controls.Add(dataGridView1);
             Margin = new Padding(2);
             Name = "SellerListForm";
@@ -119,11 +118,11 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private BindingSource usersBindingSource;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private BindingSource usersBindingSource;
     }
 }

@@ -39,27 +39,30 @@
             tbPrice = new TextBox();
             tbEnterProduct = new TextBox();
             AddProduct = new Button();
-            label6 = new Label();
             lbCountryError = new Label();
             lbPriceError = new Label();
             lbEnterProductError = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(74, 113);
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(23, 97);
             label1.Name = "label1";
-            label1.Size = new Size(106, 20);
+            label1.Size = new Size(132, 23);
             label1.TabIndex = 0;
             label1.Text = "Product-Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(74, 173);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.Location = new Point(23, 157);
             label2.Name = "label2";
-            label2.Size = new Size(60, 20);
+            label2.Size = new Size(79, 23);
             label2.TabIndex = 1;
             label2.Text = "Country";
             label2.Click += label2_Click;
@@ -67,91 +70,86 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(74, 236);
+            label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.Location = new Point(23, 220);
             label3.Name = "label3";
-            label3.Size = new Size(85, 20);
+            label3.Size = new Size(106, 23);
             label3.TabIndex = 2;
             label3.Text = "Description";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(74, 301);
+            label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(23, 285);
             label4.Name = "label4";
-            label4.Size = new Size(41, 20);
+            label4.Size = new Size(54, 23);
             label4.TabIndex = 3;
             label4.Text = "Price";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(74, 362);
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(23, 346);
             label5.Name = "label5";
-            label5.Size = new Size(100, 20);
+            label5.Size = new Size(134, 23);
             label5.TabIndex = 4;
             label5.Text = "Enter_Product";
             // 
             // tbProductName
             // 
-            tbProductName.Location = new Point(250, 113);
+            tbProductName.Location = new Point(199, 97);
             tbProductName.Name = "tbProductName";
             tbProductName.Size = new Size(482, 27);
             tbProductName.TabIndex = 7;
             // 
             // tbCountry
             // 
-            tbCountry.Location = new Point(250, 173);
+            tbCountry.Location = new Point(199, 157);
             tbCountry.Name = "tbCountry";
             tbCountry.Size = new Size(482, 27);
             tbCountry.TabIndex = 8;
             // 
             // tbDescreption
             // 
-            tbDescreption.Location = new Point(250, 236);
+            tbDescreption.Location = new Point(199, 220);
             tbDescreption.Name = "tbDescreption";
             tbDescreption.Size = new Size(482, 27);
             tbDescreption.TabIndex = 9;
             // 
             // tbPrice
             // 
-            tbPrice.Location = new Point(250, 301);
+            tbPrice.Location = new Point(199, 285);
             tbPrice.Name = "tbPrice";
             tbPrice.Size = new Size(482, 27);
             tbPrice.TabIndex = 10;
             // 
             // tbEnterProduct
             // 
-            tbEnterProduct.Location = new Point(250, 362);
+            tbEnterProduct.Location = new Point(199, 346);
             tbEnterProduct.Name = "tbEnterProduct";
             tbEnterProduct.Size = new Size(482, 27);
             tbEnterProduct.TabIndex = 11;
             // 
             // AddProduct
             // 
-            AddProduct.Location = new Point(74, 446);
+            AddProduct.BackColor = Color.Black;
+            AddProduct.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            AddProduct.ForeColor = SystemColors.ButtonFace;
+            AddProduct.Location = new Point(23, 430);
             AddProduct.Name = "AddProduct";
-            AddProduct.Size = new Size(658, 29);
+            AddProduct.Size = new Size(658, 54);
             AddProduct.TabIndex = 14;
             AddProduct.Text = "Add";
-            AddProduct.UseVisualStyleBackColor = true;
+            AddProduct.UseVisualStyleBackColor = false;
             AddProduct.Click += AddProduct_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = SystemColors.ActiveCaption;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label6.Location = new Point(276, 35);
-            label6.Name = "label6";
-            label6.Size = new Size(251, 28);
-            label6.TabIndex = 15;
-            label6.Text = "Welcome to the manager";
             // 
             // lbCountryError
             // 
             lbCountryError.AutoSize = true;
             lbCountryError.ForeColor = Color.Red;
-            lbCountryError.Location = new Point(250, 203);
+            lbCountryError.Location = new Point(199, 187);
             lbCountryError.Name = "lbCountryError";
             lbCountryError.Size = new Size(0, 20);
             lbCountryError.TabIndex = 16;
@@ -160,31 +158,41 @@
             // 
             lbPriceError.AutoSize = true;
             lbPriceError.ForeColor = Color.Red;
-            lbPriceError.Location = new Point(250, 331);
+            lbPriceError.Location = new Point(199, 315);
             lbPriceError.Name = "lbPriceError";
-            lbPriceError.Size = new Size(32, 20);
+            lbPriceError.Size = new Size(0, 20);
             lbPriceError.TabIndex = 17;
-            lbPriceError.Text = "fdg";
             lbPriceError.Click += lbPriceError_Click;
             // 
             // lbEnterProductError
             // 
             lbEnterProductError.AutoSize = true;
             lbEnterProductError.ForeColor = Color.Red;
-            lbEnterProductError.Location = new Point(250, 392);
+            lbEnterProductError.Location = new Point(199, 376);
             lbEnterProductError.Name = "lbEnterProductError";
             lbEnterProductError.Size = new Size(0, 20);
             lbEnterProductError.TabIndex = 18;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(234, 48);
+            label6.Name = "label6";
+            label6.Size = new Size(265, 25);
+            label6.TabIndex = 19;
+            label6.Text = "Welcome to the Manager";
             // 
             // CreateProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(804, 549);
+            BackColor = Color.DarkCyan;
+            ClientSize = new Size(716, 521);
+            Controls.Add(label6);
             Controls.Add(lbEnterProductError);
             Controls.Add(lbPriceError);
             Controls.Add(lbCountryError);
-            Controls.Add(label6);
             Controls.Add(AddProduct);
             Controls.Add(tbEnterProduct);
             Controls.Add(tbPrice);
@@ -196,10 +204,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            ForeColor = SystemColors.ControlText;
             Name = "CreateProduct";
             Text = "CreateProduct";
+            TransparencyKey = Color.FromArgb(64, 64, 64);
             FormClosed += CreateProduct_FormClosed;
             Load += CreateProduct_Load;
+            MouseDown += CreateProduct_Mouse;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,9 +228,9 @@
         private TextBox tbPrice;
         private TextBox tbEnterProduct;
         private Button AddProduct;
-        private Label label6;
         private Label lbCountryError;
         private Label lbPriceError;
         private Label lbEnterProductError;
+        private Label label6;
     }
 }
