@@ -59,5 +59,10 @@ namespace TechnicalProductsStore.Seller
             login.StartPosition = FormStartPosition.CenterScreen;
             login.Show();
         }
+
+        private void SellerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

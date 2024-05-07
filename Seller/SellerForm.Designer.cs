@@ -242,6 +242,7 @@
             Name = "SellerForm";
             Text = "SellerForm";
             FormClosed += SellerForm_FormClosed;
+            Load += SellerForm_Load;
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();
