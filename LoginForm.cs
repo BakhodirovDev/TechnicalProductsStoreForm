@@ -66,7 +66,7 @@ namespace TechnicalProductsStore
                 {
                     
                     this.Hide();
-                    SellerForm sellerForm = new SellerForm(user.ID);
+                    SellerForm sellerForm = new SellerForm();
                     sellerForm.StartPosition = FormStartPosition.CenterScreen;
                     sellerForm.Show();
 
