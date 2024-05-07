@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+[{"ID":1,"FullName":"Behruz Bahodirov","PhoneNumber":"998914050216","UserName":"bbahodirov","Password":"0216","Role":"Manager"},{"ID":2,"FullName":"Istamov Mirjahon","PhoneNumber":"998912527074","UserName":"istamovMM","Password":"0812","Role":"Seller"},{"ID":3,"FullName":"Musayev Diyorbek","PhoneNumber":"998915593716","UserName":"diyorbek3716","Password":"3716","Role":"Seller"},{"ID":4,"FullName":"Savatbekov Timur","PhoneNumber":"998901182505","UserName":"teres1111","Password":"1111","Role":"Seller"}]
+=======
 [
   {
     "ID": 1,
@@ -32,3 +35,4 @@
     "Role": "Seller"
   }
 ]
+>>>>>>> afc53d5cbb610bb5e192a444280aee621fe8c4a2

@@ -94,6 +94,8 @@ namespace TechnicalProductsStore.Seller
             login.Show();
         }
 
+<<<<<<< HEAD
+=======
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -118,5 +120,14 @@ namespace TechnicalProductsStore.Seller
         {
 
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> afc53d5cbb610bb5e192a444280aee621fe8c4a2
+        private void SellerForm_Load(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> fc01f452d1dcd150fd13ac6c70406bd16c254ff0
     }
 }
