@@ -18,12 +18,8 @@ namespace TechnicalProductsStore
 {
     public partial class LoginForm : Form
     {
-        int _sendIdUsers;
-        public int sendIdUsers
-        {
-            get { return _sendIdUsers;}
-            set { _sendIdUsers = value; } 
-        }
+        
+        
         public LoginForm()
         {
             InitializeComponent();
@@ -60,7 +56,6 @@ namespace TechnicalProductsStore
             {
                 if (user.Role == $"{Role.Manager}")
                 {
-                    sendIdUsers = user.ID;
                     this.Hide();
                     ManagerForm form = new ManagerForm();
                     form.StartPosition = FormStartPosition.CenterScreen;
@@ -69,9 +64,9 @@ namespace TechnicalProductsStore
                 }
                 else if (user.Role == $"{Role.Seller}")
                 {
-                    sendIdUsers = user.ID;
+                    
                     this.Hide();
-                    SellerForm sellerForm = new SellerForm();
+                    SellerForm sellerForm = new SellerForm(user.ID);
                     sellerForm.StartPosition = FormStartPosition.CenterScreen;
                     sellerForm.Show();
 
@@ -107,6 +102,11 @@ namespace TechnicalProductsStore
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
