@@ -146,6 +146,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(320, 315);
             panel1.TabIndex = 8;
+            panel1.Paint += panel1_Paint;
             // 
             // btHideEyes
             // 

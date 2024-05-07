@@ -47,6 +47,7 @@
             SellerCountTB = new TextBox();
             SellerAdd = new Button();
             panel4 = new Panel();
+            label2 = new Label();
             SellerSale = new Button();
             SellerSearchButton = new Button();
             SellerSearchTB = new TextBox();
@@ -66,12 +67,13 @@
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
-            dataGridView1.DataSource = productBindingSource1;
-            dataGridView1.Location = new Point(0, 46);
+            dataGridView1.DataSource = productBindingSource;
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(803, 548);
+            dataGridView1.Size = new Size(799, 594);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -124,6 +126,7 @@
             // productBindingSource1
             // 
             productBindingSource1.DataSource = typeof(Class.Product);
+            productBindingSource1.CurrentChanged += productBindingSource1_CurrentChanged;
             // 
             // panel3
             // 
@@ -133,80 +136,101 @@
             panel3.Controls.Add(SellerIDTB);
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
-            panel3.Location = new Point(804, 17);
+            panel3.Location = new Point(805, 107);
             panel3.Name = "panel3";
-            panel3.Size = new Size(310, 375);
+            panel3.Size = new Size(310, 342);
             panel3.TabIndex = 8;
             panel3.Paint += panel3_Paint;
             // 
             // SellerAddLabel
             // 
             SellerAddLabel.AutoSize = true;
-            SellerAddLabel.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SellerAddLabel.Location = new Point(91, 81);
+            SellerAddLabel.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SellerAddLabel.Location = new Point(104, 30);
             SellerAddLabel.Name = "SellerAddLabel";
-            SellerAddLabel.Size = new Size(90, 50);
+            SellerAddLabel.Size = new Size(85, 40);
             SellerAddLabel.TabIndex = 5;
             SellerAddLabel.Text = "Add";
             // 
             // SellerID
             // 
             SellerID.AutoSize = true;
-            SellerID.Location = new Point(33, 155);
+            SellerID.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
+            SellerID.Location = new Point(36, 81);
             SellerID.Name = "SellerID";
-            SellerID.Size = new Size(24, 20);
+            SellerID.Size = new Size(38, 27);
             SellerID.TabIndex = 4;
             SellerID.Text = "ID";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(33, 224);
+            label1.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
+            label1.Location = new Point(36, 158);
             label1.Name = "label1";
-            label1.Size = new Size(48, 20);
+            label1.Size = new Size(90, 27);
             label1.TabIndex = 3;
             label1.Text = "Count";
             // 
             // SellerIDTB
             // 
-            SellerIDTB.Location = new Point(33, 178);
+            SellerIDTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
+            SellerIDTB.Location = new Point(36, 112);
             SellerIDTB.Name = "SellerIDTB";
-            SellerIDTB.Size = new Size(233, 27);
+            SellerIDTB.Size = new Size(233, 35);
             SellerIDTB.TabIndex = 2;
             // 
             // SellerCountTB
             // 
-            SellerCountTB.Location = new Point(33, 247);
+            SellerCountTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
+            SellerCountTB.Location = new Point(36, 186);
             SellerCountTB.Name = "SellerCountTB";
-            SellerCountTB.Size = new Size(233, 27);
+            SellerCountTB.Size = new Size(233, 35);
             SellerCountTB.TabIndex = 1;
             // 
             // SellerAdd
             // 
-            SellerAdd.Location = new Point(107, 302);
+            SellerAdd.BackColor = Color.FromArgb(0, 192, 0);
+            SellerAdd.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SellerAdd.ForeColor = Color.FromArgb(192, 0, 0);
+            SellerAdd.Location = new Point(80, 240);
             SellerAdd.Name = "SellerAdd";
-            SellerAdd.Size = new Size(94, 29);
+            SellerAdd.Size = new Size(142, 42);
             SellerAdd.TabIndex = 0;
             SellerAdd.Text = "Add";
-            SellerAdd.UseVisualStyleBackColor = true;
+            SellerAdd.UseVisualStyleBackColor = false;
             SellerAdd.Click += SellerAdd_Click;
             // 
             // panel4
             // 
+            panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
-            panel4.Location = new Point(805, 389);
+            panel4.Location = new Point(805, 448);
             panel4.Name = "panel4";
-            panel4.Size = new Size(310, 210);
+            panel4.Size = new Size(310, 151);
             panel4.TabIndex = 9;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(103, 4);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 40);
+            label2.TabIndex = 1;
+            label2.Text = "SALE";
             // 
             // SellerSale
             // 
-            SellerSale.Location = new Point(106, 154);
+            SellerSale.BackColor = Color.Red;
+            SellerSale.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SellerSale.ForeColor = Color.YellowGreen;
+            SellerSale.Location = new Point(74, 57);
             SellerSale.Name = "SellerSale";
-            SellerSale.Size = new Size(94, 29);
+            SellerSale.Size = new Size(155, 47);
             SellerSale.TabIndex = 0;
             SellerSale.Text = "Sale";
-            SellerSale.UseVisualStyleBackColor = true;
+            SellerSale.UseVisualStyleBackColor = false;
             SellerSale.Click += SellerSale_Click;
             // 
             // SellerSearchButton
@@ -214,17 +238,18 @@
             SellerSearchButton.BackColor = Color.SteelBlue;
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SellerSearchButton.Location = new Point(755, 11);
+            SellerSearchButton.Location = new Point(807, 14);
             SellerSearchButton.Name = "SellerSearchButton";
             SellerSearchButton.Size = new Size(30, 29);
             SellerSearchButton.TabIndex = 10;
             SellerSearchButton.UseVisualStyleBackColor = false;
+            SellerSearchButton.Click += SellerSearchButton_Click;
             // 
             // SellerSearchTB
             // 
-            SellerSearchTB.Location = new Point(12, 12);
+            SellerSearchTB.Location = new Point(843, 16);
             SellerSearchTB.Name = "SellerSearchTB";
-            SellerSearchTB.Size = new Size(739, 27);
+            SellerSearchTB.Size = new Size(265, 27);
             SellerSearchTB.TabIndex = 11;
             // 
             // SellerForm
@@ -248,6 +273,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -273,5 +299,6 @@
         private Button SellerSale;
         private Button SellerSearchButton;
         private TextBox SellerSearchTB;
+        private Label label2;
     }
 }
