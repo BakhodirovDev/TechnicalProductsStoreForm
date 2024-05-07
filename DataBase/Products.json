@@ -1,32 +1,87 @@
 [
   {
+    "Id": 1,
+<<<<<<< HEAD
+    "ProductName": "Lumoy",
+    "ProductCountry": "sakoo",
+    "ProductPrice": 12000,
+    "ProductDescription": "Qora",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "05.05.2024 15:56:55",
+    "RemainingProductCount": 12
+  },
+  {
     "Id": 2,
-    "ProductName": "sdfgsdgf",
-    "ProductCountry": "hliuliu",
-    "ProductPrice": 876,
-    "ProductDescription": "iuglihg",
-    "ProductEnterCount": 654,
-    "ProductEnterData": "5/7/2024 4:26:35 PM",
-    "RemainingProductCount": 600
+    "ProductName": "asgfjhfdghj",
+    "ProductCountry": "dfgsgfhdsgfdghsf",
+    "ProductPrice": 1232,
+    "ProductDescription": "Qora",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "05.05.2024 16:01:32",
+    "RemainingProductCount": 12
   },
   {
     "Id": 3,
-    "ProductName": "syjryj",
-    "ProductCountry": "ljhglj",
+    "ProductName": "dfghdgh",
+    "ProductCountry": "gtfrryh",
     "ProductPrice": 123,
-    "ProductDescription": "ljghljh",
-    "ProductEnterCount": 867,
-    "ProductEnterData": "5/7/2024 4:50:19 PM",
-    "RemainingProductCount": 867
+    "ProductDescription": "tfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhetytfhety",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "05.05.2024 16:03:11",
+    "RemainingProductCount": 12
   },
   {
     "Id": 4,
-    "ProductName": "kjgfik",
-    "ProductCountry": "kgfkuytgf",
-    "ProductPrice": 87,
-    "ProductDescription": "lkgkjhgkjhg",
-    "ProductEnterCount": 76,
-    "ProductEnterData": "5/7/2024 4:50:37 PM",
-    "RemainingProductCount": 76
+    "ProductName": "sdhdgh",
+    "ProductCountry": "ljhgkugfv",
+=======
+    "ProductName": "Test",
+    "ProductCountry": "test",
+>>>>>>> 54185f88c8ed33549361080802bd8628fb1958c3
+    "ProductPrice": 5647865,
+    "ProductDescription": "lhkgfvkghvk",
+    "ProductEnterCount": 7465,
+    "ProductEnterData": "05.05.2024 16:05:46",
+    "RemainingProductCount": 0
+  },
+  {
+    "Id": 2,
+    "ProductName": "phone",
+    "ProductCountry": "china",
+    "ProductPrice": 1000,
+    "ProductDescription": "great",
+    "ProductEnterCount": 10,
+    "ProductEnterData": "07.05.2024 8:35:59",
+    "RemainingProductCount": 10
+  },
+  {
+    "Id": 3,
+    "ProductName": "smdasdmna",
+    "ProductCountry": "dasdasd",
+    "ProductPrice": 1221,
+    "ProductDescription": "dsaadsas",
+    "ProductEnterCount": 212121,
+    "ProductEnterData": "07.05.2024 9:04:12",
+    "RemainingProductCount": 212121
+  },
+  {
+    "Id": 4,
+    "ProductName": "hjgfdsjfdsf",
+    "ProductCountry": "sadjasdfkjasfkj",
+    "ProductPrice": 12132321,
+    "ProductDescription": "sfkjafkjskjfaskl",
+    "ProductEnterCount": 32132,
+    "ProductEnterData": "07.05.2024 9:19:54",
+    "RemainingProductCount": 32132
+  },
+  {
+    "Id": 5,
+    "ProductName": "kfewkfrkjewfkjek",
+    "ProductCountry": "daksdkjasdkjakl",
+    "ProductPrice": 1233,
+    "ProductDescription": "dksakjdasjkadskjl",
+    "ProductEnterCount": 33232,
+    "ProductEnterData": "07.05.2024 11:49:52",
+    "RemainingProductCount": 33232
   }
 ]
