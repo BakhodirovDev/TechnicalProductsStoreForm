@@ -116,10 +116,7 @@ namespace TechnicalProductsStore.Manager
             createProduct.Show();
             this.Hide();
         }
-        public Product ReadUser(int id)
-        {
-            return product.FirstOrDefault(u => u.Id == id);
-        }
+        
         public void UpdateUser(Product product)
         {
             // Find the product
