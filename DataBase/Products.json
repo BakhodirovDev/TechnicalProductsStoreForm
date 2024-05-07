@@ -1,6 +1,7 @@
 [
   {
     "Id": 1,
+<<<<<<< HEAD
     "ProductName": "Lumoy",
     "ProductCountry": "sakoo",
     "ProductPrice": 12000,
@@ -33,30 +34,54 @@
     "Id": 4,
     "ProductName": "sdhdgh",
     "ProductCountry": "ljhgkugfv",
+=======
+    "ProductName": "Test",
+    "ProductCountry": "test",
+>>>>>>> 54185f88c8ed33549361080802bd8628fb1958c3
     "ProductPrice": 5647865,
     "ProductDescription": "lhkgfvkghvk",
     "ProductEnterCount": 7465,
     "ProductEnterData": "05.05.2024 16:05:46",
-    "RemainingProductCount": 7465
+    "RemainingProductCount": 0
+  },
+  {
+    "Id": 2,
+    "ProductName": "phone",
+    "ProductCountry": "china",
+    "ProductPrice": 1000,
+    "ProductDescription": "great",
+    "ProductEnterCount": 10,
+    "ProductEnterData": "07.05.2024 8:35:59",
+    "RemainingProductCount": 10
+  },
+  {
+    "Id": 3,
+    "ProductName": "smdasdmna",
+    "ProductCountry": "dasdasd",
+    "ProductPrice": 1221,
+    "ProductDescription": "dsaadsas",
+    "ProductEnterCount": 212121,
+    "ProductEnterData": "07.05.2024 9:04:12",
+    "RemainingProductCount": 212121
+  },
+  {
+    "Id": 4,
+    "ProductName": "hjgfdsjfdsf",
+    "ProductCountry": "sadjasdfkjasfkj",
+    "ProductPrice": 12132321,
+    "ProductDescription": "sfkjafkjskjfaskl",
+    "ProductEnterCount": 32132,
+    "ProductEnterData": "07.05.2024 9:19:54",
+    "RemainingProductCount": 32132
   },
   {
     "Id": 5,
-    "ProductName": "rtyetrwr",
-    "ProductCountry": "uygkhjvgl",
-    "ProductPrice": 765876,
-    "ProductDescription": "loghvlhgf",
-    "ProductEnterCount": 856,
-    "ProductEnterData": "05.05.2024 16:09:43",
-    "RemainingProductCount": 856
-  },
-  {
-    "Id": 6,
-    "ProductName": "dryjrujf",
-    "ProductCountry": "iyfitygfv",
-    "ProductPrice": 875764,
-    "ProductDescription": "ogfkjgfl",
-    "ProductEnterCount": 765,
-    "ProductEnterData": "05.05.2024 16:11:42",
-    "RemainingProductCount": 765
+    "ProductName": "kfewkfrkjewfkjek",
+    "ProductCountry": "daksdkjasdkjakl",
+    "ProductPrice": 1233,
+    "ProductDescription": "dksakjdasjkadskjl",
+    "ProductEnterCount": 33232,
+    "ProductEnterData": "07.05.2024 11:49:52",
+    "RemainingProductCount": 33232
   }
 ]

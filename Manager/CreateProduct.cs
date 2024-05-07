@@ -10,16 +10,23 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TechnicalProductsStore.Class;
+using System.Text.RegularExpressions; // library 
+//using System.Runtime.InteropServices;
 
 namespace TechnicalProductsStore.Manager
 {
     public partial class CreateProduct : Form
     {
 
+        public int Form;
 
-        public CreateProduct()
+        
+        public CreateProduct(int FormID)
         {
+            this.Form = FormID;
             InitializeComponent();
+
+
 
         }
 
@@ -30,14 +37,19 @@ namespace TechnicalProductsStore.Manager
 
         private void AddProduct_Click(object sender, EventArgs e) // object != null
         {
-            lbPriceError.Text = "Bun Faqat Double qiymatlarini qabul qiladi";
             if (string.IsNullOrWhiteSpace(tbProductName.Text) ||
                 string.IsNullOrWhiteSpace(tbDescreption.Text) ||
-                string.IsNullOrWhiteSpace(tbProductName.Text) ||
-                Convert.ToDouble(tbPrice.Text) == 0 ||
-                Convert.ToInt32(tbEnterProduct.Text) == 0)
+                string.IsNullOrWhiteSpace(tbCountry.Text) ||
+                !double.TryParse(tbPrice.Text, out double price) || // test count transformation
+                !int.TryParse(tbEnterProduct.Text, out int enter_product) ||
+                price <= 0 || enter_product <= 0 ||
+                !Regex.IsMatch(tbCountry.Text, @"^[a-zA-Z]+$")) // test alfavit  words
             {
-                MessageBox.Show("Toliq malumot kirriting");
+                lbPriceError.Text = "Bun Faqat Double qiymatlarini qabul qiladi";
+                lbEnterProductError.Text = "Bun Faqat int qiymatlarini qabul qiladi";
+                lbCountryError.Text = "Bu yerda fakat hariflar bolishi kerak, son bolishi mumkinmas";
+                //
+                MessageBox.Show("To'liq va to'g'ri malumot kirriting");
                 return;
             }
 
@@ -96,15 +108,30 @@ namespace TechnicalProductsStore.Manager
 
         private void CreateProduct_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (Form == 1)
+            {
+
+                ManagerForm managerForm = new ManagerForm();
+                managerForm.StartPosition = FormStartPosition.CenterScreen;
+                managerForm.Show();
+            }
+            else if (Form == 2)
+            {
+                ProductsForm form = new ProductsForm();
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.Show();
+            }
             this.Hide();
-            ManagerForm managerForm = new ManagerForm();
-            managerForm.StartPosition = FormStartPosition.CenterScreen;
-            managerForm.Show();
         }
 
         private void lbPriceError_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        private void CreateProduct_Mouse(object sender, MouseEventArgs e) // Mouse
+        {
+            
         }
     }
 }

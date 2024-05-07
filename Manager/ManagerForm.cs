@@ -38,7 +38,7 @@ namespace TechnicalProductsStore.Manager
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CreateProduct createProduct = new CreateProduct();
+            CreateProduct createProduct = new CreateProduct(1);
             createProduct.StartPosition = FormStartPosition.CenterScreen;
             createProduct.Show();
 
