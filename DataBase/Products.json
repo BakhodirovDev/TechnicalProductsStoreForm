@@ -1,32 +1,32 @@
 [
   {
-    "Id": 2,
+    "Id": 1,
     "ProductName": "sdfgsdgf",
     "ProductCountry": "hliuliu",
-    "ProductPrice": 876,
+    "ProductPrice": 876.0,
     "ProductDescription": "iuglihg",
     "ProductEnterCount": 654,
     "ProductEnterData": "5/7/2024 4:26:35 PM",
-    "RemainingProductCount": 600
+    "RemainingProductCount": 300
   },
   {
-    "Id": 3,
+    "Id": 2,
     "ProductName": "syjryj",
     "ProductCountry": "ljhglj",
-    "ProductPrice": 123,
+    "ProductPrice": 123.0,
     "ProductDescription": "ljghljh",
     "ProductEnterCount": 867,
     "ProductEnterData": "5/7/2024 4:50:19 PM",
-    "RemainingProductCount": 867
+    "RemainingProductCount": 400
   },
   {
-    "Id": 4,
+    "Id": 3,
     "ProductName": "kjgfik",
     "ProductCountry": "kgfkuytgf",
-    "ProductPrice": 87,
+    "ProductPrice": 87.0,
     "ProductDescription": "lkgkjhgkjhg",
     "ProductEnterCount": 76,
     "ProductEnterData": "5/7/2024 4:50:37 PM",
-    "RemainingProductCount": 76
+    "RemainingProductCount": 0
   }
 ]

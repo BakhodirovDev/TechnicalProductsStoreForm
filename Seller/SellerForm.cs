@@ -67,12 +67,22 @@ namespace TechnicalProductsStore.Seller
 
         private void SellerAdd_Click(object sender, EventArgs e)
         {
+            string path = @"../../../DataBase/Products.json";
+
             string pathBaskets = @"../../../Seller/Baskets/baskets.json";
-            string pathProduct = @"../../../DataBase/Product.json";
 
             var checkproduct = ReadProduct(int.Parse(SellerIDTB.Text));
 
-            int checkproductid = checkproduct.Id;
+            int checkproductid = 0;
+            if (checkproduct != null)
+            {
+                checkproductid = checkproduct.Id;
+            }
+            else
+            {
+                MessageBox.Show("To'g'ri ma'lumot kiriting", "Ogohlantirish", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
             int qolganProduct = (int)checkproduct.RemainingProductCount - int.Parse(SellerCountTB.Text);
 
@@ -86,7 +96,7 @@ namespace TechnicalProductsStore.Seller
 
             List<Baskets> basket = new List<Baskets>();
             if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) ||
-                checkproductid <= 0 || qolganProduct <= 0)
+                checkproductid <= 0 || qolganProduct < 0)
             {
                 MessageBox.Show("To'g'ri ma'lumot kiriting", "Ogohlantirish", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -116,9 +126,21 @@ namespace TechnicalProductsStore.Seller
 
                 File.AppendAllText(pathBaskets, basketsJson + Environment.NewLine);
 
-                var productJson = JsonSerializer.Serialize(this.product, options);
-                File.WriteAllText(pathProduct, productJson);
+                //var productJson = JsonSerializer.Serialize(this.product, options);
+                //File.WriteAllText(path, productJson);
+
+
+                List<Product> kiyProduct = new List<Product>();
+
+                string ProductJsonText = File.ReadAllText(path);
+                kiyProduct = JsonConvert.DeserializeObject<List<Product>>(ProductJsonText);
+
+                kiyProduct[int.Parse(SellerIDTB.Text)-1].RemainingProductCount = qolganProduct;
+                string updatedProductJson = JsonConvert.SerializeObject(kiyProduct);
+
+                File.WriteAllText(path, updatedProductJson);
             }
+
         }
 
         private void SellerForm_FormClosed(object sender, FormClosedEventArgs e)
