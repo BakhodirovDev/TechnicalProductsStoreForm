@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "Id": 1,
     "ProductName": "sdfgsdgf",
     "ProductCountry": "hliuliu",
@@ -11,6 +12,9 @@
   },
   {
     "Id": 2,
+=======
+    "Id": 3,
+>>>>>>> b661c7064b8d2f0f66b3e37bfe510cf33766ff2c
     "ProductName": "syjryj",
     "ProductCountry": "ljhglj",
     "ProductPrice": 123.0,
@@ -27,6 +31,20 @@
     "ProductDescription": "lkgkjhgkjhg",
     "ProductEnterCount": 76,
     "ProductEnterData": "5/7/2024 4:50:37 PM",
+<<<<<<< HEAD
     "RemainingProductCount": 0
+=======
+    "RemainingProductCount": 76
+  },
+  {
+    "Id": 5,
+    "ProductName": "dsdsmld",
+    "ProductCountry": "iugsifu",
+    "ProductPrice": 123,
+    "ProductDescription": "123",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "5/7/2024 9:59:21 PM",
+    "RemainingProductCount": 12
+>>>>>>> b661c7064b8d2f0f66b3e37bfe510cf33766ff2c
   }
 ]
