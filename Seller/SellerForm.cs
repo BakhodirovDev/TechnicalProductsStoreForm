@@ -19,127 +19,131 @@ namespace TechnicalProductsStore.Seller
     public partial class SellerForm : Form
     {
 
-        int sellerID;
+        private static int sellerID;
 
         List<Product> product = new List<Product>();
         string path = @"../../../DataBase/Products.json";
-        public SellerForm(int sellerID)
+
+        List<Users> seller = new List<Users>();
+        string PathUsers = @"../../../DataBase/Users.json";
+
+        List<Baskets> baskets = new List<Baskets>();
+        string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+
+        public SellerForm(int sellerid)
         {
+
             InitializeComponent();
 
+            this.WindowState = FormWindowState.Maximized;
+
+            
+
+            if (!File.Exists(PathBaskets))
+            {
+                using (File.Create(PathBaskets)) { }
+                File.AppendAllText(PathBaskets, "[]");
+            }
+
+            if (File.Exists(PathBaskets))
+            {
+                var existingUsersJson = File.ReadAllText(PathBaskets);
+                baskets = JsonSerializer.Deserialize<List<Baskets>>(existingUsersJson);
+            }
             if (File.Exists(path))
             {
                 var existingUsersJson = File.ReadAllText(path);
                 product = JsonSerializer.Deserialize<List<Product>>(existingUsersJson);
             }
+            if (File.Exists(PathUsers))
+            {
+                var existingUsersJson = File.ReadAllText(PathUsers);
+                seller = JsonSerializer.Deserialize<List<Users>>(existingUsersJson);
+            }
+
+
 
 
             var filteredProduct = product.Where(u => u.RemainingProductCount != 0).ToList();
             dataGridView1.DataSource = product;
-            this.sellerID = sellerID;
+            sellerID = sellerid;
+
+
+            UserNameLB.Text = ReadSeller(sellerID).FullName;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void SellerSale_Click(object sender, EventArgs e)
         {
 
         }
-
+        
         public Product ReadProduct(int id)
         {
             return product.FirstOrDefault(u => u.Id == id);
         }
 
+        public Users ReadSeller(int id)
+        {
+            return seller.FirstOrDefault(u => u.ID == id);
+        }
+
+
+
         private void SellerAdd_Click(object sender, EventArgs e)
         {
-            string path = @"../../../DataBase/Products.json";
-
-            string pathBaskets = @"../../../Seller/Baskets/baskets.json";
-
-            var checkproduct = ReadProduct(int.Parse(SellerIDTB.Text));
-
-            int checkproductid = 0;
-            if (checkproduct != null)
+            try
             {
-                checkproductid = checkproduct.Id;
-            }
-            else
-            {
-                MessageBox.Show("To'g'ri ma'lumot kiriting", "Ogohlantirish", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                int CheckProductID = product.FindIndex(m => m.Id == int.Parse(SellerIDTB.Text));
 
-            int qolganProduct = (int)checkproduct.RemainingProductCount - int.Parse(SellerCountTB.Text);
+                string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
 
-            int sellerCount = int.Parse(SellerCountTB.Text); // SellerCountTB.Text ni int ga aylantirish
-            Product product = this.product.FirstOrDefault(p => p.Id == sellerCount);
 
-            if (product != null)
-            {
-                product.RemainingProductCount = qolganProduct;
-            }
-
-            List<Baskets> basket = new List<Baskets>();
-            if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) ||
-                checkproductid <= 0 || qolganProduct < 0)
-            {
-                MessageBox.Show("To'g'ri ma'lumot kiriting", "Ogohlantirish", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                Baskets baskets = new Baskets()
+                if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) || CheckProductID == -1 || (int)ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerIDTB.Text) < 0)
                 {
-                    SellerID = sellerID,
-                    SaleCount = int.Parse(SellerCountTB.Text),
-                    Id = checkproductid,
-                    ProductName = checkproduct.ProductName,
-                    ProductCountry = checkproduct.ProductCountry,
-                    ProductDescription = checkproduct.ProductDescription,
-                    ProductPrice = Convert.ToDouble(checkproduct.ProductPrice),
-                    ProductEnterCount = Convert.ToInt32(checkproduct.ProductEnterCount),
-                    ProductEnterData = DateTime.Now.ToString(),
-                    RemainingProductCount = Convert.ToInt32(qolganProduct)
-                };
-
-                var options = new JsonSerializerOptions
+                    SellerIDTB.Text = "";
+                    SellerCountTB.Text = "";
+                    MessageBox.Show("Ma'lumotlarni to'g'ri kiriting");
+                }
+                else
                 {
-                    WriteIndented = true
-                };
+                    Baskets basket = new Baskets()
+                    {
+                        SellerID = sellerID,
+                        SaleCount = int.Parse(SellerCountTB.Text),
+                        Id = CheckProductID,
+                        ProductName = ReadProduct(int.Parse(SellerIDTB.Text)).ProductName,
+                        ProductCountry = ReadProduct(int.Parse(SellerIDTB.Text)).ProductCountry,
+                        ProductDescription = ReadProduct(int.Parse(SellerIDTB.Text)).ProductDescription,
+                        ProductPrice = Convert.ToDouble(ReadProduct(int.Parse(SellerIDTB.Text)).ProductPrice),
+                        ProductEnterCount = Convert.ToInt32(ReadProduct(int.Parse(SellerIDTB.Text)).ProductEnterCount),
+                        ProductEnterData = DateTime.Now.ToString(),
+                        RemainingProductCount = Convert.ToInt32((int)ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerIDTB.Text))
+                    };
 
-                var basketsJson = JsonSerializer.Serialize(baskets, options);
+                    baskets.Add(basket);
 
-                File.AppendAllText(pathBaskets, basketsJson + Environment.NewLine);
-
-                //var productJson = JsonSerializer.Serialize(this.product, options);
-                //File.WriteAllText(path, productJson);
-
-
-                List<Product> kiyProduct = new List<Product>();
-
-                string ProductJsonText = File.ReadAllText(path);
-                kiyProduct = JsonConvert.DeserializeObject<List<Product>>(ProductJsonText);
-
-                kiyProduct[int.Parse(SellerIDTB.Text)-1].RemainingProductCount = qolganProduct;
-                string updatedProductJson = JsonConvert.SerializeObject(kiyProduct);
-
-                File.WriteAllText(path, updatedProductJson);
+                }
             }
+            catch
+            {
+                SellerIDTB.Text = "";
+                SellerCountTB.Text = "";
+                MessageBox.Show("Ma'lumotlarni to'g'ri kiriting");
+            }
+
+
 
         }
 
@@ -179,6 +183,18 @@ namespace TechnicalProductsStore.Seller
         private void SellerForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void UserNameLB_Click(object sender, EventArgs e)
+        {
         }
     }
 }

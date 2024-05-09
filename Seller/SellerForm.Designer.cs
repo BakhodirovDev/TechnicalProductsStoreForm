@@ -51,6 +51,8 @@
             SellerSale = new Button();
             SellerSearchButton = new Button();
             SellerSearchTB = new TextBox();
+            logout = new Button();
+            UserNameLB = new Label();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
@@ -69,10 +71,11 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productBindingSource;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(4, 4, 4, 4);
+            dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(999, 742);
+            dataGridView1.Size = new Size(1304, 1589);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -82,7 +85,8 @@
             idDataGridViewTextBoxColumn.HeaderText = "Id";
             idDataGridViewTextBoxColumn.MinimumWidth = 6;
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.Width = 125;
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            idDataGridViewTextBoxColumn.Width = 150;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
@@ -90,7 +94,8 @@
             productNameDataGridViewTextBoxColumn.HeaderText = "Name";
             productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            productNameDataGridViewTextBoxColumn.Width = 125;
+            productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            productNameDataGridViewTextBoxColumn.Width = 250;
             // 
             // productCountryDataGridViewTextBoxColumn
             // 
@@ -98,7 +103,8 @@
             productCountryDataGridViewTextBoxColumn.HeaderText = "Country";
             productCountryDataGridViewTextBoxColumn.MinimumWidth = 6;
             productCountryDataGridViewTextBoxColumn.Name = "productCountryDataGridViewTextBoxColumn";
-            productCountryDataGridViewTextBoxColumn.Width = 125;
+            productCountryDataGridViewTextBoxColumn.ReadOnly = true;
+            productCountryDataGridViewTextBoxColumn.Width = 250;
             // 
             // productPriceDataGridViewTextBoxColumn
             // 
@@ -106,7 +112,8 @@
             productPriceDataGridViewTextBoxColumn.HeaderText = "Price";
             productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
             productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
-            productPriceDataGridViewTextBoxColumn.Width = 125;
+            productPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            productPriceDataGridViewTextBoxColumn.Width = 150;
             // 
             // productDescriptionDataGridViewTextBoxColumn
             // 
@@ -114,7 +121,8 @@
             productDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             productDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
-            productDescriptionDataGridViewTextBoxColumn.Width = 125;
+            productDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            productDescriptionDataGridViewTextBoxColumn.Width = 200;
             // 
             // remainingProductCountDataGridViewTextBoxColumn
             // 
@@ -122,7 +130,8 @@
             remainingProductCountDataGridViewTextBoxColumn.HeaderText = "RemainingCount";
             remainingProductCountDataGridViewTextBoxColumn.MinimumWidth = 6;
             remainingProductCountDataGridViewTextBoxColumn.Name = "remainingProductCountDataGridViewTextBoxColumn";
-            remainingProductCountDataGridViewTextBoxColumn.Width = 125;
+            remainingProductCountDataGridViewTextBoxColumn.ReadOnly = true;
+            remainingProductCountDataGridViewTextBoxColumn.Width = 250;
             // 
             // productBindingSource1
             // 
@@ -137,8 +146,8 @@
             panel3.Controls.Add(SellerIDTB);
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
-            panel3.Location = new Point(1006, 134);
-            panel3.Margin = new Padding(4, 4, 4, 4);
+            panel3.Location = new Point(1335, 134);
+            panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new Size(388, 428);
             panel3.TabIndex = 8;
@@ -181,7 +190,7 @@
             // 
             SellerIDTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerIDTB.Location = new Point(45, 140);
-            SellerIDTB.Margin = new Padding(4, 4, 4, 4);
+            SellerIDTB.Margin = new Padding(4);
             SellerIDTB.Name = "SellerIDTB";
             SellerIDTB.Size = new Size(290, 40);
             SellerIDTB.TabIndex = 2;
@@ -190,7 +199,7 @@
             // 
             SellerCountTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerCountTB.Location = new Point(45, 232);
-            SellerCountTB.Margin = new Padding(4, 4, 4, 4);
+            SellerCountTB.Margin = new Padding(4);
             SellerCountTB.Name = "SellerCountTB";
             SellerCountTB.Size = new Size(290, 40);
             SellerCountTB.TabIndex = 1;
@@ -201,7 +210,7 @@
             SellerAdd.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerAdd.ForeColor = Color.FromArgb(192, 0, 0);
             SellerAdd.Location = new Point(100, 300);
-            SellerAdd.Margin = new Padding(4, 4, 4, 4);
+            SellerAdd.Margin = new Padding(4);
             SellerAdd.Name = "SellerAdd";
             SellerAdd.Size = new Size(178, 52);
             SellerAdd.TabIndex = 0;
@@ -213,8 +222,8 @@
             // 
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
-            panel4.Location = new Point(1006, 560);
-            panel4.Margin = new Padding(4, 4, 4, 4);
+            panel4.Location = new Point(1335, 560);
+            panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
             panel4.Size = new Size(388, 189);
             panel4.TabIndex = 9;
@@ -236,7 +245,7 @@
             SellerSale.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerSale.ForeColor = Color.YellowGreen;
             SellerSale.Location = new Point(92, 71);
-            SellerSale.Margin = new Padding(4, 4, 4, 4);
+            SellerSale.Margin = new Padding(4);
             SellerSale.Name = "SellerSale";
             SellerSale.Size = new Size(194, 59);
             SellerSale.TabIndex = 0;
@@ -249,21 +258,42 @@
             SellerSearchButton.BackColor = Color.SteelBlue;
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SellerSearchButton.Location = new Point(1009, 18);
-            SellerSearchButton.Margin = new Padding(4, 4, 4, 4);
+            SellerSearchButton.Location = new Point(1337, 19);
+            SellerSearchButton.Margin = new Padding(4);
             SellerSearchButton.Name = "SellerSearchButton";
-            SellerSearchButton.Size = new Size(38, 36);
+            SellerSearchButton.Size = new Size(38, 33);
             SellerSearchButton.TabIndex = 10;
             SellerSearchButton.UseVisualStyleBackColor = false;
             SellerSearchButton.Click += SellerSearchButton_Click;
             // 
             // SellerSearchTB
             // 
-            SellerSearchTB.Location = new Point(1054, 20);
-            SellerSearchTB.Margin = new Padding(4, 4, 4, 4);
+            SellerSearchTB.Location = new Point(1383, 20);
+            SellerSearchTB.Margin = new Padding(4);
             SellerSearchTB.Name = "SellerSearchTB";
             SellerSearchTB.Size = new Size(330, 31);
             SellerSearchTB.TabIndex = 11;
+            // 
+            // logout
+            // 
+            logout.Location = new Point(2323, 1544);
+            logout.Name = "logout";
+            logout.Size = new Size(112, 34);
+            logout.TabIndex = 6;
+            logout.Text = "Logout";
+            logout.UseVisualStyleBackColor = true;
+            logout.Click += button1_Click;
+            // 
+            // UserNameLB
+            // 
+            UserNameLB.AutoSize = true;
+            UserNameLB.Font = new Font("Yu Gothic UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            UserNameLB.Location = new Point(1365, 1512);
+            UserNameLB.Name = "UserNameLB";
+            UserNameLB.Size = new Size(28, 38);
+            UserNameLB.TabIndex = 13;
+            UserNameLB.Text = "1";
+            UserNameLB.Click += UserNameLB_Click;
             // 
             // SellerForm
             // 
@@ -271,13 +301,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1391, 741);
+            ClientSize = new Size(2447, 1590);
+            Controls.Add(UserNameLB);
+            Controls.Add(logout);
             Controls.Add(SellerSearchTB);
             Controls.Add(SellerSearchButton);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
-            Margin = new Padding(4, 4, 4, 4);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4);
             Name = "SellerForm";
             Text = "SellerForm";
             FormClosed += SellerForm_FormClosed;
@@ -295,14 +328,7 @@
 
         #endregion
         private BindingSource productBindingSource;
-        private DataGridView dataGridView1;
         private BindingSource productBindingSource1;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productCountryDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
         private Panel panel3;
         private Panel panel4;
         private Label SellerAddLabel;
@@ -315,5 +341,14 @@
         private Button SellerSearchButton;
         private TextBox SellerSearchTB;
         private Label label2;
+        private Button logout;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productCountryDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
+        protected DataGridView dataGridView1;
+        private Label UserNameLB;
     }
 }
