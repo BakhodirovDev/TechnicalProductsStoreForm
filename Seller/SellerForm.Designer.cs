@@ -226,7 +226,7 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.None;
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
             panel4.Location = new Point(1675, 934);
