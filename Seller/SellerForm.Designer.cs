@@ -46,8 +46,6 @@
             SellerIDTB = new TextBox();
             SellerCountTB = new TextBox();
             SellerAdd = new Button();
-            panel4 = new Panel();
-            label2 = new Label();
             SellerSale = new Button();
             SellerSearchButton = new Button();
             SellerSearchTB = new TextBox();
@@ -59,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
             panel3.SuspendLayout();
-            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)productBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BasketList_DGV).BeginInit();
             SuspendLayout();
@@ -224,34 +221,13 @@
             SellerAdd.UseVisualStyleBackColor = false;
             SellerAdd.Click += SellerAdd_Click;
             // 
-            // panel4
-            // 
-            panel4.Anchor = AnchorStyles.None;
-            panel4.Controls.Add(label2);
-            panel4.Controls.Add(SellerSale);
-            panel4.Location = new Point(1675, 934);
-            panel4.Margin = new Padding(4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(663, 189);
-            panel4.TabIndex = 9;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(276, 31);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(115, 47);
-            label2.TabIndex = 1;
-            label2.Text = "SALE";
-            // 
             // SellerSale
             // 
+            SellerSale.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             SellerSale.BackColor = Color.Red;
             SellerSale.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerSale.ForeColor = Color.YellowGreen;
-            SellerSale.Location = new Point(239, 97);
+            SellerSale.Location = new Point(1963, 949);
             SellerSale.Margin = new Padding(4);
             SellerSale.Name = "SellerSale";
             SellerSale.Size = new Size(194, 59);
@@ -324,12 +300,12 @@
             BackColor = Color.SteelBlue;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(2447, 1590);
+            Controls.Add(SellerSale);
             Controls.Add(BasketList_DGV);
             Controls.Add(UserNameLB);
             Controls.Add(logout);
             Controls.Add(SellerSearchTB);
             Controls.Add(SellerSearchButton);
-            Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
@@ -343,8 +319,6 @@
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)productBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)BasketList_DGV).EndInit();
             ResumeLayout(false);
@@ -355,7 +329,6 @@
         private BindingSource productBindingSource;
         private BindingSource productBindingSource1;
         private Panel panel3;
-        private Panel panel4;
         private Label SellerAddLabel;
         private Label SellerID;
         private Label label1;
@@ -365,7 +338,6 @@
         private Button SellerSale;
         private Button SellerSearchButton;
         private TextBox SellerSearchTB;
-        private Label label2;
         private Button logout;
         protected DataGridView dataGridView1;
         private Label UserNameLB;
