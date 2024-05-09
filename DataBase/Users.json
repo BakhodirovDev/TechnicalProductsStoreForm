@@ -38,5 +38,13 @@
     "UserName": "behruz",
     "Password": "0216",
     "Role": "Seller"
+  },
+  {
+    "ID": 6,
+    "FullName": "a",
+    "PhoneNumber": "132132",
+    "UserName": "a",
+    "Password": "a",
+    "Role": "Seller"
   }
 ]

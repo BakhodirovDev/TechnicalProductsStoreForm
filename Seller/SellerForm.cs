@@ -29,6 +29,8 @@ namespace TechnicalProductsStore.Seller
 
         List<Baskets> baskets = new List<Baskets>();
 
+        List<HistoryWorking> historySellerWorking = new List<HistoryWorking>();
+
         public SellerForm(int sellerid)
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace TechnicalProductsStore.Seller
 
             sellerID = sellerid;
             string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+            string PathSellerHistory = @$"../../../Seller/Base/History_{sellerID}.json";
 
             if (!File.Exists(PathBaskets))
             {
@@ -51,6 +54,51 @@ namespace TechnicalProductsStore.Seller
                     baskets = JsonSerializer.Deserialize<List<Baskets>>(existingUsersJson);
                 }
             }
+
+            if (!File.Exists(PathSellerHistory))
+            {
+                using (File.Create(PathSellerHistory)) { }
+            }
+
+            if (File.Exists(PathSellerHistory))
+            {
+                var existingUsersJson = File.ReadAllText(PathSellerHistory);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    // Try to deserialize the JSON as a list
+                    try
+                    {
+                        historySellerWorking = JsonSerializer.Deserialize<List<HistoryWorking>>(existingUsersJson);
+                    }
+                    // If that fails, try to deserialize it as a single object and add it to the list
+                    catch 
+                    {
+                        var singleHistory = JsonSerializer.Deserialize<HistoryWorking>(existingUsersJson);
+                        historySellerWorking = new List<HistoryWorking> { singleHistory };
+                    }
+                }
+
+                HistoryWorking history = new HistoryWorking()
+                {
+                    SellerID = sellerID,
+                    SellerSignInTime = DateTime.Now.ToString(),                    
+                    SellerSignOutTime = null,
+                    SellerSaleCount = null,
+                    SellerSalePrice = null
+                };
+
+                historySellerWorking.Add(history);
+
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                string json = JsonSerializer.Serialize(historySellerWorking, options);
+
+                File.WriteAllText(PathSellerHistory, json);
+            }
+
             if (File.Exists(path))
             {
                 var existingUsersJson = File.ReadAllText(path);
@@ -113,6 +161,11 @@ namespace TechnicalProductsStore.Seller
         private void SellerSale_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public HistoryWorking ReadSellerHistory(int id)
+        {
+            return historySellerWorking.FirstOrDefault(u => u.SellerID == id);
         }
 
         public Product ReadProduct(int id)
@@ -186,8 +239,8 @@ namespace TechnicalProductsStore.Seller
 
                     File.WriteAllText(PathBaskets, json);
 
-                    BasketList_DGV.DataSource = null; 
-                    
+                    BasketList_DGV.DataSource = null;
+
                     BasketList_DGV.DataSource = baskets;
 
                     MessageBox.Show("Successfully");
@@ -245,12 +298,64 @@ namespace TechnicalProductsStore.Seller
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            loginForm.Show();
-            this.Hide();
-        }
+            string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+            string PathSellerHistory = @$"../../../Seller/Base/History_{sellerID}.json";
+            if (File.Exists(PathBaskets))
+            {
+                var existingUsersJson = File.ReadAllText(PathBaskets);
+                if (!string.IsNullOrEmpty(existingUsersJson))
+                {
+                    MessageBox.Show("Savatda mahsulotlar bor.");
+                }
+                else
+                {
+                    HistoryWorking historyWorking = new HistoryWorking()
+                    {
+                        SellerID = ReadSellerHistory(sellerID).SellerID,
+                        SellerSignInTime = ReadSellerHistory(sellerID).SellerSignInTime,
+                        SellerSignOutTime = DateTime.Now.ToString(),
+                        SellerSaleCount = ReadSellerHistory(sellerID).SellerSaleCount,
+                        SellerSalePrice = ReadSellerHistory(sellerID).SellerSalePrice 
+                    };
+                    historySellerWorking.Add(historyWorking);
 
+                    var options = new JsonSerializerOptions
+                    {
+                        WriteIndented = true
+                    };
+
+                    string json = JsonSerializer.Serialize(historySellerWorking, options);
+
+                    File.Delete(PathBaskets);
+
+                    if (File.Exists(PathSellerHistory))
+                    {
+                        var UsersJson = File.ReadAllText(PathSellerHistory);
+                        if (!string.IsNullOrWhiteSpace(UsersJson))
+                        {
+                            var historySellerWorking = JsonSerializer.Deserialize<List<HistoryWorking>>(UsersJson);
+
+                            // Assuming you want to update the first item in the list
+                            if (historySellerWorking.Any())
+                            {
+                                historySellerWorking[0].SellerSignOutTime = DateTime.Now.ToString();
+
+                                string Sellerjson = JsonSerializer.Serialize(historySellerWorking, options);
+
+                                File.WriteAllText(PathSellerHistory, Sellerjson);
+                            }
+                        }
+                    }
+
+                    //File.Delete(PathSellerHistory);
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.StartPosition = FormStartPosition.CenterScreen;
+                    loginForm.Show();
+                    this.Hide();
+                }
+            }
+        }
+    
         private void UserNameLB_Click(object sender, EventArgs e)
         {
         }
