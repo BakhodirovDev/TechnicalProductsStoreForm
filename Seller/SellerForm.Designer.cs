@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerForm));
             productBindingSource = new BindingSource(components);
             dataGridView1 = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productCountryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            remainingProductCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productBindingSource1 = new BindingSource(components);
             panel3 = new Panel();
             SellerAddLabel = new Label();
@@ -49,12 +55,6 @@
             productBindingSource2 = new BindingSource(components);
             UserNameLB = new Label();
             BasketList_DGV = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productCountryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            remainingProductCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
@@ -70,7 +70,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
@@ -84,6 +84,60 @@
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            idDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            productNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            productNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // productCountryDataGridViewTextBoxColumn
+            // 
+            productCountryDataGridViewTextBoxColumn.DataPropertyName = "ProductCountry";
+            productCountryDataGridViewTextBoxColumn.HeaderText = "Country";
+            productCountryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            productCountryDataGridViewTextBoxColumn.Name = "productCountryDataGridViewTextBoxColumn";
+            productCountryDataGridViewTextBoxColumn.ReadOnly = true;
+            productCountryDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // productPriceDataGridViewTextBoxColumn
+            // 
+            productPriceDataGridViewTextBoxColumn.DataPropertyName = "ProductPrice";
+            productPriceDataGridViewTextBoxColumn.HeaderText = "Price";
+            productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
+            productPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            productPriceDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // productDescriptionDataGridViewTextBoxColumn
+            // 
+            productDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ProductDescription";
+            productDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            productDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
+            productDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            productDescriptionDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // remainingProductCountDataGridViewTextBoxColumn
+            // 
+            remainingProductCountDataGridViewTextBoxColumn.DataPropertyName = "RemainingProductCount";
+            remainingProductCountDataGridViewTextBoxColumn.HeaderText = "RemainingCount";
+            remainingProductCountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            remainingProductCountDataGridViewTextBoxColumn.Name = "remainingProductCountDataGridViewTextBoxColumn";
+            remainingProductCountDataGridViewTextBoxColumn.ReadOnly = true;
+            remainingProductCountDataGridViewTextBoxColumn.Width = 150;
+            // 
             // productBindingSource1
             // 
             productBindingSource1.DataSource = typeof(Class.Product);
@@ -91,14 +145,13 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(SellerAddLabel);
             panel3.Controls.Add(SellerID);
             panel3.Controls.Add(label1);
             panel3.Controls.Add(SellerIDTB);
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
-            panel3.Location = new Point(1359, 206);
+            panel3.Location = new Point(1075, 206);
             panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new Size(388, 428);
@@ -172,10 +225,10 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
-            panel4.Location = new Point(1771, 932);
+            panel4.Location = new Point(1675, 934);
             panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
             panel4.Size = new Size(663, 189);
@@ -211,7 +264,7 @@
             SellerSearchButton.BackColor = Color.SteelBlue;
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SellerSearchButton.Location = new Point(1673, 14);
+            SellerSearchButton.Location = new Point(1428, 15);
             SellerSearchButton.Margin = new Padding(4);
             SellerSearchButton.Name = "SellerSearchButton";
             SellerSearchButton.Size = new Size(35, 32);
@@ -221,7 +274,7 @@
             // 
             // SellerSearchTB
             // 
-            SellerSearchTB.Location = new Point(1335, 14);
+            SellerSearchTB.Location = new Point(1090, 15);
             SellerSearchTB.Margin = new Padding(4);
             SellerSearchTB.Name = "SellerSearchTB";
             SellerSearchTB.Size = new Size(330, 31);
@@ -229,8 +282,8 @@
             // 
             // logout
             // 
-            logout.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            logout.Location = new Point(2323, 12);
+            logout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            logout.Location = new Point(2226, 18);
             logout.Name = "logout";
             logout.Size = new Size(112, 34);
             logout.TabIndex = 6;
@@ -247,7 +300,7 @@
             UserNameLB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             UserNameLB.AutoSize = true;
             UserNameLB.Font = new Font("Yu Gothic UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            UserNameLB.Location = new Point(1923, 12);
+            UserNameLB.Location = new Point(1675, 15);
             UserNameLB.Name = "UserNameLB";
             UserNameLB.Size = new Size(28, 38);
             UserNameLB.TabIndex = 15;
@@ -255,67 +308,13 @@
             // 
             // BasketList_DGV
             // 
-            BasketList_DGV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            BasketList_DGV.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BasketList_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BasketList_DGV.Location = new Point(1771, 206);
+            BasketList_DGV.Location = new Point(1674, 206);
             BasketList_DGV.Name = "BasketList_DGV";
             BasketList_DGV.RowHeadersWidth = 62;
             BasketList_DGV.Size = new Size(664, 701);
             BasketList_DGV.TabIndex = 16;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            productNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            productNameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // productCountryDataGridViewTextBoxColumn
-            // 
-            productCountryDataGridViewTextBoxColumn.DataPropertyName = "ProductCountry";
-            productCountryDataGridViewTextBoxColumn.HeaderText = "Country";
-            productCountryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            productCountryDataGridViewTextBoxColumn.Name = "productCountryDataGridViewTextBoxColumn";
-            productCountryDataGridViewTextBoxColumn.ReadOnly = true;
-            productCountryDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // productPriceDataGridViewTextBoxColumn
-            // 
-            productPriceDataGridViewTextBoxColumn.DataPropertyName = "ProductPrice";
-            productPriceDataGridViewTextBoxColumn.HeaderText = "Price";
-            productPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
-            productPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            productPriceDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // productDescriptionDataGridViewTextBoxColumn
-            // 
-            productDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ProductDescription";
-            productDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            productDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
-            productDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            productDescriptionDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // remainingProductCountDataGridViewTextBoxColumn
-            // 
-            remainingProductCountDataGridViewTextBoxColumn.DataPropertyName = "RemainingProductCount";
-            remainingProductCountDataGridViewTextBoxColumn.HeaderText = "RemainingCount";
-            remainingProductCountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            remainingProductCountDataGridViewTextBoxColumn.Name = "remainingProductCountDataGridViewTextBoxColumn";
-            remainingProductCountDataGridViewTextBoxColumn.ReadOnly = true;
-            remainingProductCountDataGridViewTextBoxColumn.Width = 150;
             // 
             // SellerForm
             // 
