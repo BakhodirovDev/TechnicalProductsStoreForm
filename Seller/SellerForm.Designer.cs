@@ -70,6 +70,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
@@ -144,6 +145,7 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(SellerAddLabel);
             panel3.Controls.Add(SellerID);
             panel3.Controls.Add(label1);
@@ -224,7 +226,7 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
             panel4.Location = new Point(1771, 932);
@@ -281,6 +283,7 @@
             // 
             // logout
             // 
+            logout.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             logout.Location = new Point(2323, 12);
             logout.Name = "logout";
             logout.Size = new Size(112, 34);
@@ -295,6 +298,7 @@
             // 
             // UserNameLB
             // 
+            UserNameLB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             UserNameLB.AutoSize = true;
             UserNameLB.Font = new Font("Yu Gothic UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             UserNameLB.Location = new Point(1923, 12);
@@ -305,6 +309,7 @@
             // 
             // BasketList_DGV
             // 
+            BasketList_DGV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             BasketList_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             BasketList_DGV.Location = new Point(1771, 206);
             BasketList_DGV.Name = "BasketList_DGV";
