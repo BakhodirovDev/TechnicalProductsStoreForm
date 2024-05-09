@@ -70,6 +70,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -91,7 +92,7 @@
             idDataGridViewTextBoxColumn.MinimumWidth = 6;
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 150;
+            idDataGridViewTextBoxColumn.Width = 80;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
@@ -109,7 +110,7 @@
             productCountryDataGridViewTextBoxColumn.MinimumWidth = 6;
             productCountryDataGridViewTextBoxColumn.Name = "productCountryDataGridViewTextBoxColumn";
             productCountryDataGridViewTextBoxColumn.ReadOnly = true;
-            productCountryDataGridViewTextBoxColumn.Width = 200;
+            productCountryDataGridViewTextBoxColumn.Width = 150;
             // 
             // productPriceDataGridViewTextBoxColumn
             // 
@@ -225,7 +226,7 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
             panel4.Location = new Point(1675, 934);
@@ -366,15 +367,15 @@
         private TextBox SellerSearchTB;
         private Label label2;
         private Button logout;
+        protected DataGridView dataGridView1;
+        private Label UserNameLB;
+        private BindingSource productBindingSource2;
+        private DataGridView BasketList_DGV;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productCountryDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
-        protected DataGridView dataGridView1;
-        private Label UserNameLB;
-        private BindingSource productBindingSource2;
-        private DataGridView BasketList_DGV;
     }
 }
