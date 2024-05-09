@@ -28,46 +28,72 @@ namespace TechnicalProductsStore.Seller
         string PathUsers = @"../../../DataBase/Users.json";
 
         List<Baskets> baskets = new List<Baskets>();
-        string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
 
         public SellerForm(int sellerid)
         {
-
             InitializeComponent();
 
             this.WindowState = FormWindowState.Maximized;
 
-            
+            sellerID = sellerid;
+            string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
 
             if (!File.Exists(PathBaskets))
             {
                 using (File.Create(PathBaskets)) { }
-                File.AppendAllText(PathBaskets, "[]");
             }
 
             if (File.Exists(PathBaskets))
             {
                 var existingUsersJson = File.ReadAllText(PathBaskets);
-                baskets = JsonSerializer.Deserialize<List<Baskets>>(existingUsersJson);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    baskets = JsonSerializer.Deserialize<List<Baskets>>(existingUsersJson);
+                }
             }
             if (File.Exists(path))
             {
                 var existingUsersJson = File.ReadAllText(path);
-                product = JsonSerializer.Deserialize<List<Product>>(existingUsersJson);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    product = JsonSerializer.Deserialize<List<Product>>(existingUsersJson);
+                }
             }
             if (File.Exists(PathUsers))
             {
                 var existingUsersJson = File.ReadAllText(PathUsers);
-                seller = JsonSerializer.Deserialize<List<Users>>(existingUsersJson);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    seller = JsonSerializer.Deserialize<List<Users>>(existingUsersJson);
+                }
             }
 
-
-
-
             var filteredProduct = product.Where(u => u.RemainingProductCount != 0).ToList();
-            dataGridView1.DataSource = product;
-            sellerID = sellerid;
 
+            dataGridView1.DataSource = filteredProduct;
+
+            BasketList_DGV.AutoGenerateColumns = false;
+
+            BasketList_DGV.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "ProductName",
+                HeaderText = "Product Name"
+            });
+
+            BasketList_DGV.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "SaleCount",
+                HeaderText = "Sale Count"
+            });
+
+            BasketList_DGV.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "ProductPrice",
+                HeaderText = "Product Price"
+            });
+
+            BasketList_DGV.ReadOnly = true;
+            BasketList_DGV.DataSource = baskets;
 
             UserNameLB.Text = ReadSeller(sellerID).FullName;
         }
@@ -88,7 +114,7 @@ namespace TechnicalProductsStore.Seller
         {
 
         }
-        
+
         public Product ReadProduct(int id)
         {
             return product.FirstOrDefault(u => u.Id == id);
@@ -110,7 +136,7 @@ namespace TechnicalProductsStore.Seller
                 string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
 
 
-                if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) || CheckProductID == -1 || (int)ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerIDTB.Text) < 0)
+                if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) || CheckProductID == -1 || (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text)) < 0)
                 {
                     SellerIDTB.Text = "";
                     SellerCountTB.Text = "";
@@ -122,17 +148,49 @@ namespace TechnicalProductsStore.Seller
                     {
                         SellerID = sellerID,
                         SaleCount = int.Parse(SellerCountTB.Text),
-                        Id = CheckProductID,
+                        Id = int.Parse(SellerIDTB.Text),
                         ProductName = ReadProduct(int.Parse(SellerIDTB.Text)).ProductName,
                         ProductCountry = ReadProduct(int.Parse(SellerIDTB.Text)).ProductCountry,
                         ProductDescription = ReadProduct(int.Parse(SellerIDTB.Text)).ProductDescription,
                         ProductPrice = Convert.ToDouble(ReadProduct(int.Parse(SellerIDTB.Text)).ProductPrice),
                         ProductEnterCount = Convert.ToInt32(ReadProduct(int.Parse(SellerIDTB.Text)).ProductEnterCount),
                         ProductEnterData = DateTime.Now.ToString(),
-                        RemainingProductCount = Convert.ToInt32((int)ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerIDTB.Text))
+                        RemainingProductCount = (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text))
                     };
 
                     baskets.Add(basket);
+                    var options = new JsonSerializerOptions
+                    {
+                        WriteIndented = true
+                    };
+
+                    string json = JsonSerializer.Serialize(baskets, options);
+
+
+                    Product targetProduct = product.FirstOrDefault(p => p.Id == int.Parse(SellerIDTB.Text));
+
+                    if (targetProduct != null)
+                    {
+                        targetProduct.RemainingProductCount = (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text));
+                        string updatedJson = JsonSerializer.Serialize(product, options);
+                        File.WriteAllText(path, updatedJson);
+                    }
+
+                    SellerIDTB.Text = "";
+                    SellerCountTB.Text = "";
+
+
+                    var filteredProduct = product.Where(u => u.RemainingProductCount != 0).ToList();
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = filteredProduct;
+
+                    File.WriteAllText(PathBaskets, json);
+
+                    BasketList_DGV.DataSource = null; 
+                    
+                    BasketList_DGV.DataSource = baskets;
+
+                    MessageBox.Show("Successfully");
 
                 }
             }
@@ -195,6 +253,11 @@ namespace TechnicalProductsStore.Seller
 
         private void UserNameLB_Click(object sender, EventArgs e)
         {
+        }
+
+        private void BasketList_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

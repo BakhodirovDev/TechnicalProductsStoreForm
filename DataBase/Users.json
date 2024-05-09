@@ -30,5 +30,13 @@
     "UserName": "teres1111",
     "Password": "1111",
     "Role": "Seller"
+  },
+  {
+    "ID": 5,
+    "FullName": "Bahodirov Behruz",
+    "PhoneNumber": "998914050216",
+    "UserName": "behruz",
+    "Password": "0216",
+    "Role": "Seller"
   }
 ]

@@ -52,12 +52,16 @@
             SellerSearchButton = new Button();
             SellerSearchTB = new TextBox();
             logout = new Button();
+            productBindingSource2 = new BindingSource(components);
             UserNameLB = new Label();
+            BasketList_DGV = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BasketList_DGV).BeginInit();
             SuspendLayout();
             // 
             // productBindingSource
@@ -146,7 +150,7 @@
             panel3.Controls.Add(SellerIDTB);
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
-            panel3.Location = new Point(1335, 134);
+            panel3.Location = new Point(1359, 206);
             panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new Size(388, 428);
@@ -220,19 +224,20 @@
             // 
             // panel4
             // 
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
-            panel4.Location = new Point(1335, 560);
+            panel4.Location = new Point(1771, 932);
             panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(388, 189);
+            panel4.Size = new Size(663, 189);
             panel4.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(129, 5);
+            label2.Location = new Point(276, 31);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(115, 47);
@@ -244,7 +249,7 @@
             SellerSale.BackColor = Color.Red;
             SellerSale.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerSale.ForeColor = Color.YellowGreen;
-            SellerSale.Location = new Point(92, 71);
+            SellerSale.Location = new Point(239, 97);
             SellerSale.Margin = new Padding(4);
             SellerSale.Name = "SellerSale";
             SellerSale.Size = new Size(194, 59);
@@ -258,17 +263,17 @@
             SellerSearchButton.BackColor = Color.SteelBlue;
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SellerSearchButton.Location = new Point(1337, 19);
+            SellerSearchButton.Location = new Point(1673, 14);
             SellerSearchButton.Margin = new Padding(4);
             SellerSearchButton.Name = "SellerSearchButton";
-            SellerSearchButton.Size = new Size(38, 33);
+            SellerSearchButton.Size = new Size(35, 32);
             SellerSearchButton.TabIndex = 10;
             SellerSearchButton.UseVisualStyleBackColor = false;
             SellerSearchButton.Click += SellerSearchButton_Click;
             // 
             // SellerSearchTB
             // 
-            SellerSearchTB.Location = new Point(1383, 20);
+            SellerSearchTB.Location = new Point(1335, 14);
             SellerSearchTB.Margin = new Padding(4);
             SellerSearchTB.Name = "SellerSearchTB";
             SellerSearchTB.Size = new Size(330, 31);
@@ -276,7 +281,7 @@
             // 
             // logout
             // 
-            logout.Location = new Point(2323, 1544);
+            logout.Location = new Point(2323, 12);
             logout.Name = "logout";
             logout.Size = new Size(112, 34);
             logout.TabIndex = 6;
@@ -284,16 +289,28 @@
             logout.UseVisualStyleBackColor = true;
             logout.Click += button1_Click;
             // 
+            // productBindingSource2
+            // 
+            productBindingSource2.DataSource = typeof(Class.Product);
+            // 
             // UserNameLB
             // 
             UserNameLB.AutoSize = true;
             UserNameLB.Font = new Font("Yu Gothic UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            UserNameLB.Location = new Point(1365, 1512);
+            UserNameLB.Location = new Point(1923, 12);
             UserNameLB.Name = "UserNameLB";
             UserNameLB.Size = new Size(28, 38);
-            UserNameLB.TabIndex = 13;
+            UserNameLB.TabIndex = 15;
             UserNameLB.Text = "1";
-            UserNameLB.Click += UserNameLB_Click;
+            // 
+            // BasketList_DGV
+            // 
+            BasketList_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BasketList_DGV.Location = new Point(1771, 206);
+            BasketList_DGV.Name = "BasketList_DGV";
+            BasketList_DGV.RowHeadersWidth = 62;
+            BasketList_DGV.Size = new Size(664, 701);
+            BasketList_DGV.TabIndex = 16;
             // 
             // SellerForm
             // 
@@ -302,6 +319,7 @@
             BackColor = Color.SteelBlue;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(2447, 1590);
+            Controls.Add(BasketList_DGV);
             Controls.Add(UserNameLB);
             Controls.Add(logout);
             Controls.Add(SellerSearchTB);
@@ -322,6 +340,8 @@
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BasketList_DGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -350,5 +370,7 @@
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
         protected DataGridView dataGridView1;
         private Label UserNameLB;
+        private BindingSource productBindingSource2;
+        private DataGridView BasketList_DGV;
     }
 }

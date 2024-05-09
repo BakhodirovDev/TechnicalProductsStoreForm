@@ -1,0 +1,26 @@
+[
+  {
+    "SellerID": 5,
+    "SaleCount": 152,
+    "Id": 5,
+    "ProductName": "dsdsmld",
+    "ProductCountry": "iugsifu",
+    "ProductPrice": 123,
+    "ProductDescription": "123",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "5/9/2024 5:16:18 PM",
+    "RemainingProductCount": 45524339
+  },
+  {
+    "SellerID": 5,
+    "SaleCount": 54,
+    "Id": 3,
+    "ProductName": "syjryj",
+    "ProductCountry": "ljhglj",
+    "ProductPrice": 123,
+    "ProductDescription": "ljghljh",
+    "ProductEnterCount": 867,
+    "ProductEnterData": "5/9/2024 5:17:08 PM",
+    "RemainingProductCount": 453399
+  }
+]
