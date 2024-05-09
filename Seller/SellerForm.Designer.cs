@@ -80,7 +80,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1025, 1589);
+            dataGridView1.Size = new Size(1181, 1589);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -151,7 +151,7 @@
             panel3.Controls.Add(SellerIDTB);
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
-            panel3.Location = new Point(1075, 206);
+            panel3.Location = new Point(1234, 206);
             panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new Size(388, 428);
@@ -225,7 +225,7 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.Right;
             panel4.Controls.Add(label2);
             panel4.Controls.Add(SellerSale);
             panel4.Location = new Point(1675, 934);
@@ -264,7 +264,7 @@
             SellerSearchButton.BackColor = Color.SteelBlue;
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SellerSearchButton.Location = new Point(1428, 15);
+            SellerSearchButton.Location = new Point(1572, 15);
             SellerSearchButton.Margin = new Padding(4);
             SellerSearchButton.Name = "SellerSearchButton";
             SellerSearchButton.Size = new Size(35, 32);
@@ -274,7 +274,7 @@
             // 
             // SellerSearchTB
             // 
-            SellerSearchTB.Location = new Point(1090, 15);
+            SellerSearchTB.Location = new Point(1234, 15);
             SellerSearchTB.Margin = new Padding(4);
             SellerSearchTB.Name = "SellerSearchTB";
             SellerSearchTB.Size = new Size(330, 31);
@@ -300,7 +300,7 @@
             UserNameLB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             UserNameLB.AutoSize = true;
             UserNameLB.Font = new Font("Yu Gothic UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            UserNameLB.Location = new Point(1675, 15);
+            UserNameLB.Location = new Point(1781, 18);
             UserNameLB.Name = "UserNameLB";
             UserNameLB.Size = new Size(28, 38);
             UserNameLB.TabIndex = 15;
