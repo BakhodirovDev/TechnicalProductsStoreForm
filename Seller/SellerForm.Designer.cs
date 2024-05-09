@@ -227,7 +227,7 @@
             SellerSale.BackColor = Color.Red;
             SellerSale.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerSale.ForeColor = Color.YellowGreen;
-            SellerSale.Location = new Point(1963, 949);
+            SellerSale.Location = new Point(1931, 959);
             SellerSale.Margin = new Padding(4);
             SellerSale.Name = "SellerSale";
             SellerSale.Size = new Size(194, 59);
