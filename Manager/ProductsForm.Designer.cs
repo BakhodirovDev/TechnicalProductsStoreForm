@@ -53,7 +53,7 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1553, 450);
+            dataGridView1.Size = new Size(1524, 450);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -129,7 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1553, 450);
+            ClientSize = new Size(1524, 450);
             Controls.Add(dataGridView1);
             Name = "ProductsForm";
             Text = "ProductsForm";

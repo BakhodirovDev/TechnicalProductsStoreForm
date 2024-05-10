@@ -10,9 +10,6 @@
     <Compile Update="Manager\CreateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Manager\EditProductsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Manager\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
