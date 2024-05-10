@@ -82,5 +82,14 @@ namespace TechnicalProductsStore.Manager
         {
 
         }
+
+        private void SellerHistory_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ManagerForm managerForm = new ManagerForm();
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
+            managerForm.Show();
+            this.Hide();
+        }
+
     }
 }

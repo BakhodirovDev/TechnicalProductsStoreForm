@@ -218,6 +218,7 @@
             Controls.Add(dataGridView1);
             Name = "SellerHistory";
             Text = "SellerHistory";
+            FormClosed += SellerHistory_FormClosed;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)historyWorkingBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
