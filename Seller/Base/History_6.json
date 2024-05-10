@@ -1,0 +1,23 @@
+[
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "5/10/2024 8:10:15 PM",
+    "SellerSignOutTime": null,
+    "SellerSaleTotalCount": null,
+    "SellerSaleTotalPrice": null
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "5/10/2024 8:22:17 PM",
+    "SellerSignOutTime": null,
+    "SellerSaleTotalCount": null,
+    "SellerSaleTotalPrice": null
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "5/10/2024 8:23:03 PM",
+    "SellerSignOutTime": null,
+    "SellerSaleTotalCount": null,
+    "SellerSaleTotalPrice": null
+  }
+]
