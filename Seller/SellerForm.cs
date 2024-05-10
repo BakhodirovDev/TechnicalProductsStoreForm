@@ -12,6 +12,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TechnicalProductsStore.Class;
+using static System.Windows.Forms.Design.AxImporter;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace TechnicalProductsStore.Seller
@@ -28,6 +29,10 @@ namespace TechnicalProductsStore.Seller
         string PathUsers = @"../../../DataBase/Users.json";
 
         List<Baskets> baskets = new List<Baskets>();
+
+        List<Baskets> list = new List<Baskets>();
+
+        string PathBasket = @$"../../../Seller/Base/baskets_{sellerID}.json";
 
         List<HistoryWorking> historySellerWorking = new List<HistoryWorking>();
 
@@ -71,7 +76,7 @@ namespace TechnicalProductsStore.Seller
                         historySellerWorking = JsonSerializer.Deserialize<List<HistoryWorking>>(existingUsersJson);
                     }
                     // If that fails, try to deserialize it as a single object and add it to the list
-                    catch 
+                    catch
                     {
                         var singleHistory = JsonSerializer.Deserialize<HistoryWorking>(existingUsersJson);
                         historySellerWorking = new List<HistoryWorking> { singleHistory };
@@ -81,7 +86,7 @@ namespace TechnicalProductsStore.Seller
                 HistoryWorking history = new HistoryWorking()
                 {
                     SellerID = sellerID,
-                    SellerSignInTime = DateTime.Now.ToString(),                    
+                    SellerSignInTime = DateTime.Now.ToString(),
                     SellerSignOutTime = null,
                     SellerSaleCount = null,
                     SellerSalePrice = null
@@ -115,6 +120,19 @@ namespace TechnicalProductsStore.Seller
                     seller = JsonSerializer.Deserialize<List<Users>>(existingUsersJson);
                 }
             }
+
+
+            if (File.Exists(PathBasket))
+            {
+                var existingUsersJson = File.ReadAllText(PathBasket);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    list = JsonSerializer.Deserialize<List<Baskets>>(existingUsersJson);
+                }
+            }
+
+
+
 
             var filteredProduct = product.Where(u => u.RemainingProductCount != 0).ToList();
 
@@ -177,11 +195,19 @@ namespace TechnicalProductsStore.Seller
         {
             return seller.FirstOrDefault(u => u.ID == id);
         }
-
+        public Baskets ReadBaskets(int id)
+        {
+            return baskets.FirstOrDefault(u => u.Id == id);
+        }
 
 
         private void SellerAdd_Click(object sender, EventArgs e)
         {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
             try
             {
                 int CheckProductID = product.FindIndex(m => m.Id == int.Parse(SellerIDTB.Text));
@@ -197,28 +223,44 @@ namespace TechnicalProductsStore.Seller
                 }
                 else
                 {
-                    Baskets basket = new Baskets()
+
+
+
+                    Baskets targetProducts = baskets.FirstOrDefault(p => p.Id == int.Parse(SellerIDTB.Text));
+
+
+                    if (targetProducts != null)
                     {
-                        SellerID = sellerID,
-                        SaleCount = int.Parse(SellerCountTB.Text),
-                        Id = int.Parse(SellerIDTB.Text),
-                        ProductName = ReadProduct(int.Parse(SellerIDTB.Text)).ProductName,
-                        ProductCountry = ReadProduct(int.Parse(SellerIDTB.Text)).ProductCountry,
-                        ProductDescription = ReadProduct(int.Parse(SellerIDTB.Text)).ProductDescription,
-                        ProductPrice = Convert.ToDouble(ReadProduct(int.Parse(SellerIDTB.Text)).ProductPrice),
-                        ProductEnterCount = Convert.ToInt32(ReadProduct(int.Parse(SellerIDTB.Text)).ProductEnterCount),
-                        ProductEnterData = DateTime.Now.ToString(),
-                        RemainingProductCount = (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text))
-                    };
-
-                    baskets.Add(basket);
-                    var options = new JsonSerializerOptions
+                        targetProducts.SaleCount = (targetProducts.SaleCount + int.Parse(SellerCountTB.Text));
+                        double productPrice = targetProducts.ProductPrice.Value;
+                        targetProducts.ProductPrice = targetProducts.SaleCount * productPrice;
+                        string updatedJson = JsonSerializer.Serialize(baskets, options);
+                        File.WriteAllText(PathBaskets, updatedJson);
+                    }
+                    else
                     {
-                        WriteIndented = true
-                    };
+                        double productPrice = int.Parse(SellerCountTB.Text) * ReadProduct(int.Parse(SellerIDTB.Text)).ProductPrice.Value;
+                        Baskets basket = new Baskets()
+                        {
+                            SellerID = sellerID,
+                            SaleCount = int.Parse(SellerCountTB.Text),
+                            Id = int.Parse(SellerIDTB.Text),
+                            ProductName = ReadProduct(int.Parse(SellerIDTB.Text)).ProductName,
+                            ProductCountry = ReadProduct(int.Parse(SellerIDTB.Text)).ProductCountry,
+                            ProductDescription = ReadProduct(int.Parse(SellerIDTB.Text)).ProductDescription,
+                            ProductPrice = productPrice,
+                            ProductEnterCount = Convert.ToInt32(ReadProduct(int.Parse(SellerIDTB.Text)).ProductEnterCount),
+                            ProductEnterData = DateTime.Now.ToString(),
+                            RemainingProductCount = (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text))
+                        };
 
-                    string json = JsonSerializer.Serialize(baskets, options);
+                        baskets.Add(basket);
 
+
+                        string json = JsonSerializer.Serialize(baskets, options);
+
+                        File.WriteAllText(PathBaskets, json);
+                    }
 
                     Product targetProduct = product.FirstOrDefault(p => p.Id == int.Parse(SellerIDTB.Text));
 
@@ -237,7 +279,7 @@ namespace TechnicalProductsStore.Seller
                     dataGridView1.DataSource = null;
                     dataGridView1.DataSource = filteredProduct;
 
-                    File.WriteAllText(PathBaskets, json);
+
 
                     BasketList_DGV.DataSource = null;
 
@@ -253,9 +295,6 @@ namespace TechnicalProductsStore.Seller
                 SellerCountTB.Text = "";
                 MessageBox.Show("Ma'lumotlarni to'g'ri kiriting");
             }
-
-
-
         }
 
         private void SellerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -315,7 +354,7 @@ namespace TechnicalProductsStore.Seller
                         SellerSignInTime = ReadSellerHistory(sellerID).SellerSignInTime,
                         SellerSignOutTime = DateTime.Now.ToString(),
                         SellerSaleCount = ReadSellerHistory(sellerID).SellerSaleCount,
-                        SellerSalePrice = ReadSellerHistory(sellerID).SellerSalePrice 
+                        SellerSalePrice = ReadSellerHistory(sellerID).SellerSalePrice
                     };
                     historySellerWorking.Add(historyWorking);
 
@@ -355,13 +394,45 @@ namespace TechnicalProductsStore.Seller
                 }
             }
         }
-    
-        private void UserNameLB_Click(object sender, EventArgs e)
+
+        private void SellerSaleBTN_Click(object sender, EventArgs e)
         {
+
         }
 
-        private void BasketList_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
+            string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            for (int i = baskets.Count - 1; i >= 0; i--)
+            {
+                var basket = baskets[i];
+                Product targetProducts = product.FirstOrDefault(p => p.Id == basket.Id);
+
+                if (targetProducts != null)
+                {
+                    int targetProductsCount = int.Parse(ReadBaskets(basket.Id).SaleCount.ToString());
+                    targetProducts.RemainingProductCount = (targetProducts.RemainingProductCount + targetProductsCount);
+                }
+
+               
+
+                string updatedJson = JsonSerializer.Serialize(product, options);
+                File.WriteAllText(path, updatedJson);
+
+               
+                var filteredProduct = product.Where(u => u.RemainingProductCount != 0).ToList();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = filteredProduct;
+            }
+            File.WriteAllText(PathBaskets, "");
+            baskets.Clear();
+            BasketList_DGV.DataSource = null;
+            BasketList_DGV.DataSource = baskets;
 
         }
     }

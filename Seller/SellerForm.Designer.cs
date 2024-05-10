@@ -46,19 +46,22 @@
             SellerIDTB = new TextBox();
             SellerCountTB = new TextBox();
             SellerAdd = new Button();
-            SellerSale = new Button();
             SellerSearchButton = new Button();
             SellerSearchTB = new TextBox();
             logout = new Button();
             productBindingSource2 = new BindingSource(components);
             UserNameLB = new Label();
             BasketList_DGV = new DataGridView();
+            panel1 = new Panel();
+            Clear = new Button();
+            SellerSaleBTN = new Button();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)productBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BasketList_DGV).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // productBindingSource
@@ -221,21 +224,6 @@
             SellerAdd.UseVisualStyleBackColor = false;
             SellerAdd.Click += SellerAdd_Click;
             // 
-            // SellerSale
-            // 
-            SellerSale.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            SellerSale.BackColor = Color.Red;
-            SellerSale.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SellerSale.ForeColor = Color.YellowGreen;
-            SellerSale.Location = new Point(1914, 959);
-            SellerSale.Margin = new Padding(4);
-            SellerSale.Name = "SellerSale";
-            SellerSale.Size = new Size(194, 59);
-            SellerSale.TabIndex = 0;
-            SellerSale.Text = "Sale";
-            SellerSale.UseVisualStyleBackColor = false;
-            SellerSale.Click += SellerSale_Click;
-            // 
             // SellerSearchButton
             // 
             SellerSearchButton.BackColor = Color.SteelBlue;
@@ -293,6 +281,45 @@
             BasketList_DGV.Size = new Size(664, 701);
             BasketList_DGV.TabIndex = 16;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(SellerSaleBTN);
+            panel1.Controls.Add(Clear);
+            panel1.Location = new Point(1674, 982);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(664, 106);
+            panel1.TabIndex = 18;
+            // 
+            // Clear
+            // 
+            Clear.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Clear.BackColor = Color.DarkGray;
+            Clear.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Clear.ForeColor = Color.Red;
+            Clear.Location = new Point(354, 23);
+            Clear.Margin = new Padding(4);
+            Clear.Name = "Clear";
+            Clear.Size = new Size(223, 59);
+            Clear.TabIndex = 19;
+            Clear.Text = "Clear";
+            Clear.UseVisualStyleBackColor = false;
+            Clear.Click += Clear_Click;
+            // 
+            // SellerSaleBTN
+            // 
+            SellerSaleBTN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            SellerSaleBTN.BackColor = Color.LimeGreen;
+            SellerSaleBTN.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SellerSaleBTN.ForeColor = Color.DimGray;
+            SellerSaleBTN.Location = new Point(74, 23);
+            SellerSaleBTN.Margin = new Padding(4);
+            SellerSaleBTN.Name = "SellerSaleBTN";
+            SellerSaleBTN.Size = new Size(223, 59);
+            SellerSaleBTN.TabIndex = 20;
+            SellerSaleBTN.Text = "Sale";
+            SellerSaleBTN.UseVisualStyleBackColor = false;
+            SellerSaleBTN.Click += SellerSaleBTN_Click;
+            // 
             // SellerForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -300,7 +327,7 @@
             BackColor = Color.SteelBlue;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(2447, 1590);
-            Controls.Add(SellerSale);
+            Controls.Add(panel1);
             Controls.Add(BasketList_DGV);
             Controls.Add(UserNameLB);
             Controls.Add(logout);
@@ -321,6 +348,7 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)productBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)BasketList_DGV).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -349,5 +377,8 @@
         private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
+        private Panel panel1;
+        private Button Clear;
+        private Button SellerSaleBTN;
     }
 }

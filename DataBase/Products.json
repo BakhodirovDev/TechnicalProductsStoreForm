@@ -7,7 +7,7 @@
     "ProductDescription": "iuglihg",
     "ProductEnterCount": 654,
     "ProductEnterData": "5/7/2024 4:26:35 PM",
-    "RemainingProductCount": 1
+    "RemainingProductCount": 4900
   },
   {
     "Id": 3,
@@ -17,7 +17,7 @@
     "ProductDescription": "ljghljh",
     "ProductEnterCount": 867,
     "ProductEnterData": "5/7/2024 4:50:19 PM",
-    "RemainingProductCount": 453054
+    "RemainingProductCount": 453700
   },
   {
     "Id": 5,
@@ -27,6 +27,6 @@
     "ProductDescription": "123",
     "ProductEnterCount": 12,
     "ProductEnterData": "5/7/2024 9:59:21 PM",
-    "RemainingProductCount": 45518989
+    "RemainingProductCount": 45520480
   }
 ]
