@@ -54,3 +54,4 @@ node_modules/
 
 # Other specific files
 specific_file.txt
+/Seller/Base/SaleHistory_3.json

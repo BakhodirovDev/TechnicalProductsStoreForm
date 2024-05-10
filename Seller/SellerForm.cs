@@ -365,7 +365,17 @@ namespace TechnicalProductsStore.Seller
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                // product namesining ustiga bosilda name texboxga utkazib beradi
+                var selectedProducts = dataGridView1.SelectedRows[0].DataBoundItem as Product;
+                SellerIDTB.Text = selectedProducts.Id.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("some error occurd:" + ex.Message + " - " + ex.Source);
+            }
+
         }
 
         private void SellerSearchButton_Click(object sender, EventArgs e)
