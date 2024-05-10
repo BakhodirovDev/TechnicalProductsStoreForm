@@ -367,7 +367,6 @@ namespace TechnicalProductsStore.Seller
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-<<<<<<< HEAD
             try
             {
                 // product namesining ustiga bosilda name texboxga utkazib beradi
@@ -378,8 +377,6 @@ namespace TechnicalProductsStore.Seller
             {
                 MessageBox.Show("some error occurd:" + ex.Message + " - " + ex.Source);
             }
-=======
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
 
         }
 

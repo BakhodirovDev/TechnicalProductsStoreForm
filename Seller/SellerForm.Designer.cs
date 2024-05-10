@@ -81,10 +81,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-<<<<<<< HEAD
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-=======
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             dataGridView1.Size = new Size(945, 881);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
@@ -159,82 +156,48 @@
             // SellerAddLabel
             // 
             SellerAddLabel.AutoSize = true;
-<<<<<<< HEAD
             SellerAddLabel.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerAddLabel.Location = new Point(104, 30);
             SellerAddLabel.Name = "SellerAddLabel";
             SellerAddLabel.Size = new Size(85, 40);
-=======
-            SellerAddLabel.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SellerAddLabel.Location = new Point(104, 30);
-            SellerAddLabel.Name = "SellerAddLabel";
-            SellerAddLabel.Size = new Size(81, 39);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
+
             SellerAddLabel.TabIndex = 5;
             SellerAddLabel.Text = "Add";
             // 
             // SellerID
             // 
             SellerID.AutoSize = true;
-<<<<<<< HEAD
             SellerID.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerID.Location = new Point(36, 81);
             SellerID.Name = "SellerID";
             SellerID.Size = new Size(38, 27);
-=======
-            SellerID.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            SellerID.Location = new Point(36, 81);
-            SellerID.Name = "SellerID";
-            SellerID.Size = new Size(38, 29);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             SellerID.TabIndex = 4;
             SellerID.Text = "ID";
             // 
             // label1
             // 
             label1.AutoSize = true;
-<<<<<<< HEAD
             label1.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             label1.Location = new Point(36, 158);
             label1.Name = "label1";
             label1.Size = new Size(90, 27);
-=======
-            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            label1.Location = new Point(36, 158);
-            label1.Name = "label1";
-            label1.Size = new Size(81, 29);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             label1.TabIndex = 3;
             label1.Text = "Count";
             // 
             // SellerIDTB
-            // 
-<<<<<<< HEAD
+            
             SellerIDTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerIDTB.Location = new Point(36, 112);
             SellerIDTB.Name = "SellerIDTB";
             SellerIDTB.Size = new Size(233, 35);
-=======
-            SellerIDTB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            SellerIDTB.Location = new Point(36, 112);
-            SellerIDTB.Name = "SellerIDTB";
-            SellerIDTB.Size = new Size(233, 34);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             SellerIDTB.TabIndex = 2;
             // 
             // SellerCountTB
             // 
-<<<<<<< HEAD
             SellerCountTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerCountTB.Location = new Point(36, 186);
             SellerCountTB.Name = "SellerCountTB";
             SellerCountTB.Size = new Size(233, 35);
-=======
-            SellerCountTB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            SellerCountTB.Location = new Point(36, 186);
-            SellerCountTB.Name = "SellerCountTB";
-            SellerCountTB.Size = new Size(233, 34);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             SellerCountTB.TabIndex = 1;
             // 
             // SellerAdd
@@ -274,11 +237,7 @@
             // 
             logout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             logout.Location = new Point(1377, 14);
-<<<<<<< HEAD
             logout.Margin = new Padding(2);
-=======
-            logout.Margin = new Padding(2, 2, 2, 2);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             logout.Name = "logout";
             logout.Size = new Size(90, 27);
             logout.TabIndex = 6;
@@ -307,11 +266,7 @@
             BasketList_DGV.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BasketList_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             BasketList_DGV.Location = new Point(936, 165);
-<<<<<<< HEAD
             BasketList_DGV.Margin = new Padding(2);
-=======
-            BasketList_DGV.Margin = new Padding(2, 2, 2, 2);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             BasketList_DGV.Name = "BasketList_DGV";
             BasketList_DGV.RowHeadersWidth = 62;
             BasketList_DGV.Size = new Size(531, 561);
@@ -322,11 +277,7 @@
             panel1.Controls.Add(SellerSaleBTN);
             panel1.Controls.Add(Clear);
             panel1.Location = new Point(1355, 786);
-<<<<<<< HEAD
             panel1.Margin = new Padding(2);
-=======
-            panel1.Margin = new Padding(2, 2, 2, 2);
->>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
             panel1.Name = "panel1";
             panel1.Size = new Size(531, 85);
             panel1.TabIndex = 18;
