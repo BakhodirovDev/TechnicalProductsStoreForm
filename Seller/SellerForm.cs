@@ -426,7 +426,16 @@ namespace TechnicalProductsStore.Seller
                         WriteIndented = true
                     };
                     string jsonSaleHistory = File.ReadAllText(PathSaleHistory);
-                    List<HistorySale> historySale = JsonSerializer.Deserialize<List<HistorySale>>(jsonSaleHistory);
+
+                    try
+                    {
+                        List<HistorySale> historySale = JsonSerializer.Deserialize<List<HistorySale>>(jsonSaleHistory);
+                    }
+                    catch 
+                    { 
+
+                    }
+
                     string loginTime = ReadSellerHistory(sellerID).SellerSignInTime;
                     File.Delete(PathSellerHistory);
                     historySellerWorking.Clear();

@@ -40,5 +40,12 @@
     "SellerSignOutTime": "10.05.2024 20:09:33",
     "SellerSaleTotalCount": 5,
     "SellerSaleTotalPrice": 1000
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "5/10/2024 9:03:41 PM",
+    "SellerSignOutTime": "5/10/2024 9:05:37 PM",
+    "SellerSaleTotalCount": 0,
+    "SellerSaleTotalPrice": 0
   }
 ]
