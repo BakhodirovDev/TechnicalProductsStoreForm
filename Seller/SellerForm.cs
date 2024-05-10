@@ -51,6 +51,16 @@ namespace TechnicalProductsStore.Seller
 
             this.WindowState = FormWindowState.Maximized;
 
+            string folderPath = @"../../../Seller/Base";
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+;
+            
+
+
             sellerID = sellerid;
             string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
             string PathSellerHistory = @$"../../../Seller/Base/History_{sellerID}.json";
@@ -404,7 +414,7 @@ namespace TechnicalProductsStore.Seller
                         WriteIndented = true
                     };
                     string jsonSaleHistory = File.ReadAllText(PathSaleHistory);
-                    historySale = JsonSerializer.Deserialize<List<HistorySale>>(jsonSaleHistory);
+                    List<HistorySale> historySale = JsonSerializer.Deserialize<List<HistorySale>>(jsonSaleHistory);
                     string loginTime = ReadSellerHistory(sellerID).SellerSignInTime;
                     File.Delete(PathSellerHistory);
                     historySellerWorking.Clear();

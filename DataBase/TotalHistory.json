@@ -26,5 +26,12 @@
     "SellerSignOutTime": "5/10/2024 7:41:09 PM",
     "SellerSaleTotalCount": 1,
     "SellerSaleTotalPrice": 876
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "5/10/2024 7:59:25 PM",
+    "SellerSignOutTime": "5/10/2024 7:59:41 PM",
+    "SellerSaleTotalCount": 12,
+    "SellerSaleTotalPrice": 10512
   }
 ]
