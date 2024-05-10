@@ -53,8 +53,8 @@
             UserNameLB = new Label();
             BasketList_DGV = new DataGridView();
             panel1 = new Panel();
-            Clear = new Button();
             SellerSaleBTN = new Button();
+            Clear = new Button();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
@@ -285,25 +285,10 @@
             // 
             panel1.Controls.Add(SellerSaleBTN);
             panel1.Controls.Add(Clear);
-            panel1.Location = new Point(1674, 982);
+            panel1.Location = new Point(1694, 982);
             panel1.Name = "panel1";
             panel1.Size = new Size(664, 106);
             panel1.TabIndex = 18;
-            // 
-            // Clear
-            // 
-            Clear.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Clear.BackColor = Color.DarkGray;
-            Clear.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Clear.ForeColor = Color.Red;
-            Clear.Location = new Point(354, 23);
-            Clear.Margin = new Padding(4);
-            Clear.Name = "Clear";
-            Clear.Size = new Size(223, 59);
-            Clear.TabIndex = 19;
-            Clear.Text = "Clear";
-            Clear.UseVisualStyleBackColor = false;
-            Clear.Click += Clear_Click;
             // 
             // SellerSaleBTN
             // 
@@ -319,6 +304,21 @@
             SellerSaleBTN.Text = "Sale";
             SellerSaleBTN.UseVisualStyleBackColor = false;
             SellerSaleBTN.Click += SellerSaleBTN_Click;
+            // 
+            // Clear
+            // 
+            Clear.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Clear.BackColor = Color.DarkGray;
+            Clear.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Clear.ForeColor = Color.Red;
+            Clear.Location = new Point(354, 23);
+            Clear.Margin = new Padding(4);
+            Clear.Name = "Clear";
+            Clear.Size = new Size(223, 59);
+            Clear.TabIndex = 19;
+            Clear.Text = "Clear";
+            Clear.UseVisualStyleBackColor = false;
+            Clear.Click += Clear_Click;
             // 
             // SellerForm
             // 

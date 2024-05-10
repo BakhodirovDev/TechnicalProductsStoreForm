@@ -54,7 +54,10 @@ namespace TechnicalProductsStore.Manager
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            SellerHistory sellerHistory = new SellerHistory();
+            sellerHistory.StartPosition = FormStartPosition.CenterScreen;
+            sellerHistory.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
