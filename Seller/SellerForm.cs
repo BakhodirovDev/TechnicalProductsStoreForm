@@ -21,6 +21,7 @@ namespace TechnicalProductsStore.Seller
     {
 
         private static int sellerID;
+        List<Product> ComboProduct = new List<Product>();
 
         List<Product> product = new List<Product>();
         string path = @"../../../DataBase/Products.json";
@@ -48,6 +49,7 @@ namespace TechnicalProductsStore.Seller
         public SellerForm(int sellerid)
         {
             InitializeComponent();
+            SellerSearchTB.TextChanged += new EventHandler(SellerSearchTB_TextChanged);
 
             this.WindowState = FormWindowState.Maximized;
 
@@ -58,7 +60,7 @@ namespace TechnicalProductsStore.Seller
                 Directory.CreateDirectory(folderPath);
             }
 ;
-            
+
 
 
             sellerID = sellerid;
@@ -365,6 +367,7 @@ namespace TechnicalProductsStore.Seller
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
             try
             {
                 // product namesining ustiga bosilda name texboxga utkazib beradi
@@ -375,6 +378,8 @@ namespace TechnicalProductsStore.Seller
             {
                 MessageBox.Show("some error occurd:" + ex.Message + " - " + ex.Source);
             }
+=======
+>>>>>>> 7c6fa1de47ad68c881e8ff61d42206a6e0c40dca
 
         }
 
@@ -429,7 +434,7 @@ namespace TechnicalProductsStore.Seller
                     File.Delete(PathSellerHistory);
                     historySellerWorking.Clear();
 
-                    
+
                     int totalProductCount = historySale.Sum(s => s.ProductCount);
                     double totalProductPrice = historySale.Sum(s => s.ProductPrice);
 
@@ -454,7 +459,7 @@ namespace TechnicalProductsStore.Seller
                     File.Delete(PathSaleHistory);
                     File.Delete(PathBaskets);
 
-                    
+
                     LoginForm loginForm = new LoginForm();
                     loginForm.StartPosition = FormStartPosition.CenterScreen;
                     loginForm.Show();
@@ -574,6 +579,31 @@ namespace TechnicalProductsStore.Seller
             BasketList_DGV.DataSource = null;
             BasketList_DGV.DataSource = baskets;
 
+        }
+
+        private void SellerSearchTB_TextChanged(object sender, EventArgs e)
+        {
+            string pathProduct = @"../../../DataBase/Products.json";
+            if (File.Exists(pathProduct))
+            {
+                var existingProductData = File.ReadAllText(pathProduct);
+                ComboProduct = JsonSerializer.Deserialize<List<Product>>(existingProductData);
+            }
+            else
+            {
+                MessageBox.Show("Fayl eror.");
+            }
+            string searchLetter = SellerSearchTB.Text.Trim().ToLower();
+
+            if (searchLetter == null)
+            {
+                dataGridView1.DataSource = ComboProduct.Where(p => p.RemainingProductCount != 0).ToList();
+            }
+            else
+            {
+                List<Product> searchResult = ComboProduct.Where(p => p.ProductName.ToLower().StartsWith(searchLetter)).ToList();
+                dataGridView1.DataSource = searchResult;
+            }
         }
     }
 }

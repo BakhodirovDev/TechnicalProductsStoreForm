@@ -34,7 +34,6 @@
             label4 = new Label();
             label5 = new Label();
             tbProductName = new TextBox();
-            tbCountry = new TextBox();
             tbDescreption = new TextBox();
             tbPrice = new TextBox();
             tbEnterProduct = new TextBox();
@@ -43,6 +42,7 @@
             lbPriceError = new Label();
             lbEnterProductError = new Label();
             label6 = new Label();
+            comboBoxCountry = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -103,13 +103,6 @@
             tbProductName.Name = "tbProductName";
             tbProductName.Size = new Size(482, 27);
             tbProductName.TabIndex = 7;
-            // 
-            // tbCountry
-            // 
-            tbCountry.Location = new Point(199, 157);
-            tbCountry.Name = "tbCountry";
-            tbCountry.Size = new Size(482, 27);
-            tbCountry.TabIndex = 8;
             // 
             // tbDescreption
             // 
@@ -183,12 +176,22 @@
             label6.TabIndex = 19;
             label6.Text = "Welcome to the Manager";
             // 
+            // comboBoxCountry
+            // 
+            comboBoxCountry.FormattingEnabled = true;
+            comboBoxCountry.Location = new Point(198, 155);
+            comboBoxCountry.Name = "comboBoxCountry";
+            comboBoxCountry.Size = new Size(483, 28);
+            comboBoxCountry.TabIndex = 20;
+            comboBoxCountry.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // CreateProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkCyan;
             ClientSize = new Size(716, 521);
+            Controls.Add(comboBoxCountry);
             Controls.Add(label6);
             Controls.Add(lbEnterProductError);
             Controls.Add(lbPriceError);
@@ -197,7 +200,6 @@
             Controls.Add(tbEnterProduct);
             Controls.Add(tbPrice);
             Controls.Add(tbDescreption);
-            Controls.Add(tbCountry);
             Controls.Add(tbProductName);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -223,7 +225,6 @@
         private Label label4;
         private Label label5;
         private TextBox tbProductName;
-        private TextBox tbCountry;
         private TextBox tbDescreption;
         private TextBox tbPrice;
         private TextBox tbEnterProduct;
@@ -232,5 +233,6 @@
         private Label lbPriceError;
         private Label lbEnterProductError;
         private Label label6;
+        private ComboBox comboBoxCountry;
     }
 }
