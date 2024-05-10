@@ -20,16 +20,26 @@ namespace TechnicalProductsStore.Manager
 
         public int Form;
 
-        
+
         public CreateProduct(int FormID)
         {
             this.Form = FormID;
             InitializeComponent();
+            InitializeCountryComboBox();
+
 
 
 
         }
+        private void InitializeCountryComboBox()
+        {
+            // Задаем источник данных для ComboBox - значения перечисления Country
+            comboBoxCountry.DataSource = Enum.GetValues(typeof(Country));
 
+            // Устанавливаем ComboBox так, чтобы он позволял пользовательский ввод
+            comboBoxCountry.DropDownStyle = ComboBoxStyle.DropDown;
+
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -37,13 +47,17 @@ namespace TechnicalProductsStore.Manager
 
         private void AddProduct_Click(object sender, EventArgs e) // object != null
         {
+            string enteredText = comboBoxCountry.Text;
+
+
             if (string.IsNullOrWhiteSpace(tbProductName.Text) ||
                 string.IsNullOrWhiteSpace(tbDescreption.Text) ||
-                string.IsNullOrWhiteSpace(tbCountry.Text) ||
                 !double.TryParse(tbPrice.Text, out double price) || // test count transformation
                 !int.TryParse(tbEnterProduct.Text, out int enter_product) ||
                 price <= 0 || enter_product <= 0 ||
-                !Regex.IsMatch(tbCountry.Text, @"^[a-zA-Z]+$")) // test alfavit  words
+                !Regex.IsMatch(comboBoxCountry.Text, @"^[a-zA-Z]+$") ||// test alfavit  words
+                !(Enum.GetNames(typeof(Country)).Any(country => country.ToLower() == enteredText.ToLower())))
+
             {
                 lbPriceError.Text = "Bun Faqat Double qiymatlarini qabul qiladi";
                 lbEnterProductError.Text = "Bun Faqat int qiymatlarini qabul qiladi";
@@ -52,6 +66,7 @@ namespace TechnicalProductsStore.Manager
                 MessageBox.Show("To'liq va to'g'ri malumot kirriting");
                 return;
             }
+            //if (comboBoxCountry.Text != )
 
             string pathProduct = @"../../../DataBase/Products.json";
 
@@ -69,7 +84,7 @@ namespace TechnicalProductsStore.Manager
             {
                 Id = IdProductNext,
                 ProductName = tbProductName.Text,
-                ProductCountry = tbCountry.Text,
+                ProductCountry = (comboBoxCountry.Text).ToUpper(),
                 ProductDescription = tbDescreption.Text,
                 ProductPrice = Convert.ToDouble(tbPrice.Text),
                 ProductEnterCount = Convert.ToInt32(tbEnterProduct.Text),
@@ -128,10 +143,15 @@ namespace TechnicalProductsStore.Manager
         {
 
         }
-        
+
         private void CreateProduct_Mouse(object sender, MouseEventArgs e) // Mouse
         {
-            
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

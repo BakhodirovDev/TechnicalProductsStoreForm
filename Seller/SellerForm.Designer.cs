@@ -77,11 +77,10 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productBindingSource;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1181, 1589);
+            dataGridView1.Size = new Size(945, 881);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -152,62 +151,56 @@
             panel3.Controls.Add(SellerIDTB);
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
-            panel3.Location = new Point(1234, 206);
-            panel3.Margin = new Padding(4);
+            panel3.Location = new Point(987, 165);
             panel3.Name = "panel3";
-            panel3.Size = new Size(388, 428);
+            panel3.Size = new Size(310, 342);
             panel3.TabIndex = 8;
             panel3.Paint += panel3_Paint;
             // 
             // SellerAddLabel
             // 
             SellerAddLabel.AutoSize = true;
-            SellerAddLabel.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SellerAddLabel.Location = new Point(130, 38);
-            SellerAddLabel.Margin = new Padding(4, 0, 4, 0);
+            SellerAddLabel.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SellerAddLabel.Location = new Point(104, 30);
             SellerAddLabel.Name = "SellerAddLabel";
-            SellerAddLabel.Size = new Size(100, 47);
+            SellerAddLabel.Size = new Size(81, 39);
             SellerAddLabel.TabIndex = 5;
             SellerAddLabel.Text = "Add";
             // 
             // SellerID
             // 
             SellerID.AutoSize = true;
-            SellerID.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
-            SellerID.Location = new Point(45, 101);
-            SellerID.Margin = new Padding(4, 0, 4, 0);
+            SellerID.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            SellerID.Location = new Point(36, 81);
             SellerID.Name = "SellerID";
-            SellerID.Size = new Size(46, 33);
+            SellerID.Size = new Size(38, 29);
             SellerID.TabIndex = 4;
             SellerID.Text = "ID";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
-            label1.Location = new Point(45, 198);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            label1.Location = new Point(36, 158);
             label1.Name = "label1";
-            label1.Size = new Size(109, 33);
+            label1.Size = new Size(81, 29);
             label1.TabIndex = 3;
             label1.Text = "Count";
             // 
             // SellerIDTB
             // 
-            SellerIDTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
-            SellerIDTB.Location = new Point(45, 140);
-            SellerIDTB.Margin = new Padding(4);
+            SellerIDTB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            SellerIDTB.Location = new Point(36, 112);
             SellerIDTB.Name = "SellerIDTB";
-            SellerIDTB.Size = new Size(290, 40);
+            SellerIDTB.Size = new Size(233, 34);
             SellerIDTB.TabIndex = 2;
             // 
             // SellerCountTB
             // 
-            SellerCountTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
-            SellerCountTB.Location = new Point(45, 232);
-            SellerCountTB.Margin = new Padding(4);
+            SellerCountTB.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            SellerCountTB.Location = new Point(36, 186);
             SellerCountTB.Name = "SellerCountTB";
-            SellerCountTB.Size = new Size(290, 40);
+            SellerCountTB.Size = new Size(233, 34);
             SellerCountTB.TabIndex = 1;
             // 
             // SellerAdd
@@ -215,10 +208,9 @@
             SellerAdd.BackColor = Color.FromArgb(0, 192, 0);
             SellerAdd.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerAdd.ForeColor = Color.FromArgb(192, 0, 0);
-            SellerAdd.Location = new Point(100, 300);
-            SellerAdd.Margin = new Padding(4);
+            SellerAdd.Location = new Point(80, 240);
             SellerAdd.Name = "SellerAdd";
-            SellerAdd.Size = new Size(178, 52);
+            SellerAdd.Size = new Size(142, 42);
             SellerAdd.TabIndex = 0;
             SellerAdd.Text = "Add";
             SellerAdd.UseVisualStyleBackColor = false;
@@ -229,28 +221,28 @@
             SellerSearchButton.BackColor = Color.SteelBlue;
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SellerSearchButton.Location = new Point(1572, 15);
-            SellerSearchButton.Margin = new Padding(4);
+            SellerSearchButton.Location = new Point(1258, 12);
             SellerSearchButton.Name = "SellerSearchButton";
-            SellerSearchButton.Size = new Size(35, 32);
+            SellerSearchButton.Size = new Size(28, 26);
             SellerSearchButton.TabIndex = 10;
             SellerSearchButton.UseVisualStyleBackColor = false;
             SellerSearchButton.Click += SellerSearchButton_Click;
             // 
             // SellerSearchTB
             // 
-            SellerSearchTB.Location = new Point(1234, 15);
-            SellerSearchTB.Margin = new Padding(4);
+            SellerSearchTB.Location = new Point(987, 12);
             SellerSearchTB.Name = "SellerSearchTB";
-            SellerSearchTB.Size = new Size(330, 31);
+            SellerSearchTB.Size = new Size(265, 27);
             SellerSearchTB.TabIndex = 11;
+            SellerSearchTB.TextChanged += SellerSearchTB_TextChanged;
             // 
             // logout
             // 
             logout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            logout.Location = new Point(2226, 18);
+            logout.Location = new Point(1377, 14);
+            logout.Margin = new Padding(2, 2, 2, 2);
             logout.Name = "logout";
-            logout.Size = new Size(112, 34);
+            logout.Size = new Size(90, 27);
             logout.TabIndex = 6;
             logout.Text = "Logout";
             logout.UseVisualStyleBackColor = true;
@@ -265,9 +257,10 @@
             UserNameLB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             UserNameLB.AutoSize = true;
             UserNameLB.Font = new Font("Yu Gothic UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            UserNameLB.Location = new Point(1781, 18);
+            UserNameLB.Location = new Point(1425, 14);
+            UserNameLB.Margin = new Padding(2, 0, 2, 0);
             UserNameLB.Name = "UserNameLB";
-            UserNameLB.Size = new Size(28, 38);
+            UserNameLB.Size = new Size(24, 32);
             UserNameLB.TabIndex = 15;
             UserNameLB.Text = "1";
             // 
@@ -275,19 +268,21 @@
             // 
             BasketList_DGV.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BasketList_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BasketList_DGV.Location = new Point(1674, 206);
+            BasketList_DGV.Location = new Point(936, 165);
+            BasketList_DGV.Margin = new Padding(2, 2, 2, 2);
             BasketList_DGV.Name = "BasketList_DGV";
             BasketList_DGV.RowHeadersWidth = 62;
-            BasketList_DGV.Size = new Size(664, 701);
+            BasketList_DGV.Size = new Size(531, 561);
             BasketList_DGV.TabIndex = 16;
             // 
             // panel1
             // 
             panel1.Controls.Add(SellerSaleBTN);
             panel1.Controls.Add(Clear);
-            panel1.Location = new Point(1694, 982);
+            panel1.Location = new Point(1355, 786);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(664, 106);
+            panel1.Size = new Size(531, 85);
             panel1.TabIndex = 18;
             // 
             // SellerSaleBTN
@@ -296,10 +291,9 @@
             SellerSaleBTN.BackColor = Color.LimeGreen;
             SellerSaleBTN.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerSaleBTN.ForeColor = Color.DimGray;
-            SellerSaleBTN.Location = new Point(74, 23);
-            SellerSaleBTN.Margin = new Padding(4);
+            SellerSaleBTN.Location = new Point(59, 18);
             SellerSaleBTN.Name = "SellerSaleBTN";
-            SellerSaleBTN.Size = new Size(223, 59);
+            SellerSaleBTN.Size = new Size(178, 47);
             SellerSaleBTN.TabIndex = 20;
             SellerSaleBTN.Text = "Sale";
             SellerSaleBTN.UseVisualStyleBackColor = false;
@@ -311,10 +305,9 @@
             Clear.BackColor = Color.DarkGray;
             Clear.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Clear.ForeColor = Color.Red;
-            Clear.Location = new Point(354, 23);
-            Clear.Margin = new Padding(4);
+            Clear.Location = new Point(283, 18);
             Clear.Name = "Clear";
-            Clear.Size = new Size(223, 59);
+            Clear.Size = new Size(178, 47);
             Clear.TabIndex = 19;
             Clear.Text = "Clear";
             Clear.UseVisualStyleBackColor = false;
@@ -322,11 +315,11 @@
             // 
             // SellerForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(2447, 1590);
+            ClientSize = new Size(1554, 882);
             Controls.Add(panel1);
             Controls.Add(BasketList_DGV);
             Controls.Add(UserNameLB);
@@ -336,7 +329,6 @@
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4);
             Name = "SellerForm";
             Text = "SellerForm";
             FormClosed += SellerForm_FormClosed;

@@ -75,5 +75,12 @@
     "ProductCount": 12,
     "ProductPrice": 10512,
     "ProductSaleTime": "5/10/2024 7:59:39 PM"
+  },
+  {
+    "SellerID": 6,
+    "ProductID": 5,
+    "ProductCount": 5,
+    "ProductPrice": 1000,
+    "ProductSaleTime": "10.05.2024 20:09:30"
   }
 ]
