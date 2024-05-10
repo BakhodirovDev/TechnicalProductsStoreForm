@@ -8,11 +8,11 @@ namespace TechnicalProductsStore.Class
 {
     public class HistorySale 
     {
-        public int SellerID;
-        public int ProductID;
-        public int ProductCount;
-        public double ProductPrice;
-        public string? ProductSaleTime;
+        public int SellerID { get; set; }
+        public int ProductID { get; set; }
+        public int ProductCount { get; set; }
+        public double ProductPrice { get; set; }
+        public string ProductSaleTime { get; set; }
     }
 }
     

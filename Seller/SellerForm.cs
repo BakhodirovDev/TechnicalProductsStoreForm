@@ -36,6 +36,15 @@ namespace TechnicalProductsStore.Seller
 
         List<HistoryWorking> historySellerWorking = new List<HistoryWorking>();
 
+        List<HistorySale> historySales = new List<HistorySale>();
+        string PathHistorySale = @$"../../../DataBase/History.json";
+
+        List<HistorySale> historySale = new List<HistorySale>();
+        string PathSaleHistory = @$"../../../Seller/Base/SaleHistory_{sellerID}.json";
+
+        List<HistoryWorking> Working = new List<HistoryWorking>();
+        string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
+
         public SellerForm(int sellerid)
         {
             InitializeComponent();
@@ -45,11 +54,30 @@ namespace TechnicalProductsStore.Seller
             sellerID = sellerid;
             string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
             string PathSellerHistory = @$"../../../Seller/Base/History_{sellerID}.json";
+            string PathSaleHistory = @$"../../../Seller/Base/SaleHistory_{sellerID}.json";
+            string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
 
             if (!File.Exists(PathBaskets))
             {
                 using (File.Create(PathBaskets)) { }
             }
+
+            if (!File.Exists(PathHistoryWoking))
+            {
+                using (File.Create(PathHistoryWoking)) { }
+            }
+
+
+
+            if (File.Exists(PathHistoryWoking))
+            {
+                var existingUsersJson = File.ReadAllText(PathHistoryWoking);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    Working = JsonSerializer.Deserialize<List<HistoryWorking>>(existingUsersJson);
+                }
+            }
+
 
             if (File.Exists(PathBaskets))
             {
@@ -63,6 +91,10 @@ namespace TechnicalProductsStore.Seller
             if (!File.Exists(PathSellerHistory))
             {
                 using (File.Create(PathSellerHistory)) { }
+            }
+            if (!File.Exists(PathSaleHistory))
+            {
+                using (File.Create(PathSaleHistory)) { }
             }
 
             if (File.Exists(PathSellerHistory))
@@ -88,8 +120,8 @@ namespace TechnicalProductsStore.Seller
                     SellerID = sellerID,
                     SellerSignInTime = DateTime.Now.ToString(),
                     SellerSignOutTime = null,
-                    SellerSaleCount = null,
-                    SellerSalePrice = null
+                    SellerSaleTotalCount = null,
+                    SellerSaleTotalPrice = null
                 };
 
                 historySellerWorking.Add(history);
@@ -131,6 +163,22 @@ namespace TechnicalProductsStore.Seller
                 }
             }
 
+            if (File.Exists(PathHistorySale))
+            {
+                var existingUsersJson = File.ReadAllText(PathHistorySale);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    historySales = JsonSerializer.Deserialize<List<HistorySale>>(existingUsersJson);
+                }
+            }
+            if (File.Exists(PathSaleHistory))
+            {
+                var existingUsersJson = File.ReadAllText(PathSaleHistory);
+                if (!string.IsNullOrWhiteSpace(existingUsersJson))
+                {
+                    historySale = JsonSerializer.Deserialize<List<HistorySale>>(existingUsersJson);
+                }
+            }
 
 
 
@@ -215,7 +263,7 @@ namespace TechnicalProductsStore.Seller
                 string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
 
 
-                if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) || CheckProductID == -1 || (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text)) < 0)
+                if (string.IsNullOrWhiteSpace(SellerIDTB.Text) || string.IsNullOrWhiteSpace(SellerCountTB.Text) || CheckProductID == -1 || (ReadProduct(int.Parse(SellerIDTB.Text)).RemainingProductCount - int.Parse(SellerCountTB.Text)) < 0 || int.Parse(SellerCountTB.Text) <= 0)
                 {
                     SellerIDTB.Text = "";
                     SellerCountTB.Text = "";
@@ -337,8 +385,11 @@ namespace TechnicalProductsStore.Seller
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+
             string PathSellerHistory = @$"../../../Seller/Base/History_{sellerID}.json";
+            string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+            string PathSaleHistory = @$"../../../Seller/Base/SaleHistory_{sellerID}.json";
+            string PathHistorySale = @$"../../../DataBase/History.json";
             if (File.Exists(PathBaskets))
             {
                 var existingUsersJson = File.ReadAllText(PathBaskets);
@@ -348,45 +399,42 @@ namespace TechnicalProductsStore.Seller
                 }
                 else
                 {
-                    HistoryWorking historyWorking = new HistoryWorking()
-                    {
-                        SellerID = ReadSellerHistory(sellerID).SellerID,
-                        SellerSignInTime = ReadSellerHistory(sellerID).SellerSignInTime,
-                        SellerSignOutTime = DateTime.Now.ToString(),
-                        SellerSaleCount = ReadSellerHistory(sellerID).SellerSaleCount,
-                        SellerSalePrice = ReadSellerHistory(sellerID).SellerSalePrice
-                    };
-                    historySellerWorking.Add(historyWorking);
-
                     var options = new JsonSerializerOptions
                     {
                         WriteIndented = true
                     };
+                    string jsonSaleHistory = File.ReadAllText(PathSaleHistory);
+                    historySale = JsonSerializer.Deserialize<List<HistorySale>>(jsonSaleHistory);
+                    string loginTime = ReadSellerHistory(sellerID).SellerSignInTime;
+                    File.Delete(PathSellerHistory);
+                    historySellerWorking.Clear();
 
-                    string json = JsonSerializer.Serialize(historySellerWorking, options);
+                    
+                    int totalProductCount = historySale.Sum(s => s.ProductCount);
+                    double totalProductPrice = historySale.Sum(s => s.ProductPrice);
 
+                    HistoryWorking historyWork = new HistoryWorking()
+                    {
+                        SellerID = sellerID,
+                        SellerSignInTime = loginTime,
+                        SellerSignOutTime = DateTime.Now.ToString(),
+                        SellerSaleTotalCount = totalProductCount,
+                        SellerSaleTotalPrice = totalProductPrice
+                    };
+
+                    Working.Add(historyWork);
+                    string updatedJson = JsonSerializer.Serialize(Working, options);
+                    File.WriteAllText(PathHistoryWoking, updatedJson);
+
+
+
+
+
+
+                    File.Delete(PathSaleHistory);
                     File.Delete(PathBaskets);
 
-                    if (File.Exists(PathSellerHistory))
-                    {
-                        var UsersJson = File.ReadAllText(PathSellerHistory);
-                        if (!string.IsNullOrWhiteSpace(UsersJson))
-                        {
-                            var historySellerWorking = JsonSerializer.Deserialize<List<HistoryWorking>>(UsersJson);
-
-                            // Assuming you want to update the first item in the list
-                            if (historySellerWorking.Any())
-                            {
-                                historySellerWorking[0].SellerSignOutTime = DateTime.Now.ToString();
-
-                                string Sellerjson = JsonSerializer.Serialize(historySellerWorking, options);
-
-                                File.WriteAllText(PathSellerHistory, Sellerjson);
-                            }
-                        }
-                    }
-
-                    //File.Delete(PathSellerHistory);
+                    
                     LoginForm loginForm = new LoginForm();
                     loginForm.StartPosition = FormStartPosition.CenterScreen;
                     loginForm.Show();
@@ -397,7 +445,79 @@ namespace TechnicalProductsStore.Seller
 
         private void SellerSaleBTN_Click(object sender, EventArgs e)
         {
+            string PathBaskets = @$"../../../Seller/Base/baskets_{sellerID}.json";
+            if (File.Exists(PathBaskets))
+            {
 
+
+                var existingUsersJson = File.ReadAllText(PathBaskets);
+                if (!string.IsNullOrEmpty(existingUsersJson))
+                {
+                    string PathSaleHistory = @$"../../../Seller/Base/SaleHistory_{sellerID}.json";
+                    string PathHistorySale = @$"../../../DataBase/History.json";
+                    var options = new JsonSerializerOptions
+                    {
+                        WriteIndented = true
+                    };
+
+                    for (int i = baskets.Count - 1; i >= 0; i--)
+                    {
+                        var basket = baskets[i];
+                        Baskets targetProducts = baskets.FirstOrDefault(p => p.Id == basket.Id);
+
+                        if (targetProducts != null)
+                        {
+                            HistorySale historySaleObject = new HistorySale()
+                            {
+                                SellerID = sellerID,
+                                ProductID = int.Parse(ReadBaskets(basket.Id).Id.ToString()),
+                                ProductCount = int.Parse(ReadBaskets(basket.Id).SaleCount.ToString()),
+                                ProductPrice = double.Parse(ReadBaskets(basket.Id).ProductPrice.ToString()),
+                                ProductSaleTime = DateTime.Now.ToString()
+                            };
+                            historySales.Add(historySaleObject);
+                            string updatedJson = JsonSerializer.Serialize(historySales, options);
+                            File.WriteAllText(PathHistorySale, updatedJson);
+                        }
+                    }
+
+
+                    for (int i = baskets.Count - 1; i >= 0; i--)
+                    {
+                        var basket = baskets[i];
+                        Baskets targetProducts = baskets.FirstOrDefault(p => p.Id == basket.Id);
+
+                        if (targetProducts != null)
+                        {
+                            HistorySale historySaleObject = new HistorySale()
+                            {
+                                SellerID = sellerID,
+                                ProductID = int.Parse(ReadBaskets(basket.Id).Id.ToString()),
+                                ProductCount = int.Parse(ReadBaskets(basket.Id).SaleCount.ToString()),
+                                ProductPrice = double.Parse(ReadBaskets(basket.Id).ProductPrice.ToString()),
+                                ProductSaleTime = DateTime.Now.ToString()
+                            };
+                            historySale.Add(historySaleObject);
+                            string updatedJson = JsonSerializer.Serialize(historySale, options);
+                            File.WriteAllText(PathSaleHistory, updatedJson);
+                        }
+                    }
+
+
+
+
+                    File.WriteAllText(PathBaskets, "");
+                    baskets.Clear();
+                    BasketList_DGV.DataSource = null;
+                    BasketList_DGV.DataSource = baskets;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Savatda mahsulot mavjud emas");
+                }
+            }
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -419,12 +539,12 @@ namespace TechnicalProductsStore.Seller
                     targetProducts.RemainingProductCount = (targetProducts.RemainingProductCount + targetProductsCount);
                 }
 
-               
+
 
                 string updatedJson = JsonSerializer.Serialize(product, options);
                 File.WriteAllText(path, updatedJson);
 
-               
+
                 var filteredProduct = product.Where(u => u.RemainingProductCount != 0).ToList();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = filteredProduct;

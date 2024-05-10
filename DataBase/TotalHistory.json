@@ -1,0 +1,23 @@
+[
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "5/10/2024 6:03:48 PM",
+    "SellerSignOutTime": "5/10/2024 6:04:28 PM",
+    "SellerSaleTotalCount": 100,
+    "SellerSaleTotalPrice": 52962
+  },
+  {
+    "SellerID": 5,
+    "SellerSignInTime": "5/10/2024 6:07:16 PM",
+    "SellerSignOutTime": "5/10/2024 6:07:47 PM",
+    "SellerSaleTotalCount": 100,
+    "SellerSaleTotalPrice": 36396
+  },
+  {
+    "SellerID": 2,
+    "SellerSignInTime": "5/10/2024 6:08:20 PM",
+    "SellerSignOutTime": "5/10/2024 6:09:09 PM",
+    "SellerSaleTotalCount": 100,
+    "SellerSaleTotalPrice": 22842
+  }
+]

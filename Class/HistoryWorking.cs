@@ -11,7 +11,7 @@ namespace TechnicalProductsStore.Class
         public int? SellerID { get; set; }
         public string? SellerSignInTime { get; set; }
         public string? SellerSignOutTime { get; set; }
-        public int? SellerSaleCount { get; set; }
-        public double? SellerSalePrice { get; set; }
+        public int? SellerSaleTotalCount { get; set; }
+        public double? SellerSaleTotalPrice { get; set; }
     }
 }
