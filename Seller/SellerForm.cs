@@ -365,7 +365,7 @@ namespace TechnicalProductsStore.Seller
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void SellerSearchButton_Click(object sender, EventArgs e)
