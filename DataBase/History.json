@@ -82,5 +82,75 @@
     "ProductCount": 5,
     "ProductPrice": 1000,
     "ProductSaleTime": "10.05.2024 20:09:30"
+  },
+  {
+    "SellerID": 2,
+    "ProductID": 13,
+    "ProductCount": 5,
+    "ProductPrice": 1500,
+    "ProductSaleTime": "5/10/2024 9:45:35 PM"
+  },
+  {
+    "SellerID": 2,
+    "ProductID": 8,
+    "ProductCount": 5,
+    "ProductPrice": 4500,
+    "ProductSaleTime": "5/10/2024 9:45:35 PM"
+  },
+  {
+    "SellerID": 2,
+    "ProductID": 4,
+    "ProductCount": 3,
+    "ProductPrice": 2400,
+    "ProductSaleTime": "5/10/2024 9:45:35 PM"
+  },
+  {
+    "SellerID": 4,
+    "ProductID": 12,
+    "ProductCount": 5,
+    "ProductPrice": 400,
+    "ProductSaleTime": "5/10/2024 9:47:03 PM"
+  },
+  {
+    "SellerID": 4,
+    "ProductID": 10,
+    "ProductCount": 20,
+    "ProductPrice": 2000,
+    "ProductSaleTime": "5/10/2024 9:47:03 PM"
+  },
+  {
+    "SellerID": 7,
+    "ProductID": 1,
+    "ProductCount": 9,
+    "ProductPrice": 9000,
+    "ProductSaleTime": "5/12/2024 12:21:52 AM"
+  },
+  {
+    "SellerID": 5,
+    "ProductID": 18,
+    "ProductCount": 15,
+    "ProductPrice": 1800,
+    "ProductSaleTime": "5/13/2024 4:59:50 PM"
+  },
+  {
+    "SellerID": 5,
+    "ProductID": 1,
+    "ProductCount": 1,
+    "ProductPrice": 1000,
+    "ProductSaleTime": "5/13/2024 4:59:50 PM"
+  },
+  {
+    "SellerID": 5,
+    "ProductID": 10,
+    "ProductCount": 2,
+    "ProductPrice": 200,
+    "ProductSaleTime": "5/13/2024 4:59:50 PM"
+  },
+  {
+    "SellerID": 5,
+    "ProductID": 8,
+    "ProductCount": 5,
+    "ProductPrice": 4500,
+    "ProductSaleTime": "5/13/2024 4:59:50 PM"
   }
 ]

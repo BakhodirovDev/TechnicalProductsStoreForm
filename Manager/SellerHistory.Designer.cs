@@ -47,6 +47,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            notifyIcon1 = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)historyWorkingBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
@@ -201,6 +202,12 @@
             label6.Size = new Size(0, 30);
             label6.TabIndex = 12;
             // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            // 
             // SellerHistory
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -247,5 +254,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private NotifyIcon notifyIcon1;
     }
 }

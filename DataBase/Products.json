@@ -7,7 +7,7 @@
     "ProductDescription": "great",
     "ProductEnterCount": 10,
     "ProductEnterData": "05/07/2024 04:26:35 PM",
-    "RemainingProductCount": 10
+    "RemainingProductCount": 0
   },
   {
     "Id": 2,
@@ -37,7 +37,7 @@
     "ProductDescription": "professional",
     "ProductEnterCount": 12,
     "ProductEnterData": "05/10/2024 09:30:45 AM",
-    "RemainingProductCount": 12
+    "RemainingProductCount": 9
   },
   {
     "Id": 5,
@@ -77,7 +77,7 @@
     "ProductDescription": "high-flying",
     "ProductEnterCount": 10,
     "ProductEnterData": "05/14/2024 08:45:12 AM",
-    "RemainingProductCount": 10
+    "RemainingProductCount": 0
   },
   {
     "Id": 9,
@@ -97,7 +97,7 @@
     "ProductDescription": "portable",
     "ProductEnterCount": 22,
     "ProductEnterData": "05/16/2024 10:55:40 AM",
-    "RemainingProductCount": 22
+    "RemainingProductCount": 0
   },
   {
     "Id": 11,
@@ -117,7 +117,7 @@
     "ProductDescription": "data storage",
     "ProductEnterCount": 25,
     "ProductEnterData": "05/18/2024 09:40:22 AM",
-    "RemainingProductCount": 25
+    "RemainingProductCount": 20
   },
   {
     "Id": 13,
@@ -127,7 +127,7 @@
     "ProductDescription": "efficient",
     "ProductEnterCount": 15,
     "ProductEnterData": "05/19/2024 02:55:35 PM",
-    "RemainingProductCount": 15
+    "RemainingProductCount": 10
   },
   {
     "Id": 14,
@@ -177,6 +177,6 @@
     "ProductDescription": "waterproof",
     "ProductEnterCount": 20,
     "ProductEnterData": "05/24/2024 03:10:55 PM",
-    "RemainingProductCount": 15
+    "RemainingProductCount": 0
   }
 ]

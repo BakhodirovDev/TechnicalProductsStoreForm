@@ -78,7 +78,7 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productCountryDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn, productDescriptionDataGridViewTextBoxColumn, remainingProductCountDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productBindingSource;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(4, 4, 4, 4);
+            dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
@@ -149,7 +149,7 @@
             panel3.Controls.Add(SellerCountTB);
             panel3.Controls.Add(SellerAdd);
             panel3.Location = new Point(1234, 206);
-            panel3.Margin = new Padding(4, 4, 4, 4);
+            panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new Size(388, 428);
             panel3.TabIndex = 8;
@@ -192,7 +192,7 @@
             // 
             SellerIDTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerIDTB.Location = new Point(45, 140);
-            SellerIDTB.Margin = new Padding(4, 4, 4, 4);
+            SellerIDTB.Margin = new Padding(4);
             SellerIDTB.Name = "SellerIDTB";
             SellerIDTB.Size = new Size(290, 40);
             SellerIDTB.TabIndex = 2;
@@ -201,7 +201,7 @@
             // 
             SellerCountTB.Font = new Font("Stencil", 13.8F, FontStyle.Bold);
             SellerCountTB.Location = new Point(45, 232);
-            SellerCountTB.Margin = new Padding(4, 4, 4, 4);
+            SellerCountTB.Margin = new Padding(4);
             SellerCountTB.Name = "SellerCountTB";
             SellerCountTB.Size = new Size(290, 40);
             SellerCountTB.TabIndex = 1;
@@ -212,7 +212,7 @@
             SellerAdd.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerAdd.ForeColor = Color.FromArgb(192, 0, 0);
             SellerAdd.Location = new Point(100, 300);
-            SellerAdd.Margin = new Padding(4, 4, 4, 4);
+            SellerAdd.Margin = new Padding(4);
             SellerAdd.Name = "SellerAdd";
             SellerAdd.Size = new Size(178, 52);
             SellerAdd.TabIndex = 0;
@@ -226,7 +226,7 @@
             SellerSearchButton.BackgroundImage = (Image)resources.GetObject("SellerSearchButton.BackgroundImage");
             SellerSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
             SellerSearchButton.Location = new Point(1572, 15);
-            SellerSearchButton.Margin = new Padding(4, 4, 4, 4);
+            SellerSearchButton.Margin = new Padding(4);
             SellerSearchButton.Name = "SellerSearchButton";
             SellerSearchButton.Size = new Size(35, 32);
             SellerSearchButton.TabIndex = 10;
@@ -236,7 +236,7 @@
             // SellerSearchTB
             // 
             SellerSearchTB.Location = new Point(1234, 15);
-            SellerSearchTB.Margin = new Padding(4, 4, 4, 4);
+            SellerSearchTB.Margin = new Padding(4);
             SellerSearchTB.Name = "SellerSearchTB";
             SellerSearchTB.PlaceholderText = "Enter Product Name";
             SellerSearchTB.Size = new Size(330, 31);
@@ -281,6 +281,7 @@
             BasketList_DGV.RowHeadersWidth = 62;
             BasketList_DGV.Size = new Size(664, 701);
             BasketList_DGV.TabIndex = 16;
+            BasketList_DGV.CellContentClick += BasketList_DGV_CellContentClick;
             // 
             // panel1
             // 
@@ -299,7 +300,7 @@
             SellerSaleBTN.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SellerSaleBTN.ForeColor = Color.DimGray;
             SellerSaleBTN.Location = new Point(74, 22);
-            SellerSaleBTN.Margin = new Padding(4, 4, 4, 4);
+            SellerSaleBTN.Margin = new Padding(4);
             SellerSaleBTN.Name = "SellerSaleBTN";
             SellerSaleBTN.Size = new Size(222, 59);
             SellerSaleBTN.TabIndex = 20;
@@ -314,7 +315,7 @@
             Clear.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Clear.ForeColor = Color.Red;
             Clear.Location = new Point(354, 22);
-            Clear.Margin = new Padding(4, 4, 4, 4);
+            Clear.Margin = new Padding(4);
             Clear.Name = "Clear";
             Clear.Size = new Size(222, 59);
             Clear.TabIndex = 19;
@@ -338,7 +339,7 @@
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "SellerForm";
             Text = "SellerForm";
             FormClosed += SellerForm_FormClosed;

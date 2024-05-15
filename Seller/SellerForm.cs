@@ -49,6 +49,12 @@ namespace TechnicalProductsStore.Seller
         public SellerForm(int sellerid)
         {
             InitializeComponent();
+
+            this.AutoScaleMode = AutoScaleMode.Font;
+
+            // Formani maksimal holatga keltirish
+            this.WindowState = FormWindowState.Maximized;
+
             SellerSearchTB.TextChanged += new EventHandler(SellerSearchTB_TextChanged);
 
             this.WindowState = FormWindowState.Maximized;
@@ -373,7 +379,7 @@ namespace TechnicalProductsStore.Seller
                 var selectedProducts = dataGridView1.SelectedRows[0].DataBoundItem as Product;
                 SellerIDTB.Text = selectedProducts.Id.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("some error occurd:" + ex.Message + " - " + ex.Source);
             }
@@ -431,8 +437,8 @@ namespace TechnicalProductsStore.Seller
                     {
                         List<HistorySale> historySale = JsonSerializer.Deserialize<List<HistorySale>>(jsonSaleHistory);
                     }
-                    catch 
-                    { 
+                    catch
+                    {
 
                     }
 
@@ -610,6 +616,11 @@ namespace TechnicalProductsStore.Seller
                 List<Product> searchResult = ComboProduct.Where(p => p.ProductName.ToLower().StartsWith(searchLetter)).ToList();
                 dataGridView1.DataSource = searchResult;
             }
+        }
+
+        private void BasketList_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

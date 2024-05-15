@@ -116,7 +116,7 @@ namespace TechnicalProductsStore.Manager
             createProduct.Show();
             this.Hide();
         }
-        
+
         public void UpdateUser(Product product)
         {
             // Find the product
@@ -140,7 +140,7 @@ namespace TechnicalProductsStore.Manager
             };
 
             var productJson = System.Text.Json.JsonSerializer.Serialize(product, options);
-            
+
             File.WriteAllText(path, productJson);
         }
         public void DeleteProduct(int id)
@@ -178,6 +178,11 @@ namespace TechnicalProductsStore.Manager
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }

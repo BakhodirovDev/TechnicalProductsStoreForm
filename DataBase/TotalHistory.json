@@ -42,9 +42,44 @@
     "SellerSaleTotalPrice": 1000
   },
   {
-    "SellerID": 6,
-    "SellerSignInTime": "5/10/2024 9:03:41 PM",
-    "SellerSignOutTime": "5/10/2024 9:05:37 PM",
+    "SellerID": 2,
+    "SellerSignInTime": "5/10/2024 9:39:21 PM",
+    "SellerSignOutTime": "5/10/2024 9:46:01 PM",
+    "SellerSaleTotalCount": 13,
+    "SellerSaleTotalPrice": 8400
+  },
+  {
+    "SellerID": 4,
+    "SellerSignInTime": "5/10/2024 9:46:16 PM",
+    "SellerSignOutTime": "5/10/2024 9:47:14 PM",
+    "SellerSaleTotalCount": 25,
+    "SellerSaleTotalPrice": 2400
+  },
+  {
+    "SellerID": 7,
+    "SellerSignInTime": "5/12/2024 12:20:38 AM",
+    "SellerSignOutTime": "5/12/2024 12:21:56 AM",
+    "SellerSaleTotalCount": 9,
+    "SellerSaleTotalPrice": 9000
+  },
+  {
+    "SellerID": 5,
+    "SellerSignInTime": "5/13/2024 4:59:07 PM",
+    "SellerSignOutTime": "5/13/2024 4:59:52 PM",
+    "SellerSaleTotalCount": 23,
+    "SellerSaleTotalPrice": 7500
+  },
+  {
+    "SellerID": 5,
+    "SellerSignInTime": "5/14/2024 9:47:56 PM",
+    "SellerSignOutTime": "5/14/2024 9:49:12 PM",
+    "SellerSaleTotalCount": 0,
+    "SellerSaleTotalPrice": 0
+  },
+  {
+    "SellerID": 5,
+    "SellerSignInTime": "5/15/2024 7:46:53 PM",
+    "SellerSignOutTime": "5/15/2024 7:46:56 PM",
     "SellerSaleTotalCount": 0,
     "SellerSaleTotalPrice": 0
   }

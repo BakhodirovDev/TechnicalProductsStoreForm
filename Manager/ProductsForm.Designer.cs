@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             dataGridView1 = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -39,8 +42,10 @@
             productEnterDataDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             remainingProductCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productBindingSource = new BindingSource(components);
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -53,7 +58,7 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1524, 450);
+            dataGridView1.Size = new Size(1544, 658);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -125,11 +130,29 @@
             // 
             productBindingSource.DataSource = typeof(Class.Product);
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(525, 119);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(450, 450);
+            chart1.TabIndex = 1;
+            chart1.Text = "chart1";
+            chart1.Click += chart1_Click;
+            // 
             // ProductsForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1524, 450);
+            ClientSize = new Size(1544, 658);
+            Controls.Add(chart1);
             Controls.Add(dataGridView1);
             Name = "ProductsForm";
             Text = "ProductsForm";
@@ -137,6 +160,7 @@
             Load += ProductsForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
         }
 
@@ -152,5 +176,6 @@
         private DataGridViewTextBoxColumn productEnterCountDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productEnterDataDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

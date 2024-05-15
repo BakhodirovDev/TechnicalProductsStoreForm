@@ -91,5 +91,9 @@ namespace TechnicalProductsStore.Manager
             this.Hide();
         }
 
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
