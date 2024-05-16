@@ -55,7 +55,7 @@ namespace TechnicalProductsStore.Manager
                 var selectedRow = dataGridView1.SelectedRows[0];
                 var product = (Product)selectedRow.DataBoundItem;
                 UpdateUser(product); // Передача выбранного продукта для редактирования
-                                     
+
             }
             catch
             {
@@ -182,6 +182,23 @@ namespace TechnicalProductsStore.Manager
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 7 && e.Value != null)
+            {
+                int sum = Convert.ToInt32(e.Value);
+
+                if (sum < 10)
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.White;
+                }
+            }
         }
     }
 }
