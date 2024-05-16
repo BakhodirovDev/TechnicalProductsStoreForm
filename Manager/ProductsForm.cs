@@ -54,16 +54,12 @@ namespace TechnicalProductsStore.Manager
             {
                 var selectedRow = dataGridView1.SelectedRows[0];
                 var product = (Product)selectedRow.DataBoundItem;
-                UpdateUser(product);
-                dataGridView1.ContextMenuStrip.Items[0].Visible = false;
-                dataGridView1.ContextMenuStrip.Items[1].Visible = false;
-                dataGridView1.ContextMenuStrip.Items[2].Visible = true;
-                dataGridView1.ContextMenuStrip.Items[3].Visible = false;
-                selectedRow.DefaultCellStyle.BackColor = Color.Yellow;
+                UpdateUser(product); // Передача выбранного продукта для редактирования
+                                     
             }
             catch
             {
-                MessageBox.Show("To'liq qatorni tanlab keyin 'Edit' tugmasini bosing.");
+                MessageBox.Show("Please select a row and try again.");
             }
         }
         private void Save_Click(object sender, EventArgs e)
@@ -119,16 +115,9 @@ namespace TechnicalProductsStore.Manager
 
         public void UpdateUser(Product product)
         {
-            // Find the product
-            var existingProduct = this.product.FirstOrDefault(u => u.Id == product.Id);
-            if (existingProduct != null)
-            {
-
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = this.product.ToList();
-                // Save to file
-                SaveProductToFile();
-            }
+            UpdateForm updateForm = new UpdateForm(product);
+            updateForm.StartPosition = FormStartPosition.CenterScreen;
+            updateForm.Show();
         }
         public void SaveProductToFile()
         {
@@ -165,6 +154,14 @@ namespace TechnicalProductsStore.Manager
 
         private void ProductsForm_Load(object sender, EventArgs e)
         {
+
+
+        }
+        public void RefreshDataGridView() // Update datagidView
+        {
+            RefreshDataGridView();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = product.ToList();
 
 
         }
