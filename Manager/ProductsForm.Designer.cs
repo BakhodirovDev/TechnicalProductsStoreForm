@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
-            productBindingSource = new BindingSource(components);
             productBindingSource1 = new BindingSource(components);
+            productBindingSource = new BindingSource(components);
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
@@ -41,8 +41,8 @@
             dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -56,7 +56,7 @@
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1235, 526);
+            dataGridView1.Size = new Size(1639, 658);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
@@ -79,7 +79,7 @@
             dataGridViewTextBoxColumn2.HeaderText = "ProductName";
             dataGridViewTextBoxColumn2.MinimumWidth = 6;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 125;
+            dataGridViewTextBoxColumn2.Width = 250;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -87,7 +87,7 @@
             dataGridViewTextBoxColumn3.HeaderText = "ProductCountry";
             dataGridViewTextBoxColumn3.MinimumWidth = 6;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 125;
+            dataGridViewTextBoxColumn3.Width = 200;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -95,7 +95,7 @@
             dataGridViewTextBoxColumn4.HeaderText = "ProductPrice";
             dataGridViewTextBoxColumn4.MinimumWidth = 6;
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 125;
+            dataGridViewTextBoxColumn4.Width = 150;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -103,7 +103,7 @@
             dataGridViewTextBoxColumn5.HeaderText = "ProductDescription";
             dataGridViewTextBoxColumn5.MinimumWidth = 6;
             dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.Width = 125;
+            dataGridViewTextBoxColumn5.Width = 250;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -111,7 +111,7 @@
             dataGridViewTextBoxColumn6.HeaderText = "ProductEnterCount";
             dataGridViewTextBoxColumn6.MinimumWidth = 6;
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.Width = 125;
+            dataGridViewTextBoxColumn6.Width = 175;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -119,7 +119,7 @@
             dataGridViewTextBoxColumn7.HeaderText = "ProductEnterData";
             dataGridViewTextBoxColumn7.MinimumWidth = 6;
             dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            dataGridViewTextBoxColumn7.Width = 125;
+            dataGridViewTextBoxColumn7.Width = 175;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -127,13 +127,13 @@
             dataGridViewTextBoxColumn8.HeaderText = "RemainingProductCount";
             dataGridViewTextBoxColumn8.MinimumWidth = 6;
             dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.Width = 125;
+            dataGridViewTextBoxColumn8.Width = 250;
             // 
             // ProductsForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1235, 526);
+            ClientSize = new Size(1639, 658);
             Controls.Add(dataGridView1);
             Margin = new Padding(2);
             Name = "ProductsForm";
@@ -141,8 +141,8 @@
             FormClosed += ProductsForm_FormClosed;
             Load += ProductsForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -158,6 +158,7 @@
         private DataGridViewTextBoxColumn productEnterCountDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productEnterDataDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn;
+        private BindingSource productBindingSource1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -166,6 +167,5 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private BindingSource productBindingSource1;
     }
 }
