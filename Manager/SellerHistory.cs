@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -92,6 +93,83 @@ namespace TechnicalProductsStore.Manager
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tabControl = sender as TabControl;
+            Graphics g = e.Graphics;
+            Brush textBrush;
+
+            // TabControl bo'limlari (TabPage) uchun standart ko'rinishlarni sozlash
+            Rectangle tabBounds = tabControl.GetTabRect(e.Index);
+
+            if (e.State == DrawItemState.Selected)
+            {
+                // Tanlangan bo'lim uchun orqa fonni bo'yash
+                textBrush = new SolidBrush(Color.Red);
+                g.FillRectangle(Brushes.Gray, e.Bounds);
+            }
+            else
+            {
+                // Tanlanmagan bo'limlar uchun orqa fonni bo'yash
+                textBrush = new SolidBrush(e.ForeColor);
+                g.FillRectangle(Brushes.LightGray, e.Bounds);
+            }
+
+            // Matnni vertikal joylashishini aniqlash
+            string tabText = tabControl.TabPages[e.Index].Text;
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Center;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            g.DrawString(tabText, e.Font, textBrush, tabBounds, stringFormat);
+
+            // Matnni vertikal aylantirish
+            g.ResetTransform();
+            g.RotateTransform(270);
+            g.TranslateTransform(-tabBounds.Height / 2 - tabBounds.Y, tabBounds.X + tabBounds.Width / 2, MatrixOrder.Append);
+            g.DrawString(tabText, e.Font, textBrush, 0, 0);
+            g.ResetTransform();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellerHistory_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripProgressBar1_Click_1(object sender, EventArgs e)
         {
 
         }
