@@ -114,7 +114,7 @@
     "ProductName": "external hard drive",
     "ProductCountry": "Ireland",
     "ProductPrice": 80,
-    "ProductDescription": "data storage",
+    "ProductDescription": "d",
     "ProductEnterCount": 25,
     "ProductEnterData": "05/18/2024 09:40:22 AM",
     "RemainingProductCount": 20
@@ -168,15 +168,5 @@
     "ProductEnterCount": 15,
     "ProductEnterData": "05/23/2024 09:55:45 AM",
     "RemainingProductCount": 15
-  },
-  {
-    "Id": 18,
-    "ProductName": "portable speaker",
-    "ProductCountry": "USA",
-    "ProductPrice": 120,
-    "ProductDescription": "waterproof",
-    "ProductEnterCount": 20,
-    "ProductEnterData": "05/24/2024 03:10:55 PM",
-    "RemainingProductCount": 0
   }
 ]
