@@ -19,6 +19,8 @@ namespace TechnicalProductsStore.Manager
         public SellerHistory()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

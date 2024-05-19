@@ -145,8 +145,9 @@
             panel1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Inch);
             panel1.ImeMode = ImeMode.AlphaFull;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1378, 58);
+            panel1.Size = new Size(1722, 72);
             panel1.TabIndex = 13;
             panel1.Paint += panel1_Paint;
             // 
@@ -155,7 +156,8 @@
             MenuLabel.AutoSize = true;
             MenuLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.World);
             MenuLabel.ForeColor = SystemColors.ButtonHighlight;
-            MenuLabel.Location = new Point(83, 23);
+            MenuLabel.Location = new Point(104, 29);
+            MenuLabel.Margin = new Padding(4, 0, 4, 0);
             MenuLabel.Name = "MenuLabel";
             MenuLabel.Size = new Size(29, 12);
             MenuLabel.TabIndex = 1;
@@ -166,9 +168,10 @@
             MenuButton.BackColor = Color.MidnightBlue;
             MenuButton.BackgroundImage = (Image)resources.GetObject("MenuButton.BackgroundImage");
             MenuButton.BackgroundImageLayout = ImageLayout.Center;
-            MenuButton.Location = new Point(12, 7);
+            MenuButton.Location = new Point(15, 9);
+            MenuButton.Margin = new Padding(4, 4, 4, 4);
             MenuButton.Name = "MenuButton";
-            MenuButton.Size = new Size(46, 43);
+            MenuButton.Size = new Size(58, 54);
             MenuButton.TabIndex = 0;
             MenuButton.UseVisualStyleBackColor = false;
             MenuButton.Click += MenuButton_Click;
@@ -183,40 +186,40 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            label6.Location = new Point(899, 496);
+            label6.Location = new Point(1124, 620);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(0, 25);
+            label6.Size = new Size(0, 30);
             label6.TabIndex = 12;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            label5.Location = new Point(724, 496);
+            label5.Location = new Point(905, 620);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(0, 25);
+            label5.Size = new Size(0, 30);
             label5.TabIndex = 11;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            label4.Location = new Point(946, 451);
+            label4.Location = new Point(1182, 564);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(0, 25);
+            label4.Size = new Size(0, 30);
             label4.TabIndex = 10;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            label1.Location = new Point(724, 451);
+            label1.Location = new Point(905, 564);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 25);
+            label1.Size = new Size(0, 30);
             label1.TabIndex = 9;
             // 
             // historySaleBindingSource
@@ -233,9 +236,13 @@
             // 
             // tabPage2
             // 
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 34);
+            tabPage2.Margin = new Padding(4, 4, 4, 4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1032, 620);
+            tabPage2.Padding = new Padding(4, 4, 4, 4);
+            tabPage2.Size = new Size(130, 778);
             tabPage2.Size = new Size(102, 620);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
@@ -250,9 +257,13 @@
             tabPage1.Controls.Add(buttonOK);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label3);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 34);
+            tabPage1.Margin = new Padding(4, 4, 4, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1057, 620);
+            tabPage1.Padding = new Padding(4, 4, 4, 4);
+            tabPage1.Size = new Size(130, 778);
             tabPage1.Size = new Size(15, 620);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
@@ -263,11 +274,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn1, sellerSignInTimeDataGridViewTextBoxColumn1, sellerSignOutTimeDataGridViewTextBoxColumn1, sellerSaleTotalCountDataGridViewTextBoxColumn1, sellerSaleTotalPriceDataGridViewTextBoxColumn1 });
             dataGridView1.Dock = DockStyle.Left;
-            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Location = new Point(4, 4);
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(689, 614);
+            dataGridView1.Size = new Size(861, 770);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -314,28 +325,28 @@
             // dateTimePickerEnd
             // 
             dateTimePickerEnd.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            dateTimePickerEnd.Location = new Point(744, 130);
+            dateTimePickerEnd.Location = new Point(930, 162);
             dateTimePickerEnd.Margin = new Padding(2);
             dateTimePickerEnd.Name = "dateTimePickerEnd";
-            dateTimePickerEnd.Size = new Size(382, 31);
+            dateTimePickerEnd.Size = new Size(476, 35);
             dateTimePickerEnd.TabIndex = 3;
             // 
             // dateTimePickerStart
             // 
             dateTimePickerStart.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            dateTimePickerStart.Location = new Point(744, 47);
+            dateTimePickerStart.Location = new Point(930, 59);
             dateTimePickerStart.Margin = new Padding(2);
             dateTimePickerStart.Name = "dateTimePickerStart";
-            dateTimePickerStart.Size = new Size(382, 31);
+            dateTimePickerStart.Size = new Size(476, 35);
             dateTimePickerStart.TabIndex = 2;
             // 
             // buttonOK
             // 
             buttonOK.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            buttonOK.Location = new Point(844, 204);
+            buttonOK.Location = new Point(1055, 255);
             buttonOK.Margin = new Padding(2);
             buttonOK.Name = "buttonOK";
-            buttonOK.Size = new Size(182, 30);
+            buttonOK.Size = new Size(228, 38);
             buttonOK.TabIndex = 4;
             buttonOK.Text = "Search";
             buttonOK.UseVisualStyleBackColor = true;
@@ -345,29 +356,33 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            label2.Location = new Point(528, 93);
+            label2.Location = new Point(660, 116);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(0, 23);
+            label2.Size = new Size(0, 29);
             label2.TabIndex = 7;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            label3.Location = new Point(528, 191);
+            label3.Location = new Point(660, 239);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(0, 23);
+            label3.Size = new Size(0, 29);
             label3.TabIndex = 8;
             // 
             // History1TabControl
             // 
             History1TabControl.Controls.Add(tabPage1);
             History1TabControl.Controls.Add(tabPage2);
+            History1TabControl.Location = new Point(340, 828);
+            History1TabControl.Margin = new Padding(4, 4, 4, 4);
             History1TabControl.Location = new Point(1264, 80);
             History1TabControl.Name = "History1TabControl";
             History1TabControl.SelectedIndex = 0;
+            History1TabControl.Size = new Size(1065, 653);
+            History1TabControl.Size = new Size(138, 816);
             History1TabControl.Size = new Size(23, 653);
             History1TabControl.TabIndex = 15;
             // 
@@ -383,26 +398,29 @@
             MenuPanel.Controls.Add(Sellers2Button);
             MenuPanel.Controls.Add(History2Button);
             MenuPanel.Dock = DockStyle.Left;
-            MenuPanel.Location = new Point(0, 58);
+            MenuPanel.Location = new Point(0, 72);
+            MenuPanel.Margin = new Padding(4, 4, 4, 4);
             MenuPanel.Name = "MenuPanel";
-            MenuPanel.Size = new Size(246, 706);
+            MenuPanel.Size = new Size(308, 883);
             MenuPanel.TabIndex = 14;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.PapayaWhip;
-            pictureBox3.Location = new Point(0, 461);
+            pictureBox3.Location = new Point(0, 576);
+            pictureBox3.Margin = new Padding(4, 4, 4, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(15, 242);
+            pictureBox3.Size = new Size(19, 302);
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.PapayaWhip;
-            pictureBox2.Location = new Point(0, 229);
+            pictureBox2.Location = new Point(0, 286);
+            pictureBox2.Margin = new Padding(4, 4, 4, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(10, 229);
+            pictureBox2.Size = new Size(12, 286);
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
@@ -410,16 +428,18 @@
             // 
             pictureBox1.BackColor = Color.PapayaWhip;
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(10, 230);
+            pictureBox1.Size = new Size(12, 288);
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
             // Product1Button
             // 
-            Product1Button.Location = new Point(12, 461);
+            Product1Button.Location = new Point(15, 576);
+            Product1Button.Margin = new Padding(4, 4, 4, 4);
             Product1Button.Name = "Product1Button";
-            Product1Button.Size = new Size(86, 245);
+            Product1Button.Size = new Size(108, 306);
             Product1Button.TabIndex = 5;
             Product1Button.Text = "button6";
             Product1Button.UseVisualStyleBackColor = true;
@@ -427,9 +447,10 @@
             // 
             // Sellers1Button
             // 
-            Sellers1Button.Location = new Point(12, 226);
+            Sellers1Button.Location = new Point(15, 282);
+            Sellers1Button.Margin = new Padding(4, 4, 4, 4);
             Sellers1Button.Name = "Sellers1Button";
-            Sellers1Button.Size = new Size(85, 237);
+            Sellers1Button.Size = new Size(106, 296);
             Sellers1Button.TabIndex = 4;
             Sellers1Button.Text = "button5";
             Sellers1Button.UseVisualStyleBackColor = true;
@@ -437,9 +458,10 @@
             // 
             // History1Button
             // 
-            History1Button.Location = new Point(12, 0);
+            History1Button.Location = new Point(15, 0);
+            History1Button.Margin = new Padding(4, 4, 4, 4);
             History1Button.Name = "History1Button";
-            History1Button.Size = new Size(86, 229);
+            History1Button.Size = new Size(108, 286);
             History1Button.TabIndex = 3;
             History1Button.Text = "button1";
             History1Button.UseVisualStyleBackColor = true;
@@ -447,9 +469,10 @@
             // 
             // Product2Button
             // 
-            Product2Button.Location = new Point(95, 461);
+            Product2Button.Location = new Point(119, 576);
+            Product2Button.Margin = new Padding(4, 4, 4, 4);
             Product2Button.Name = "Product2Button";
-            Product2Button.Size = new Size(150, 242);
+            Product2Button.Size = new Size(188, 302);
             Product2Button.TabIndex = 2;
             Product2Button.Text = "Product";
             Product2Button.UseVisualStyleBackColor = true;
@@ -457,9 +480,10 @@
             // 
             // Sellers2Button
             // 
-            Sellers2Button.Location = new Point(95, 226);
+            Sellers2Button.Location = new Point(119, 282);
+            Sellers2Button.Margin = new Padding(4, 4, 4, 4);
             Sellers2Button.Name = "Sellers2Button";
-            Sellers2Button.Size = new Size(152, 237);
+            Sellers2Button.Size = new Size(190, 296);
             Sellers2Button.TabIndex = 1;
             Sellers2Button.Text = "Seller";
             Sellers2Button.UseVisualStyleBackColor = true;
@@ -467,9 +491,10 @@
             // 
             // History2Button
             // 
-            History2Button.Location = new Point(95, 0);
+            History2Button.Location = new Point(119, 0);
+            History2Button.Margin = new Padding(4, 4, 4, 4);
             History2Button.Name = "History2Button";
-            History2Button.Size = new Size(152, 229);
+            History2Button.Size = new Size(190, 286);
             History2Button.TabIndex = 0;
             History2Button.Text = "Report";
             History2Button.UseVisualStyleBackColor = true;
@@ -482,14 +507,25 @@
             History2TabControl.Controls.Add(tabPage7);
             History2TabControl.Controls.Add(tabPage8);
             History2TabControl.ItemSize = new Size(74, 25);
+            History2TabControl.Location = new Point(486, 828);
+            History2TabControl.Margin = new Padding(4, 4, 4, 4);
             History2TabControl.Location = new Point(262, 64);
             History2TabControl.Name = "History2TabControl";
             History2TabControl.SelectedIndex = 0;
+            History2TabControl.Size = new Size(214, 816);
             History2TabControl.Size = new Size(679, 700);
             History2TabControl.TabIndex = 16;
             // 
             // tP3
             // 
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Margin = new Padding(4, 4, 4, 4);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(4, 4, 4, 4);
+            tabPage3.Size = new Size(206, 783);
+            tabPage3.TabIndex = 0;
+            tabPage3.Text = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
             tP3.Controls.Add(dataGridView2);
             tP3.Location = new Point(4, 29);
             tP3.Name = "tP3";
@@ -503,8 +539,12 @@
             // tabPage4
             // 
             tabPage4.Location = new Point(4, 29);
+            tabPage4.Margin = new Padding(4, 4, 4, 4);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(165, 620);
+            tabPage4.Padding = new Padding(4, 4, 4, 4);
+            tabPage4.Size = new Size(206, 783);
             tabPage4.Size = new Size(671, 667);
             tabPage4.TabIndex = 1;
             tabPage4.Text = " ";
@@ -513,8 +553,12 @@
             // tabPage7
             // 
             tabPage7.Location = new Point(4, 29);
+            tabPage7.Margin = new Padding(4, 4, 4, 4);
             tabPage7.Name = "tabPage7";
             tabPage7.Padding = new Padding(3);
+            tabPage7.Size = new Size(165, 620);
+            tabPage7.Padding = new Padding(4, 4, 4, 4);
+            tabPage7.Size = new Size(206, 783);
             tabPage7.Size = new Size(671, 667);
             tabPage7.TabIndex = 2;
             tabPage7.Text = "tabPage7";
@@ -523,8 +567,12 @@
             // tabPage8
             // 
             tabPage8.Location = new Point(4, 29);
+            tabPage8.Margin = new Padding(4, 4, 4, 4);
             tabPage8.Name = "tabPage8";
             tabPage8.Padding = new Padding(3);
+            tabPage8.Size = new Size(165, 620);
+            tabPage8.Padding = new Padding(4, 4, 4, 4);
+            tabPage8.Size = new Size(206, 783);
             tabPage8.Size = new Size(671, 667);
             tabPage8.TabIndex = 3;
             tabPage8.Text = "tabPage8";
@@ -534,16 +582,22 @@
             // 
             History3TabControl1.Controls.Add(tabPage5);
             History3TabControl1.Controls.Add(tabPage6);
+            History3TabControl1.Location = new Point(317, 80);
+            History3TabControl1.Margin = new Padding(4, 4, 4, 4);
             History3TabControl1.Location = new Point(1293, 80);
             History3TabControl1.Name = "History3TabControl1";
             History3TabControl1.SelectedIndex = 0;
+            History3TabControl1.Size = new Size(1392, 870);
             History3TabControl1.Size = new Size(16, 672);
             History3TabControl1.TabIndex = 17;
             // 
             // tabPage5
             // 
-            tabPage5.Location = new Point(4, 29);
+            tabPage5.Location = new Point(4, 34);
+            tabPage5.Margin = new Padding(4, 4, 4, 4);
             tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(4, 4, 4, 4);
+            tabPage5.Size = new Size(1384, 832);
             tabPage5.Padding = new Padding(3);
             tabPage5.Size = new Size(8, 639);
             tabPage5.TabIndex = 0;
@@ -552,9 +606,13 @@
             // 
             // tabPage6
             // 
-            tabPage6.Location = new Point(4, 29);
+            tabPage6.Location = new Point(4, 34);
+            tabPage6.Margin = new Padding(4, 4, 4, 4);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(3);
+            tabPage6.Size = new Size(275, 639);
+            tabPage6.Padding = new Padding(4, 4, 4, 4);
+            tabPage6.Size = new Size(346, 802);
             tabPage6.Size = new Size(551, 639);
             tabPage6.TabIndex = 1;
             tabPage6.Text = "tabPage6";
@@ -571,9 +629,9 @@
             // 
             // SellerHistory
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1378, 764);
+            ClientSize = new Size(1722, 955);
             Controls.Add(History3TabControl1);
             Controls.Add(History2TabControl);
             Controls.Add(History1TabControl);
