@@ -518,14 +518,14 @@
             // 
             // tP3
             // 
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Margin = new Padding(4, 4, 4, 4);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(4, 4, 4, 4);
-            tabPage3.Size = new Size(206, 783);
-            tabPage3.TabIndex = 0;
-            tabPage3.Text = "tabPage3";
-            tabPage3.UseVisualStyleBackColor = true;
+            tP3.Location = new Point(4, 29);
+            tP3.Margin = new Padding(4, 4, 4, 4);
+            tP3.Name = "tabPage3";
+            tP3.Padding = new Padding(4, 4, 4, 4);
+            tP3.Size = new Size(206, 783);
+            tP3.TabIndex = 0;
+            tP3.Text = "tabPage3";
+            tP3.UseVisualStyleBackColor = true;
             tP3.Controls.Add(dataGridView2);
             tP3.Location = new Point(4, 29);
             tP3.Name = "tP3";
