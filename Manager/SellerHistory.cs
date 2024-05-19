@@ -195,12 +195,12 @@ namespace TechnicalProductsStore.Manager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SelectSection(History1TabControl, History2TabControl, History3TabControl1,History2Button.Text);
+            SelectSection(History1TabControl, History2TabControl, History3TabControl1, History2Button.Text);
         }
 
         private void History1Button_Click(object sender, EventArgs e)
         {
-            SelectSection(History1TabControl, History2TabControl, History3TabControl1,History2Button.Text);
+            SelectSection(History1TabControl, History2TabControl, History3TabControl1, History2Button.Text);
         }
 
         private void Sellers1Button_Click(object sender, EventArgs e)
@@ -214,21 +214,25 @@ namespace TechnicalProductsStore.Manager
 
         private void Product2Button_Click(object sender, EventArgs e)
         {
-            SelectSection(History3TabControl1, History2TabControl, History1TabControl,Product2Button.Text);
+            SelectSection(History3TabControl1, History2TabControl, History1TabControl, Product2Button.Text);
         }
 
         private void Product1Button_Click(object sender, EventArgs e)
         {
             SelectSection(History3TabControl1, History2TabControl, History1TabControl, Product2Button.Text);
         }
-        public void SelectSection(TabControl tabControl1, TabControl tabControl2,TabControl tabControl3, string TextButton )
+        public void SelectSection(TabControl tabControl1, TabControl tabControl2, TabControl tabControl3, string TextButton)
         {
             tabControl1.Visible = true;
             tabControl2.Visible = false;
             tabControl3.Visible = false;
             tabControl1.Dock = DockStyle.Fill;
-            MenuLabel.Text =TextButton;
+            MenuLabel.Text = TextButton;
         }
 
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

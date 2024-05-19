@@ -71,13 +71,14 @@
             Sellers2Button = new Button();
             History2Button = new Button();
             History2TabControl = new TabControl();
-            tabPage3 = new TabPage();
+            tP3 = new TabPage();
             tabPage4 = new TabPage();
             tabPage7 = new TabPage();
             tabPage8 = new TabPage();
             History3TabControl1 = new TabControl();
             tabPage5 = new TabPage();
             tabPage6 = new TabPage();
+            dataGridView2 = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)historySaleBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
@@ -90,7 +91,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             History2TabControl.SuspendLayout();
+            tP3.SuspendLayout();
             History3TabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // sellerIDDataGridViewTextBoxColumn
@@ -233,7 +236,7 @@
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(144, 620);
+            tabPage2.Size = new Size(102, 620);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -250,7 +253,7 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(102, 620);
+            tabPage1.Size = new Size(15, 620);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -362,10 +365,10 @@
             // 
             History1TabControl.Controls.Add(tabPage1);
             History1TabControl.Controls.Add(tabPage2);
-            History1TabControl.Location = new Point(301, 64);
+            History1TabControl.Location = new Point(1264, 80);
             History1TabControl.Name = "History1TabControl";
             History1TabControl.SelectedIndex = 0;
-            History1TabControl.Size = new Size(110, 653);
+            History1TabControl.Size = new Size(23, 653);
             History1TabControl.TabIndex = 15;
             // 
             // MenuPanel
@@ -474,35 +477,37 @@
             // 
             // History2TabControl
             // 
-            History2TabControl.Controls.Add(tabPage3);
+            History2TabControl.Controls.Add(tP3);
             History2TabControl.Controls.Add(tabPage4);
             History2TabControl.Controls.Add(tabPage7);
             History2TabControl.Controls.Add(tabPage8);
             History2TabControl.ItemSize = new Size(74, 25);
-            History2TabControl.Location = new Point(459, 64);
+            History2TabControl.Location = new Point(262, 64);
             History2TabControl.Name = "History2TabControl";
             History2TabControl.SelectedIndex = 0;
-            History2TabControl.Size = new Size(171, 653);
+            History2TabControl.Size = new Size(679, 700);
             History2TabControl.TabIndex = 16;
             // 
-            // tabPage3
+            // tP3
             // 
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(163, 620);
-            tabPage3.TabIndex = 0;
-            tabPage3.Text = "tabPage3";
-            tabPage3.UseVisualStyleBackColor = true;
+            tP3.Controls.Add(dataGridView2);
+            tP3.Location = new Point(4, 29);
+            tP3.Name = "tP3";
+            tP3.Padding = new Padding(3);
+            tP3.Size = new Size(671, 667);
+            tP3.TabIndex = 0;
+            tP3.Text = "Kunlik";
+            tP3.UseVisualStyleBackColor = true;
+            tP3.Click += tabPage3_Click;
             // 
             // tabPage4
             // 
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(308, 620);
+            tabPage4.Size = new Size(671, 667);
             tabPage4.TabIndex = 1;
-            tabPage4.Text = "tabPage4";
+            tabPage4.Text = " ";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage7
@@ -510,7 +515,7 @@
             tabPage7.Location = new Point(4, 29);
             tabPage7.Name = "tabPage7";
             tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(308, 620);
+            tabPage7.Size = new Size(671, 667);
             tabPage7.TabIndex = 2;
             tabPage7.Text = "tabPage7";
             tabPage7.UseVisualStyleBackColor = true;
@@ -520,7 +525,7 @@
             tabPage8.Location = new Point(4, 29);
             tabPage8.Name = "tabPage8";
             tabPage8.Padding = new Padding(3);
-            tabPage8.Size = new Size(308, 620);
+            tabPage8.Size = new Size(671, 667);
             tabPage8.TabIndex = 3;
             tabPage8.Text = "tabPage8";
             tabPage8.UseVisualStyleBackColor = true;
@@ -529,10 +534,10 @@
             // 
             History3TabControl1.Controls.Add(tabPage5);
             History3TabControl1.Controls.Add(tabPage6);
-            History3TabControl1.Location = new Point(805, 64);
+            History3TabControl1.Location = new Point(1293, 80);
             History3TabControl1.Name = "History3TabControl1";
             History3TabControl1.SelectedIndex = 0;
-            History3TabControl1.Size = new Size(283, 672);
+            History3TabControl1.Size = new Size(16, 672);
             History3TabControl1.TabIndex = 17;
             // 
             // tabPage5
@@ -540,7 +545,7 @@
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(275, 639);
+            tabPage5.Size = new Size(8, 639);
             tabPage5.TabIndex = 0;
             tabPage5.Text = "tabPage5";
             tabPage5.UseVisualStyleBackColor = true;
@@ -550,10 +555,19 @@
             tabPage6.Location = new Point(4, 29);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(316, 620);
+            tabPage6.Size = new Size(551, 639);
             tabPage6.TabIndex = 1;
             tabPage6.Text = "tabPage6";
             tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(24, 42);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(376, 188);
+            dataGridView2.TabIndex = 0;
             // 
             // SellerHistory
             // 
@@ -588,7 +602,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             History2TabControl.ResumeLayout(false);
+            tP3.ResumeLayout(false);
             History3TabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -632,7 +648,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private TabPage tabPage3;
+        private TabPage tP3;
         private TabPage tabPage4;
         private TabPage tabPage5;
         private TabPage tabPage6;
@@ -642,5 +658,6 @@
         public Button History2Button;
         private TabPage tabPage7;
         private TabPage tabPage8;
+        private DataGridView dataGridView2;
     }
 }
