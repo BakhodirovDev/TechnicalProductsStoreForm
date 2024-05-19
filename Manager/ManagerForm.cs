@@ -55,9 +55,12 @@ namespace TechnicalProductsStore.Manager
         private void button4_Click(object sender, EventArgs e)
         {
             SellerHistory sellerHistory = new SellerHistory();
-            sellerHistory.StartPosition = FormStartPosition.CenterScreen;
+            sellerHistory.MenuButton_Click(sellerHistory, e);
+            sellerHistory.SelectSection(sellerHistory.History1TabControl,sellerHistory.History2TabControl, sellerHistory.History3TabControl1,sellerHistory.History2Button.Text);
+            sellerHistory.WindowState = FormWindowState.Maximized;
             sellerHistory.Show();
             this.Hide();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -80,5 +83,6 @@ namespace TechnicalProductsStore.Manager
         {
 
         }
+
     }
 }

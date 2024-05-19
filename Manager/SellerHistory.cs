@@ -15,6 +15,7 @@ namespace TechnicalProductsStore.Manager
 {
     public partial class SellerHistory : Form
     {
+        public bool MenuisLarge = false;
         public SellerHistory()
         {
             InitializeComponent();
@@ -173,5 +174,61 @@ namespace TechnicalProductsStore.Manager
         {
 
         }
+
+        public void MenuButton_Click(object sender, EventArgs e)
+        {
+            MenuisLarge = !MenuisLarge;
+            if (MenuisLarge == false)
+            {
+                MenuPanel.Size = new Size(245, 706);
+            }
+            else
+            {
+                MenuPanel.Size = new Size(98, 706);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SelectSection(History1TabControl, History2TabControl, History3TabControl1,History2Button.Text);
+        }
+
+        private void History1Button_Click(object sender, EventArgs e)
+        {
+            SelectSection(History1TabControl, History2TabControl, History3TabControl1,History2Button.Text);
+        }
+
+        private void Sellers1Button_Click(object sender, EventArgs e)
+        {
+            SelectSection(History2TabControl, History3TabControl1, History1TabControl, Sellers2Button.Text);
+        }
+        private void Sellers2Button_Click(object sender, EventArgs e)
+        {
+            SelectSection(History2TabControl, History3TabControl1, History1TabControl, Sellers2Button.Text);
+        }
+
+        private void Product2Button_Click(object sender, EventArgs e)
+        {
+            SelectSection(History3TabControl1, History2TabControl, History1TabControl,Product2Button.Text);
+        }
+
+        private void Product1Button_Click(object sender, EventArgs e)
+        {
+            SelectSection(History3TabControl1, History2TabControl, History1TabControl, Product2Button.Text);
+        }
+        public void SelectSection(TabControl tabControl1, TabControl tabControl2,TabControl tabControl3, string TextButton )
+        {
+            tabControl1.Visible = true;
+            tabControl2.Visible = false;
+            tabControl3.Visible = false;
+            tabControl1.Dock = DockStyle.Fill;
+            MenuLabel.Text =TextButton;
+        }
+
     }
 }
