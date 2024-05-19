@@ -49,7 +49,7 @@ namespace TechnicalProductsStore.Seller
         public SellerForm(int sellerid)
         {
             InitializeComponent();
-
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScaleMode = AutoScaleMode.Font;
 
             // Formani maksimal holatga keltirish
