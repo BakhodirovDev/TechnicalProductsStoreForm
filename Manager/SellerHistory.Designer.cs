@@ -233,7 +233,7 @@
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(144, 620);
+            tabPage2.Size = new Size(1032, 620);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(102, 620);
+            tabPage1.Size = new Size(1057, 620);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -365,7 +365,7 @@
             History1TabControl.Location = new Point(301, 64);
             History1TabControl.Name = "History1TabControl";
             History1TabControl.SelectedIndex = 0;
-            History1TabControl.Size = new Size(110, 653);
+            History1TabControl.Size = new Size(1065, 653);
             History1TabControl.TabIndex = 15;
             // 
             // MenuPanel
@@ -500,7 +500,7 @@
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(308, 620);
+            tabPage4.Size = new Size(165, 620);
             tabPage4.TabIndex = 1;
             tabPage4.Text = "tabPage4";
             tabPage4.UseVisualStyleBackColor = true;
@@ -510,7 +510,7 @@
             tabPage7.Location = new Point(4, 29);
             tabPage7.Name = "tabPage7";
             tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(308, 620);
+            tabPage7.Size = new Size(165, 620);
             tabPage7.TabIndex = 2;
             tabPage7.Text = "tabPage7";
             tabPage7.UseVisualStyleBackColor = true;
@@ -520,7 +520,7 @@
             tabPage8.Location = new Point(4, 29);
             tabPage8.Name = "tabPage8";
             tabPage8.Padding = new Padding(3);
-            tabPage8.Size = new Size(308, 620);
+            tabPage8.Size = new Size(165, 620);
             tabPage8.TabIndex = 3;
             tabPage8.Text = "tabPage8";
             tabPage8.UseVisualStyleBackColor = true;
@@ -550,7 +550,7 @@
             tabPage6.Location = new Point(4, 29);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(316, 620);
+            tabPage6.Size = new Size(275, 639);
             tabPage6.TabIndex = 1;
             tabPage6.Text = "tabPage6";
             tabPage6.UseVisualStyleBackColor = true;
