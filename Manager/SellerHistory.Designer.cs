@@ -236,6 +236,8 @@
             tabPage2.Location = new Point(4, 34);
             tabPage2.Margin = new Padding(4, 4, 4, 4);
             tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1032, 620);
             tabPage2.Padding = new Padding(4, 4, 4, 4);
             tabPage2.Size = new Size(130, 778);
             tabPage2.TabIndex = 1;
@@ -254,6 +256,8 @@
             tabPage1.Location = new Point(4, 34);
             tabPage1.Margin = new Padding(4, 4, 4, 4);
             tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1057, 620);
             tabPage1.Padding = new Padding(4, 4, 4, 4);
             tabPage1.Size = new Size(130, 778);
             tabPage1.TabIndex = 0;
@@ -371,6 +375,7 @@
             History1TabControl.Margin = new Padding(4, 4, 4, 4);
             History1TabControl.Name = "History1TabControl";
             History1TabControl.SelectedIndex = 0;
+            History1TabControl.Size = new Size(1065, 653);
             History1TabControl.Size = new Size(138, 816);
             History1TabControl.TabIndex = 15;
             // 
@@ -518,6 +523,8 @@
             tabPage4.Location = new Point(4, 29);
             tabPage4.Margin = new Padding(4, 4, 4, 4);
             tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(165, 620);
             tabPage4.Padding = new Padding(4, 4, 4, 4);
             tabPage4.Size = new Size(206, 783);
             tabPage4.TabIndex = 1;
@@ -529,6 +536,8 @@
             tabPage7.Location = new Point(4, 29);
             tabPage7.Margin = new Padding(4, 4, 4, 4);
             tabPage7.Name = "tabPage7";
+            tabPage7.Padding = new Padding(3);
+            tabPage7.Size = new Size(165, 620);
             tabPage7.Padding = new Padding(4, 4, 4, 4);
             tabPage7.Size = new Size(206, 783);
             tabPage7.TabIndex = 2;
@@ -540,6 +549,8 @@
             tabPage8.Location = new Point(4, 29);
             tabPage8.Margin = new Padding(4, 4, 4, 4);
             tabPage8.Name = "tabPage8";
+            tabPage8.Padding = new Padding(3);
+            tabPage8.Size = new Size(165, 620);
             tabPage8.Padding = new Padding(4, 4, 4, 4);
             tabPage8.Size = new Size(206, 783);
             tabPage8.TabIndex = 3;
@@ -573,6 +584,8 @@
             tabPage6.Location = new Point(4, 34);
             tabPage6.Margin = new Padding(4, 4, 4, 4);
             tabPage6.Name = "tabPage6";
+            tabPage6.Padding = new Padding(3);
+            tabPage6.Size = new Size(275, 639);
             tabPage6.Padding = new Padding(4, 4, 4, 4);
             tabPage6.Size = new Size(346, 802);
             tabPage6.TabIndex = 1;
