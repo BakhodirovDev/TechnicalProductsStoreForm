@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TechnicalProductsStore.Class
 {
-    public class HistorySale 
+    public class HistorySale : Product
     {
         public int SellerID { get; set; }
         public int ProductID { get; set; }
