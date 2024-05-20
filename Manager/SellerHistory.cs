@@ -79,7 +79,7 @@ namespace TechnicalProductsStore.Manager
         private void Chart_Click(object sender, EventArgs e)
         {
            
-                tP3Kunlik.SelectedTab = tP8Chart; 
+                //tP3Kunlik.SelectedTab = tP8Chart; 
            
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
