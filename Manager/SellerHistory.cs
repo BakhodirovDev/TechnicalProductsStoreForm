@@ -36,6 +36,14 @@ namespace TechnicalProductsStore.Manager
 
         }
 
+
+
+
+
+
+
+
+
         public void SaleReportFunction()
         {
             for (int i = 1; i <= 31; i++)
@@ -48,14 +56,14 @@ namespace TechnicalProductsStore.Manager
             string[] months = new string[] { "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
             //comboBoxMonth3.Items.AddRange(months);
             //comboBoxMonth2.Items.AddRange(months);
-            comboBoxMonth1.Items.AddRange(months);
+            //comboBoxMonth1.Items.AddRange(months);
 
             // Инициализация ComboBox для годов
             for (int i = 2000; i <= DateTime.Now.Year; i++)
             {
                 // comboBoxYear3.Items.Add(i);
                 // comboBoxYear2.Items.Add(i);
-                comboBoxYear1.Items.Add(i);
+                //comboBoxYear1.Items.Add(i);
             }
 
             // Устанавливаем начальные значения
@@ -452,6 +460,11 @@ namespace TechnicalProductsStore.Manager
         }
 
         private void SellerHistory_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellerHistory_Load_1(object sender, EventArgs e)
         {
 
         }

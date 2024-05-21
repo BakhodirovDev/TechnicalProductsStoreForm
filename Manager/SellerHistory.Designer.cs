@@ -210,7 +210,7 @@
             panel1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Inch);
             panel1.ImeMode = ImeMode.AlphaFull;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new Size(1969, 72);
             panel1.TabIndex = 13;
@@ -234,7 +234,7 @@
             MenuButton.BackgroundImage = (Image)resources.GetObject("MenuButton.BackgroundImage");
             MenuButton.BackgroundImageLayout = ImageLayout.Center;
             MenuButton.Location = new Point(12, 9);
-            MenuButton.Margin = new Padding(4, 4, 4, 4);
+            MenuButton.Margin = new Padding(4);
             MenuButton.Name = "MenuButton";
             MenuButton.Size = new Size(58, 54);
             MenuButton.TabIndex = 0;
@@ -245,8 +245,8 @@
             // 
             ProductTabControl.Controls.Add(tabPage5);
             ProductTabControl.Controls.Add(tabPage6);
-            ProductTabControl.Location = new Point(30, 740);
-            ProductTabControl.Margin = new Padding(4, 4, 4, 4);
+            ProductTabControl.Location = new Point(1460, 83);
+            ProductTabControl.Margin = new Padding(4);
             ProductTabControl.Name = "ProductTabControl";
             ProductTabControl.SelectedIndex = 0;
             ProductTabControl.Size = new Size(142, 130);
@@ -255,7 +255,7 @@
             // tabPage5
             // 
             tabPage5.Location = new Point(4, 34);
-            tabPage5.Margin = new Padding(4, 4, 4, 4);
+            tabPage5.Margin = new Padding(4);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(2);
             tabPage5.Size = new Size(134, 92);
@@ -266,10 +266,10 @@
             // tabPage6
             // 
             tabPage6.Location = new Point(4, 34);
-            tabPage6.Margin = new Padding(4, 4, 4, 4);
+            tabPage6.Margin = new Padding(4);
             tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new Padding(4, 4, 4, 4);
-            tabPage6.Size = new Size(286, 803);
+            tabPage6.Padding = new Padding(4);
+            tabPage6.Size = new Size(134, 92);
             tabPage6.TabIndex = 1;
             tabPage6.Text = "tabPage6";
             tabPage6.UseVisualStyleBackColor = true;
@@ -279,7 +279,7 @@
             ReportTabControl.Controls.Add(tabPage1);
             ReportTabControl.Controls.Add(tabPage2);
             ReportTabControl.Location = new Point(415, 80);
-            ReportTabControl.Margin = new Padding(4, 4, 4, 4);
+            ReportTabControl.Margin = new Padding(4);
             ReportTabControl.Name = "ReportTabControl";
             ReportTabControl.SelectedIndex = 0;
             ReportTabControl.Size = new Size(335, 841);
@@ -295,9 +295,9 @@
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label3);
             tabPage1.Location = new Point(4, 34);
-            tabPage1.Margin = new Padding(4, 4, 4, 4);
+            tabPage1.Margin = new Padding(4);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(4, 4, 4, 4);
+            tabPage1.Padding = new Padding(4);
             tabPage1.Size = new Size(327, 803);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
@@ -408,10 +408,10 @@
             // tabPage2
             // 
             tabPage2.Location = new Point(4, 34);
-            tabPage2.Margin = new Padding(4, 4, 4, 4);
+            tabPage2.Margin = new Padding(4);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(4, 4, 4, 4);
-            tabPage2.Size = new Size(1482, 803);
+            tabPage2.Padding = new Padding(4);
+            tabPage2.Size = new Size(327, 803);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -480,7 +480,7 @@
             MenuIconPanel.Controls.Add(HistoryImgButton);
             MenuIconPanel.Dock = DockStyle.Left;
             MenuIconPanel.Location = new Point(0, 72);
-            MenuIconPanel.Margin = new Padding(4, 4, 4, 4);
+            MenuIconPanel.Margin = new Padding(4);
             MenuIconPanel.Name = "MenuIconPanel";
             MenuIconPanel.Size = new Size(111, 883);
             MenuIconPanel.TabIndex = 14;
@@ -490,7 +490,7 @@
             ProductImgButton.BackgroundImage = Properties.Resources.product;
             ProductImgButton.BackgroundImageLayout = ImageLayout.Zoom;
             ProductImgButton.Location = new Point(0, 225);
-            ProductImgButton.Margin = new Padding(4, 4, 4, 4);
+            ProductImgButton.Margin = new Padding(4);
             ProductImgButton.Name = "ProductImgButton";
             ProductImgButton.Size = new Size(110, 131);
             ProductImgButton.TabIndex = 5;
@@ -502,7 +502,7 @@
             SellerImgButton.BackgroundImage = Properties.Resources.sellerpng;
             SellerImgButton.BackgroundImageLayout = ImageLayout.Zoom;
             SellerImgButton.Location = new Point(0, 108);
-            SellerImgButton.Margin = new Padding(4, 4, 4, 4);
+            SellerImgButton.Margin = new Padding(4);
             SellerImgButton.Name = "SellerImgButton";
             SellerImgButton.Size = new Size(110, 118);
             SellerImgButton.TabIndex = 4;
@@ -514,7 +514,7 @@
             HistoryImgButton.BackgroundImage = (Image)resources.GetObject("HistoryImgButton.BackgroundImage");
             HistoryImgButton.BackgroundImageLayout = ImageLayout.Zoom;
             HistoryImgButton.Location = new Point(0, 0);
-            HistoryImgButton.Margin = new Padding(4, 4, 4, 4);
+            HistoryImgButton.Margin = new Padding(4);
             HistoryImgButton.Name = "HistoryImgButton";
             HistoryImgButton.Size = new Size(110, 109);
             HistoryImgButton.TabIndex = 3;
@@ -529,7 +529,7 @@
             SellerTabControl.Controls.Add(tP8Chart);
             SellerTabControl.ItemSize = new Size(74, 25);
             SellerTabControl.Location = new Point(856, 98);
-            SellerTabControl.Margin = new Padding(4, 4, 4, 4);
+            SellerTabControl.Margin = new Padding(4);
             SellerTabControl.Name = "SellerTabControl";
             SellerTabControl.SelectedIndex = 0;
             SellerTabControl.Size = new Size(502, 823);
@@ -548,7 +548,7 @@
             tP3Kunlik.Controls.Add(dateTimePicker1Kunlik);
             tP3Kunlik.Controls.Add(dataGridView2kunlik);
             tP3Kunlik.Location = new Point(4, 29);
-            tP3Kunlik.Margin = new Padding(4, 4, 4, 4);
+            tP3Kunlik.Margin = new Padding(4);
             tP3Kunlik.Name = "tP3Kunlik";
             tP3Kunlik.Padding = new Padding(2);
             tP3Kunlik.Size = new Size(494, 790);
@@ -571,7 +571,7 @@
             // 
             cBKunlikSellerId.FormattingEnabled = true;
             cBKunlikSellerId.Location = new Point(1105, 208);
-            cBKunlikSellerId.Margin = new Padding(4, 4, 4, 4);
+            cBKunlikSellerId.Margin = new Padding(4);
             cBKunlikSellerId.Name = "cBKunlikSellerId";
             cBKunlikSellerId.Size = new Size(312, 33);
             cBKunlikSellerId.TabIndex = 8;
@@ -624,7 +624,7 @@
             // 
             searchKunlik.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
             searchKunlik.Location = new Point(1172, 264);
-            searchKunlik.Margin = new Padding(4, 4, 4, 4);
+            searchKunlik.Margin = new Padding(4);
             searchKunlik.Name = "searchKunlik";
             searchKunlik.Size = new Size(156, 55);
             searchKunlik.TabIndex = 3;
@@ -647,7 +647,7 @@
             // 
             dateTimePicker1Kunlik.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             dateTimePicker1Kunlik.Location = new Point(1105, 111);
-            dateTimePicker1Kunlik.Margin = new Padding(4, 4, 4, 4);
+            dateTimePicker1Kunlik.Margin = new Padding(4);
             dateTimePicker1Kunlik.Name = "dateTimePicker1Kunlik";
             dateTimePicker1Kunlik.Size = new Size(312, 39);
             dateTimePicker1Kunlik.TabIndex = 1;
@@ -724,10 +724,10 @@
             tP4Sanalik.Controls.Add(dateTimePicker1Start);
             tP4Sanalik.Controls.Add(dataGridView3Sanalik);
             tP4Sanalik.Location = new Point(4, 29);
-            tP4Sanalik.Margin = new Padding(4, 4, 4, 4);
+            tP4Sanalik.Margin = new Padding(4);
             tP4Sanalik.Name = "tP4Sanalik";
-            tP4Sanalik.Padding = new Padding(4, 4, 4, 4);
-            tP4Sanalik.Size = new Size(286, 808);
+            tP4Sanalik.Padding = new Padding(4);
+            tP4Sanalik.Size = new Size(494, 790);
             tP4Sanalik.TabIndex = 1;
             tP4Sanalik.Text = " Sanalik";
             tP4Sanalik.UseVisualStyleBackColor = true;
@@ -748,7 +748,7 @@
             cBsanalik.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             cBsanalik.FormattingEnabled = true;
             cBsanalik.Location = new Point(1104, 280);
-            cBsanalik.Margin = new Padding(4, 4, 4, 4);
+            cBsanalik.Margin = new Padding(4);
             cBsanalik.Name = "cBsanalik";
             cBsanalik.Size = new Size(312, 36);
             cBsanalik.TabIndex = 10;
@@ -801,7 +801,7 @@
             // 
             searchSanalik.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 204);
             searchSanalik.Location = new Point(1170, 338);
-            searchSanalik.Margin = new Padding(4, 4, 4, 4);
+            searchSanalik.Margin = new Padding(4);
             searchSanalik.Name = "searchSanalik";
             searchSanalik.Size = new Size(159, 56);
             searchSanalik.TabIndex = 5;
@@ -835,7 +835,7 @@
             // 
             dateTimePicker2Finish.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             dateTimePicker2Finish.Location = new Point(1104, 176);
-            dateTimePicker2Finish.Margin = new Padding(4, 4, 4, 4);
+            dateTimePicker2Finish.Margin = new Padding(4);
             dateTimePicker2Finish.Name = "dateTimePicker2Finish";
             dateTimePicker2Finish.Size = new Size(312, 39);
             dateTimePicker2Finish.TabIndex = 2;
@@ -844,7 +844,7 @@
             // 
             dateTimePicker1Start.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             dateTimePicker1Start.Location = new Point(1104, 72);
-            dateTimePicker1Start.Margin = new Padding(4, 4, 4, 4);
+            dateTimePicker1Start.Margin = new Padding(4);
             dateTimePicker1Start.Name = "dateTimePicker1Start";
             dateTimePicker1Start.Size = new Size(312, 39);
             dateTimePicker1Start.TabIndex = 1;
@@ -856,7 +856,7 @@
             dataGridView3Sanalik.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn3, sellerSignInTimeDataGridViewTextBoxColumn3, sellerSignOutTimeDataGridViewTextBoxColumn3, sellerSaleTotalCountDataGridViewTextBoxColumn3, sellerSaleTotalPriceDataGridViewTextBoxColumn3 });
             dataGridView3Sanalik.DataSource = historyWorkingBindingSource2;
             dataGridView3Sanalik.Location = new Point(1, 0);
-            dataGridView3Sanalik.Margin = new Padding(4, 4, 4, 4);
+            dataGridView3Sanalik.Margin = new Padding(4);
             dataGridView3Sanalik.Name = "dataGridView3Sanalik";
             dataGridView3Sanalik.ReadOnly = true;
             dataGridView3Sanalik.RowHeadersWidth = 51;
@@ -927,10 +927,10 @@
             tP7Oylik.Controls.Add(searchOylik);
             tP7Oylik.Controls.Add(dataGridViewOylik);
             tP7Oylik.Location = new Point(4, 29);
-            tP7Oylik.Margin = new Padding(4, 4, 4, 4);
+            tP7Oylik.Margin = new Padding(4);
             tP7Oylik.Name = "tP7Oylik";
-            tP7Oylik.Padding = new Padding(4, 4, 4, 4);
-            tP7Oylik.Size = new Size(286, 808);
+            tP7Oylik.Padding = new Padding(4);
+            tP7Oylik.Size = new Size(494, 790);
             tP7Oylik.TabIndex = 2;
             tP7Oylik.Text = "Oylik";
             tP7Oylik.UseVisualStyleBackColor = true;
@@ -970,7 +970,7 @@
             cBYillar_O.FormattingEnabled = true;
             cBYillar_O.Items.AddRange(new object[] { "2020", "2021", "2022", "2023", "2024" });
             cBYillar_O.Location = new Point(1118, 145);
-            cBYillar_O.Margin = new Padding(4, 4, 4, 4);
+            cBYillar_O.Margin = new Padding(4);
             cBYillar_O.Name = "cBYillar_O";
             cBYillar_O.Size = new Size(312, 33);
             cBYillar_O.TabIndex = 9;
@@ -980,7 +980,7 @@
             cBOylar_O.FormattingEnabled = true;
             cBOylar_O.Items.AddRange(new object[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" });
             cBOylar_O.Location = new Point(1118, 68);
-            cBOylar_O.Margin = new Padding(4, 4, 4, 4);
+            cBOylar_O.Margin = new Padding(4);
             cBOylar_O.Name = "cBOylar_O";
             cBOylar_O.Size = new Size(312, 33);
             cBOylar_O.TabIndex = 8;
@@ -1033,7 +1033,7 @@
             // 
             cBSellerId.FormattingEnabled = true;
             cBSellerId.Location = new Point(1118, 230);
-            cBSellerId.Margin = new Padding(4, 4, 4, 4);
+            cBSellerId.Margin = new Padding(4);
             cBSellerId.Name = "cBSellerId";
             cBSellerId.Size = new Size(312, 33);
             cBSellerId.TabIndex = 3;
@@ -1041,7 +1041,7 @@
             // searchOylik
             // 
             searchOylik.Location = new Point(1190, 282);
-            searchOylik.Margin = new Padding(4, 4, 4, 4);
+            searchOylik.Margin = new Padding(4);
             searchOylik.Name = "searchOylik";
             searchOylik.Size = new Size(139, 52);
             searchOylik.TabIndex = 2;
@@ -1056,7 +1056,7 @@
             dataGridViewOylik.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn2, sellerSignInTimeDataGridViewTextBoxColumn2, sellerSignOutTimeDataGridViewTextBoxColumn2, sellerSaleTotalCountDataGridViewTextBoxColumn2, sellerSaleTotalPriceDataGridViewTextBoxColumn2 });
             dataGridViewOylik.DataSource = historyWorkingBindingSource1;
             dataGridViewOylik.Location = new Point(0, 4);
-            dataGridViewOylik.Margin = new Padding(4, 4, 4, 4);
+            dataGridViewOylik.Margin = new Padding(4);
             dataGridViewOylik.Name = "dataGridViewOylik";
             dataGridViewOylik.RowHeadersWidth = 51;
             dataGridViewOylik.Size = new Size(1021, 839);
@@ -1111,10 +1111,10 @@
             tP8Chart.Controls.Add(chartYillik);
             tP8Chart.Controls.Add(chartOylik);
             tP8Chart.Location = new Point(4, 29);
-            tP8Chart.Margin = new Padding(4, 4, 4, 4);
+            tP8Chart.Margin = new Padding(4);
             tP8Chart.Name = "tP8Chart";
-            tP8Chart.Padding = new Padding(4, 4, 4, 4);
-            tP8Chart.Size = new Size(286, 808);
+            tP8Chart.Padding = new Padding(4);
+            tP8Chart.Size = new Size(494, 790);
             tP8Chart.TabIndex = 3;
             tP8Chart.Text = "Diagramma";
             tP8Chart.UseVisualStyleBackColor = true;
@@ -1126,7 +1126,7 @@
             legend1.Name = "Legend1";
             chartYillik.Legends.Add(legend1);
             chartYillik.Location = new Point(722, 94);
-            chartYillik.Margin = new Padding(4, 4, 4, 4);
+            chartYillik.Margin = new Padding(4);
             chartYillik.Name = "chartYillik";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -1143,7 +1143,7 @@
             legend2.Name = "Legend1";
             chartOylik.Legends.Add(legend2);
             chartOylik.Location = new Point(46, 94);
-            chartOylik.Margin = new Padding(4, 4, 4, 4);
+            chartOylik.Margin = new Padding(4);
             chartOylik.Name = "chartOylik";
             series2.BorderColor = Color.FromArgb(192, 0, 0);
             series2.ChartArea = "ChartArea1";
@@ -1158,12 +1158,11 @@
             // MenuButtonPanel
             // 
             MenuButtonPanel.Controls.Add(ProductButton);
-            MenuButtonPanel.Controls.Add(ProductTabControl);
             MenuButtonPanel.Controls.Add(SellerButton);
             MenuButtonPanel.Controls.Add(HistoryButton);
             MenuButtonPanel.Dock = DockStyle.Left;
             MenuButtonPanel.Location = new Point(111, 72);
-            MenuButtonPanel.Margin = new Padding(4, 4, 4, 4);
+            MenuButtonPanel.Margin = new Padding(4);
             MenuButtonPanel.Name = "MenuButtonPanel";
             MenuButtonPanel.Size = new Size(296, 883);
             MenuButtonPanel.TabIndex = 18;
@@ -1172,7 +1171,7 @@
             // 
             ProductButton.Font = new Font("Lucida Fax", 12F, FontStyle.Bold);
             ProductButton.Location = new Point(0, 225);
-            ProductButton.Margin = new Padding(4, 4, 4, 4);
+            ProductButton.Margin = new Padding(4);
             ProductButton.Name = "ProductButton";
             ProductButton.Size = new Size(296, 131);
             ProductButton.TabIndex = 2;
@@ -1184,7 +1183,7 @@
             // 
             SellerButton.Font = new Font("Lucida Fax", 12F, FontStyle.Bold);
             SellerButton.Location = new Point(0, 106);
-            SellerButton.Margin = new Padding(4, 4, 4, 4);
+            SellerButton.Margin = new Padding(4);
             SellerButton.Name = "SellerButton";
             SellerButton.Size = new Size(296, 120);
             SellerButton.TabIndex = 1;
@@ -1196,7 +1195,7 @@
             // 
             HistoryButton.Font = new Font("Lucida Fax", 12F, FontStyle.Bold);
             HistoryButton.Location = new Point(0, -1);
-            HistoryButton.Margin = new Padding(4, 4, 4, 4);
+            HistoryButton.Margin = new Padding(4);
             HistoryButton.Name = "HistoryButton";
             HistoryButton.Size = new Size(296, 110);
             HistoryButton.TabIndex = 0;
@@ -1210,6 +1209,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1969, 955);
             Controls.Add(MenuButtonPanel);
+            Controls.Add(ProductTabControl);
             Controls.Add(MenuIconPanel);
             Controls.Add(SellerTabControl);
             Controls.Add(panel1);
@@ -1222,6 +1222,7 @@
             Name = "SellerHistory";
             Text = "SellerHistory";
             FormClosed += SellerHistory_FormClosed;
+            Load += SellerHistory_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ProductTabControl.ResumeLayout(false);

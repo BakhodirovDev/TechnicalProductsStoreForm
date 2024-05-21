@@ -156,20 +156,8 @@
   {
     "SellerID": 6,
     "ProductID": 14,
-<<<<<<< HEAD
-    "ProductCount": 10,
-    "ProductPrice": 500,
-    "ProductSaleTime": "19.05.2024 14:43:39"
-=======
     "ProductCount": 3,
     "ProductPrice": 150,
-    "ProductSaleTime": "20.05.2024 14:28:39"
-  },
-  {
-    "SellerID": 6,
-    "ProductID": 7,
-    "ProductCount": 2,
-    "ProductPrice": 300,
     "ProductSaleTime": "20.05.2024 14:28:39"
   },
   {
@@ -185,6 +173,5 @@
     "ProductCount": 2,
     "ProductPrice": 160,
     "ProductSaleTime": "20.05.2024 14:29:43"
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
   }
 ]
