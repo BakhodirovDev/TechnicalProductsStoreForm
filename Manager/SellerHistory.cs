@@ -12,6 +12,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TechnicalProductsStore.Class;
+using System.Globalization;
 
 namespace TechnicalProductsStore.Manager
 {
@@ -21,15 +22,22 @@ namespace TechnicalProductsStore.Manager
         public SellerHistory()
         {
             InitializeComponent();
-            InitializeComboBoxes();
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-<<<<<<< HEAD
+
+            //Timur
+            SaleReportFunction();
+
+            //Mirjahon
+            SellerReportFunction();
+
+            //Behruz
+            ProductReportFunction();
 
         }
-        private void InitializeComboBoxes()
+
+        public void SaleReportFunction()
         {
-            // Инициализация ComboBox для дней
             for (int i = 1; i <= 31; i++)
             {
                 //comboBoxDay2.Items.Add(i);
@@ -52,17 +60,10 @@ namespace TechnicalProductsStore.Manager
 
             // Устанавливаем начальные значения
             DateTime today = DateTime.Today;
-            //comboBoxDay2.SelectedItem = today.Day;
-            //comboBoxMonth2.SelectedIndex = today.Month - 1; // Индексы месяцев начинаются с 0
-            //comboBoxYear2.SelectedItem = today.Year;
-            //comboBoxDay3.SelectedItem = today.Day;
-            //comboBoxMonth3.SelectedIndex = today.Month - 1; // Индексы месяцев начинаются с 0
-            //comboBoxYear3.SelectedItem = today.Year;
-
         }
-=======
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
 
+        public void SellerReportFunction()
+        {
             dateTimePicker1Start.Value = DateTime.Today;
             dateTimePicker2Finish.Value = DateTime.Today.AddDays(1);
 
@@ -72,7 +73,7 @@ namespace TechnicalProductsStore.Manager
             menuStrip.Items.Add("Diagramma");
 
             dataGridView2kunlik.ContextMenuStrip = menuStrip;
-            menuStrip.Items[0].Click += new EventHandler(Chart_Click);
+            //menuStrip.Items[0].Click += new EventHandler(Chart_Click);
 
             string pathUsers = @"../../../DataBase/Users.json";
             string jsonUser = File.ReadAllText(pathUsers);
@@ -115,118 +116,51 @@ namespace TechnicalProductsStore.Manager
             cBKunlikSellerId.DropDownStyle = ComboBoxStyle.DropDownList;
             cBsanalik.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        private void Chart_Click(object sender, EventArgs e)
-        {
-           
-                //tP3Kunlik.SelectedTab = tP8Chart; 
-           
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        public void ProductReportFunction()
         {
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            // Пути к JSON файлам
-            string PathHistorySale = @$"../../../DataBase/History.json";
-            string PathProducts = @$"../../../DataBase/Products.json";
+            string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
 
-            // Получаем выбранные значения из DateTimePicker
-            DateTime startDate = dateTimePickerFrom.Value.Date;
-            DateTime endDate = dateTimePickerBefore.Value.Date.AddDays(1); // Увеличиваем на 1 день, чтобы включить всю выбранную дату "before"
-
+            DateTime startDate = dateTimePickerStart.Value.Date;
+            DateTime endDate = dateTimePickerEnd.Value.Date;
+            dateTimePickerStart.Value = DateTime.Today;
+            dateTimePickerEnd.Value = DateTime.Today.AddDays(1);
+            label1.Text = "";
+            label5.Text = "";
+            label4.Text = "";
+            label6.Text = "";
             if (startDate >= endDate)
             {
-                // Устанавливаем значения DateTimePicker по умолчанию
-                dateTimePickerFrom.Value = DateTime.Today;
-                dateTimePickerBefore.Value = DateTime.Today;
+                dateTimePickerStart.Value = DateTime.Today;
+                dateTimePickerEnd.Value = DateTime.Today.AddDays(1);
                 MessageBox.Show("Sanani Noto'g'ri kiritdingiz.");
             }
             else
             {
-                // Читаем и десериализуем данные из JSON
-                string jsonHistory = File.ReadAllText(PathHistorySale);
-                List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
+                string json = File.ReadAllText(PathHistoryWoking);
+                List<HistoryWorking> historyList = JsonSerializer.Deserialize<List<HistoryWorking>>(json);
 
-                string jsonProducts = File.ReadAllText(PathProducts);
-                List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
+                var filteredHistory = historyList.Where(h =>
+                    DateTime.Parse(h.SellerSignInTime) >= startDate &&
+                    DateTime.Parse(h.SellerSignOutTime) <= endDate).ToList();
 
-                // Проверка десериализации
-                if (historyList == null || productList == null)
-                {
-                    MessageBox.Show("eror json deserelize");
-                    return;
-                }
-
-                // Фильтрация истории по выбранной дате с учетом различных форматов дат
-                List<HistorySale> filteredHistory = historyList.Where(h =>
-                {
-                    DateTime saleTime;
-                    bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
-
-                    // Отладочные сообщения для проверки парсинга дат и фильтрации
-                    Console.WriteLine($"saleTimeParsed: {saleTimeParsed}");
-                    if (saleTimeParsed) Console.WriteLine($"saleTime: {saleTime}");
-
-                    return saleTimeParsed && saleTime >= startDate && saleTime < endDate;
-                }).ToList();
-
-                // Проверка наличия данных после фильтрации
-                if (filteredHistory.Count == 0)
-                {
-                    MessageBox.Show("Нет данных для отображения в выбранном диапазоне дат.");
-                    return;
-                }
-                // Объединение данных о продажах с именами продуктов
-                var filteredHistoryWithProductNames = filteredHistory.Join(
-                    productList,
-                    sale => sale.ProductID,
-                    product => product.Id,
-                    (sale, product) => new
-                    {
-                        sale.SellerID,
-                        sale.ProductID,
-                        product.ProductName,
-                        sale.ProductCount,
-                        sale.ProductPrice,
-                        sale.ProductSaleTime
-                    }).ToList();
-
-                // Привязываем данные к DataGridView
-                dataGridView1.DataSource = filteredHistoryWithProductNames;
-                dataGridView3.DataSource = filteredHistoryWithProductNames;
-                // Обновляем текстовые метки статистики
-                double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
-                label7.Text = $"Product Quantity = {totalSaleCount} pieces";
-
-                double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
-                label8.Text = $"Month Profit = {totalSalePrice} $";
-
-
+                dataGridView1.DataSource = filteredHistory;
+                label1.Text = "Sotilgan mahsulotlar soni:";
+                label5.Text = "Jami Daromad:";
+                double totalsalecount = (double)filteredHistory.Sum(h => h.SellerSaleTotalCount);
+                label4.Text = totalsalecount.ToString() + " ta";
+                double totalSalePrice = (double)filteredHistory.Sum(h => h.SellerSaleTotalPrice);
+                label6.Text = totalSalePrice.ToString() + " so'm";
 
             }
         }
-        private void labelTotalSalePrice_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void jamidaromad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SellerHistory_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -234,16 +168,6 @@ namespace TechnicalProductsStore.Manager
             managerForm.StartPosition = FormStartPosition.CenterScreen;
             managerForm.Show();
             this.Hide();
-        }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void tabControl2_DrawItem(object sender, DrawItemEventArgs e)
@@ -283,51 +207,20 @@ namespace TechnicalProductsStore.Manager
             g.ResetTransform();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SellerHistory_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripProgressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripProgressBar1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         public void MenuButton_Click(object sender, EventArgs e)
         {
             MenuisLarge = !MenuisLarge;
             if (MenuisLarge == false)
             {
-                MenuPanel.Size = new Size(245, 706);
+                MenuIconPanel.Visible = false;
+                MenuButtonPanel.Visible = true;
+                MenuButtonPanel.Size = new Size(237, 706);
             }
             else
             {
-                MenuPanel.Size = new Size(98, 706);
+                MenuButtonPanel.Visible = false;
+                MenuIconPanel.Visible = true;
+                MenuIconPanel.Size = new Size(87, 706);
             }
         }
 
@@ -336,33 +229,33 @@ namespace TechnicalProductsStore.Manager
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SelectSection(History1TabControl, History2TabControl, History3TabControl1, History2Button.Text);
-        }
-
         private void History1Button_Click(object sender, EventArgs e)
         {
-            SelectSection(History1TabControl, History2TabControl, History3TabControl1, History2Button.Text);
+            SelectSection(ReportTabControl, SellerTabControl, ProductTabControl, "Report");
         }
 
         private void Sellers1Button_Click(object sender, EventArgs e)
         {
-            SelectSection(History2TabControl, History3TabControl1, History1TabControl, Sellers2Button.Text);
-        }
-        private void Sellers2Button_Click(object sender, EventArgs e)
-        {
-            SelectSection(History2TabControl, History3TabControl1, History1TabControl, Sellers2Button.Text);
-        }
-
-        private void Product2Button_Click(object sender, EventArgs e)
-        {
-            SelectSection(History3TabControl1, History2TabControl, History1TabControl, Product2Button.Text);
+            SelectSection(SellerTabControl, ProductTabControl, ReportTabControl, "Seller");
         }
 
         private void Product1Button_Click(object sender, EventArgs e)
         {
-            SelectSection(History3TabControl1, History2TabControl, History1TabControl, Product2Button.Text);
+            SelectSection(ProductTabControl, SellerTabControl, ReportTabControl, "Product");
+        }
+        private void HistoryButton_Click(object sender, EventArgs e)
+        {
+            SelectSection(ReportTabControl, SellerTabControl, ProductTabControl, "Report");
+        }
+
+        private void SellerButton_Click(object sender, EventArgs e)
+        {
+            SelectSection(SellerTabControl, ProductTabControl, ReportTabControl, "Seller");
+        }
+
+        private void ProductButton_Click(object sender, EventArgs e)
+        {
+            SelectSection(ProductTabControl, SellerTabControl, ReportTabControl, "Product");
         }
         public void SelectSection(TabControl tabControl1, TabControl tabControl2, TabControl tabControl3, string TextButton)
         {
@@ -370,80 +263,10 @@ namespace TechnicalProductsStore.Manager
             tabControl2.Visible = false;
             tabControl3.Visible = false;
             tabControl1.Dock = DockStyle.Fill;
-            MenuLabel.Text = TextButton;
+            MenuLabel.Text = "Manager/" + TextButton;
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-<<<<<<< HEAD
-        private void dateTimePickerStart_ValueChanged(object sender, EventArgs e)
-=======
-        private void cBOylar_O_SelectedIndexChanged(object sender, EventArgs e)
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
-        {
-
-        }
-
-<<<<<<< HEAD
-        private void butMonth_Click(object sender, EventArgs e)
-        {
-            string PathHistorySale = @$"../../../DataBase/History.json";
-            string PathProducts = @$"../../../DataBase/Products.json";
-
-            int selectedMonth1 = comboBoxMonth1.SelectedIndex + 1; // Индексы месяцев начинаются с 0
-            int selectedYear1 = (int)comboBoxYear1.SelectedItem;
-
-            // Читаем и десериализуем данные из JSON
-            string jsonHistory = File.ReadAllText(PathHistorySale);
-            List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
-
-            string jsonProducts = File.ReadAllText(PathProducts);
-            List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
-
-
-            // Фильтрация истории по выбранному месяцу и году
-            List<HistorySale> filteredHistory = historyList.Where(h =>
-            {
-                DateTime saleTime;
-                bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
-
-                return saleTimeParsed &&
-                       saleTime.Month == selectedMonth1 && saleTime.Year == selectedYear1;
-            }).ToList();
-
-            // Объединение данных о продажах с именами продуктов
-            var filteredHistoryWithProductNames = filteredHistory.Join(
-                productList,
-                sale => sale.ProductID,
-                product => product.Id,
-                (sale, product) => new
-                {
-                    sale.SellerID,
-                    sale.ProductID,
-                    product.ProductName,
-                    product.ProductCountry,
-                    sale.ProductCount,
-                    sale.ProductPrice,
-                    sale.ProductSaleTime
-                }).ToList();
-
-            
-            dataGridView3.DataSource = filteredHistoryWithProductNames;
-
-
-            // Обновляем текстовые метки статистики
-            double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
-            label12.Text = $"Product Quantity = {totalSaleCount} pieces";
-
-            double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
-            label13.Text = $"Month Profit = {totalSalePrice} $";
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-=======
         private void searchOylik_Click(object sender, EventArgs e)
         {
             int monthselect = 0;
@@ -516,46 +339,7 @@ namespace TechnicalProductsStore.Manager
             }
         }
 
-        private void cBYillar_O_SelectedIndexChanged(object sender, EventArgs e)
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
-        {
 
-        }
-
-<<<<<<< HEAD
-        private void lbSumma_Click(object sender, EventArgs e)
-=======
-        private void label13_Click(object sender, EventArgs e)
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
-        {
-
-        }
-
-<<<<<<< HEAD
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-=======
-        private void tP4Sanalik_Click(object sender, EventArgs e)
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
-        {
-
-        }
-
-<<<<<<< HEAD
-        private void comboBoxYear1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-=======
         private void searchSanalik_Click(object sender, EventArgs e)
         {
             string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
@@ -667,7 +451,9 @@ namespace TechnicalProductsStore.Manager
             }
         }
 
+        private void SellerHistory_Load(object sender, EventArgs e)
+        {
 
->>>>>>> 21100940f284a6bf38d9da3d94738fbaf20b7513
+        }
     }
 }

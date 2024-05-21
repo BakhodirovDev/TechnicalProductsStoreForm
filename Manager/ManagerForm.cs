@@ -56,7 +56,7 @@ namespace TechnicalProductsStore.Manager
         {
             SellerHistory sellerHistory = new SellerHistory();
             sellerHistory.MenuButton_Click(sellerHistory, e);
-            sellerHistory.SelectSection(sellerHistory.History1TabControl,sellerHistory.History2TabControl, sellerHistory.History3TabControl1,sellerHistory.History2Button.Text);
+            sellerHistory.SelectSection(sellerHistory.ReportTabControl,sellerHistory.SellerTabControl, sellerHistory.ProductTabControl,sellerHistory.HistoryButton.Text);
             sellerHistory.WindowState = FormWindowState.Maximized;
             sellerHistory.Show();
             this.Hide();
