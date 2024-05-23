@@ -13,13 +13,10 @@
     <Compile Update="Manager\CreateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Manager\ManagerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Manager\ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Manager\SellerHistory.cs">
+    <Compile Update="Manager\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Manager\SellerListForm.cs">
@@ -33,7 +30,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Manager\SellerHistory.resx">
+    <EmbeddedResource Update="Manager\ManagerForm.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

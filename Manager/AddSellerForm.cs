@@ -16,10 +16,8 @@ namespace TechnicalProductsStore.Manager
 {
     public partial class AddSellerForm : Form
     {
-        public int Form;
-        public AddSellerForm(int FormID)
+        public AddSellerForm()
         {
-            this.Form = FormID;
             InitializeComponent();
         }
 
@@ -72,41 +70,14 @@ namespace TechnicalProductsStore.Manager
             string json = JsonSerializer.Serialize(users, options);
 
             File.WriteAllText(path, json);
-            MessageBox.Show("Successfully");
+            MessageBox.Show("Successfully Create");
             // Form == 1 bo'lganda ManagerForm ga o'tadi
-            if (Form == 1)
-            {
-                ManagerForm form = new ManagerForm();
-                form.StartPosition = FormStartPosition.CenterScreen; // bu funksiya Formani o'rtadan chiqaradi
-                form.Show();
-                this.Hide();
-            }
-            // Form == 2 bo'lganda SellerListForm ga o'tadi
-            else if (Form == 2)
-            {
-                SellerListForm form = new SellerListForm();
-                form.StartPosition = FormStartPosition.CenterScreen; // bu funksiya Formani o'rtadan chiqaradi
-                form.Show();
-                this.Hide();
-            }
+            this.Hide();
         }
 
         private void AddSellerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form == 1)
-            {
-                ManagerForm form = new ManagerForm();
-                form.StartPosition = FormStartPosition.CenterScreen;
-                form.Show();
-                this.Hide();
-            }
-            else if (Form == 2)
-            {
-                SellerListForm form = new SellerListForm();
-                form.StartPosition = FormStartPosition.CenterScreen;
-                form.Show();
-                this.Hide();
-            }
+            this.Hide();
         }
 
         private void AddSellerForm_Load(object sender, EventArgs e)

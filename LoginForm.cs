@@ -23,6 +23,9 @@ namespace TechnicalProductsStore
         public LoginForm()
         {
             InitializeComponent();
+
+            
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -57,9 +60,12 @@ namespace TechnicalProductsStore
                 if (user.Role == $"{Role.Manager}")
                 {
                     this.Hide();
-                    ManagerForm form = new ManagerForm();
-                    form.StartPosition = FormStartPosition.CenterScreen;
-                    form.Show();
+                    ManagerForm Managerform = new ManagerForm();
+                    Managerform.MenuButton_Click(Managerform, e);
+                    Managerform.WindowState = FormWindowState.Maximized;
+                    Managerform.Show();
+                    this.Hide();
+
 
                 }
                 else if (user.Role == $"{Role.Seller}")

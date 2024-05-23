@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TechnicalProductsStore.Class.Sections.ManagerForm.Reports
+namespace TechnicalProductsStore.Sections.ManagerForm.Reports
 {
-    public class SellersReport
+    public class SalesReport
     {
     }
 }

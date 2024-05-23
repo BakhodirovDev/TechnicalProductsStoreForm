@@ -131,42 +131,52 @@
   },
   {
     "Id": 14,
-    "ProductName": "blender",
-    "ProductCountry": "Italy",
-    "ProductPrice": 50,
-    "ProductDescription": "multifunctional",
-    "ProductEnterCount": 20,
-    "ProductEnterData": "05/20/2024 11:10:50 AM",
-    "RemainingProductCount": 10
+    "ProductName": "srghdrgfh",
+    "ProductCountry": "UZBEKISTAN",
+    "ProductPrice": 234,
+    "ProductDescription": "srghdgfth",
+    "ProductEnterCount": 1212,
+    "ProductEnterData": "5/23/2024 1:37:33 PM",
+    "RemainingProductCount": 1212
   },
   {
     "Id": 15,
-    "ProductName": "coffee maker",
-    "ProductCountry": "Netherlands",
-    "ProductPrice": 100,
-    "ProductDescription": "automatic",
-    "ProductEnterCount": 10,
-    "ProductEnterData": "05/21/2024 08:25:15 AM",
-    "RemainingProductCount": 10
+    "ProductName": "dgjgfj",
+    "ProductCountry": "UZBEKISTAN",
+    "ProductPrice": 24324,
+    "ProductDescription": "djrfytj",
+    "ProductEnterCount": 345,
+    "ProductEnterData": "5/23/2024 1:39:45 PM",
+    "RemainingProductCount": 345
   },
   {
     "Id": 16,
-    "ProductName": "vacuum cleaner",
-    "ProductCountry": "France",
-    "ProductPrice": 250,
-    "ProductDescription": "powerful suction",
-    "ProductEnterCount": 12,
-    "ProductEnterData": "05/22/2024 01:40:30 PM",
-    "RemainingProductCount": 10
+    "ProductName": "dasdfghj",
+    "ProductCountry": "UZBEKISTAN",
+    "ProductPrice": 546,
+    "ProductDescription": "ljkgvfh",
+    "ProductEnterCount": 564,
+    "ProductEnterData": "5/23/2024 1:48:42 PM",
+    "RemainingProductCount": 564
   },
   {
     "Id": 17,
-    "ProductName": "electric toothbrush",
-    "ProductCountry": "Sweden",
-    "ProductPrice": 70,
-    "ProductDescription": "whitening",
-    "ProductEnterCount": 15,
-    "ProductEnterData": "05/23/2024 09:55:45 AM",
-    "RemainingProductCount": 15
+    "ProductName": "asdfggf",
+    "ProductCountry": "UZBEKISTAN",
+    "ProductPrice": 1,
+    "ProductDescription": "sdfghdfgh",
+    "ProductEnterCount": 1,
+    "ProductEnterData": "5/23/2024 1:53:15 PM",
+    "RemainingProductCount": 1
+  },
+  {
+    "Id": 18,
+    "ProductName": "dsgfsdrg",
+    "ProductCountry": "UZBEKISTAN",
+    "ProductPrice": 234,
+    "ProductDescription": "arfdgdsdg",
+    "ProductEnterCount": 342,
+    "ProductEnterData": "5/23/2024 1:56:34 PM",
+    "RemainingProductCount": 342
   }
 ]

@@ -107,10 +107,9 @@ namespace TechnicalProductsStore.Manager
         }
         public void CreateUser(object sender, EventArgs e)
         {
-            CreateProduct createProduct = new CreateProduct(2);
+            CreateProduct createProduct = new CreateProduct();
             createProduct.StartPosition = FormStartPosition.CenterScreen;
             createProduct.Show();
-            this.Hide();
         }
 
         public void UpdateUser(Product product)

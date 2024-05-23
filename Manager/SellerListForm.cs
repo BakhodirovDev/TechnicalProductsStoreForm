@@ -114,10 +114,9 @@ namespace TechnicalProductsStore.Manager
 
         public void CreateUser(object sender, EventArgs e)
         {
-            AddSellerForm addUser = new AddSellerForm(2);
+            AddSellerForm addUser = new AddSellerForm();
             addUser.StartPosition = FormStartPosition.CenterScreen;
             addUser.Show();
-            this.Hide();
         }
 
         // Read operation

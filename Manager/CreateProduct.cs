@@ -18,12 +18,10 @@ namespace TechnicalProductsStore.Manager
     public partial class CreateProduct : Form
     {
 
-        public int Form;
+        List<Product> products = new List<Product>();
 
-
-        public CreateProduct(int FormID)
+        public CreateProduct()
         {
-            this.Form = FormID;
             InitializeComponent();
             InitializeCountryComboBox();
 
@@ -70,7 +68,7 @@ namespace TechnicalProductsStore.Manager
 
             string pathProduct = @"../../../DataBase/Products.json";
 
-            List<Product> products = new List<Product>();
+            
 
             if (File.Exists(pathProduct))
             {
@@ -103,17 +101,9 @@ namespace TechnicalProductsStore.Manager
             File.WriteAllText(pathProduct, JsonProduct);
             MessageBox.Show("Successfully");
             //MessageBox.Show("Go manager = YES or create product = NO","Tanlang",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-
-
+            
             this.Hide();
-            ManagerForm managerForm = new ManagerForm();
-            managerForm.StartPosition = FormStartPosition.CenterScreen;
-            managerForm.Show();
-
-
-
-
-
+           
         }
 
         private void CreateProduct_Load(object sender, EventArgs e)
@@ -123,19 +113,6 @@ namespace TechnicalProductsStore.Manager
 
         private void CreateProduct_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Form == 1)
-            {
-
-                ManagerForm managerForm = new ManagerForm();
-                managerForm.StartPosition = FormStartPosition.CenterScreen;
-                managerForm.Show();
-            }
-            else if (Form == 2)
-            {
-                ProductsForm form = new ProductsForm();
-                form.StartPosition = FormStartPosition.CenterScreen;
-                form.Show();
-            }
             this.Hide();
         }
 

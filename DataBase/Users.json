@@ -13,7 +13,7 @@
     "PhoneNumber": "998912527074",
     "UserName": "IstamovMM",
     "Password": "0812",
-    "Role": "Seller"
+    "Role": "Sellers"
   },
   {
     "ID": 3,
@@ -53,6 +53,14 @@
     "PhoneNumber": "983091200",
     "UserName": "bahrom",
     "Password": "20112014",
+    "Role": "Seller"
+  },
+  {
+    "ID": 8,
+    "FullName": "Test",
+    "PhoneNumber": "645",
+    "UserName": "test",
+    "Password": "1",
     "Role": "Seller"
   }
 ]
