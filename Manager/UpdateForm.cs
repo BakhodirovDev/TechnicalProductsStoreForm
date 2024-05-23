@@ -16,14 +16,17 @@ namespace TechnicalProductsStore.Manager
     public partial class UpdateForm : Form
     {
         private Product selectedProduct;
+
         public UpdateForm(Product product)
         {
             InitializeComponent();
             InitializeUpCountryComboBox();
-            
 
             selectedProduct = product;
+
+            PopulateFields(); // Вызываем PopulateFields() здесь
         }
+
         private void InitializeUpCountryComboBox()
         {
             // Задаем источник данных для ComboBox - значения перечисления Country
@@ -31,9 +34,18 @@ namespace TechnicalProductsStore.Manager
 
             // Устанавливаем ComboBox так, чтобы он позволял пользовательский ввод
             comboUpCountry.DropDownStyle = ComboBoxStyle.DropDown;
-
         }
-       
+
+        private void PopulateFields()
+        {
+            // Заполняем поля формы данными из выбранного продукта
+            tbUpProductName.Text = selectedProduct.ProductName;
+            tbUpDeccription.Text = selectedProduct.ProductDescription;
+            tbUpPrice.Text = selectedProduct.ProductPrice.ToString();
+            tbUpEnterProduct.Text = selectedProduct.ProductEnterCount.ToString();
+            tbUpRemaningProduct.Text = selectedProduct.RemainingProductCount.ToString();
+            comboUpCountry.Text = selectedProduct.ProductCountry;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             // Проверяем, введены ли все необходимые данные для редактирования продукта
@@ -99,6 +111,11 @@ namespace TechnicalProductsStore.Manager
             {
                 MessageBox.Show("Product not found");
             }
+        }
+
+        private void UpdateForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -178,5 +178,245 @@
     "ProductEnterCount": 342,
     "ProductEnterData": "5/23/2024 1:56:34 PM",
     "RemainingProductCount": 342
+  },
+  {
+    "Id": 19,
+    "ProductName": "watch",
+    "ProductCountry": "Switzerland",
+    "ProductPrice": 650,
+    "ProductDescription": "vintage",
+    "ProductEnterCount": 10,
+    "ProductEnterData": "05/12/2024 08:30:17 AM",
+    "RemainingProductCount": 10
+  },
+  {
+    "Id": 20,
+    "ProductName": "handbag",
+    "ProductCountry": "Italy",
+    "ProductPrice": 850,
+    "ProductDescription": "luxury leather",
+    "ProductEnterCount": 7,
+    "ProductEnterData": "05/12/2024 09:15:23 AM",
+    "RemainingProductCount": 7
+  },
+  {
+    "Id": 21,
+    "ProductName": "smartphone",
+    "ProductCountry": "South Korea",
+    "ProductPrice": 1200,
+    "ProductDescription": "latest model",
+    "ProductEnterCount": 15,
+    "ProductEnterData": "05/12/2024 10:45:30 AM",
+    "RemainingProductCount": 15
+  },
+  {
+    "Id": 22,
+    "ProductName": "laptop",
+    "ProductCountry": "USA",
+    "ProductPrice": 1500,
+    "ProductDescription": "high performance",
+    "ProductEnterCount": 20,
+    "ProductEnterData": "05/12/2024 11:30:00 AM",
+    "RemainingProductCount": 20
+  },
+  {
+    "Id": 23,
+    "ProductName": "camera",
+    "ProductCountry": "Japan",
+    "ProductPrice": 950,
+    "ProductDescription": "DSLR",
+    "ProductEnterCount": 10,
+    "ProductEnterData": "05/12/2024 12:15:45 PM",
+    "RemainingProductCount": 10
+  },
+  {
+    "Id": 24,
+    "ProductName": "headphones",
+    "ProductCountry": "Germany",
+    "ProductPrice": 300,
+    "ProductDescription": "noise-cancelling",
+    "ProductEnterCount": 25,
+    "ProductEnterData": "05/12/2024 01:30:15 PM",
+    "RemainingProductCount": 25
+  },
+  {
+    "Id": 25,
+    "ProductName": "bicycle",
+    "ProductCountry": "Netherlands",
+    "ProductPrice": 1200,
+    "ProductDescription": "electric bike",
+    "ProductEnterCount": 5,
+    "ProductEnterData": "05/12/2024 02:45:17 PM",
+    "RemainingProductCount": 5
+  },
+  {
+    "Id": 26,
+    "ProductName": "blender",
+    "ProductCountry": "USA",
+    "ProductPrice": 150,
+    "ProductDescription": "high-speed",
+    "ProductEnterCount": 20,
+    "ProductEnterData": "05/12/2024 03:15:22 PM",
+    "RemainingProductCount": 20
+  },
+  {
+    "Id": 27,
+    "ProductName": "coffee maker",
+    "ProductCountry": "Italy",
+    "ProductPrice": 200,
+    "ProductDescription": "espresso",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "05/12/2024 04:00:00 PM",
+    "RemainingProductCount": 12
+  },
+  {
+    "Id": 28,
+    "ProductName": "vacuum cleaner",
+    "ProductCountry": "Germany",
+    "ProductPrice": 400,
+    "ProductDescription": "robotic",
+    "ProductEnterCount": 15,
+    "ProductEnterData": "05/12/2024 05:30:45 PM",
+    "RemainingProductCount": 15
+  },
+  {
+    "Id": 29,
+    "ProductName": "guitar",
+    "ProductCountry": "USA",
+    "ProductPrice": 1200,
+    "ProductDescription": "electric",
+    "ProductEnterCount": 8,
+    "ProductEnterData": "05/12/2024 06:45:12 PM",
+    "RemainingProductCount": 8
+  },
+  {
+    "Id": 30,
+    "ProductName": "smartwatch",
+    "ProductCountry": "South Korea",
+    "ProductPrice": 350,
+    "ProductDescription": "fitness tracking",
+    "ProductEnterCount": 18,
+    "ProductEnterData": "05/12/2024 07:15:17 PM",
+    "RemainingProductCount": 18
+  },
+  {
+    "Id": 31,
+    "ProductName": "tablet",
+    "ProductCountry": "China",
+    "ProductPrice": 450,
+    "ProductDescription": "10 inch screen",
+    "ProductEnterCount": 20,
+    "ProductEnterData": "05/12/2024 08:00:00 PM",
+    "RemainingProductCount": 20
+  },
+  {
+    "Id": 32,
+    "ProductName": "printer",
+    "ProductCountry": "Japan",
+    "ProductPrice": 300,
+    "ProductDescription": "all-in-one",
+    "ProductEnterCount": 10,
+    "ProductEnterData": "05/12/2024 09:30:00 PM",
+    "RemainingProductCount": 10
+  },
+  {
+    "Id": 33,
+    "ProductName": "air conditioner",
+    "ProductCountry": "South Korea",
+    "ProductPrice": 800,
+    "ProductDescription": "portable",
+    "ProductEnterCount": 6,
+    "ProductEnterData": "05/12/2024 10:45:00 PM",
+    "RemainingProductCount": 6
+  },
+  {
+    "Id": 34,
+    "ProductName": "microwave oven",
+    "ProductCountry": "USA",
+    "ProductPrice": 250,
+    "ProductDescription": "smart",
+    "ProductEnterCount": 14,
+    "ProductEnterData": "05/12/2024 11:00:00 PM",
+    "RemainingProductCount": 14
+  },
+  {
+    "Id": 35,
+    "ProductName": "refrigerator",
+    "ProductCountry": "Germany",
+    "ProductPrice": 1200,
+    "ProductDescription": "double door",
+    "ProductEnterCount": 8,
+    "ProductEnterData": "05/13/2024 12:15:00 AM",
+    "RemainingProductCount": 8
+  },
+  {
+    "Id": 36,
+    "ProductName": "washing machine",
+    "ProductCountry": "Japan",
+    "ProductPrice": 900,
+    "ProductDescription": "front load",
+    "ProductEnterCount": 10,
+    "ProductEnterData": "05/13/2024 01:30:00 AM",
+    "RemainingProductCount": 10
+  },
+  {
+    "Id": 37,
+    "ProductName": "television",
+    "ProductCountry": "South Korea",
+    "ProductPrice": 1500,
+    "ProductDescription": "4K UHD",
+    "ProductEnterCount": 5,
+    "ProductEnterData": "05/13/2024 02:45:00 AM",
+    "RemainingProductCount": 5
+  },
+  {
+    "Id": 38,
+    "ProductName": "gaming console",
+    "ProductCountry": "Japan",
+    "ProductPrice": 500,
+    "ProductDescription": "next-gen",
+    "ProductEnterCount": 20,
+    "ProductEnterData": "05/13/2024 03:15:00 AM",
+    "RemainingProductCount": 20
+  },
+  {
+    "Id": 39,
+    "ProductName": "electric scooter",
+    "ProductCountry": "China",
+    "ProductPrice": 800,
+    "ProductDescription": "foldable",
+    "ProductEnterCount": 7,
+    "ProductEnterData": "05/13/2024 04:00:00 AM",
+    "RemainingProductCount": 7
+  },
+  {
+    "Id": 40,
+    "ProductName": "air purifier",
+    "ProductCountry": "USA",
+    "ProductPrice": 250,
+    "ProductDescription": "HEPA filter",
+    "ProductEnterCount": 12,
+    "ProductEnterData": "05/13/2024 05:30:00 AM",
+    "RemainingProductCount": 12
+  },
+  {
+    "Id": 41,
+    "ProductName": "electric toothbrush",
+    "ProductCountry": "Germany",
+    "ProductPrice": 100,
+    "ProductDescription": "ultrasonic",
+    "ProductEnterCount": 30,
+    "ProductEnterData": "05/13/2024 06:45:00 AM",
+    "RemainingProductCount": 30
+  },
+  {
+    "Id": 42,
+    "ProductName": "smart home hub",
+    "ProductCountry": "USA",
+    "ProductPrice": 150,
+    "ProductDescription": "voice-controlled",
+    "ProductEnterCount": 15,
+    "ProductEnterData": "05/13/2024 07:15:00 AM",
+    "RemainingProductCount": 15
   }
 ]

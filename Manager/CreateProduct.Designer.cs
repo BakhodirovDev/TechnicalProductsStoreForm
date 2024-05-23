@@ -49,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.ForeColor = SystemColors.ButtonFace;
             label1.Location = new Point(23, 97);
             label1.Name = "label1";
             label1.Size = new Size(132, 23);
@@ -60,6 +60,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.ForeColor = SystemColors.ButtonFace;
             label2.Location = new Point(23, 157);
             label2.Name = "label2";
             label2.Size = new Size(79, 23);
@@ -71,6 +72,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.ForeColor = SystemColors.ButtonFace;
             label3.Location = new Point(23, 220);
             label3.Name = "label3";
             label3.Size = new Size(106, 23);
@@ -81,6 +83,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ButtonFace;
             label4.Location = new Point(23, 285);
             label4.Name = "label4";
             label4.Size = new Size(54, 23);
@@ -91,6 +94,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ButtonFace;
             label5.Location = new Point(23, 346);
             label5.Name = "label5";
             label5.Size = new Size(134, 23);
@@ -170,6 +174,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(234, 48);
             label6.Name = "label6";
             label6.Size = new Size(265, 25);
@@ -189,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkCyan;
+            BackColor = Color.MidnightBlue;
             ClientSize = new Size(716, 521);
             Controls.Add(comboBoxCountry);
             Controls.Add(label6);
