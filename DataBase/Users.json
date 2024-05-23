@@ -1,1 +1,66 @@
-[{"ID":1,"FullName":"Behruz Bahodirov","PhoneNumber":"998914050216","UserName":"bbahodirov","Password":"0216","Role":"Manager"},{"ID":2,"FullName":"Istamov Mirjahon","PhoneNumber":"998912527074","UserName":"IstamovMM","Password":"0812","Role":"Sellers"},{"ID":3,"FullName":"Musayev Diyorbek","PhoneNumber":"998915593716","UserName":"diyorbek3716","Password":"3716","Role":"Seller"},{"ID":4,"FullName":"Savatbekov Timur","PhoneNumber":"998901182505","UserName":"teres1111","Password":"1111","Role":"Seller"},{"ID":5,"FullName":"Bahodirov Behruz","PhoneNumber":"998914050216","UserName":"behruz","Password":"0216","Role":"Seller"},{"ID":6,"FullName":"a","PhoneNumber":"132132","UserName":"a","Password":"a","Role":"Seller"},{"ID":7,"FullName":"Bahodirov Bahrom","PhoneNumber":"983091200","UserName":"bahrom","Password":"20112014","Role":"Seller"},{"ID":8,"FullName":"Test","PhoneNumber":"645","UserName":"test","Password":"1","Role":"Seller"}]
+[
+  {
+    "ID": 1,
+    "FullName": "Behruz Bahodirov",
+    "PhoneNumber": "998914050216",
+    "UserName": "bbahodirov",
+    "Password": "0216",
+    "Role": "Manager"
+  },
+  {
+    "ID": 2,
+    "FullName": "Istamov Mirjahon",
+    "PhoneNumber": "998912527074",
+    "UserName": "IstamovMM",
+    "Password": "0812",
+    "Role": "Sellers"
+  },
+  {
+    "ID": 3,
+    "FullName": "Musayev Diyorbek",
+    "PhoneNumber": "998915593716",
+    "UserName": "diyorbek3716",
+    "Password": "3716",
+    "Role": "Seller"
+  },
+  {
+    "ID": 4,
+    "FullName": "Savatbekov Timur",
+    "PhoneNumber": "998901182505",
+    "UserName": "teres1111",
+    "Password": "1111",
+    "Role": "Seller"
+  },
+  {
+    "ID": 5,
+    "FullName": "Bahodirov Behruz",
+    "PhoneNumber": "998914050216",
+    "UserName": "behruz",
+    "Password": "0216",
+    "Role": "Seller"
+  },
+  {
+    "ID": 6,
+    "FullName": "a",
+    "PhoneNumber": "132132",
+    "UserName": "a",
+    "Password": "a",
+    "Role": "Seller"
+  },
+  {
+    "ID": 7,
+    "FullName": "Bahodirov Bahrom",
+    "PhoneNumber": "983091200",
+    "UserName": "bahrom",
+    "Password": "20112014",
+    "Role": "Seller"
+  },
+  {
+    "ID": 8,
+    "FullName": "Test",
+    "PhoneNumber": "645",
+    "UserName": "test",
+    "Password": "1",
+    "Role": "Seller"
+  }
+]

@@ -33,7 +33,41 @@ namespace TechnicalProductsStore.Manager
             SellerListPanel();
             ProductsListPanel();
             InitializeComboBoxes();
+
+            //Mirjahon
+            SanalikPageningDateTimePickerQiymatlari();
+            ComboBoxTuldirishSellerIdBilan();
         }
+        //Mirjahon javobgar
+        public void SanalikPageningDateTimePickerQiymatlari()
+        {
+            SellerReportSanalikDTPStart.Value = DateTime.Today;
+            SellerReportSanalikDTPEnd.Value = DateTime.Today.AddDays(1);
+        }
+        public void ComboBoxTuldirishSellerIdBilan()
+        {
+            SellerReportKunlikSellerUserNameCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            SellerReportSanalikSellerUsernameCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            SellerReportOylikOylarCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            SellerReportOylikSellerCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            SellerReportOylikYillarCB.DropDownStyle = ComboBoxStyle.DropDownList;
+
+
+            string pathUsers = @"../../../DataBase/Users.json";
+            string jsonUser = File.ReadAllText(pathUsers);
+            List<Users> newUserList = JsonSerializer.Deserialize<List<Users>>(jsonUser);
+
+            for (int i = 0; i < newUserList.Count; i++)
+            {
+                if (newUserList[i].Role.ToLower() != "manager")
+                {
+                    SellerReportKunlikSellerUserNameCB.Items.Add(newUserList[i].UserName);
+                    SellerReportSanalikSellerUsernameCB.Items.Add(newUserList[i].UserName);
+                    SellerReportOylikSellerCB.Items.Add(newUserList[i].UserName);
+                }
+            }
+        }
+
         private void InitializeComboBoxes()
         {
             // Инициализация ComboBox для месяцев
@@ -665,7 +699,7 @@ namespace TechnicalProductsStore.Manager
             {
                 MessageBox.Show("Ma'lumotlarni to'liq kiriting"); return;
             }
-            
+
         }
 
         private void SaleProductDayDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -674,6 +708,239 @@ namespace TechnicalProductsStore.Manager
         }
 
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellerReportKunlikSearchBTN_Click(object sender, EventArgs e)
+        {
+            int countKunlik = 0;
+            double priceKunlik = 0;
+            string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
+            string json = File.ReadAllText(PathHistoryWoking);
+            List<HistoryWorking> historyListKunlik = JsonSerializer.Deserialize<List<HistoryWorking>>(json);
+            List<HistoryWorking> sortKunlik = new List<HistoryWorking>();
+
+            DateTime startDate = SellerReportKunlikDTP.Value.Date;
+
+            if (string.IsNullOrEmpty(SellerReportKunlikSellerUserNameCB.Text))
+            {
+                MessageBox.Show("Sotuvchi Id sini tanlamadingiz", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                // Sanalarni aniqlash uchun formatlar ro'yxati
+                string[] dateFormats = { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" };
+
+                var filteredHistory = historyListKunlik.Where(h =>
+                {
+                    DateTime sellerSignInTime;
+
+                    bool isSignInValid = DateTime.TryParseExact(h.SellerSignInTime, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out sellerSignInTime);
+
+                    return isSignInValid && sellerSignInTime.Date == startDate;
+                }).ToList();
+
+                foreach (var item in filteredHistory)
+                {
+                    if (item.SellerID == UserNameOrqaliIdniOlishKunlik())
+                    {
+                        if(item.SellerSaleTotalCount != 0)
+                        {
+                            sortKunlik.Add(item);
+                            countKunlik += item.SellerSaleTotalCount.Value;
+                            priceKunlik += item.SellerSaleTotalPrice.Value;
+                        }
+                    }
+                }
+
+                SellerReportKunlikTotalCountText.Text = "Total Count :";
+                SellerReportKunlikTotalCountValue.Text = countKunlik.ToString();
+                SellerReportKunlikTotalPriceText.Text = "Total Price : ";
+                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString();
+                SellerReportKunlikDGV.DataSource = sortKunlik;
+            }
+        }
+
+        private void SellerReportSanalikSearchBTN_Click(object sender, EventArgs e)
+        {
+            string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
+
+            int count = 0;
+            double price = 0;
+
+            DateTime startDate = SellerReportSanalikDTPStart.Value.Date;
+            DateTime endDate = SellerReportSanalikDTPEnd.Value.Date;
+            SellerReportSanalikDTPStart.Value = DateTime.Today;
+            SellerReportSanalikDTPEnd.Value = DateTime.Today.AddDays(1);
+
+            if (string.IsNullOrEmpty(SellerReportSanalikSellerUsernameCB.Text))
+            {
+                MessageBox.Show("Sotuvchi Id sini tanlamadingiz", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (startDate >= endDate)
+            {
+                SellerReportSanalikDTPStart.Value = DateTime.Today;
+                SellerReportSanalikDTPEnd.Value = DateTime.Today.AddDays(1);
+                MessageBox.Show("Sanani Noto'g'ri kiritdingiz.");
+                return;
+            }
+
+            string json = File.ReadAllText(PathHistoryWoking);
+            List<HistoryWorking> historyListsanalik = JsonSerializer.Deserialize<List<HistoryWorking>>(json);
+            List<HistoryWorking> sortSanalik = new List<HistoryWorking>();
+
+            // Sanalarni aniqlash uchun formatlar
+            string[] dateFormats = { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" };
+
+            var filteredHistory = historyListsanalik.Where(h =>
+            {
+                DateTime sellerSignInTime, sellerSignOutTime;
+
+                bool isSignInValid = DateTime.TryParseExact(h.SellerSignInTime, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out sellerSignInTime);
+                bool isSignOutValid = DateTime.TryParseExact(h.SellerSignOutTime, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out sellerSignOutTime);
+
+                return isSignInValid && isSignOutValid &&
+                       sellerSignInTime >= startDate &&
+                       sellerSignOutTime <= endDate;
+            }).ToList();
+
+            foreach (var item in filteredHistory)
+            {
+                if (item.SellerID == UserNameOrqaliIdniOlishSanalik())
+                {
+                    if(item.SellerSaleTotalCount != 0)
+                    {
+                        sortSanalik.Add(item);
+                        count += item.SellerSaleTotalCount.Value;
+                        price += item.SellerSaleTotalPrice.Value;
+                    }
+                    
+                }
+            }
+            SellerReportSanalikTotalCountText.Text = "Total Count:";
+            SellerReportSanalikTotalPriceText.Text = "Total Price:";
+            SellerReportSanalikTotalCountValue.Text = count.ToString();
+            SellerReportSanalikTotalCountValue.Text = price.ToString();
+
+            SellerReportSanalikDGV.DataSource = sortSanalik;
+        }
+        public int UserNameOrqaliIdniOlishOylik()
+        {
+            List<Users> users = new List<Users>();
+            string pathUsers = @"../../../DataBase/Users.json";
+            string jsonformat2 = File.ReadAllText(pathUsers);
+            users = JsonSerializer.Deserialize<List<Users>>(jsonformat2);
+
+            var objectQaytarish = users.FirstOrDefault(u => u.UserName == SellerReportOylikSellerCB.Text);
+            int cBSellerId = objectQaytarish.ID;
+            return cBSellerId;
+        }
+        public int UserNameOrqaliIdniOlishKunlik()
+        {
+            List<Users> users = new List<Users>();
+            string pathUsers = @"../../../DataBase/Users.json";
+            string jsonformat2 = File.ReadAllText(pathUsers);
+            users = JsonSerializer.Deserialize<List<Users>>(jsonformat2);
+
+            var objectQaytarish = users.FirstOrDefault(u => u.UserName == SellerReportKunlikSellerUserNameCB.Text);
+            int cBSellerId = objectQaytarish.ID;
+            return cBSellerId;
+        }
+        public int UserNameOrqaliIdniOlishSanalik()
+        {
+            List<Users> users = new List<Users>();
+            string pathUsers = @"../../../DataBase/Users.json";
+            string jsonformat2 = File.ReadAllText(pathUsers);
+            users = JsonSerializer.Deserialize<List<Users>>(jsonformat2);
+
+            var objectQaytarish = users.FirstOrDefault(u => u.UserName == SellerReportSanalikSellerUsernameCB.Text);
+            int cBSellerId = objectQaytarish.ID;
+            return cBSellerId;
+        }
+        private void SellerReportOylikSearchBTN_Click(object sender, EventArgs e)
+        {
+            int monthselect = 0;
+            double priceValue = 0;
+            int productCount = 0;
+
+            Dictionary<string, int> months = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
+            {
+                { "january", 1 }, { "february", 2 }, { "march", 3 }, { "april", 4 },
+                { "may", 5 }, { "june", 6 }, { "july", 7 }, { "august", 8 },
+                { "september", 9 }, { "october", 10 }, { "november", 11 }, { "december", 12 }
+            };
+
+            if (months.ContainsKey(SellerReportOylikOylarCB.Text.ToLower()))
+            {
+                monthselect = months[SellerReportOylikOylarCB.Text.ToLower()];
+            }
+            else
+            {
+                monthselect = 12;
+            }
+
+            if (string.IsNullOrWhiteSpace(SellerReportOylikOylarCB.Text) ||
+                string.IsNullOrWhiteSpace(SellerReportOylikYillarCB.Text) ||
+                string.IsNullOrWhiteSpace(SellerReportOylikSellerCB.Text))
+            {
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                List<HistoryWorking> resultDataGridView = new List<HistoryWorking>();
+
+                string pathHistoryWorkingClic = @"../../../DataBase/TotalHistory.json";
+                string jsonformat = File.ReadAllText(pathHistoryWorkingClic);
+                List<HistoryWorking> historyWorkingClick = JsonSerializer.Deserialize<List<HistoryWorking>>(jsonformat);
+
+                string[] dateFormats = { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" };
+                var filteredHistory = historyWorkingClick.Where(h =>
+                {
+                    DateTime sellerSignInTime, sellerSignOutTime;
+
+                    bool isSignInValid = DateTime.TryParseExact(h.SellerSignInTime, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out sellerSignInTime);
+                    bool isSignOutValid = DateTime.TryParseExact(h.SellerSignOutTime, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out sellerSignOutTime);
+
+                    return isSignInValid && isSignOutValid;
+
+                }).ToList();
+
+                foreach (var item in filteredHistory)
+                {
+                    if (item.SellerID == UserNameOrqaliIdniOlishOylik())
+                    {
+                        DateTime signInDate = DateTime.ParseExact(item.SellerSignInTime, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None);
+
+                        if (signInDate.Month == monthselect && signInDate.Year.ToString() == SellerReportOylikYillarCB.Text && item.SellerSaleTotalCount.Value != 0)
+                        {
+                            if(item.SellerSaleTotalCount != 0)
+                            {
+                                resultDataGridView.Add(item);
+                                productCount += item.SellerSaleTotalCount.Value;
+                                priceValue += item.SellerSaleTotalPrice.Value;
+                            }
+                            
+                        }
+                    }
+                }
+
+                SellerReportOylikTotalCountText.Text = "Total Count";
+                SellerReportOylikTotalCountValue.Text = $"{productCount}";
+                SellerReportOylikTotalPriceText.Text = "Total Price";
+                SellerReportOylikTotalPriceValue.Text = $"{priceValue}";
+                SellerReportOylikDGV.DataSource = resultDataGridView;
+            }
+        }
+
+        private void SanalikSellerReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellerReportSanalikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
