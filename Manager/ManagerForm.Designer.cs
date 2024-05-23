@@ -93,7 +93,27 @@
             SalesReportTab = new TabPage();
             tabControl1 = new TabControl();
             KunlikSalesReport = new TabPage();
+            panel2 = new Panel();
+            dateTimePickerBefore = new DateTimePicker();
+            label7 = new Label();
+            label8 = new Label();
+            dateTimePickerFrom = new DateTimePicker();
+            ButSearchSaleKunlik = new Button();
+            panel1 = new Panel();
+            label10 = new Label();
+            label9 = new Label();
+            SaleProductDayDGV = new DataGridView();
             OylikSalesReport = new TabPage();
+            panel4 = new Panel();
+            comboBoxYear1 = new ComboBox();
+            label11 = new Label();
+            ButSearchSaleOylik = new Button();
+            label12 = new Label();
+            comboBoxMonth1 = new ComboBox();
+            panel3 = new Panel();
+            label13 = new Label();
+            label14 = new Label();
+            SaleProductMonthDGV = new DataGridView();
             SellerReportTab = new TabPage();
             SellerReport = new TabControl();
             KunlikSellerReport = new TabPage();
@@ -106,6 +126,18 @@
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             SellersListPanel = new Panel();
+            productNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productSaleTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sellerIDDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productNameDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productIDDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productSaleTimeDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            sellerIDDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -124,6 +156,14 @@
             ReportsTab.SuspendLayout();
             SalesReportTab.SuspendLayout();
             tabControl1.SuspendLayout();
+            KunlikSalesReport.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SaleProductDayDGV).BeginInit();
+            OylikSalesReport.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SaleProductMonthDGV).BeginInit();
             SellerReportTab.SuspendLayout();
             SellerReport.SuspendLayout();
             ProductReportTab.SuspendLayout();
@@ -529,16 +569,166 @@
             // 
             // KunlikSalesReport
             // 
+            KunlikSalesReport.Controls.Add(panel2);
+            KunlikSalesReport.Controls.Add(panel1);
+            KunlikSalesReport.Controls.Add(SaleProductDayDGV);
             resources.ApplyResources(KunlikSalesReport, "KunlikSalesReport");
             KunlikSalesReport.Name = "KunlikSalesReport";
             KunlikSalesReport.UseVisualStyleBackColor = true;
             KunlikSalesReport.Click += KunlikSalesReport_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.MidnightBlue;
+            panel2.Controls.Add(dateTimePickerBefore);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(dateTimePickerFrom);
+            panel2.Controls.Add(ButSearchSaleKunlik);
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Name = "panel2";
+            // 
+            // dateTimePickerBefore
+            // 
+            resources.ApplyResources(dateTimePickerBefore, "dateTimePickerBefore");
+            dateTimePickerBefore.Name = "dateTimePickerBefore";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(label7, "label7");
+            label7.ForeColor = SystemColors.ButtonFace;
+            label7.Name = "label7";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(label8, "label8");
+            label8.ForeColor = SystemColors.ButtonFace;
+            label8.Name = "label8";
+            // 
+            // dateTimePickerFrom
+            // 
+            resources.ApplyResources(dateTimePickerFrom, "dateTimePickerFrom");
+            dateTimePickerFrom.Name = "dateTimePickerFrom";
+            // 
+            // ButSearchSaleKunlik
+            // 
+            ButSearchSaleKunlik.BackColor = Color.Transparent;
+            resources.ApplyResources(ButSearchSaleKunlik, "ButSearchSaleKunlik");
+            ButSearchSaleKunlik.ForeColor = SystemColors.ActiveCaptionText;
+            ButSearchSaleKunlik.Name = "ButSearchSaleKunlik";
+            ButSearchSaleKunlik.UseVisualStyleBackColor = false;
+            ButSearchSaleKunlik.Click += ButSearchSaleKunlik_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ControlDark;
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label9);
+            panel1.ForeColor = SystemColors.Control;
+            resources.ApplyResources(panel1, "panel1");
+            panel1.Name = "panel1";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(label10, "label10");
+            label10.ForeColor = Color.Yellow;
+            label10.Name = "label10";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(label9, "label9");
+            label9.ForeColor = Color.Yellow;
+            label9.Name = "label9";
+            // 
+            // SaleProductDayDGV
+            // 
+            SaleProductDayDGV.AllowUserToOrderColumns = true;
+            SaleProductDayDGV.AutoGenerateColumns = false;
+            SaleProductDayDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SaleProductDayDGV.Columns.AddRange(new DataGridViewColumn[] { productNameDataGridViewTextBoxColumn1, productIDDataGridViewTextBoxColumn, productCountDataGridViewTextBoxColumn, productPriceDataGridViewTextBoxColumn1, productSaleTimeDataGridViewTextBoxColumn, sellerIDDataGridViewTextBoxColumn2 });
+            SaleProductDayDGV.DataSource = historySaleBindingSource;
+            resources.ApplyResources(SaleProductDayDGV, "SaleProductDayDGV");
+            SaleProductDayDGV.Name = "SaleProductDayDGV";
+            // 
             // OylikSalesReport
             // 
+            OylikSalesReport.Controls.Add(panel4);
+            OylikSalesReport.Controls.Add(panel3);
+            OylikSalesReport.Controls.Add(SaleProductMonthDGV);
             resources.ApplyResources(OylikSalesReport, "OylikSalesReport");
             OylikSalesReport.Name = "OylikSalesReport";
             OylikSalesReport.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.MidnightBlue;
+            panel4.Controls.Add(comboBoxYear1);
+            panel4.Controls.Add(label11);
+            panel4.Controls.Add(ButSearchSaleOylik);
+            panel4.Controls.Add(label12);
+            panel4.Controls.Add(comboBoxMonth1);
+            resources.ApplyResources(panel4, "panel4");
+            panel4.Name = "panel4";
+            // 
+            // comboBoxYear1
+            // 
+            comboBoxYear1.FormattingEnabled = true;
+            resources.ApplyResources(comboBoxYear1, "comboBoxYear1");
+            comboBoxYear1.Name = "comboBoxYear1";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(label11, "label11");
+            label11.ForeColor = SystemColors.ButtonHighlight;
+            label11.Name = "label11";
+            // 
+            // ButSearchSaleOylik
+            // 
+            resources.ApplyResources(ButSearchSaleOylik, "ButSearchSaleOylik");
+            ButSearchSaleOylik.Name = "ButSearchSaleOylik";
+            ButSearchSaleOylik.UseVisualStyleBackColor = true;
+            ButSearchSaleOylik.Click += ButSearchSaleOylik_Click;
+            // 
+            // label12
+            // 
+            resources.ApplyResources(label12, "label12");
+            label12.ForeColor = SystemColors.ButtonHighlight;
+            label12.Name = "label12";
+            // 
+            // comboBoxMonth1
+            // 
+            comboBoxMonth1.FormattingEnabled = true;
+            resources.ApplyResources(comboBoxMonth1, "comboBoxMonth1");
+            comboBoxMonth1.Name = "comboBoxMonth1";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlDark;
+            panel3.Controls.Add(label13);
+            panel3.Controls.Add(label14);
+            resources.ApplyResources(panel3, "panel3");
+            panel3.Name = "panel3";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(label13, "label13");
+            label13.ForeColor = Color.Yellow;
+            label13.Name = "label13";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(label14, "label14");
+            label14.ForeColor = Color.Yellow;
+            label14.Name = "label14";
+            // 
+            // SaleProductMonthDGV
+            // 
+            SaleProductMonthDGV.AutoGenerateColumns = false;
+            SaleProductMonthDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SaleProductMonthDGV.Columns.AddRange(new DataGridViewColumn[] { productNameDataGridViewTextBoxColumn2, productIDDataGridViewTextBoxColumn1, productCountDataGridViewTextBoxColumn1, productPriceDataGridViewTextBoxColumn2, productSaleTimeDataGridViewTextBoxColumn1, sellerIDDataGridViewTextBoxColumn3 });
+            SaleProductMonthDGV.DataSource = historySaleBindingSource;
+            resources.ApplyResources(SaleProductMonthDGV, "SaleProductMonthDGV");
+            SaleProductMonthDGV.Name = "SaleProductMonthDGV";
             // 
             // SellerReportTab
             // 
@@ -617,6 +807,78 @@
             resources.ApplyResources(SellersListPanel, "SellersListPanel");
             SellersListPanel.Name = "SellersListPanel";
             // 
+            // productNameDataGridViewTextBoxColumn1
+            // 
+            productNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn1, "productNameDataGridViewTextBoxColumn1");
+            productNameDataGridViewTextBoxColumn1.Name = "productNameDataGridViewTextBoxColumn1";
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            resources.ApplyResources(productIDDataGridViewTextBoxColumn, "productIDDataGridViewTextBoxColumn");
+            productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            // 
+            // productCountDataGridViewTextBoxColumn
+            // 
+            productCountDataGridViewTextBoxColumn.DataPropertyName = "ProductCount";
+            resources.ApplyResources(productCountDataGridViewTextBoxColumn, "productCountDataGridViewTextBoxColumn");
+            productCountDataGridViewTextBoxColumn.Name = "productCountDataGridViewTextBoxColumn";
+            // 
+            // productPriceDataGridViewTextBoxColumn1
+            // 
+            productPriceDataGridViewTextBoxColumn1.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn1, "productPriceDataGridViewTextBoxColumn1");
+            productPriceDataGridViewTextBoxColumn1.Name = "productPriceDataGridViewTextBoxColumn1";
+            // 
+            // productSaleTimeDataGridViewTextBoxColumn
+            // 
+            productSaleTimeDataGridViewTextBoxColumn.DataPropertyName = "ProductSaleTime";
+            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn, "productSaleTimeDataGridViewTextBoxColumn");
+            productSaleTimeDataGridViewTextBoxColumn.Name = "productSaleTimeDataGridViewTextBoxColumn";
+            // 
+            // sellerIDDataGridViewTextBoxColumn2
+            // 
+            sellerIDDataGridViewTextBoxColumn2.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn2, "sellerIDDataGridViewTextBoxColumn2");
+            sellerIDDataGridViewTextBoxColumn2.Name = "sellerIDDataGridViewTextBoxColumn2";
+            // 
+            // productNameDataGridViewTextBoxColumn2
+            // 
+            productNameDataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn2, "productNameDataGridViewTextBoxColumn2");
+            productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
+            // 
+            // productIDDataGridViewTextBoxColumn1
+            // 
+            productIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
+            resources.ApplyResources(productIDDataGridViewTextBoxColumn1, "productIDDataGridViewTextBoxColumn1");
+            productIDDataGridViewTextBoxColumn1.Name = "productIDDataGridViewTextBoxColumn1";
+            // 
+            // productCountDataGridViewTextBoxColumn1
+            // 
+            productCountDataGridViewTextBoxColumn1.DataPropertyName = "ProductCount";
+            resources.ApplyResources(productCountDataGridViewTextBoxColumn1, "productCountDataGridViewTextBoxColumn1");
+            productCountDataGridViewTextBoxColumn1.Name = "productCountDataGridViewTextBoxColumn1";
+            // 
+            // productPriceDataGridViewTextBoxColumn2
+            // 
+            productPriceDataGridViewTextBoxColumn2.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn2, "productPriceDataGridViewTextBoxColumn2");
+            productPriceDataGridViewTextBoxColumn2.Name = "productPriceDataGridViewTextBoxColumn2";
+            // 
+            // productSaleTimeDataGridViewTextBoxColumn1
+            // 
+            productSaleTimeDataGridViewTextBoxColumn1.DataPropertyName = "ProductSaleTime";
+            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn1, "productSaleTimeDataGridViewTextBoxColumn1");
+            productSaleTimeDataGridViewTextBoxColumn1.Name = "productSaleTimeDataGridViewTextBoxColumn1";
+            // 
+            // sellerIDDataGridViewTextBoxColumn3
+            // 
+            sellerIDDataGridViewTextBoxColumn3.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn3, "sellerIDDataGridViewTextBoxColumn3");
+            sellerIDDataGridViewTextBoxColumn3.Name = "sellerIDDataGridViewTextBoxColumn3";
+            // 
             // ManagerForm
             // 
             resources.ApplyResources(this, "$this");
@@ -656,6 +918,18 @@
             ReportsTab.ResumeLayout(false);
             SalesReportTab.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
+            KunlikSalesReport.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SaleProductDayDGV).EndInit();
+            OylikSalesReport.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SaleProductMonthDGV).EndInit();
             SellerReportTab.ResumeLayout(false);
             SellerReport.ResumeLayout(false);
             ProductReportTab.ResumeLayout(false);
@@ -745,5 +1019,37 @@
         private DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
         private BindingSource usersBindingSource;
         private Panel SellersListPanel;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private DataGridView SaleProductDayDGV;
+        private Button ButSearchSaleKunlik;
+        private Label label14;
+        private Label label13;
+        private Button ButSearchSaleOylik;
+        private ComboBox comboBoxYear1;
+        private ComboBox comboBoxMonth1;
+        private Label label12;
+        private Label label11;
+        private DataGridView SaleProductMonthDGV;
+        private DateTimePicker dateTimePickerBefore;
+        private DateTimePicker dateTimePickerFrom;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productCountDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn productSaleTimeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn productCountDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn productSaleTimeDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn3;
     }
 }

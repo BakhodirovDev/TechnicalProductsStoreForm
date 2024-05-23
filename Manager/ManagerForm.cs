@@ -13,8 +13,8 @@
     using System.Windows.Forms;
     using TechnicalProductsStore.Class;
 
-    namespace TechnicalProductsStore.Manager
-    {
+namespace TechnicalProductsStore.Manager
+{
     public partial class ManagerForm : Form
     {
         public bool MenuisLarge = false;
@@ -23,6 +23,7 @@
         public ManagerForm()
         {
             InitializeComponent();
+            InitializeComboBoxes();
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
@@ -31,8 +32,18 @@
 
             SellerListPanel();
             ProductsListPanel();
+        }
+        private void InitializeComboBoxes()
+        {
+            // Инициализация ComboBox для месяцев
+            string[] months = new string[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+            comboBoxMonth1.Items.AddRange(months);
 
-
+            // Инициализация ComboBox для годов
+            for (int i = 2019; i <= DateTime.Now.Year; i++)
+            {
+                comboBoxYear1.Items.Add(i);
+            }
         }
 
         public void SellerListPanel()
@@ -514,6 +525,140 @@
                     e.CellStyle.BackColor = Color.White;
                 }
             }
+        }
+
+        private void ButSearchSaleKunlik_Click(object sender, EventArgs e)
+        {
+            // Пути к JSON файлам
+            string PathHistorySale = @$"../../../DataBase/History.json";
+            string PathProducts = @$"../../../DataBase/Products.json";
+
+            // Получаем выбранные значения из DateTimePicker
+            DateTime startDate = dateTimePickerFrom.Value.Date;
+            DateTime endDate = dateTimePickerBefore.Value.Date.AddDays(1); // Увеличиваем на 1 день, чтобы включить всю выбранную дату "before"
+
+            if (startDate >= endDate)
+            {
+                // Устанавливаем значения DateTimePicker по умолчанию
+                dateTimePickerFrom.Value = DateTime.Today;
+                dateTimePickerBefore.Value = DateTime.Today;
+                MessageBox.Show("Sanani Noto'g'ri kiritdingiz.");
+            }
+            else
+            {
+                // Читаем и десериализуем данные из JSON
+                string jsonHistory = File.ReadAllText(PathHistorySale);
+                List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
+
+                string jsonProducts = File.ReadAllText(PathProducts);
+                List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
+
+                // Проверка десериализации
+                if (historyList == null || productList == null)
+                {
+                    MessageBox.Show("eror json deserelize");
+                    return;
+                }
+
+                // Фильтрация истории по выбранной дате с учетом различных форматов дат
+                List<HistorySale> filteredHistory = historyList.Where(h =>
+                {
+                    DateTime saleTime;
+                    bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+
+                    // Отладочные сообщения для проверки парсинга дат и фильтрации
+                    Console.WriteLine($"saleTimeParsed: {saleTimeParsed}");
+                    if (saleTimeParsed) Console.WriteLine($"saleTime: {saleTime}");
+
+                    return saleTimeParsed && saleTime >= startDate && saleTime < endDate;
+                }).ToList();
+
+                // Проверка наличия данных после фильтрации
+                if (filteredHistory.Count == 0)
+                {
+                    MessageBox.Show("Нет данных для отображения в выбранном диапазоне дат.");
+                    return;
+                }
+                // Объединение данных о продажах с именами продуктов
+                var filteredHistoryWithProductNames = filteredHistory.Join(
+                    productList,
+                    sale => sale.ProductID,
+                    product => product.Id,
+                    (sale, product) => new
+                    {
+                        sale.SellerID,
+                        sale.ProductID,
+                        product.ProductName,
+                        sale.ProductCount,
+                        sale.ProductPrice,
+                        sale.ProductSaleTime
+                    }).ToList();
+
+                // Привязываем данные к DataGridView
+                SaleProductDayDGV.DataSource = filteredHistoryWithProductNames;
+
+                // Обновляем текстовые метки статистики
+                double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
+                label9.Text = $"Product Quantity = {totalSaleCount} pieces";
+
+                double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
+                label10.Text = $"Days Profit = {totalSalePrice} $";
+
+            }
+        }
+
+        private void ButSearchSaleOylik_Click(object sender, EventArgs e)
+        {
+            string PathHistorySale = @$"../../../DataBase/History.json";
+            string PathProducts = @$"../../../DataBase/Products.json";
+
+            int selectedMonth1 = comboBoxMonth1.SelectedIndex + 1; // Индексы месяцев начинаются с 0
+            int selectedYear1 = (int)comboBoxYear1.SelectedItem;
+
+            // Читаем и десериализуем данные из JSON
+            string jsonHistory = File.ReadAllText(PathHistorySale);
+            List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
+
+            string jsonProducts = File.ReadAllText(PathProducts);
+            List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
+
+
+            // Фильтрация истории по выбранному месяцу и году
+            List<HistorySale> filteredHistory = historyList.Where(h =>
+            {
+                DateTime saleTime;
+                bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+
+                return saleTimeParsed &&
+                       saleTime.Month == selectedMonth1 && saleTime.Year == selectedYear1;
+            }).ToList();
+
+            // Объединение данных о продажах с именами продуктов
+            var filteredHistoryWithProductNames = filteredHistory.Join(
+                productList,
+                sale => sale.ProductID,
+                product => product.Id,
+                (sale, product) => new
+                {
+                    sale.SellerID,
+                    sale.ProductID,
+                    product.ProductName,
+                    product.ProductCountry,
+                    sale.ProductCount,
+                    sale.ProductPrice,
+                    sale.ProductSaleTime
+                }).ToList();
+
+
+            SaleProductMonthDGV.DataSource = filteredHistoryWithProductNames;
+
+
+            // Обновляем текстовые метки статистики
+            double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
+            label13.Text = $"Product Quantity = {totalSaleCount} pieces";
+
+            double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
+            label14.Text = $"Month Profit = {totalSalePrice} $";
         }
     }
 }

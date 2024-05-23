@@ -20,6 +20,7 @@ namespace TechnicalProductsStore.Manager
         {
             InitializeComponent();
             InitializeUpCountryComboBox();
+            
 
             selectedProduct = product;
         }
@@ -32,6 +33,7 @@ namespace TechnicalProductsStore.Manager
             comboUpCountry.DropDownStyle = ComboBoxStyle.DropDown;
 
         }
+       
         private void button1_Click(object sender, EventArgs e)
         {
             // Проверяем, введены ли все необходимые данные для редактирования продукта
