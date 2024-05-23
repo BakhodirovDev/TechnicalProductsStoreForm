@@ -1511,7 +1511,7 @@
     <value>0</value>
   </data>
   <data name="ProductListPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1436, 71</value>
+    <value>1815, 90</value>
   </data>
   <data name="ProductListPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -1621,11 +1621,14 @@
   <data name="&gt;&gt;SellerListDGV.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="dateTimePickerBefore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
   <data name="dateTimePickerBefore.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 140</value>
+    <value>22, 140</value>
   </data>
   <data name="dateTimePickerBefore.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 27</value>
+    <value>266, 30</value>
   </data>
   <data name="dateTimePickerBefore.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1646,13 +1649,13 @@
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.8pt</value>
+    <value>Palatino Linotype, 12pt, style=Bold</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 28</value>
+    <value>22, 22</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>65, 27</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1676,13 +1679,13 @@
     <value>True</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.8pt</value>
+    <value>Palatino Linotype, 12pt, style=Bold</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 117</value>
+    <value>22, 111</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
+    <value>77, 27</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1702,11 +1705,14 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="dateTimePickerFrom.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
   <data name="dateTimePickerFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 51</value>
+    <value>22, 51</value>
   </data>
   <data name="dateTimePickerFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 27</value>
+    <value>266, 30</value>
   </data>
   <data name="dateTimePickerFrom.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1724,13 +1730,13 @@
     <value>3</value>
   </data>
   <data name="ButSearchSaleKunlik.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
+    <value>Palatino Linotype, 10pt, style=Bold</value>
   </data>
   <data name="ButSearchSaleKunlik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 189</value>
+    <value>101, 182</value>
   </data>
   <data name="ButSearchSaleKunlik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 29</value>
+    <value>99, 35</value>
   </data>
   <data name="ButSearchSaleKunlik.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1751,10 +1757,10 @@
     <value>4</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>801, 15</value>
+    <value>810, 23</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 233</value>
+    <value>302, 233</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1826,10 +1832,10 @@
     <value>1</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-4, 552</value>
+    <value>1, 542</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>782, 86</value>
+    <value>782, 101</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1907,7 +1913,7 @@
     <value>51</value>
   </data>
   <data name="SaleProductDayDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 578</value>
+    <value>783, 543</value>
   </data>
   <data name="SaleProductDayDGV.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1934,7 +1940,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="KunlikSalesReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1227, 638</value>
+    <value>1078, 631</value>
   </data>
   <data name="KunlikSalesReport.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1954,11 +1960,14 @@
   <data name="&gt;&gt;KunlikSalesReport.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="comboBoxYear1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
   <data name="comboBoxYear1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 116</value>
+    <value>37, 122</value>
   </data>
   <data name="comboBoxYear1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 28</value>
+    <value>235, 31</value>
   </data>
   <data name="comboBoxYear1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1979,13 +1988,13 @@
     <value>True</value>
   </data>
   <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt, style=Bold</value>
+    <value>Palatino Linotype, 12pt, style=Bold</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 23</value>
+    <value>37, 30</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 19</value>
+    <value>79, 27</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2005,8 +2014,11 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ButSearchSaleOylik.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
   <data name="ButSearchSaleOylik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 161</value>
+    <value>96, 169</value>
   </data>
   <data name="ButSearchSaleOylik.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 35</value>
@@ -2033,13 +2045,13 @@
     <value>True</value>
   </data>
   <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt, style=Bold</value>
+    <value>Palatino Linotype, 12pt, style=Bold</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 85</value>
+    <value>37, 91</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 19</value>
+    <value>57, 27</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2059,11 +2071,14 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="comboBoxMonth1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
   <data name="comboBoxMonth1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 54</value>
+    <value>37, 61</value>
   </data>
   <data name="comboBoxMonth1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 28</value>
+    <value>235, 31</value>
   </data>
   <data name="comboBoxMonth1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2081,10 +2096,10 @@
     <value>4</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>813, 15</value>
+    <value>810, 23</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 214</value>
+    <value>302, 233</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2243,7 +2258,7 @@
     <value>51</value>
   </data>
   <data name="SaleProductMonthDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>783, 578</value>
+    <value>783, 543</value>
   </data>
   <data name="SaleProductMonthDGV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2270,7 +2285,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="OylikSalesReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1227, 638</value>
+    <value>1078, 631</value>
   </data>
   <data name="OylikSalesReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2290,14 +2305,17 @@
   <data name="&gt;&gt;OylikSalesReport.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 2</value>
+    <value>2, 2</value>
   </data>
   <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1235, 671</value>
+    <value>1086, 664</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2344,6 +2362,336 @@
   <data name="&gt;&gt;SalesReportTab.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="SellerReportKunlikTotalPriceValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 511</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceValue.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceValue.Name" xml:space="preserve">
+    <value>SellerReportKunlikTotalPriceValue</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceValue.Parent" xml:space="preserve">
+    <value>KunlikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 511</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportKunlikTotalPriceText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceText.Name" xml:space="preserve">
+    <value>SellerReportKunlikTotalPriceText</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceText.Parent" xml:space="preserve">
+    <value>KunlikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalPriceText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 427</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountValue.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountValue.Name" xml:space="preserve">
+    <value>SellerReportKunlikTotalCountValue</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountValue.Parent" xml:space="preserve">
+    <value>KunlikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountValue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 427</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportKunlikTotalCountText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountText.Name" xml:space="preserve">
+    <value>SellerReportKunlikTotalCountText</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountText.Parent" xml:space="preserve">
+    <value>KunlikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikTotalCountText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 113</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 23</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>SellerReportKunlikPanel</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SellerReportKunlikSellerUserNameCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 142</value>
+  </data>
+  <data name="SellerReportKunlikSellerUserNameCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 28</value>
+  </data>
+  <data name="SellerReportKunlikSellerUserNameCB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSellerUserNameCB.Name" xml:space="preserve">
+    <value>SellerReportKunlikSellerUserNameCB</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSellerUserNameCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSellerUserNameCB.Parent" xml:space="preserve">
+    <value>SellerReportKunlikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSellerUserNameCB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 18</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 23</value>
+  </data>
+  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>SellerReportKunlikPanel</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SellerReportKunlikSearchBTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportKunlikSearchBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 189</value>
+  </data>
+  <data name="SellerReportKunlikSearchBTN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 38</value>
+  </data>
+  <data name="SellerReportKunlikSearchBTN.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="SellerReportKunlikSearchBTN.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSearchBTN.Name" xml:space="preserve">
+    <value>SellerReportKunlikSearchBTN</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSearchBTN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSearchBTN.Parent" xml:space="preserve">
+    <value>SellerReportKunlikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikSearchBTN.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SellerReportKunlikDTP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportKunlikDTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 55</value>
+  </data>
+  <data name="SellerReportKunlikDTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 30</value>
+  </data>
+  <data name="SellerReportKunlikDTP.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDTP.Name" xml:space="preserve">
+    <value>SellerReportKunlikDTP</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDTP.Parent" xml:space="preserve">
+    <value>SellerReportKunlikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDTP.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SellerReportKunlikPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 23</value>
+  </data>
+  <data name="SellerReportKunlikPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 266</value>
+  </data>
+  <data name="SellerReportKunlikPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikPanel.Name" xml:space="preserve">
+    <value>SellerReportKunlikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikPanel.Parent" xml:space="preserve">
+    <value>KunlikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>SellerID</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>SellerSignInTime</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>SellerSignOutTime</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>SellerSaleTotalCount</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>SellerSaleTotalPrice</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="SellerReportKunlikDGV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="SellerReportKunlikDGV.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="SellerReportKunlikDGV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 543</value>
+  </data>
+  <data name="SellerReportKunlikDGV.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDGV.Name" xml:space="preserve">
+    <value>SellerReportKunlikDGV</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDGV.Parent" xml:space="preserve">
+    <value>KunlikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportKunlikDGV.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="KunlikSellerReport.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
@@ -2354,7 +2702,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="KunlikSellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1222, 636</value>
+    <value>1078, 631</value>
   </data>
   <data name="KunlikSellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2374,6 +2722,396 @@
   <data name="&gt;&gt;KunlikSellerReport.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="SellerReportSanalikTotalPriceValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>998, 508</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceValue.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceValue.Name" xml:space="preserve">
+    <value>SellerReportSanalikTotalPriceValue</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceValue.Parent" xml:space="preserve">
+    <value>SanalikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 512</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportSanalikTotalPriceText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceText.Name" xml:space="preserve">
+    <value>SellerReportSanalikTotalPriceText</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceText.Parent" xml:space="preserve">
+    <value>SanalikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalPriceText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>998, 414</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountValue.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountValue.Name" xml:space="preserve">
+    <value>SellerReportSanalikTotalCountValue</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountValue.Parent" xml:space="preserve">
+    <value>SanalikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountValue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 414</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportSanalikTotalCountText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountText.Name" xml:space="preserve">
+    <value>SellerReportSanalikTotalCountText</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountText.Parent" xml:space="preserve">
+    <value>SanalikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikTotalCountText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SellerReportSanalikSearchBTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikSearchBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 256</value>
+  </data>
+  <data name="SellerReportSanalikSearchBTN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 37</value>
+  </data>
+  <data name="SellerReportSanalikSearchBTN.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="SellerReportSanalikSearchBTN.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSearchBTN.Name" xml:space="preserve">
+    <value>SellerReportSanalikSearchBTN</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSearchBTN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSearchBTN.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSearchBTN.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernamelb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernamelb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernamelb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 166</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernamelb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 23</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernamelb.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernamelb.Text" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernamelb.Name" xml:space="preserve">
+    <value>SellerReportSanalikSellerUsernamelb</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernamelb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernamelb.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernamelb.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernameCB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernameCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 196</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernameCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 31</value>
+  </data>
+  <data name="SellerReportSanalikSellerUsernameCB.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernameCB.Name" xml:space="preserve">
+    <value>SellerReportSanalikSellerUsernameCB</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernameCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernameCB.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikSellerUsernameCB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SR_SanalikEndlb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SR_SanalikEndlb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SR_SanalikEndlb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 93</value>
+  </data>
+  <data name="SR_SanalikEndlb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 23</value>
+  </data>
+  <data name="SR_SanalikEndlb.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="SR_SanalikEndlb.Text" xml:space="preserve">
+    <value>End Day</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikEndlb.Name" xml:space="preserve">
+    <value>SR_SanalikEndlb</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikEndlb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikEndlb.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikEndlb.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SR_SanalikStartDTP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SR_SanalikStartDTP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SR_SanalikStartDTP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 19</value>
+  </data>
+  <data name="SR_SanalikStartDTP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 23</value>
+  </data>
+  <data name="SR_SanalikStartDTP.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="SR_SanalikStartDTP.Text" xml:space="preserve">
+    <value>Start Day</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikStartDTP.Name" xml:space="preserve">
+    <value>SR_SanalikStartDTP</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikStartDTP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikStartDTP.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SR_SanalikStartDTP.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SellerReportSanalikDTPEnd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikDTPEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
+  </data>
+  <data name="SellerReportSanalikDTPEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 30</value>
+  </data>
+  <data name="SellerReportSanalikDTPEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPEnd.Name" xml:space="preserve">
+    <value>SellerReportSanalikDTPEnd</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPEnd.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPEnd.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SellerReportSanalikDTPStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportSanalikDTPStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="SellerReportSanalikDTPStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 30</value>
+  </data>
+  <data name="SellerReportSanalikDTPStart.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPStart.Name" xml:space="preserve">
+    <value>SellerReportSanalikDTPStart</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPStart.Parent" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDTPStart.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="SellerReportSanalikPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 23</value>
+  </data>
+  <data name="SellerReportSanalikPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 313</value>
+  </data>
+  <data name="SellerReportSanalikPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikPanel.Name" xml:space="preserve">
+    <value>SellerReportSanalikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikPanel.Parent" xml:space="preserve">
+    <value>SanalikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>SellerID</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn5.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>SellerSignInTime</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>SellerSignOutTime</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>SellerSaleTotalCount</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>SellerSaleTotalPrice</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn3.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="SellerReportSanalikDGV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="SellerReportSanalikDGV.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="SellerReportSanalikDGV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 543</value>
+  </data>
+  <data name="SellerReportSanalikDGV.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDGV.Name" xml:space="preserve">
+    <value>SellerReportSanalikDGV</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDGV.Parent" xml:space="preserve">
+    <value>SanalikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportSanalikDGV.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="SanalikSellerReport.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
@@ -2384,7 +3122,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SanalikSellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1222, 636</value>
+    <value>1078, 631</value>
   </data>
   <data name="SanalikSellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2404,6 +3142,450 @@
   <data name="&gt;&gt;SanalikSellerReport.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="SellerReportOylikTotalPriceValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>978, 509</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceValue.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceValue.Name" xml:space="preserve">
+    <value>SellerReportOylikTotalPriceValue</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceValue.Parent" xml:space="preserve">
+    <value>OylikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 509</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportOylikTotalPriceText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceText.Name" xml:space="preserve">
+    <value>SellerReportOylikTotalPriceText</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceText.Parent" xml:space="preserve">
+    <value>OylikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalPriceText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SellerReportOylikTotalCountValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportOylikTotalCountValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikTotalCountValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>978, 427</value>
+  </data>
+  <data name="SellerReportOylikTotalCountValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportOylikTotalCountValue.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountValue.Name" xml:space="preserve">
+    <value>SellerReportOylikTotalCountValue</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountValue.Parent" xml:space="preserve">
+    <value>OylikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountValue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SellerReportOylikTotalCountText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SellerReportOylikTotalCountText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 13.8pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikTotalCountText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 427</value>
+  </data>
+  <data name="SellerReportOylikTotalCountText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="SellerReportOylikTotalCountText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountText.Name" xml:space="preserve">
+    <value>SellerReportOylikTotalCountText</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountText.Parent" xml:space="preserve">
+    <value>OylikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikTotalCountText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 103</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 23</value>
+  </data>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Items" xml:space="preserve">
+    <value>2019</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Items1" xml:space="preserve">
+    <value>2020</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Items2" xml:space="preserve">
+    <value>2021</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Items3" xml:space="preserve">
+    <value>2022</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Items4" xml:space="preserve">
+    <value>2023</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Items5" xml:space="preserve">
+    <value>2024</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 132</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 31</value>
+  </data>
+  <data name="SellerReportOylikYillarCB.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikYillarCB.Name" xml:space="preserve">
+    <value>SellerReportOylikYillarCB</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikYillarCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikYillarCB.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikYillarCB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SellerReportOylikSearchBTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikSearchBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 242</value>
+  </data>
+  <data name="SellerReportOylikSearchBTN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 38</value>
+  </data>
+  <data name="SellerReportOylikSearchBTN.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="SellerReportOylikSearchBTN.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSearchBTN.Name" xml:space="preserve">
+    <value>SellerReportOylikSearchBTN</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSearchBTN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSearchBTN.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSearchBTN.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 166</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 23</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 23</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SellerReportOylikSellerCB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikSellerCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 193</value>
+  </data>
+  <data name="SellerReportOylikSellerCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 31</value>
+  </data>
+  <data name="SellerReportOylikSellerCB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSellerCB.Name" xml:space="preserve">
+    <value>SellerReportOylikSellerCB</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSellerCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSellerCB.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikSellerCB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 10pt, style=Bold</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items1" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items2" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items3" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items4" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items5" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items6" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items7" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items8" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items9" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items10" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Items11" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 60</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 31</value>
+  </data>
+  <data name="SellerReportOylikOylarCB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikOylarCB.Name" xml:space="preserve">
+    <value>SellerReportOylikOylarCB</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikOylarCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikOylarCB.Parent" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikOylarCB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="SellerReportOylikPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 3</value>
+  </data>
+  <data name="SellerReportOylikPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 310</value>
+  </data>
+  <data name="SellerReportOylikPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikPanel.Name" xml:space="preserve">
+    <value>SellerReportOylikPanel</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikPanel.Parent" xml:space="preserve">
+    <value>OylikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>SellerID</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn6.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerIDDataGridViewTextBoxColumn6.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>SellerSignInTime</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSignInTimeDataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>SellerSignOutTime</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSignOutTimeDataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>SellerSaleTotalCount</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSaleTotalCountDataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>SellerSaleTotalPrice</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="sellerSaleTotalPriceDataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="SellerReportOylikDGV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="SellerReportOylikDGV.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="SellerReportOylikDGV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 543</value>
+  </data>
+  <data name="SellerReportOylikDGV.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikDGV.Name" xml:space="preserve">
+    <value>SellerReportOylikDGV</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikDGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikDGV.Parent" xml:space="preserve">
+    <value>OylikSellerReport</value>
+  </data>
+  <data name="&gt;&gt;SellerReportOylikDGV.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="OylikSellerReport.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
@@ -2414,7 +3596,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="OylikSellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1222, 636</value>
+    <value>1078, 631</value>
   </data>
   <data name="OylikSellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2434,6 +3616,9 @@
   <data name="&gt;&gt;OylikSellerReport.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="SellerReport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="SellerReport.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
   </data>
@@ -2441,7 +3626,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1230, 669</value>
+    <value>1086, 664</value>
   </data>
   <data name="SellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2495,7 +3680,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="MonthProductReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1222, 634</value>
+    <value>1078, 631</value>
   </data>
   <data name="MonthProductReport.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2525,7 +3710,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SanalikProductReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1222, 634</value>
+    <value>1078, 631</value>
   </data>
   <data name="SanalikProductReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2545,6 +3730,9 @@
   <data name="&gt;&gt;SanalikProductReport.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="tabControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="tabControl3.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
   </data>
@@ -2552,7 +3740,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="tabControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1230, 667</value>
+    <value>1086, 664</value>
   </data>
   <data name="tabControl3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2957,6 +4145,96 @@
     <value>sellerIDDataGridViewTextBoxColumn3</value>
   </data>
   <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>sellerIDDataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSignInTimeDataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>sellerSignInTimeDataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;sellerSignInTimeDataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSignOutTimeDataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>sellerSignOutTimeDataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;sellerSignOutTimeDataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalCountDataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>sellerSaleTotalCountDataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalCountDataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>sellerSaleTotalPriceDataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>sellerIDDataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSignInTimeDataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>sellerSignInTimeDataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;sellerSignInTimeDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSignOutTimeDataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>sellerSignOutTimeDataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;sellerSignOutTimeDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalCountDataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>sellerSaleTotalCountDataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalCountDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>sellerSaleTotalPriceDataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>sellerIDDataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;sellerIDDataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSignInTimeDataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>sellerSignInTimeDataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;sellerSignInTimeDataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSignOutTimeDataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>sellerSignOutTimeDataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;sellerSignOutTimeDataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalCountDataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>sellerSaleTotalCountDataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalCountDataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>sellerSaleTotalPriceDataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn4.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -28,9 +28,4 @@
     <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Sections\ManagerForms\ProductList\" />
-    <Folder Include="Sections\ManagerForms\SellerList\" />
-  </ItemGroup>
-
 </Project>

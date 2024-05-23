@@ -103,6 +103,12 @@
             label10 = new Label();
             label9 = new Label();
             SaleProductDayDGV = new DataGridView();
+            productNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productSaleTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sellerIDDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             OylikSalesReport = new TabPage();
             panel4 = new Panel();
             comboBoxYear1 = new ComboBox();
@@ -114,11 +120,69 @@
             label13 = new Label();
             label14 = new Label();
             SaleProductMonthDGV = new DataGridView();
+            productNameDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productIDDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productSaleTimeDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            sellerIDDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             SellerReportTab = new TabPage();
             SellerReport = new TabControl();
             KunlikSellerReport = new TabPage();
+            SellerReportKunlikTotalPriceValue = new Label();
+            SellerReportKunlikTotalPriceText = new Label();
+            SellerReportKunlikTotalCountValue = new Label();
+            SellerReportKunlikTotalCountText = new Label();
+            SellerReportKunlikPanel = new Panel();
+            label18 = new Label();
+            SellerReportKunlikSellerUserNameCB = new ComboBox();
+            label17 = new Label();
+            SellerReportKunlikSearchBTN = new Button();
+            SellerReportKunlikDTP = new DateTimePicker();
+            SellerReportKunlikDGV = new DataGridView();
+            sellerIDDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            sellerSignInTimeDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            sellerSignOutTimeDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            sellerSaleTotalCountDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            sellerSaleTotalPriceDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             SanalikSellerReport = new TabPage();
+            SellerReportSanalikTotalPriceValue = new Label();
+            SellerReportSanalikTotalPriceText = new Label();
+            SellerReportSanalikTotalCountValue = new Label();
+            SellerReportSanalikTotalCountText = new Label();
+            SellerReportSanalikPanel = new Panel();
+            SellerReportSanalikSearchBTN = new Button();
+            SellerReportSanalikSellerUsernamelb = new Label();
+            SellerReportSanalikSellerUsernameCB = new ComboBox();
+            SR_SanalikEndlb = new Label();
+            SR_SanalikStartDTP = new Label();
+            SellerReportSanalikDTPEnd = new DateTimePicker();
+            SellerReportSanalikDTPStart = new DateTimePicker();
+            SellerReportSanalikDGV = new DataGridView();
+            sellerIDDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            sellerSignInTimeDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            sellerSignOutTimeDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            sellerSaleTotalCountDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            sellerSaleTotalPriceDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             OylikSellerReport = new TabPage();
+            SellerReportOylikTotalPriceValue = new Label();
+            SellerReportOylikTotalPriceText = new Label();
+            SellerReportOylikTotalCountValue = new Label();
+            SellerReportOylikTotalCountText = new Label();
+            SellerReportOylikPanel = new Panel();
+            label19 = new Label();
+            SellerReportOylikYillarCB = new ComboBox();
+            SellerReportOylikSearchBTN = new Button();
+            label16 = new Label();
+            label15 = new Label();
+            SellerReportOylikSellerCB = new ComboBox();
+            SellerReportOylikOylarCB = new ComboBox();
+            SellerReportOylikDGV = new DataGridView();
+            sellerIDDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            sellerSignInTimeDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            sellerSignOutTimeDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            sellerSaleTotalCountDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            sellerSaleTotalPriceDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             ProductReportTab = new TabPage();
             tabControl3 = new TabControl();
             MonthProductReport = new TabPage();
@@ -126,18 +190,6 @@
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             SellersListPanel = new Panel();
-            productNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productSaleTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            sellerIDDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productNameDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productIDDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productSaleTimeDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            sellerIDDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -166,6 +218,15 @@
             ((System.ComponentModel.ISupportInitialize)SaleProductMonthDGV).BeginInit();
             SellerReportTab.SuspendLayout();
             SellerReport.SuspendLayout();
+            KunlikSellerReport.SuspendLayout();
+            SellerReportKunlikPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SellerReportKunlikDGV).BeginInit();
+            SanalikSellerReport.SuspendLayout();
+            SellerReportSanalikPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SellerReportSanalikDGV).BeginInit();
+            OylikSellerReport.SuspendLayout();
+            SellerReportOylikPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SellerReportOylikDGV).BeginInit();
             ProductReportTab.SuspendLayout();
             tabControl3.SuspendLayout();
             SellersListPanel.SuspendLayout();
@@ -609,6 +670,7 @@
             // 
             resources.ApplyResources(dateTimePickerFrom, "dateTimePickerFrom");
             dateTimePickerFrom.Name = "dateTimePickerFrom";
+            dateTimePickerFrom.ValueChanged += dateTimePickerFrom_ValueChanged;
             // 
             // ButSearchSaleKunlik
             // 
@@ -649,6 +711,43 @@
             SaleProductDayDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(SaleProductDayDGV, "SaleProductDayDGV");
             SaleProductDayDGV.Name = "SaleProductDayDGV";
+            SaleProductDayDGV.CellContentClick += SaleProductDayDGV_CellContentClick;
+            // 
+            // productNameDataGridViewTextBoxColumn1
+            // 
+            productNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn1, "productNameDataGridViewTextBoxColumn1");
+            productNameDataGridViewTextBoxColumn1.Name = "productNameDataGridViewTextBoxColumn1";
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            resources.ApplyResources(productIDDataGridViewTextBoxColumn, "productIDDataGridViewTextBoxColumn");
+            productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            // 
+            // productCountDataGridViewTextBoxColumn
+            // 
+            productCountDataGridViewTextBoxColumn.DataPropertyName = "ProductCount";
+            resources.ApplyResources(productCountDataGridViewTextBoxColumn, "productCountDataGridViewTextBoxColumn");
+            productCountDataGridViewTextBoxColumn.Name = "productCountDataGridViewTextBoxColumn";
+            // 
+            // productPriceDataGridViewTextBoxColumn1
+            // 
+            productPriceDataGridViewTextBoxColumn1.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn1, "productPriceDataGridViewTextBoxColumn1");
+            productPriceDataGridViewTextBoxColumn1.Name = "productPriceDataGridViewTextBoxColumn1";
+            // 
+            // productSaleTimeDataGridViewTextBoxColumn
+            // 
+            productSaleTimeDataGridViewTextBoxColumn.DataPropertyName = "ProductSaleTime";
+            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn, "productSaleTimeDataGridViewTextBoxColumn");
+            productSaleTimeDataGridViewTextBoxColumn.Name = "productSaleTimeDataGridViewTextBoxColumn";
+            // 
+            // sellerIDDataGridViewTextBoxColumn2
+            // 
+            sellerIDDataGridViewTextBoxColumn2.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn2, "sellerIDDataGridViewTextBoxColumn2");
+            sellerIDDataGridViewTextBoxColumn2.Name = "sellerIDDataGridViewTextBoxColumn2";
             // 
             // OylikSalesReport
             // 
@@ -672,8 +771,8 @@
             // 
             // comboBoxYear1
             // 
-            comboBoxYear1.FormattingEnabled = true;
             resources.ApplyResources(comboBoxYear1, "comboBoxYear1");
+            comboBoxYear1.FormattingEnabled = true;
             comboBoxYear1.Name = "comboBoxYear1";
             // 
             // label11
@@ -697,8 +796,8 @@
             // 
             // comboBoxMonth1
             // 
-            comboBoxMonth1.FormattingEnabled = true;
             resources.ApplyResources(comboBoxMonth1, "comboBoxMonth1");
+            comboBoxMonth1.FormattingEnabled = true;
             comboBoxMonth1.Name = "comboBoxMonth1";
             // 
             // panel3
@@ -730,6 +829,42 @@
             resources.ApplyResources(SaleProductMonthDGV, "SaleProductMonthDGV");
             SaleProductMonthDGV.Name = "SaleProductMonthDGV";
             // 
+            // productNameDataGridViewTextBoxColumn2
+            // 
+            productNameDataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn2, "productNameDataGridViewTextBoxColumn2");
+            productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
+            // 
+            // productIDDataGridViewTextBoxColumn1
+            // 
+            productIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
+            resources.ApplyResources(productIDDataGridViewTextBoxColumn1, "productIDDataGridViewTextBoxColumn1");
+            productIDDataGridViewTextBoxColumn1.Name = "productIDDataGridViewTextBoxColumn1";
+            // 
+            // productCountDataGridViewTextBoxColumn1
+            // 
+            productCountDataGridViewTextBoxColumn1.DataPropertyName = "ProductCount";
+            resources.ApplyResources(productCountDataGridViewTextBoxColumn1, "productCountDataGridViewTextBoxColumn1");
+            productCountDataGridViewTextBoxColumn1.Name = "productCountDataGridViewTextBoxColumn1";
+            // 
+            // productPriceDataGridViewTextBoxColumn2
+            // 
+            productPriceDataGridViewTextBoxColumn2.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn2, "productPriceDataGridViewTextBoxColumn2");
+            productPriceDataGridViewTextBoxColumn2.Name = "productPriceDataGridViewTextBoxColumn2";
+            // 
+            // productSaleTimeDataGridViewTextBoxColumn1
+            // 
+            productSaleTimeDataGridViewTextBoxColumn1.DataPropertyName = "ProductSaleTime";
+            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn1, "productSaleTimeDataGridViewTextBoxColumn1");
+            productSaleTimeDataGridViewTextBoxColumn1.Name = "productSaleTimeDataGridViewTextBoxColumn1";
+            // 
+            // sellerIDDataGridViewTextBoxColumn3
+            // 
+            sellerIDDataGridViewTextBoxColumn3.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn3, "sellerIDDataGridViewTextBoxColumn3");
+            sellerIDDataGridViewTextBoxColumn3.Name = "sellerIDDataGridViewTextBoxColumn3";
+            // 
             // SellerReportTab
             // 
             SellerReportTab.Controls.Add(SellerReport);
@@ -748,21 +883,384 @@
             // 
             // KunlikSellerReport
             // 
+            KunlikSellerReport.Controls.Add(SellerReportKunlikTotalPriceValue);
+            KunlikSellerReport.Controls.Add(SellerReportKunlikTotalPriceText);
+            KunlikSellerReport.Controls.Add(SellerReportKunlikTotalCountValue);
+            KunlikSellerReport.Controls.Add(SellerReportKunlikTotalCountText);
+            KunlikSellerReport.Controls.Add(SellerReportKunlikPanel);
+            KunlikSellerReport.Controls.Add(SellerReportKunlikDGV);
             resources.ApplyResources(KunlikSellerReport, "KunlikSellerReport");
             KunlikSellerReport.Name = "KunlikSellerReport";
             KunlikSellerReport.UseVisualStyleBackColor = true;
             // 
+            // SellerReportKunlikTotalPriceValue
+            // 
+            resources.ApplyResources(SellerReportKunlikTotalPriceValue, "SellerReportKunlikTotalPriceValue");
+            SellerReportKunlikTotalPriceValue.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportKunlikTotalPriceValue.Name = "SellerReportKunlikTotalPriceValue";
+            // 
+            // SellerReportKunlikTotalPriceText
+            // 
+            resources.ApplyResources(SellerReportKunlikTotalPriceText, "SellerReportKunlikTotalPriceText");
+            SellerReportKunlikTotalPriceText.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportKunlikTotalPriceText.Name = "SellerReportKunlikTotalPriceText";
+            // 
+            // SellerReportKunlikTotalCountValue
+            // 
+            resources.ApplyResources(SellerReportKunlikTotalCountValue, "SellerReportKunlikTotalCountValue");
+            SellerReportKunlikTotalCountValue.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportKunlikTotalCountValue.Name = "SellerReportKunlikTotalCountValue";
+            // 
+            // SellerReportKunlikTotalCountText
+            // 
+            resources.ApplyResources(SellerReportKunlikTotalCountText, "SellerReportKunlikTotalCountText");
+            SellerReportKunlikTotalCountText.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportKunlikTotalCountText.Name = "SellerReportKunlikTotalCountText";
+            // 
+            // SellerReportKunlikPanel
+            // 
+            SellerReportKunlikPanel.BackColor = Color.MidnightBlue;
+            SellerReportKunlikPanel.Controls.Add(label18);
+            SellerReportKunlikPanel.Controls.Add(SellerReportKunlikSellerUserNameCB);
+            SellerReportKunlikPanel.Controls.Add(label17);
+            SellerReportKunlikPanel.Controls.Add(SellerReportKunlikSearchBTN);
+            SellerReportKunlikPanel.Controls.Add(SellerReportKunlikDTP);
+            resources.ApplyResources(SellerReportKunlikPanel, "SellerReportKunlikPanel");
+            SellerReportKunlikPanel.Name = "SellerReportKunlikPanel";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(label18, "label18");
+            label18.ForeColor = SystemColors.ButtonFace;
+            label18.Name = "label18";
+            // 
+            // SellerReportKunlikSellerUserNameCB
+            // 
+            SellerReportKunlikSellerUserNameCB.FormattingEnabled = true;
+            resources.ApplyResources(SellerReportKunlikSellerUserNameCB, "SellerReportKunlikSellerUserNameCB");
+            SellerReportKunlikSellerUserNameCB.Name = "SellerReportKunlikSellerUserNameCB";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(label17, "label17");
+            label17.ForeColor = SystemColors.ButtonFace;
+            label17.Name = "label17";
+            // 
+            // SellerReportKunlikSearchBTN
+            // 
+            resources.ApplyResources(SellerReportKunlikSearchBTN, "SellerReportKunlikSearchBTN");
+            SellerReportKunlikSearchBTN.Name = "SellerReportKunlikSearchBTN";
+            SellerReportKunlikSearchBTN.UseVisualStyleBackColor = true;
+            SellerReportKunlikSearchBTN.Click += SellerReportKunlikSearchBTN_Click;
+            // 
+            // SellerReportKunlikDTP
+            // 
+            resources.ApplyResources(SellerReportKunlikDTP, "SellerReportKunlikDTP");
+            SellerReportKunlikDTP.Name = "SellerReportKunlikDTP";
+            // 
+            // SellerReportKunlikDGV
+            // 
+            SellerReportKunlikDGV.AutoGenerateColumns = false;
+            SellerReportKunlikDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SellerReportKunlikDGV.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn4, sellerSignInTimeDataGridViewTextBoxColumn2, sellerSignOutTimeDataGridViewTextBoxColumn2, sellerSaleTotalCountDataGridViewTextBoxColumn2, sellerSaleTotalPriceDataGridViewTextBoxColumn2 });
+            SellerReportKunlikDGV.DataSource = historyWorkingBindingSource1;
+            resources.ApplyResources(SellerReportKunlikDGV, "SellerReportKunlikDGV");
+            SellerReportKunlikDGV.Name = "SellerReportKunlikDGV";
+            // 
+            // sellerIDDataGridViewTextBoxColumn4
+            // 
+            sellerIDDataGridViewTextBoxColumn4.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn4, "sellerIDDataGridViewTextBoxColumn4");
+            sellerIDDataGridViewTextBoxColumn4.Name = "sellerIDDataGridViewTextBoxColumn4";
+            // 
+            // sellerSignInTimeDataGridViewTextBoxColumn2
+            // 
+            sellerSignInTimeDataGridViewTextBoxColumn2.DataPropertyName = "SellerSignInTime";
+            resources.ApplyResources(sellerSignInTimeDataGridViewTextBoxColumn2, "sellerSignInTimeDataGridViewTextBoxColumn2");
+            sellerSignInTimeDataGridViewTextBoxColumn2.Name = "sellerSignInTimeDataGridViewTextBoxColumn2";
+            // 
+            // sellerSignOutTimeDataGridViewTextBoxColumn2
+            // 
+            sellerSignOutTimeDataGridViewTextBoxColumn2.DataPropertyName = "SellerSignOutTime";
+            resources.ApplyResources(sellerSignOutTimeDataGridViewTextBoxColumn2, "sellerSignOutTimeDataGridViewTextBoxColumn2");
+            sellerSignOutTimeDataGridViewTextBoxColumn2.Name = "sellerSignOutTimeDataGridViewTextBoxColumn2";
+            // 
+            // sellerSaleTotalCountDataGridViewTextBoxColumn2
+            // 
+            sellerSaleTotalCountDataGridViewTextBoxColumn2.DataPropertyName = "SellerSaleTotalCount";
+            resources.ApplyResources(sellerSaleTotalCountDataGridViewTextBoxColumn2, "sellerSaleTotalCountDataGridViewTextBoxColumn2");
+            sellerSaleTotalCountDataGridViewTextBoxColumn2.Name = "sellerSaleTotalCountDataGridViewTextBoxColumn2";
+            // 
+            // sellerSaleTotalPriceDataGridViewTextBoxColumn2
+            // 
+            sellerSaleTotalPriceDataGridViewTextBoxColumn2.DataPropertyName = "SellerSaleTotalPrice";
+            resources.ApplyResources(sellerSaleTotalPriceDataGridViewTextBoxColumn2, "sellerSaleTotalPriceDataGridViewTextBoxColumn2");
+            sellerSaleTotalPriceDataGridViewTextBoxColumn2.Name = "sellerSaleTotalPriceDataGridViewTextBoxColumn2";
+            // 
             // SanalikSellerReport
             // 
+            SanalikSellerReport.Controls.Add(SellerReportSanalikTotalPriceValue);
+            SanalikSellerReport.Controls.Add(SellerReportSanalikTotalPriceText);
+            SanalikSellerReport.Controls.Add(SellerReportSanalikTotalCountValue);
+            SanalikSellerReport.Controls.Add(SellerReportSanalikTotalCountText);
+            SanalikSellerReport.Controls.Add(SellerReportSanalikPanel);
+            SanalikSellerReport.Controls.Add(SellerReportSanalikDGV);
             resources.ApplyResources(SanalikSellerReport, "SanalikSellerReport");
             SanalikSellerReport.Name = "SanalikSellerReport";
             SanalikSellerReport.UseVisualStyleBackColor = true;
+            SanalikSellerReport.Click += SanalikSellerReport_Click;
+            // 
+            // SellerReportSanalikTotalPriceValue
+            // 
+            resources.ApplyResources(SellerReportSanalikTotalPriceValue, "SellerReportSanalikTotalPriceValue");
+            SellerReportSanalikTotalPriceValue.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportSanalikTotalPriceValue.Name = "SellerReportSanalikTotalPriceValue";
+            // 
+            // SellerReportSanalikTotalPriceText
+            // 
+            resources.ApplyResources(SellerReportSanalikTotalPriceText, "SellerReportSanalikTotalPriceText");
+            SellerReportSanalikTotalPriceText.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportSanalikTotalPriceText.Name = "SellerReportSanalikTotalPriceText";
+            // 
+            // SellerReportSanalikTotalCountValue
+            // 
+            resources.ApplyResources(SellerReportSanalikTotalCountValue, "SellerReportSanalikTotalCountValue");
+            SellerReportSanalikTotalCountValue.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportSanalikTotalCountValue.Name = "SellerReportSanalikTotalCountValue";
+            // 
+            // SellerReportSanalikTotalCountText
+            // 
+            resources.ApplyResources(SellerReportSanalikTotalCountText, "SellerReportSanalikTotalCountText");
+            SellerReportSanalikTotalCountText.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportSanalikTotalCountText.Name = "SellerReportSanalikTotalCountText";
+            // 
+            // SellerReportSanalikPanel
+            // 
+            SellerReportSanalikPanel.BackColor = Color.MidnightBlue;
+            SellerReportSanalikPanel.Controls.Add(SellerReportSanalikSearchBTN);
+            SellerReportSanalikPanel.Controls.Add(SellerReportSanalikSellerUsernamelb);
+            SellerReportSanalikPanel.Controls.Add(SellerReportSanalikSellerUsernameCB);
+            SellerReportSanalikPanel.Controls.Add(SR_SanalikEndlb);
+            SellerReportSanalikPanel.Controls.Add(SR_SanalikStartDTP);
+            SellerReportSanalikPanel.Controls.Add(SellerReportSanalikDTPEnd);
+            SellerReportSanalikPanel.Controls.Add(SellerReportSanalikDTPStart);
+            resources.ApplyResources(SellerReportSanalikPanel, "SellerReportSanalikPanel");
+            SellerReportSanalikPanel.Name = "SellerReportSanalikPanel";
+            // 
+            // SellerReportSanalikSearchBTN
+            // 
+            resources.ApplyResources(SellerReportSanalikSearchBTN, "SellerReportSanalikSearchBTN");
+            SellerReportSanalikSearchBTN.Name = "SellerReportSanalikSearchBTN";
+            SellerReportSanalikSearchBTN.UseVisualStyleBackColor = true;
+            SellerReportSanalikSearchBTN.Click += SellerReportSanalikSearchBTN_Click;
+            // 
+            // SellerReportSanalikSellerUsernamelb
+            // 
+            resources.ApplyResources(SellerReportSanalikSellerUsernamelb, "SellerReportSanalikSellerUsernamelb");
+            SellerReportSanalikSellerUsernamelb.ForeColor = SystemColors.ButtonFace;
+            SellerReportSanalikSellerUsernamelb.Name = "SellerReportSanalikSellerUsernamelb";
+            // 
+            // SellerReportSanalikSellerUsernameCB
+            // 
+            resources.ApplyResources(SellerReportSanalikSellerUsernameCB, "SellerReportSanalikSellerUsernameCB");
+            SellerReportSanalikSellerUsernameCB.FormattingEnabled = true;
+            SellerReportSanalikSellerUsernameCB.Name = "SellerReportSanalikSellerUsernameCB";
+            // 
+            // SR_SanalikEndlb
+            // 
+            resources.ApplyResources(SR_SanalikEndlb, "SR_SanalikEndlb");
+            SR_SanalikEndlb.ForeColor = SystemColors.ButtonFace;
+            SR_SanalikEndlb.Name = "SR_SanalikEndlb";
+            // 
+            // SR_SanalikStartDTP
+            // 
+            resources.ApplyResources(SR_SanalikStartDTP, "SR_SanalikStartDTP");
+            SR_SanalikStartDTP.ForeColor = SystemColors.ButtonHighlight;
+            SR_SanalikStartDTP.Name = "SR_SanalikStartDTP";
+            // 
+            // SellerReportSanalikDTPEnd
+            // 
+            resources.ApplyResources(SellerReportSanalikDTPEnd, "SellerReportSanalikDTPEnd");
+            SellerReportSanalikDTPEnd.Name = "SellerReportSanalikDTPEnd";
+            // 
+            // SellerReportSanalikDTPStart
+            // 
+            resources.ApplyResources(SellerReportSanalikDTPStart, "SellerReportSanalikDTPStart");
+            SellerReportSanalikDTPStart.Name = "SellerReportSanalikDTPStart";
+            // 
+            // SellerReportSanalikDGV
+            // 
+            SellerReportSanalikDGV.AutoGenerateColumns = false;
+            SellerReportSanalikDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SellerReportSanalikDGV.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn5, sellerSignInTimeDataGridViewTextBoxColumn3, sellerSignOutTimeDataGridViewTextBoxColumn3, sellerSaleTotalCountDataGridViewTextBoxColumn3, sellerSaleTotalPriceDataGridViewTextBoxColumn3 });
+            SellerReportSanalikDGV.DataSource = historyWorkingBindingSource1;
+            resources.ApplyResources(SellerReportSanalikDGV, "SellerReportSanalikDGV");
+            SellerReportSanalikDGV.Name = "SellerReportSanalikDGV";
+            SellerReportSanalikDGV.CellContentClick += SellerReportSanalikDGV_CellContentClick;
+            // 
+            // sellerIDDataGridViewTextBoxColumn5
+            // 
+            sellerIDDataGridViewTextBoxColumn5.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn5, "sellerIDDataGridViewTextBoxColumn5");
+            sellerIDDataGridViewTextBoxColumn5.Name = "sellerIDDataGridViewTextBoxColumn5";
+            // 
+            // sellerSignInTimeDataGridViewTextBoxColumn3
+            // 
+            sellerSignInTimeDataGridViewTextBoxColumn3.DataPropertyName = "SellerSignInTime";
+            resources.ApplyResources(sellerSignInTimeDataGridViewTextBoxColumn3, "sellerSignInTimeDataGridViewTextBoxColumn3");
+            sellerSignInTimeDataGridViewTextBoxColumn3.Name = "sellerSignInTimeDataGridViewTextBoxColumn3";
+            // 
+            // sellerSignOutTimeDataGridViewTextBoxColumn3
+            // 
+            sellerSignOutTimeDataGridViewTextBoxColumn3.DataPropertyName = "SellerSignOutTime";
+            resources.ApplyResources(sellerSignOutTimeDataGridViewTextBoxColumn3, "sellerSignOutTimeDataGridViewTextBoxColumn3");
+            sellerSignOutTimeDataGridViewTextBoxColumn3.Name = "sellerSignOutTimeDataGridViewTextBoxColumn3";
+            // 
+            // sellerSaleTotalCountDataGridViewTextBoxColumn3
+            // 
+            sellerSaleTotalCountDataGridViewTextBoxColumn3.DataPropertyName = "SellerSaleTotalCount";
+            resources.ApplyResources(sellerSaleTotalCountDataGridViewTextBoxColumn3, "sellerSaleTotalCountDataGridViewTextBoxColumn3");
+            sellerSaleTotalCountDataGridViewTextBoxColumn3.Name = "sellerSaleTotalCountDataGridViewTextBoxColumn3";
+            // 
+            // sellerSaleTotalPriceDataGridViewTextBoxColumn3
+            // 
+            sellerSaleTotalPriceDataGridViewTextBoxColumn3.DataPropertyName = "SellerSaleTotalPrice";
+            resources.ApplyResources(sellerSaleTotalPriceDataGridViewTextBoxColumn3, "sellerSaleTotalPriceDataGridViewTextBoxColumn3");
+            sellerSaleTotalPriceDataGridViewTextBoxColumn3.Name = "sellerSaleTotalPriceDataGridViewTextBoxColumn3";
             // 
             // OylikSellerReport
             // 
+            OylikSellerReport.Controls.Add(SellerReportOylikTotalPriceValue);
+            OylikSellerReport.Controls.Add(SellerReportOylikTotalPriceText);
+            OylikSellerReport.Controls.Add(SellerReportOylikTotalCountValue);
+            OylikSellerReport.Controls.Add(SellerReportOylikTotalCountText);
+            OylikSellerReport.Controls.Add(SellerReportOylikPanel);
+            OylikSellerReport.Controls.Add(SellerReportOylikDGV);
             resources.ApplyResources(OylikSellerReport, "OylikSellerReport");
             OylikSellerReport.Name = "OylikSellerReport";
             OylikSellerReport.UseVisualStyleBackColor = true;
+            // 
+            // SellerReportOylikTotalPriceValue
+            // 
+            resources.ApplyResources(SellerReportOylikTotalPriceValue, "SellerReportOylikTotalPriceValue");
+            SellerReportOylikTotalPriceValue.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportOylikTotalPriceValue.Name = "SellerReportOylikTotalPriceValue";
+            // 
+            // SellerReportOylikTotalPriceText
+            // 
+            resources.ApplyResources(SellerReportOylikTotalPriceText, "SellerReportOylikTotalPriceText");
+            SellerReportOylikTotalPriceText.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportOylikTotalPriceText.Name = "SellerReportOylikTotalPriceText";
+            // 
+            // SellerReportOylikTotalCountValue
+            // 
+            resources.ApplyResources(SellerReportOylikTotalCountValue, "SellerReportOylikTotalCountValue");
+            SellerReportOylikTotalCountValue.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportOylikTotalCountValue.Name = "SellerReportOylikTotalCountValue";
+            // 
+            // SellerReportOylikTotalCountText
+            // 
+            resources.ApplyResources(SellerReportOylikTotalCountText, "SellerReportOylikTotalCountText");
+            SellerReportOylikTotalCountText.ForeColor = Color.FromArgb(0, 192, 0);
+            SellerReportOylikTotalCountText.Name = "SellerReportOylikTotalCountText";
+            // 
+            // SellerReportOylikPanel
+            // 
+            SellerReportOylikPanel.BackColor = Color.MidnightBlue;
+            SellerReportOylikPanel.Controls.Add(label19);
+            SellerReportOylikPanel.Controls.Add(SellerReportOylikYillarCB);
+            SellerReportOylikPanel.Controls.Add(SellerReportOylikSearchBTN);
+            SellerReportOylikPanel.Controls.Add(label16);
+            SellerReportOylikPanel.Controls.Add(label15);
+            SellerReportOylikPanel.Controls.Add(SellerReportOylikSellerCB);
+            SellerReportOylikPanel.Controls.Add(SellerReportOylikOylarCB);
+            resources.ApplyResources(SellerReportOylikPanel, "SellerReportOylikPanel");
+            SellerReportOylikPanel.Name = "SellerReportOylikPanel";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(label19, "label19");
+            label19.ForeColor = SystemColors.ButtonFace;
+            label19.Name = "label19";
+            // 
+            // SellerReportOylikYillarCB
+            // 
+            resources.ApplyResources(SellerReportOylikYillarCB, "SellerReportOylikYillarCB");
+            SellerReportOylikYillarCB.FormattingEnabled = true;
+            SellerReportOylikYillarCB.Items.AddRange(new object[] { resources.GetString("SellerReportOylikYillarCB.Items"), resources.GetString("SellerReportOylikYillarCB.Items1"), resources.GetString("SellerReportOylikYillarCB.Items2"), resources.GetString("SellerReportOylikYillarCB.Items3"), resources.GetString("SellerReportOylikYillarCB.Items4"), resources.GetString("SellerReportOylikYillarCB.Items5") });
+            SellerReportOylikYillarCB.Name = "SellerReportOylikYillarCB";
+            // 
+            // SellerReportOylikSearchBTN
+            // 
+            resources.ApplyResources(SellerReportOylikSearchBTN, "SellerReportOylikSearchBTN");
+            SellerReportOylikSearchBTN.Name = "SellerReportOylikSearchBTN";
+            SellerReportOylikSearchBTN.UseVisualStyleBackColor = true;
+            SellerReportOylikSearchBTN.Click += SellerReportOylikSearchBTN_Click;
+            // 
+            // label16
+            // 
+            resources.ApplyResources(label16, "label16");
+            label16.ForeColor = SystemColors.ButtonHighlight;
+            label16.Name = "label16";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(label15, "label15");
+            label15.BackColor = Color.MidnightBlue;
+            label15.ForeColor = SystemColors.ButtonFace;
+            label15.Name = "label15";
+            // 
+            // SellerReportOylikSellerCB
+            // 
+            resources.ApplyResources(SellerReportOylikSellerCB, "SellerReportOylikSellerCB");
+            SellerReportOylikSellerCB.FormattingEnabled = true;
+            SellerReportOylikSellerCB.Name = "SellerReportOylikSellerCB";
+            // 
+            // SellerReportOylikOylarCB
+            // 
+            resources.ApplyResources(SellerReportOylikOylarCB, "SellerReportOylikOylarCB");
+            SellerReportOylikOylarCB.FormattingEnabled = true;
+            SellerReportOylikOylarCB.Items.AddRange(new object[] { resources.GetString("SellerReportOylikOylarCB.Items"), resources.GetString("SellerReportOylikOylarCB.Items1"), resources.GetString("SellerReportOylikOylarCB.Items2"), resources.GetString("SellerReportOylikOylarCB.Items3"), resources.GetString("SellerReportOylikOylarCB.Items4"), resources.GetString("SellerReportOylikOylarCB.Items5"), resources.GetString("SellerReportOylikOylarCB.Items6"), resources.GetString("SellerReportOylikOylarCB.Items7"), resources.GetString("SellerReportOylikOylarCB.Items8"), resources.GetString("SellerReportOylikOylarCB.Items9"), resources.GetString("SellerReportOylikOylarCB.Items10"), resources.GetString("SellerReportOylikOylarCB.Items11") });
+            SellerReportOylikOylarCB.Name = "SellerReportOylikOylarCB";
+            // 
+            // SellerReportOylikDGV
+            // 
+            SellerReportOylikDGV.AutoGenerateColumns = false;
+            SellerReportOylikDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SellerReportOylikDGV.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn6, sellerSignInTimeDataGridViewTextBoxColumn4, sellerSignOutTimeDataGridViewTextBoxColumn4, sellerSaleTotalCountDataGridViewTextBoxColumn4, sellerSaleTotalPriceDataGridViewTextBoxColumn4 });
+            SellerReportOylikDGV.DataSource = historyWorkingBindingSource1;
+            resources.ApplyResources(SellerReportOylikDGV, "SellerReportOylikDGV");
+            SellerReportOylikDGV.Name = "SellerReportOylikDGV";
+            // 
+            // sellerIDDataGridViewTextBoxColumn6
+            // 
+            sellerIDDataGridViewTextBoxColumn6.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn6, "sellerIDDataGridViewTextBoxColumn6");
+            sellerIDDataGridViewTextBoxColumn6.Name = "sellerIDDataGridViewTextBoxColumn6";
+            // 
+            // sellerSignInTimeDataGridViewTextBoxColumn4
+            // 
+            sellerSignInTimeDataGridViewTextBoxColumn4.DataPropertyName = "SellerSignInTime";
+            resources.ApplyResources(sellerSignInTimeDataGridViewTextBoxColumn4, "sellerSignInTimeDataGridViewTextBoxColumn4");
+            sellerSignInTimeDataGridViewTextBoxColumn4.Name = "sellerSignInTimeDataGridViewTextBoxColumn4";
+            // 
+            // sellerSignOutTimeDataGridViewTextBoxColumn4
+            // 
+            sellerSignOutTimeDataGridViewTextBoxColumn4.DataPropertyName = "SellerSignOutTime";
+            resources.ApplyResources(sellerSignOutTimeDataGridViewTextBoxColumn4, "sellerSignOutTimeDataGridViewTextBoxColumn4");
+            sellerSignOutTimeDataGridViewTextBoxColumn4.Name = "sellerSignOutTimeDataGridViewTextBoxColumn4";
+            // 
+            // sellerSaleTotalCountDataGridViewTextBoxColumn4
+            // 
+            sellerSaleTotalCountDataGridViewTextBoxColumn4.DataPropertyName = "SellerSaleTotalCount";
+            resources.ApplyResources(sellerSaleTotalCountDataGridViewTextBoxColumn4, "sellerSaleTotalCountDataGridViewTextBoxColumn4");
+            sellerSaleTotalCountDataGridViewTextBoxColumn4.Name = "sellerSaleTotalCountDataGridViewTextBoxColumn4";
+            // 
+            // sellerSaleTotalPriceDataGridViewTextBoxColumn4
+            // 
+            sellerSaleTotalPriceDataGridViewTextBoxColumn4.DataPropertyName = "SellerSaleTotalPrice";
+            resources.ApplyResources(sellerSaleTotalPriceDataGridViewTextBoxColumn4, "sellerSaleTotalPriceDataGridViewTextBoxColumn4");
+            sellerSaleTotalPriceDataGridViewTextBoxColumn4.Name = "sellerSaleTotalPriceDataGridViewTextBoxColumn4";
             // 
             // ProductReportTab
             // 
@@ -806,78 +1304,6 @@
             SellersListPanel.Controls.Add(SellerListDGV);
             resources.ApplyResources(SellersListPanel, "SellersListPanel");
             SellersListPanel.Name = "SellersListPanel";
-            // 
-            // productNameDataGridViewTextBoxColumn1
-            // 
-            productNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
-            resources.ApplyResources(productNameDataGridViewTextBoxColumn1, "productNameDataGridViewTextBoxColumn1");
-            productNameDataGridViewTextBoxColumn1.Name = "productNameDataGridViewTextBoxColumn1";
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            resources.ApplyResources(productIDDataGridViewTextBoxColumn, "productIDDataGridViewTextBoxColumn");
-            productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            // 
-            // productCountDataGridViewTextBoxColumn
-            // 
-            productCountDataGridViewTextBoxColumn.DataPropertyName = "ProductCount";
-            resources.ApplyResources(productCountDataGridViewTextBoxColumn, "productCountDataGridViewTextBoxColumn");
-            productCountDataGridViewTextBoxColumn.Name = "productCountDataGridViewTextBoxColumn";
-            // 
-            // productPriceDataGridViewTextBoxColumn1
-            // 
-            productPriceDataGridViewTextBoxColumn1.DataPropertyName = "ProductPrice";
-            resources.ApplyResources(productPriceDataGridViewTextBoxColumn1, "productPriceDataGridViewTextBoxColumn1");
-            productPriceDataGridViewTextBoxColumn1.Name = "productPriceDataGridViewTextBoxColumn1";
-            // 
-            // productSaleTimeDataGridViewTextBoxColumn
-            // 
-            productSaleTimeDataGridViewTextBoxColumn.DataPropertyName = "ProductSaleTime";
-            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn, "productSaleTimeDataGridViewTextBoxColumn");
-            productSaleTimeDataGridViewTextBoxColumn.Name = "productSaleTimeDataGridViewTextBoxColumn";
-            // 
-            // sellerIDDataGridViewTextBoxColumn2
-            // 
-            sellerIDDataGridViewTextBoxColumn2.DataPropertyName = "SellerID";
-            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn2, "sellerIDDataGridViewTextBoxColumn2");
-            sellerIDDataGridViewTextBoxColumn2.Name = "sellerIDDataGridViewTextBoxColumn2";
-            // 
-            // productNameDataGridViewTextBoxColumn2
-            // 
-            productNameDataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
-            resources.ApplyResources(productNameDataGridViewTextBoxColumn2, "productNameDataGridViewTextBoxColumn2");
-            productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
-            // 
-            // productIDDataGridViewTextBoxColumn1
-            // 
-            productIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
-            resources.ApplyResources(productIDDataGridViewTextBoxColumn1, "productIDDataGridViewTextBoxColumn1");
-            productIDDataGridViewTextBoxColumn1.Name = "productIDDataGridViewTextBoxColumn1";
-            // 
-            // productCountDataGridViewTextBoxColumn1
-            // 
-            productCountDataGridViewTextBoxColumn1.DataPropertyName = "ProductCount";
-            resources.ApplyResources(productCountDataGridViewTextBoxColumn1, "productCountDataGridViewTextBoxColumn1");
-            productCountDataGridViewTextBoxColumn1.Name = "productCountDataGridViewTextBoxColumn1";
-            // 
-            // productPriceDataGridViewTextBoxColumn2
-            // 
-            productPriceDataGridViewTextBoxColumn2.DataPropertyName = "ProductPrice";
-            resources.ApplyResources(productPriceDataGridViewTextBoxColumn2, "productPriceDataGridViewTextBoxColumn2");
-            productPriceDataGridViewTextBoxColumn2.Name = "productPriceDataGridViewTextBoxColumn2";
-            // 
-            // productSaleTimeDataGridViewTextBoxColumn1
-            // 
-            productSaleTimeDataGridViewTextBoxColumn1.DataPropertyName = "ProductSaleTime";
-            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn1, "productSaleTimeDataGridViewTextBoxColumn1");
-            productSaleTimeDataGridViewTextBoxColumn1.Name = "productSaleTimeDataGridViewTextBoxColumn1";
-            // 
-            // sellerIDDataGridViewTextBoxColumn3
-            // 
-            sellerIDDataGridViewTextBoxColumn3.DataPropertyName = "SellerID";
-            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn3, "sellerIDDataGridViewTextBoxColumn3");
-            sellerIDDataGridViewTextBoxColumn3.Name = "sellerIDDataGridViewTextBoxColumn3";
             // 
             // ManagerForm
             // 
@@ -932,6 +1358,21 @@
             ((System.ComponentModel.ISupportInitialize)SaleProductMonthDGV).EndInit();
             SellerReportTab.ResumeLayout(false);
             SellerReport.ResumeLayout(false);
+            KunlikSellerReport.ResumeLayout(false);
+            KunlikSellerReport.PerformLayout();
+            SellerReportKunlikPanel.ResumeLayout(false);
+            SellerReportKunlikPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SellerReportKunlikDGV).EndInit();
+            SanalikSellerReport.ResumeLayout(false);
+            SanalikSellerReport.PerformLayout();
+            SellerReportSanalikPanel.ResumeLayout(false);
+            SellerReportSanalikPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SellerReportSanalikDGV).EndInit();
+            OylikSellerReport.ResumeLayout(false);
+            OylikSellerReport.PerformLayout();
+            SellerReportOylikPanel.ResumeLayout(false);
+            SellerReportOylikPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SellerReportOylikDGV).EndInit();
             ProductReportTab.ResumeLayout(false);
             tabControl3.ResumeLayout(false);
             SellersListPanel.ResumeLayout(false);
@@ -1051,5 +1492,57 @@
         private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn productSaleTimeDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn3;
+        private Panel SellerReportKunlikPanel;
+        private DataGridView SellerReportKunlikDGV;
+        private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn sellerSignInTimeDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn sellerSignOutTimeDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn sellerSaleTotalCountDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn sellerSaleTotalPriceDataGridViewTextBoxColumn2;
+        private Label SellerReportKunlikTotalPriceValue;
+        private Label SellerReportKunlikTotalPriceText;
+        private Label SellerReportKunlikTotalCountValue;
+        private Label SellerReportKunlikTotalCountText;
+        private Button SellerReportKunlikSearchBTN;
+        private DateTimePicker SellerReportKunlikDTP;
+        private DataGridView SellerReportSanalikDGV;
+        private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn sellerSignInTimeDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn sellerSignOutTimeDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn sellerSaleTotalCountDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn sellerSaleTotalPriceDataGridViewTextBoxColumn3;
+        private Panel SellerReportSanalikPanel;
+        private Button SellerReportSanalikSearchBTN;
+        private Label SellerReportSanalikSellerUsernamelb;
+        private ComboBox SellerReportSanalikSellerUsernameCB;
+        private Label SR_SanalikEndlb;
+        private Label SR_SanalikStartDTP;
+        private DateTimePicker SellerReportSanalikDTPEnd;
+        private DateTimePicker SellerReportSanalikDTPStart;
+        private Label SellerReportSanalikTotalPriceValue;
+        private Label SellerReportSanalikTotalPriceText;
+        private Label SellerReportSanalikTotalCountValue;
+        private Label SellerReportSanalikTotalCountText;
+        private DataGridView SellerReportOylikDGV;
+        private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn sellerSignInTimeDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn sellerSignOutTimeDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn sellerSaleTotalCountDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn sellerSaleTotalPriceDataGridViewTextBoxColumn4;
+        private Label SellerReportOylikTotalPriceValue;
+        private Label SellerReportOylikTotalPriceText;
+        private Label SellerReportOylikTotalCountValue;
+        private Label SellerReportOylikTotalCountText;
+        private Panel SellerReportOylikPanel;
+        private Button SellerReportOylikSearchBTN;
+        private Label label16;
+        private Label label15;
+        private ComboBox SellerReportOylikSellerCB;
+        private ComboBox SellerReportOylikOylarCB;
+        private Label label18;
+        private ComboBox SellerReportKunlikSellerUserNameCB;
+        private Label label17;
+        private ComboBox SellerReportOylikYillarCB;
+        private Label label19;
     }
 }
