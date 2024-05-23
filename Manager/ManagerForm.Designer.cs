@@ -103,6 +103,12 @@
             label10 = new Label();
             label9 = new Label();
             SaleProductDayDGV = new DataGridView();
+            productNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productSaleTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sellerIDDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             OylikSalesReport = new TabPage();
             panel4 = new Panel();
             comboBoxYear1 = new ComboBox();
@@ -114,6 +120,12 @@
             label13 = new Label();
             label14 = new Label();
             SaleProductMonthDGV = new DataGridView();
+            productNameDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productIDDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            productSaleTimeDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            sellerIDDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             SellerReportTab = new TabPage();
             SellerReport = new TabControl();
             KunlikSellerReport = new TabPage();
@@ -126,18 +138,6 @@
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             SellersListPanel = new Panel();
-            productNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productCountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productSaleTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            sellerIDDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productNameDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productIDDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productSaleTimeDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            sellerIDDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -609,6 +609,7 @@
             // 
             resources.ApplyResources(dateTimePickerFrom, "dateTimePickerFrom");
             dateTimePickerFrom.Name = "dateTimePickerFrom";
+            dateTimePickerFrom.ValueChanged += dateTimePickerFrom_ValueChanged;
             // 
             // ButSearchSaleKunlik
             // 
@@ -649,6 +650,43 @@
             SaleProductDayDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(SaleProductDayDGV, "SaleProductDayDGV");
             SaleProductDayDGV.Name = "SaleProductDayDGV";
+            SaleProductDayDGV.CellContentClick += SaleProductDayDGV_CellContentClick;
+            // 
+            // productNameDataGridViewTextBoxColumn1
+            // 
+            productNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn1, "productNameDataGridViewTextBoxColumn1");
+            productNameDataGridViewTextBoxColumn1.Name = "productNameDataGridViewTextBoxColumn1";
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            resources.ApplyResources(productIDDataGridViewTextBoxColumn, "productIDDataGridViewTextBoxColumn");
+            productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            // 
+            // productCountDataGridViewTextBoxColumn
+            // 
+            productCountDataGridViewTextBoxColumn.DataPropertyName = "ProductCount";
+            resources.ApplyResources(productCountDataGridViewTextBoxColumn, "productCountDataGridViewTextBoxColumn");
+            productCountDataGridViewTextBoxColumn.Name = "productCountDataGridViewTextBoxColumn";
+            // 
+            // productPriceDataGridViewTextBoxColumn1
+            // 
+            productPriceDataGridViewTextBoxColumn1.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn1, "productPriceDataGridViewTextBoxColumn1");
+            productPriceDataGridViewTextBoxColumn1.Name = "productPriceDataGridViewTextBoxColumn1";
+            // 
+            // productSaleTimeDataGridViewTextBoxColumn
+            // 
+            productSaleTimeDataGridViewTextBoxColumn.DataPropertyName = "ProductSaleTime";
+            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn, "productSaleTimeDataGridViewTextBoxColumn");
+            productSaleTimeDataGridViewTextBoxColumn.Name = "productSaleTimeDataGridViewTextBoxColumn";
+            // 
+            // sellerIDDataGridViewTextBoxColumn2
+            // 
+            sellerIDDataGridViewTextBoxColumn2.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn2, "sellerIDDataGridViewTextBoxColumn2");
+            sellerIDDataGridViewTextBoxColumn2.Name = "sellerIDDataGridViewTextBoxColumn2";
             // 
             // OylikSalesReport
             // 
@@ -672,8 +710,8 @@
             // 
             // comboBoxYear1
             // 
-            comboBoxYear1.FormattingEnabled = true;
             resources.ApplyResources(comboBoxYear1, "comboBoxYear1");
+            comboBoxYear1.FormattingEnabled = true;
             comboBoxYear1.Name = "comboBoxYear1";
             // 
             // label11
@@ -697,8 +735,8 @@
             // 
             // comboBoxMonth1
             // 
-            comboBoxMonth1.FormattingEnabled = true;
             resources.ApplyResources(comboBoxMonth1, "comboBoxMonth1");
+            comboBoxMonth1.FormattingEnabled = true;
             comboBoxMonth1.Name = "comboBoxMonth1";
             // 
             // panel3
@@ -729,6 +767,42 @@
             SaleProductMonthDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(SaleProductMonthDGV, "SaleProductMonthDGV");
             SaleProductMonthDGV.Name = "SaleProductMonthDGV";
+            // 
+            // productNameDataGridViewTextBoxColumn2
+            // 
+            productNameDataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn2, "productNameDataGridViewTextBoxColumn2");
+            productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
+            // 
+            // productIDDataGridViewTextBoxColumn1
+            // 
+            productIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
+            resources.ApplyResources(productIDDataGridViewTextBoxColumn1, "productIDDataGridViewTextBoxColumn1");
+            productIDDataGridViewTextBoxColumn1.Name = "productIDDataGridViewTextBoxColumn1";
+            // 
+            // productCountDataGridViewTextBoxColumn1
+            // 
+            productCountDataGridViewTextBoxColumn1.DataPropertyName = "ProductCount";
+            resources.ApplyResources(productCountDataGridViewTextBoxColumn1, "productCountDataGridViewTextBoxColumn1");
+            productCountDataGridViewTextBoxColumn1.Name = "productCountDataGridViewTextBoxColumn1";
+            // 
+            // productPriceDataGridViewTextBoxColumn2
+            // 
+            productPriceDataGridViewTextBoxColumn2.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn2, "productPriceDataGridViewTextBoxColumn2");
+            productPriceDataGridViewTextBoxColumn2.Name = "productPriceDataGridViewTextBoxColumn2";
+            // 
+            // productSaleTimeDataGridViewTextBoxColumn1
+            // 
+            productSaleTimeDataGridViewTextBoxColumn1.DataPropertyName = "ProductSaleTime";
+            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn1, "productSaleTimeDataGridViewTextBoxColumn1");
+            productSaleTimeDataGridViewTextBoxColumn1.Name = "productSaleTimeDataGridViewTextBoxColumn1";
+            // 
+            // sellerIDDataGridViewTextBoxColumn3
+            // 
+            sellerIDDataGridViewTextBoxColumn3.DataPropertyName = "SellerID";
+            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn3, "sellerIDDataGridViewTextBoxColumn3");
+            sellerIDDataGridViewTextBoxColumn3.Name = "sellerIDDataGridViewTextBoxColumn3";
             // 
             // SellerReportTab
             // 
@@ -806,78 +880,6 @@
             SellersListPanel.Controls.Add(SellerListDGV);
             resources.ApplyResources(SellersListPanel, "SellersListPanel");
             SellersListPanel.Name = "SellersListPanel";
-            // 
-            // productNameDataGridViewTextBoxColumn1
-            // 
-            productNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
-            resources.ApplyResources(productNameDataGridViewTextBoxColumn1, "productNameDataGridViewTextBoxColumn1");
-            productNameDataGridViewTextBoxColumn1.Name = "productNameDataGridViewTextBoxColumn1";
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            resources.ApplyResources(productIDDataGridViewTextBoxColumn, "productIDDataGridViewTextBoxColumn");
-            productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            // 
-            // productCountDataGridViewTextBoxColumn
-            // 
-            productCountDataGridViewTextBoxColumn.DataPropertyName = "ProductCount";
-            resources.ApplyResources(productCountDataGridViewTextBoxColumn, "productCountDataGridViewTextBoxColumn");
-            productCountDataGridViewTextBoxColumn.Name = "productCountDataGridViewTextBoxColumn";
-            // 
-            // productPriceDataGridViewTextBoxColumn1
-            // 
-            productPriceDataGridViewTextBoxColumn1.DataPropertyName = "ProductPrice";
-            resources.ApplyResources(productPriceDataGridViewTextBoxColumn1, "productPriceDataGridViewTextBoxColumn1");
-            productPriceDataGridViewTextBoxColumn1.Name = "productPriceDataGridViewTextBoxColumn1";
-            // 
-            // productSaleTimeDataGridViewTextBoxColumn
-            // 
-            productSaleTimeDataGridViewTextBoxColumn.DataPropertyName = "ProductSaleTime";
-            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn, "productSaleTimeDataGridViewTextBoxColumn");
-            productSaleTimeDataGridViewTextBoxColumn.Name = "productSaleTimeDataGridViewTextBoxColumn";
-            // 
-            // sellerIDDataGridViewTextBoxColumn2
-            // 
-            sellerIDDataGridViewTextBoxColumn2.DataPropertyName = "SellerID";
-            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn2, "sellerIDDataGridViewTextBoxColumn2");
-            sellerIDDataGridViewTextBoxColumn2.Name = "sellerIDDataGridViewTextBoxColumn2";
-            // 
-            // productNameDataGridViewTextBoxColumn2
-            // 
-            productNameDataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
-            resources.ApplyResources(productNameDataGridViewTextBoxColumn2, "productNameDataGridViewTextBoxColumn2");
-            productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
-            // 
-            // productIDDataGridViewTextBoxColumn1
-            // 
-            productIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
-            resources.ApplyResources(productIDDataGridViewTextBoxColumn1, "productIDDataGridViewTextBoxColumn1");
-            productIDDataGridViewTextBoxColumn1.Name = "productIDDataGridViewTextBoxColumn1";
-            // 
-            // productCountDataGridViewTextBoxColumn1
-            // 
-            productCountDataGridViewTextBoxColumn1.DataPropertyName = "ProductCount";
-            resources.ApplyResources(productCountDataGridViewTextBoxColumn1, "productCountDataGridViewTextBoxColumn1");
-            productCountDataGridViewTextBoxColumn1.Name = "productCountDataGridViewTextBoxColumn1";
-            // 
-            // productPriceDataGridViewTextBoxColumn2
-            // 
-            productPriceDataGridViewTextBoxColumn2.DataPropertyName = "ProductPrice";
-            resources.ApplyResources(productPriceDataGridViewTextBoxColumn2, "productPriceDataGridViewTextBoxColumn2");
-            productPriceDataGridViewTextBoxColumn2.Name = "productPriceDataGridViewTextBoxColumn2";
-            // 
-            // productSaleTimeDataGridViewTextBoxColumn1
-            // 
-            productSaleTimeDataGridViewTextBoxColumn1.DataPropertyName = "ProductSaleTime";
-            resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn1, "productSaleTimeDataGridViewTextBoxColumn1");
-            productSaleTimeDataGridViewTextBoxColumn1.Name = "productSaleTimeDataGridViewTextBoxColumn1";
-            // 
-            // sellerIDDataGridViewTextBoxColumn3
-            // 
-            sellerIDDataGridViewTextBoxColumn3.DataPropertyName = "SellerID";
-            resources.ApplyResources(sellerIDDataGridViewTextBoxColumn3, "sellerIDDataGridViewTextBoxColumn3");
-            sellerIDDataGridViewTextBoxColumn3.Name = "sellerIDDataGridViewTextBoxColumn3";
             // 
             // ManagerForm
             // 

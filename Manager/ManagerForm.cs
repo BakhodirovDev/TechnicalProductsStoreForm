@@ -23,7 +23,7 @@ namespace TechnicalProductsStore.Manager
         public ManagerForm()
         {
             InitializeComponent();
-            InitializeComboBoxes();
+
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
@@ -32,6 +32,7 @@ namespace TechnicalProductsStore.Manager
 
             SellerListPanel();
             ProductsListPanel();
+            InitializeComboBoxes();
         }
         private void InitializeComboBoxes()
         {
@@ -421,6 +422,7 @@ namespace TechnicalProductsStore.Manager
             tabControl1.Visible = true;
             tabControl2.Visible = false;
             tabControl3.Visible = false;
+            ReportsTab.Dock = DockStyle.Fill;
             tabControl1.Dock = DockStyle.Fill;
             MenuLabel.Text = "Manager/" + TextButton;
         }
@@ -613,52 +615,67 @@ namespace TechnicalProductsStore.Manager
             string PathProducts = @$"../../../DataBase/Products.json";
 
             int selectedMonth1 = comboBoxMonth1.SelectedIndex + 1; // Индексы месяцев начинаются с 0
-            int selectedYear1 = (int)comboBoxYear1.SelectedItem;
 
-            // Читаем и десериализуем данные из JSON
-            string jsonHistory = File.ReadAllText(PathHistorySale);
-            List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
-
-            string jsonProducts = File.ReadAllText(PathProducts);
-            List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
-
-
-            // Фильтрация истории по выбранному месяцу и году
-            List<HistorySale> filteredHistory = historyList.Where(h =>
+            if (comboBoxYear1.SelectedItem != null)
             {
-                DateTime saleTime;
-                bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+                int selectedYear1 = (int)comboBoxYear1.SelectedItem;
+                string jsonHistory = File.ReadAllText(PathHistorySale);
+                List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
 
-                return saleTimeParsed &&
-                       saleTime.Month == selectedMonth1 && saleTime.Year == selectedYear1;
-            }).ToList();
+                string jsonProducts = File.ReadAllText(PathProducts);
+                List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
 
-            // Объединение данных о продажах с именами продуктов
-            var filteredHistoryWithProductNames = filteredHistory.Join(
-                productList,
-                sale => sale.ProductID,
-                product => product.Id,
-                (sale, product) => new
+                List<HistorySale> filteredHistory = historyList.Where(h =>
                 {
-                    sale.SellerID,
-                    sale.ProductID,
-                    product.ProductName,
-                    product.ProductCountry,
-                    sale.ProductCount,
-                    sale.ProductPrice,
-                    sale.ProductSaleTime
+                    DateTime saleTime;
+                    bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+
+                    return saleTimeParsed &&
+                           saleTime.Month == selectedMonth1 && saleTime.Year == selectedYear1;
                 }).ToList();
 
+                // Объединение данных о продажах с именами продуктов
+                var filteredHistoryWithProductNames = filteredHistory.Join(
+                    productList,
+                    sale => sale.ProductID,
+                    product => product.Id,
+                    (sale, product) => new
+                    {
+                        sale.SellerID,
+                        sale.ProductID,
+                        product.ProductName,
+                        product.ProductCountry,
+                        sale.ProductCount,
+                        sale.ProductPrice,
+                        sale.ProductSaleTime
+                    }).ToList();
 
-            SaleProductMonthDGV.DataSource = filteredHistoryWithProductNames;
+
+                SaleProductMonthDGV.DataSource = filteredHistoryWithProductNames;
 
 
-            // Обновляем текстовые метки статистики
-            double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
-            label13.Text = $"Product Quantity = {totalSaleCount} pieces";
+                // Обновляем текстовые метки статистики
+                double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
+                label13.Text = $"Product Quantity = {totalSaleCount} pieces";
 
-            double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
-            label14.Text = $"Month Profit = {totalSalePrice} $";
+                double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
+                label14.Text = $"Month Profit = {totalSalePrice} $";
+            }
+            else
+            {
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting"); return;
+            }
+            
+        }
+
+        private void SaleProductDayDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
