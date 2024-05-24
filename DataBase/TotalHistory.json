@@ -89,5 +89,26 @@
     "SellerSignOutTime": "5/22/2024 8:33:44 PM",
     "SellerSaleTotalCount": 0,
     "SellerSaleTotalPrice": 0
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "24.05.2024 18:00:53",
+    "SellerSignOutTime": "24.05.2024 18:01:31",
+    "SellerSaleTotalCount": 24,
+    "SellerSaleTotalPrice": 14300
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "24.05.2024 18:07:00",
+    "SellerSignOutTime": "24.05.2024 18:07:23",
+    "SellerSaleTotalCount": 8,
+    "SellerSaleTotalPrice": 3450
+  },
+  {
+    "SellerID": 6,
+    "SellerSignInTime": "24.05.2024 18:14:11",
+    "SellerSignOutTime": "24.05.2024 18:14:35",
+    "SellerSaleTotalCount": 5,
+    "SellerSaleTotalPrice": 700
   }
 ]

@@ -187,15 +187,22 @@ namespace TechnicalProductsStore.Manager
         {
             if (e.ColumnIndex == 7 && e.Value != null)
             {
-                int sum = Convert.ToInt32(e.Value);
-
-                if (sum < 10)
+                // Пытаемся конвертировать значение ячейки в целое число
+                if (int.TryParse(e.Value.ToString(), out int sum))
                 {
-                    e.CellStyle.BackColor = Color.Red;
-                }
-                else
-                {
-                    e.CellStyle.BackColor = Color.White;
+                    // Изменяем цвет ячейки в зависимости от значения
+                    if (sum < 10)
+                    {
+                        e.CellStyle.BackColor = Color.Red;
+                    }
+                    else if (sum >= 10 && sum < 20)
+                    {
+                        e.CellStyle.BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        e.CellStyle.BackColor = Color.Green;
+                    }
                 }
             }
         }
