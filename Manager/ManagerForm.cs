@@ -51,7 +51,12 @@ namespace TechnicalProductsStore.Manager
             SellerReportOylikOylarCB.DropDownStyle = ComboBoxStyle.DropDownList;
             SellerReportOylikSellerCB.DropDownStyle = ComboBoxStyle.DropDownList;
             SellerReportOylikYillarCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMonthAnaliz.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxYearAnaliz.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            label23.Text = "";
+            label24.Text = "";
+            label25.Text = "";
 
             string pathUsers = @"../../../DataBase/Users.json";
             string jsonUser = File.ReadAllText(pathUsers);
@@ -825,7 +830,7 @@ namespace TechnicalProductsStore.Manager
             SellerReportSanalikTotalCountText.Text = "Total Count:";
             SellerReportSanalikTotalPriceText.Text = "Total Price:";
             SellerReportSanalikTotalCountValue.Text = count.ToString();
-            SellerReportSanalikTotalCountValue.Text = price.ToString();
+            SellerReportSanalikTotalPriceValue.Text = price.ToString();
 
             SellerReportSanalikDGV.DataSource = sortSanalik;
         }
@@ -983,14 +988,30 @@ namespace TechnicalProductsStore.Manager
 
         private void butAnalizNotSell_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
+            {
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
 
             var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
             ProductsAnalizReportDGV.DataSource = filterAnaliz;
+
+            label23.Text = "";
+            label24.Text = "";
+            label25.Text = "";
+
+
         }
 
         private void butAnalizSell_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
+            {
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
             AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
             var filterAnaliz = filteredHistory.Where(p => p.ProductCount > 0).ToList();
 
