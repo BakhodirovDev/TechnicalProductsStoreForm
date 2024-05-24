@@ -1,0 +1,35 @@
+{
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "uz": "O'zbek"
+  },
+  "{Label1}": {
+    "en": {
+      "Label1": "Hello",
+      "Button1": "Click Me"
+    },
+    "es": {
+      "Label1": "Hola",
+      "Button1": "Haz clic"
+    },
+    "uz": {
+      "Label1": "Salom",
+      "Button1": "Bosing"
+    }
+  },
+  "{Label2}": {
+    "en": {
+      "Label2": "Hello",
+      "Button2": "Click Me"
+    },
+    "es": {
+      "Label2": "Hola",
+      "Button2": "Haz clic"
+    },
+    "uz": {
+      "Label2": "Salom",
+      "Button2": "Bosing"
+    }
+  }
+}
