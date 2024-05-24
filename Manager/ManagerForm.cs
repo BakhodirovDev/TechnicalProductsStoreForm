@@ -1267,6 +1267,7 @@ namespace TechnicalProductsStore.Manager
             }
         }
 
+<<<<<<< HEAD
         private void SellerReportKunlikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string nameData = $"{SellerReportKunlikDGV.Columns[e.ColumnIndex].DataPropertyName}";
@@ -1319,5 +1320,16 @@ namespace TechnicalProductsStore.Manager
             dataGridView.DataSource = list;
         }
 
+=======
+        private void ProductsAnalizReportDaysDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void OylikSellerReport_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 1f26ea73930074c2c371d71bb96bc75736ab7d61
     }
 }
