@@ -92,7 +92,7 @@ namespace TechnicalProductsStore.Manager
 
         public void SellerListPanel()
         {
-
+            SellerListDGV.CellDoubleClick += SellerListDGV_CellContentClick;
             string path = @"../../../DataBase/Users.json";
 
             if (File.Exists(path))
@@ -261,6 +261,8 @@ namespace TechnicalProductsStore.Manager
 
         public void ProductsListPanel()
         {
+            ProductLestDGV.CellDoubleClick += ProductLestDGV_CellContentClick;
+
             string path = @"../../../DataBase/Products.json";
 
             if (File.Exists(path))
@@ -552,7 +554,18 @@ namespace TechnicalProductsStore.Manager
 
         private void SellerListDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string nameData = $"{SellerListDGV.Columns[e.ColumnIndex].DataPropertyName}";
+            if (SortList == false)
+            {
+                SortList = !SortList;
+                SortListByProperty(users, nameData, SellerListDGV, true);
+            }
+            else
+            {
+                SortList = !SortList;
+                SortListByProperty(users, nameData, SellerListDGV, false);
+            }
+            SellerListDGV.Refresh();
         }
 
         private void ProductLestDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -571,7 +584,7 @@ namespace TechnicalProductsStore.Manager
                 }
             }
         }
-        List<HistorySale> historySales = new List<HistorySale>();
+        List<HistorySaleList> historySales = new List<HistorySaleList>();
         private void ButSearchSaleKunlik_Click(object sender, EventArgs e)
         {
             SaleProductDayDGV.CellDoubleClick += SaleProductDayDGV_CellContentClick;
@@ -630,7 +643,6 @@ namespace TechnicalProductsStore.Manager
                         ProductSaleTime = sale.ProductSaleTime
                     }).ToList();
 
-                historySales.AddRange(filteredHistoryWithProductNames);
 
                 SaleProductDayDGV.DataSource = filteredHistoryWithProductNames;
 
@@ -872,7 +884,7 @@ namespace TechnicalProductsStore.Manager
             int cBSellerId = objectQaytarish.ID;
             return cBSellerId;
         }
-        public  List<HistoryWorking> resultDataGridView = new List<HistoryWorking>();
+        public List<HistoryWorking> resultDataGridView = new List<HistoryWorking>();
         private void SellerReportOylikSearchBTN_Click(object sender, EventArgs e)
         {
             SellerReportOylikDGV.CellDoubleClick += SellerReportOylikDGV_CellContentClick;
@@ -1323,6 +1335,32 @@ namespace TechnicalProductsStore.Manager
         }
 
         private void OylikSellerReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductLestDGV_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductLestDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nameData = $"{ProductLestDGV.Columns[e.ColumnIndex].DataPropertyName}";
+            if (SortList == false)
+            {
+                SortList = !SortList;
+                SortListByProperty(product, nameData, ProductLestDGV, true);
+            }
+            else
+            {
+                SortList = !SortList;
+                SortListByProperty(product, nameData, ProductLestDGV, false);
+            }
+            ProductLestDGV.Refresh();
+        }
+
+        private void SaleProductDayDGV_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

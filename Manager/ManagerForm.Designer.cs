@@ -199,7 +199,6 @@
             label22 = new Label();
             ProductsAnalizReportDGV = new DataGridView();
             Id = new DataGridViewTextBoxColumn();
-            ProductID = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             ProductEnterCount = new DataGridViewTextBoxColumn();
             remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -221,6 +220,7 @@
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            ProductID = new DataGridViewTextBoxColumn();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             SellersListPanel = new Panel();
@@ -550,7 +550,9 @@
             ProductLestDGV.DataSource = productBindingSource;
             resources.ApplyResources(ProductLestDGV, "ProductLestDGV");
             ProductLestDGV.Name = "ProductLestDGV";
+            ProductLestDGV.CellContentClick += ProductLestDGV_CellContentClick;
             ProductLestDGV.CellFormatting += ProductLestDGV_CellFormatting;
+            ProductLestDGV.DoubleClick += ProductLestDGV_DoubleClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -758,6 +760,7 @@
             resources.ApplyResources(SaleProductDayDGV, "SaleProductDayDGV");
             SaleProductDayDGV.Name = "SaleProductDayDGV";
             SaleProductDayDGV.CellContentClick += SaleProductDayDGV_CellContentClick;
+            SaleProductDayDGV.CellContentDoubleClick += SaleProductDayDGV_CellContentDoubleClick;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -1424,12 +1427,6 @@
             resources.ApplyResources(Id, "Id");
             Id.Name = "Id";
             // 
-            // ProductID
-            // 
-            ProductID.DataPropertyName = "ProductID";
-            resources.ApplyResources(ProductID, "ProductID");
-            ProductID.Name = "ProductID";
-            //
             // productNameDataGridViewTextBoxColumn3
             // 
             productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
@@ -1568,6 +1565,12 @@
             resources.ApplyResources(dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // ProductID
+            // 
+            ProductID.DataPropertyName = "ProductID";
+            resources.ApplyResources(ProductID, "ProductID");
+            ProductID.Name = "ProductID";
+            // 
             // tabPage3
             // 
             resources.ApplyResources(tabPage3, "tabPage3");
@@ -1600,8 +1603,8 @@
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(ProductListPanel);
             Controls.Add(ReportsTab);
+            Controls.Add(ProductListPanel);
             Controls.Add(SellersListPanel);
             Controls.Add(MenuButtonPanel);
             Controls.Add(MenuIconPanel);
