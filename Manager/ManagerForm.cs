@@ -762,9 +762,9 @@ namespace TechnicalProductsStore.Manager
                 }
 
                 SellerReportKunlikTotalCountText.Text = "Total Count :";
-                SellerReportKunlikTotalCountValue.Text = countKunlik.ToString();
+                SellerReportKunlikTotalCountValue.Text = countKunlik.ToString() + " ta";
                 SellerReportKunlikTotalPriceText.Text = "Total Price : ";
-                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString();
+                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString() +"$";
                 SellerReportKunlikDGV.DataSource = sortKunlik;
             }
         }
@@ -829,8 +829,8 @@ namespace TechnicalProductsStore.Manager
             }
             SellerReportSanalikTotalCountText.Text = "Total Count:";
             SellerReportSanalikTotalPriceText.Text = "Total Price:";
-            SellerReportSanalikTotalCountValue.Text = count.ToString();
-            SellerReportSanalikTotalPriceValue.Text = price.ToString();
+            SellerReportSanalikTotalCountValue.Text = count.ToString() +" ta";
+            SellerReportSanalikTotalPriceValue.Text = price.ToString() + "$";
 
             SellerReportSanalikDGV.DataSource = sortSanalik;
         }
@@ -935,9 +935,9 @@ namespace TechnicalProductsStore.Manager
                 }
 
                 SellerReportOylikTotalCountText.Text = "Total Count";
-                SellerReportOylikTotalCountValue.Text = $"{productCount}";
+                SellerReportOylikTotalCountValue.Text = $"{productCount} ta";
                 SellerReportOylikTotalPriceText.Text = "Total Price";
-                SellerReportOylikTotalPriceValue.Text = $"{priceValue}";
+                SellerReportOylikTotalPriceValue.Text = $"{priceValue}$";
                 SellerReportOylikDGV.DataSource = resultDataGridView;
             }
         }
