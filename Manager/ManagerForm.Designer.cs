@@ -198,6 +198,12 @@
             label23 = new Label();
             label22 = new Label();
             ProductsAnalizReportDGV = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            ProductID = new DataGridViewTextBoxColumn();
+            productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            ProductEnterCount = new DataGridViewTextBoxColumn();
+            remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             SanalikProductReport = new TabPage();
             panel6 = new Panel();
             dateTimePickerAnalizBefore = new DateTimePicker();
@@ -221,12 +227,6 @@
             productBindingSource1 = new BindingSource(components);
             productHistoryBindingSource = new BindingSource(components);
             productBindingSource2 = new BindingSource(components);
-            Id = new DataGridViewTextBoxColumn();
-            ProductID = new DataGridViewTextBoxColumn();
-            productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            ProductEnterCount = new DataGridViewTextBoxColumn();
-            remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -1012,6 +1012,7 @@
             SellerReportKunlikDGV.DataSource = historyWorkingBindingSource1;
             resources.ApplyResources(SellerReportKunlikDGV, "SellerReportKunlikDGV");
             SellerReportKunlikDGV.Name = "SellerReportKunlikDGV";
+            SellerReportKunlikDGV.CellContentClick += SellerReportKunlikDGV_CellContentClick;
             // 
             // sellerIDDataGridViewTextBoxColumn4
             // 
@@ -1277,6 +1278,7 @@
             SellerReportOylikDGV.DataSource = historyWorkingBindingSource1;
             resources.ApplyResources(SellerReportOylikDGV, "SellerReportOylikDGV");
             SellerReportOylikDGV.Name = "SellerReportOylikDGV";
+            SellerReportOylikDGV.CellContentClick += SellerReportOylikDGV_CellContentClick;
             // 
             // sellerIDDataGridViewTextBoxColumn6
             // 
@@ -1415,6 +1417,42 @@
             ProductsAnalizReportDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(ProductsAnalizReportDGV, "ProductsAnalizReportDGV");
             ProductsAnalizReportDGV.Name = "ProductsAnalizReportDGV";
+            // 
+            // Id
+            // 
+            Id.DataPropertyName = "Id";
+            resources.ApplyResources(Id, "Id");
+            Id.Name = "Id";
+            // 
+            // ProductID
+            // 
+            ProductID.DataPropertyName = "ProductID";
+            resources.ApplyResources(ProductID, "ProductID");
+            ProductID.Name = "ProductID";
+            // 
+            // productNameDataGridViewTextBoxColumn3
+            // 
+            productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn3, "productNameDataGridViewTextBoxColumn3");
+            productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
+            // 
+            // ProductEnterCount
+            // 
+            ProductEnterCount.DataPropertyName = "ProductEnterCount";
+            resources.ApplyResources(ProductEnterCount, "ProductEnterCount");
+            ProductEnterCount.Name = "ProductEnterCount";
+            // 
+            // remainingProductCountDataGridViewTextBoxColumn1
+            // 
+            remainingProductCountDataGridViewTextBoxColumn1.DataPropertyName = "RemainingProductCount";
+            resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn1, "remainingProductCountDataGridViewTextBoxColumn1");
+            remainingProductCountDataGridViewTextBoxColumn1.Name = "remainingProductCountDataGridViewTextBoxColumn1";
+            // 
+            // productPriceDataGridViewTextBoxColumn3
+            // 
+            productPriceDataGridViewTextBoxColumn3.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn3, "productPriceDataGridViewTextBoxColumn3");
+            productPriceDataGridViewTextBoxColumn3.Name = "productPriceDataGridViewTextBoxColumn3";
             // 
             // SanalikProductReport
             // 
@@ -1557,42 +1595,6 @@
             // productBindingSource2
             // 
             productBindingSource2.DataSource = typeof(Class.Product);
-            // 
-            // Id
-            // 
-            Id.DataPropertyName = "Id";
-            resources.ApplyResources(Id, "Id");
-            Id.Name = "Id";
-            // 
-            // ProductID
-            // 
-            ProductID.DataPropertyName = "ProductID";
-            resources.ApplyResources(ProductID, "ProductID");
-            ProductID.Name = "ProductID";
-            // 
-            // productNameDataGridViewTextBoxColumn3
-            // 
-            productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
-            resources.ApplyResources(productNameDataGridViewTextBoxColumn3, "productNameDataGridViewTextBoxColumn3");
-            productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
-            // 
-            // ProductEnterCount
-            // 
-            ProductEnterCount.DataPropertyName = "ProductEnterCount";
-            resources.ApplyResources(ProductEnterCount, "ProductEnterCount");
-            ProductEnterCount.Name = "ProductEnterCount";
-            // 
-            // remainingProductCountDataGridViewTextBoxColumn1
-            // 
-            remainingProductCountDataGridViewTextBoxColumn1.DataPropertyName = "RemainingProductCount";
-            resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn1, "remainingProductCountDataGridViewTextBoxColumn1");
-            remainingProductCountDataGridViewTextBoxColumn1.Name = "remainingProductCountDataGridViewTextBoxColumn1";
-            // 
-            // productPriceDataGridViewTextBoxColumn3
-            // 
-            productPriceDataGridViewTextBoxColumn3.DataPropertyName = "ProductPrice";
-            resources.ApplyResources(productPriceDataGridViewTextBoxColumn3, "productPriceDataGridViewTextBoxColumn3");
-            productPriceDataGridViewTextBoxColumn3.Name = "productPriceDataGridViewTextBoxColumn3";
             // 
             // ManagerForm
             // 

@@ -1,13 +1,14 @@
 ﻿    using Microsoft.VisualBasic;
     using System;
-    using System.Collections.Generic;
+using System.Collections.Generic;
     using System.ComponentModel;
     using System.Data;
     using System.Drawing;
     using System.Drawing.Drawing2D;
     using System.Globalization;
     using System.Linq;
-    using System.Text;
+using System.Reflection;
+using System.Text;
     using System.Text.Json;
     using System.Threading.Tasks;
     using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace TechnicalProductsStore.Manager
     public partial class ManagerForm : Form
     {
         public bool MenuisLarge = false;
+        public bool SortList = false;
         List<Users> users = new List<Users>();
         List<Product> product = new List<Product>();
         public ManagerForm()
@@ -569,84 +571,74 @@ namespace TechnicalProductsStore.Manager
                 }
             }
         }
-
+        List<HistorySale> historySales = new List<HistorySale>();
         private void ButSearchSaleKunlik_Click(object sender, EventArgs e)
         {
-            // Пути к JSON файлам
+            SaleProductDayDGV.CellDoubleClick += SaleProductDayDGV_CellContentClick;
             string PathHistorySale = @$"../../../DataBase/History.json";
             string PathProducts = @$"../../../DataBase/Products.json";
 
-            // Получаем выбранные значения из DateTimePicker
             DateTime startDate = dateTimePickerFrom.Value.Date;
-            DateTime endDate = dateTimePickerBefore.Value.Date.AddDays(1); // Увеличиваем на 1 день, чтобы включить всю выбранную дату "before"
+            DateTime endDate = dateTimePickerBefore.Value.Date.AddDays(1);
 
             if (startDate >= endDate)
             {
-                // Устанавливаем значения DateTimePicker по умолчанию
                 dateTimePickerFrom.Value = DateTime.Today;
                 dateTimePickerBefore.Value = DateTime.Today;
                 MessageBox.Show("Sanani Noto'g'ri kiritdingiz.");
             }
             else
             {
-                // Читаем и десериализуем данные из JSON
                 string jsonHistory = File.ReadAllText(PathHistorySale);
                 List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
 
                 string jsonProducts = File.ReadAllText(PathProducts);
                 List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
 
-                // Проверка десериализации
                 if (historyList == null || productList == null)
                 {
-                    MessageBox.Show("eror json deserelize");
+                    MessageBox.Show("Error json deserialize");
                     return;
                 }
 
-                // Фильтрация истории по выбранной дате с учетом различных форматов дат
                 List<HistorySale> filteredHistory = historyList.Where(h =>
                 {
                     DateTime saleTime;
                     bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
-
-                    // Отладочные сообщения для проверки парсинга дат и фильтрации
                     Console.WriteLine($"saleTimeParsed: {saleTimeParsed}");
                     if (saleTimeParsed) Console.WriteLine($"saleTime: {saleTime}");
-
                     return saleTimeParsed && saleTime >= startDate && saleTime < endDate;
                 }).ToList();
 
-                // Проверка наличия данных после фильтрации
                 if (filteredHistory.Count == 0)
                 {
                     MessageBox.Show("Нет данных для отображения в выбранном диапазоне дат.");
                     return;
                 }
-                // Объединение данных о продажах с именами продуктов
+
                 var filteredHistoryWithProductNames = filteredHistory.Join(
                     productList,
                     sale => sale.ProductID,
                     product => product.Id,
-                    (sale, product) => new
+                    (sale, product) => new HistorySale
                     {
-                        sale.SellerID,
-                        sale.ProductID,
-                        product.ProductName,
-                        sale.ProductCount,
-                        sale.ProductPrice,
-                        sale.ProductSaleTime
+                        SellerID = sale.SellerID,
+                        ProductID = sale.ProductID,
+                        ProductName = product.ProductName,
+                        ProductCount = sale.ProductCount,
+                        ProductPrice = sale.ProductPrice,
+                        ProductSaleTime = sale.ProductSaleTime
                     }).ToList();
 
-                // Привязываем данные к DataGridView
+                historySales.AddRange(filteredHistoryWithProductNames);
+
                 SaleProductDayDGV.DataSource = filteredHistoryWithProductNames;
 
-                // Обновляем текстовые метки статистики
                 double totalSaleCount = filteredHistory.Sum(h => (double)(h.ProductCount));
                 label9.Text = $"Product Quantity = {totalSaleCount} pieces";
 
                 double totalSalePrice = filteredHistory.Sum(h => (double)(h.ProductPrice));
                 label10.Text = $"Days Profit = {totalSalePrice} $";
-
             }
         }
 
@@ -711,7 +703,18 @@ namespace TechnicalProductsStore.Manager
 
         private void SaleProductDayDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string nameData = $"{SaleProductDayDGV.Columns[e.ColumnIndex].DataPropertyName}";
+            if (SortList == false)
+            {
+                SortList = !SortList;
+                SortListByProperty(historySales, nameData, SaleProductDayDGV, true);
+            }
+            else
+            {
+                SortList = !SortList;
+                SortListByProperty(historySales, nameData, SaleProductDayDGV, false);
+            }
+            SaleProductDayDGV.Refresh();
         }
 
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
@@ -719,14 +722,15 @@ namespace TechnicalProductsStore.Manager
 
         }
 
+        List<HistoryWorking> sortKunlik = new List<HistoryWorking>();
         private void SellerReportKunlikSearchBTN_Click(object sender, EventArgs e)
         {
+            SellerReportSanalikDGV.CellDoubleClick += SellerReportKunlikDGV_CellContentClick;
             int countKunlik = 0;
             double priceKunlik = 0;
             string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
             string json = File.ReadAllText(PathHistoryWoking);
             List<HistoryWorking> historyListKunlik = JsonSerializer.Deserialize<List<HistoryWorking>>(json);
-            List<HistoryWorking> sortKunlik = new List<HistoryWorking>();
 
             DateTime startDate = SellerReportKunlikDTP.Value.Date;
 
@@ -764,13 +768,15 @@ namespace TechnicalProductsStore.Manager
                 SellerReportKunlikTotalCountText.Text = "Total Count :";
                 SellerReportKunlikTotalCountValue.Text = countKunlik.ToString() + " ta";
                 SellerReportKunlikTotalPriceText.Text = "Total Price : ";
-                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString() +"$";
+                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString() + "$";
                 SellerReportKunlikDGV.DataSource = sortKunlik;
             }
         }
 
+        public List<HistoryWorking> sortSanalik = new List<HistoryWorking>();
         private void SellerReportSanalikSearchBTN_Click(object sender, EventArgs e)
         {
+            SellerReportKunlikDGV.CellDoubleClick += SellerReportSanalikDGV_CellContentClick;
             string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
 
             int count = 0;
@@ -797,7 +803,6 @@ namespace TechnicalProductsStore.Manager
 
             string json = File.ReadAllText(PathHistoryWoking);
             List<HistoryWorking> historyListsanalik = JsonSerializer.Deserialize<List<HistoryWorking>>(json);
-            List<HistoryWorking> sortSanalik = new List<HistoryWorking>();
 
             // Sanalarni aniqlash uchun formatlar
             string[] dateFormats = { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" };
@@ -829,7 +834,7 @@ namespace TechnicalProductsStore.Manager
             }
             SellerReportSanalikTotalCountText.Text = "Total Count:";
             SellerReportSanalikTotalPriceText.Text = "Total Price:";
-            SellerReportSanalikTotalCountValue.Text = count.ToString() +" ta";
+            SellerReportSanalikTotalCountValue.Text = count.ToString() + " ta";
             SellerReportSanalikTotalPriceValue.Text = price.ToString() + "$";
 
             SellerReportSanalikDGV.DataSource = sortSanalik;
@@ -867,8 +872,10 @@ namespace TechnicalProductsStore.Manager
             int cBSellerId = objectQaytarish.ID;
             return cBSellerId;
         }
+        public  List<HistoryWorking> resultDataGridView = new List<HistoryWorking>();
         private void SellerReportOylikSearchBTN_Click(object sender, EventArgs e)
         {
+            SellerReportOylikDGV.CellDoubleClick += SellerReportOylikDGV_CellContentClick;
             int monthselect = 0;
             double priceValue = 0;
             int productCount = 0;
@@ -897,7 +904,6 @@ namespace TechnicalProductsStore.Manager
             }
             else
             {
-                List<HistoryWorking> resultDataGridView = new List<HistoryWorking>();
 
                 string pathHistoryWorkingClic = @"../../../DataBase/TotalHistory.json";
                 string jsonformat = File.ReadAllText(pathHistoryWorkingClic);
@@ -950,6 +956,18 @@ namespace TechnicalProductsStore.Manager
         private void SellerReportSanalikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            string nameData = $"{SellerReportSanalikDGV.Columns[e.ColumnIndex].DataPropertyName}";
+            if (SortList == false)
+            {
+                SortList = !SortList;
+                SortListByProperty(sortSanalik, nameData, SellerReportSanalikDGV, true);
+            }
+            else
+            {
+                SortList = !SortList;
+                SortListByProperty(sortSanalik, nameData, SellerReportSanalikDGV, false);
+            }
+            SellerReportSanalikDGV.Refresh();
         }
 
         private void MonthProductReport_Click(object sender, EventArgs e)
@@ -1007,9 +1025,9 @@ namespace TechnicalProductsStore.Manager
 
         private void butAnalizSell_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
+            if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
             {
-                MessageBox.Show("Ma'lumotlarni to'liq kiriting","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
@@ -1243,10 +1261,63 @@ namespace TechnicalProductsStore.Manager
                 var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
                 ProductsAnalizReportDaysDGV.DataSource = filterAnaliz;
 
-               
 
-                
+
+
             }
         }
+
+        private void SellerReportKunlikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nameData = $"{SellerReportKunlikDGV.Columns[e.ColumnIndex].DataPropertyName}";
+            if (SortList == false)
+            {
+                SortList = !SortList;
+                SortListByProperty(sortKunlik, nameData, SellerReportKunlikDGV, true);
+            }
+            else
+            {
+                SortList = !SortList;
+                SortListByProperty(sortKunlik, nameData, SellerReportKunlikDGV, false);
+            }
+            SellerReportKunlikDGV.Refresh();
+        }
+
+        private void SellerReportOylikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nameData = $"{SellerReportOylikDGV.Columns[e.ColumnIndex].DataPropertyName}";
+            if (SortList == false)
+            {
+                SortList = !SortList;
+                SortListByProperty(resultDataGridView, nameData, SellerReportOylikDGV, true);
+            }
+            else
+            {
+                SortList = !SortList;
+                SortListByProperty(resultDataGridView, nameData, SellerReportOylikDGV, false);
+            }
+            SellerReportOylikDGV.Refresh();
+        }
+
+        public static void SortListByProperty<T>(List<T> list, string propertyName, DataGridView dataGridView, bool rostmi) where T : class
+        {
+            PropertyInfo propInfo = typeof(T).GetProperty(propertyName);
+            if (propInfo == null)
+            {
+                throw new ArgumentException($"Property '{propertyName}' not found on type '{typeof(T).Name}'");
+            }
+            list.Sort((x, y) =>
+            {
+                object valueX = propInfo.GetValue(x);
+                object valueY = propInfo.GetValue(y);
+                return ((IComparable)valueX).CompareTo(valueY);
+            });
+            if (rostmi == true)
+            {
+                list.Reverse();
+            }
+            dataGridView.DataSource = list;
+        }
+
     }
 }
