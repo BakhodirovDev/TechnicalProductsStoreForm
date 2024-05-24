@@ -2468,13 +2468,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportKunlikTotalPriceValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportKunlikTotalPriceValue.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="SellerReportKunlikTotalPriceValue.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportKunlikTotalPriceValue.Name" xml:space="preserve">
     <value>SellerReportKunlikTotalPriceValue</value>
@@ -2501,13 +2498,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportKunlikTotalPriceText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportKunlikTotalPriceText.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="SellerReportKunlikTotalPriceText.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportKunlikTotalPriceText.Name" xml:space="preserve">
     <value>SellerReportKunlikTotalPriceText</value>
@@ -2534,13 +2528,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportKunlikTotalCountValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportKunlikTotalCountValue.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="SellerReportKunlikTotalCountValue.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportKunlikTotalCountValue.Name" xml:space="preserve">
     <value>SellerReportKunlikTotalCountValue</value>
@@ -2567,13 +2558,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportKunlikTotalCountText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportKunlikTotalCountText.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="SellerReportKunlikTotalCountText.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportKunlikTotalCountText.Name" xml:space="preserve">
     <value>SellerReportKunlikTotalCountText</value>
@@ -2879,13 +2867,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportSanalikTotalPriceValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportSanalikTotalPriceValue.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="SellerReportSanalikTotalPriceValue.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportSanalikTotalPriceValue.Name" xml:space="preserve">
     <value>SellerReportSanalikTotalPriceValue</value>
@@ -2915,13 +2900,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportSanalikTotalPriceText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportSanalikTotalPriceText.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="SellerReportSanalikTotalPriceText.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportSanalikTotalPriceText.Name" xml:space="preserve">
     <value>SellerReportSanalikTotalPriceText</value>
@@ -2948,13 +2930,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportSanalikTotalCountValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportSanalikTotalCountValue.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="SellerReportSanalikTotalCountValue.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportSanalikTotalCountValue.Name" xml:space="preserve">
     <value>SellerReportSanalikTotalCountValue</value>
@@ -2981,13 +2960,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="SellerReportSanalikTotalCountText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="SellerReportSanalikTotalCountText.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="SellerReportSanalikTotalCountText.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;SellerReportSanalikTotalCountText.Name" xml:space="preserve">
     <value>SellerReportSanalikTotalCountText</value>
@@ -3293,7 +3269,7 @@
     <value>51</value>
   </data>
   <data name="SellerReportSanalikDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1152, 783</value>
+    <value>1152, 776</value>
   </data>
   <data name="SellerReportSanalikDGV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3311,7 +3287,7 @@
     <value>5</value>
   </data>
   <data name="SanalikSellerReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 34</value>
+    <value>4, 41</value>
   </data>
   <data name="SanalikSellerReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -3320,7 +3296,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SanalikSellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1828, 789</value>
+    <value>1828, 782</value>
   </data>
   <data name="SanalikSellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4142,13 +4118,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="label25.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
-  </data>
-  <data name="label25.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;label25.Name" xml:space="preserve">
     <value>label25</value>
@@ -4175,13 +4148,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="label24.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;label24.Name" xml:space="preserve">
     <value>label24</value>
@@ -4208,13 +4178,10 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 38</value>
+    <value>0, 38</value>
   </data>
   <data name="label23.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
-  </data>
-  <data name="label23.Text" xml:space="preserve">
-    <value>a</value>
   </data>
   <data name="&gt;&gt;label23.Name" xml:space="preserve">
     <value>label23</value>
@@ -4724,7 +4691,7 @@
     <value>51</value>
   </data>
   <data name="ProductsAnalizReportDaysDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1155, 775</value>
+    <value>1155, 782</value>
   </data>
   <data name="ProductsAnalizReportDaysDGV.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -4742,7 +4709,7 @@
     <value>4</value>
   </data>
   <data name="SanalikProductReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 41</value>
+    <value>4, 34</value>
   </data>
   <data name="SanalikProductReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4751,7 +4718,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SanalikProductReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1828, 782</value>
+    <value>1828, 789</value>
   </data>
   <data name="SanalikProductReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

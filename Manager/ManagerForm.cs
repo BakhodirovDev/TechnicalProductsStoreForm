@@ -1366,5 +1366,10 @@ namespace TechnicalProductsStore.Manager
         {
 
         }
+
+        private void KunlikSellerReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

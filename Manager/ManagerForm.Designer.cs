@@ -941,6 +941,7 @@
             resources.ApplyResources(KunlikSellerReport, "KunlikSellerReport");
             KunlikSellerReport.Name = "KunlikSellerReport";
             KunlikSellerReport.UseVisualStyleBackColor = true;
+            KunlikSellerReport.Click += KunlikSellerReport_Click;
             // 
             // SellerReportKunlikTotalPriceValue
             // 
