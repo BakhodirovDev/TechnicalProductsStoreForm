@@ -186,10 +186,47 @@
             ProductReportTab = new TabPage();
             tabControl3 = new TabControl();
             MonthProductReport = new TabPage();
+            panel5 = new Panel();
+            butAnalizSell = new Button();
+            label31 = new Label();
+            comboBoxMonthAnaliz = new ComboBox();
+            comboBoxYearAnaliz = new ComboBox();
+            butAnalizNotSell = new Button();
+            label21 = new Label();
+            label25 = new Label();
+            label24 = new Label();
+            label23 = new Label();
+            label22 = new Label();
+            ProductsAnalizReportDGV = new DataGridView();
             SanalikProductReport = new TabPage();
+            panel6 = new Panel();
+            dateTimePickerAnalizBefore = new DateTimePicker();
+            dateTimePickerAnalizFrom = new DateTimePicker();
+            butAnalizNotSellDay = new Button();
+            butAnalizSellDay = new Button();
+            label26 = new Label();
+            label27 = new Label();
+            label30 = new Label();
+            label29 = new Label();
+            label28 = new Label();
+            ProductsAnalizReportDaysDGV = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             SellersListPanel = new Panel();
+            productBindingSource1 = new BindingSource(components);
+            productHistoryBindingSource = new BindingSource(components);
+            productBindingSource2 = new BindingSource(components);
+            Id = new DataGridViewTextBoxColumn();
+            ProductID = new DataGridViewTextBoxColumn();
+            productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            ProductEnterCount = new DataGridViewTextBoxColumn();
+            remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -229,7 +266,16 @@
             ((System.ComponentModel.ISupportInitialize)SellerReportOylikDGV).BeginInit();
             ProductReportTab.SuspendLayout();
             tabControl3.SuspendLayout();
+            MonthProductReport.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDGV).BeginInit();
+            SanalikProductReport.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDaysDGV).BeginInit();
             SellersListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)productHistoryBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource2).BeginInit();
             SuspendLayout();
             // 
             // sellerIDDataGridViewTextBoxColumn
@@ -1279,15 +1325,210 @@
             // 
             // MonthProductReport
             // 
+            MonthProductReport.Controls.Add(panel5);
+            MonthProductReport.Controls.Add(label25);
+            MonthProductReport.Controls.Add(label24);
+            MonthProductReport.Controls.Add(label23);
+            MonthProductReport.Controls.Add(label22);
+            MonthProductReport.Controls.Add(ProductsAnalizReportDGV);
             resources.ApplyResources(MonthProductReport, "MonthProductReport");
             MonthProductReport.Name = "MonthProductReport";
             MonthProductReport.UseVisualStyleBackColor = true;
+            MonthProductReport.Click += MonthProductReport_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.MidnightBlue;
+            panel5.Controls.Add(butAnalizSell);
+            panel5.Controls.Add(label31);
+            panel5.Controls.Add(comboBoxMonthAnaliz);
+            panel5.Controls.Add(comboBoxYearAnaliz);
+            panel5.Controls.Add(butAnalizNotSell);
+            panel5.Controls.Add(label21);
+            resources.ApplyResources(panel5, "panel5");
+            panel5.Name = "panel5";
+            // 
+            // butAnalizSell
+            // 
+            resources.ApplyResources(butAnalizSell, "butAnalizSell");
+            butAnalizSell.Name = "butAnalizSell";
+            butAnalizSell.UseVisualStyleBackColor = true;
+            butAnalizSell.Click += butAnalizSell_Click;
+            // 
+            // label31
+            // 
+            resources.ApplyResources(label31, "label31");
+            label31.ForeColor = SystemColors.ButtonHighlight;
+            label31.Name = "label31";
+            // 
+            // comboBoxMonthAnaliz
+            // 
+            comboBoxMonthAnaliz.FormattingEnabled = true;
+            resources.ApplyResources(comboBoxMonthAnaliz, "comboBoxMonthAnaliz");
+            comboBoxMonthAnaliz.Name = "comboBoxMonthAnaliz";
+            // 
+            // comboBoxYearAnaliz
+            // 
+            comboBoxYearAnaliz.FormattingEnabled = true;
+            resources.ApplyResources(comboBoxYearAnaliz, "comboBoxYearAnaliz");
+            comboBoxYearAnaliz.Name = "comboBoxYearAnaliz";
+            // 
+            // butAnalizNotSell
+            // 
+            resources.ApplyResources(butAnalizNotSell, "butAnalizNotSell");
+            butAnalizNotSell.Name = "butAnalizNotSell";
+            butAnalizNotSell.UseVisualStyleBackColor = true;
+            butAnalizNotSell.Click += butAnalizNotSell_Click;
+            // 
+            // label21
+            // 
+            resources.ApplyResources(label21, "label21");
+            label21.ForeColor = SystemColors.ButtonHighlight;
+            label21.Name = "label21";
+            label21.Click += label21_Click;
+            // 
+            // label25
+            // 
+            resources.ApplyResources(label25, "label25");
+            label25.Name = "label25";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(label24, "label24");
+            label24.Name = "label24";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(label23, "label23");
+            label23.Name = "label23";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(label22, "label22");
+            label22.Name = "label22";
+            // 
+            // ProductsAnalizReportDGV
+            // 
+            ProductsAnalizReportDGV.AutoGenerateColumns = false;
+            ProductsAnalizReportDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ProductsAnalizReportDGV.Columns.AddRange(new DataGridViewColumn[] { Id, ProductID, productNameDataGridViewTextBoxColumn3, ProductEnterCount, remainingProductCountDataGridViewTextBoxColumn1, productPriceDataGridViewTextBoxColumn3 });
+            ProductsAnalizReportDGV.DataSource = historySaleBindingSource;
+            resources.ApplyResources(ProductsAnalizReportDGV, "ProductsAnalizReportDGV");
+            ProductsAnalizReportDGV.Name = "ProductsAnalizReportDGV";
             // 
             // SanalikProductReport
             // 
+            SanalikProductReport.Controls.Add(panel6);
+            SanalikProductReport.Controls.Add(label30);
+            SanalikProductReport.Controls.Add(label29);
+            SanalikProductReport.Controls.Add(label28);
+            SanalikProductReport.Controls.Add(ProductsAnalizReportDaysDGV);
             resources.ApplyResources(SanalikProductReport, "SanalikProductReport");
             SanalikProductReport.Name = "SanalikProductReport";
             SanalikProductReport.UseVisualStyleBackColor = true;
+            SanalikProductReport.Click += SanalikProductReport_Click;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.MidnightBlue;
+            panel6.Controls.Add(dateTimePickerAnalizBefore);
+            panel6.Controls.Add(dateTimePickerAnalizFrom);
+            panel6.Controls.Add(butAnalizNotSellDay);
+            panel6.Controls.Add(butAnalizSellDay);
+            panel6.Controls.Add(label26);
+            panel6.Controls.Add(label27);
+            resources.ApplyResources(panel6, "panel6");
+            panel6.Name = "panel6";
+            // 
+            // dateTimePickerAnalizBefore
+            // 
+            resources.ApplyResources(dateTimePickerAnalizBefore, "dateTimePickerAnalizBefore");
+            dateTimePickerAnalizBefore.Name = "dateTimePickerAnalizBefore";
+            // 
+            // dateTimePickerAnalizFrom
+            // 
+            resources.ApplyResources(dateTimePickerAnalizFrom, "dateTimePickerAnalizFrom");
+            dateTimePickerAnalizFrom.Name = "dateTimePickerAnalizFrom";
+            // 
+            // butAnalizNotSellDay
+            // 
+            resources.ApplyResources(butAnalizNotSellDay, "butAnalizNotSellDay");
+            butAnalizNotSellDay.Name = "butAnalizNotSellDay";
+            butAnalizNotSellDay.UseVisualStyleBackColor = true;
+            butAnalizNotSellDay.Click += butAnalizNotSellDay_Click_1;
+            // 
+            // butAnalizSellDay
+            // 
+            resources.ApplyResources(butAnalizSellDay, "butAnalizSellDay");
+            butAnalizSellDay.Name = "butAnalizSellDay";
+            butAnalizSellDay.UseVisualStyleBackColor = true;
+            butAnalizSellDay.Click += butAnalizSellDay_Click_1;
+            // 
+            // label26
+            // 
+            resources.ApplyResources(label26, "label26");
+            label26.ForeColor = SystemColors.ButtonHighlight;
+            label26.Name = "label26";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(label27, "label27");
+            label27.ForeColor = SystemColors.ButtonHighlight;
+            label27.Name = "label27";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(label30, "label30");
+            label30.Name = "label30";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(label29, "label29");
+            label29.Name = "label29";
+            // 
+            // label28
+            // 
+            resources.ApplyResources(label28, "label28");
+            label28.Name = "label28";
+            // 
+            // ProductsAnalizReportDaysDGV
+            // 
+            ProductsAnalizReportDaysDGV.AutoGenerateColumns = false;
+            ProductsAnalizReportDaysDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ProductsAnalizReportDaysDGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn6 });
+            ProductsAnalizReportDaysDGV.DataSource = historySaleBindingSource;
+            resources.ApplyResources(ProductsAnalizReportDaysDGV, "ProductsAnalizReportDaysDGV");
+            ProductsAnalizReportDaysDGV.Name = "ProductsAnalizReportDaysDGV";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            resources.ApplyResources(dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            resources.ApplyResources(dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "ProductEnterCount";
+            resources.ApplyResources(dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "RemainingProductCount";
+            resources.ApplyResources(dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // tabPage3
             // 
@@ -1304,6 +1545,54 @@
             SellersListPanel.Controls.Add(SellerListDGV);
             resources.ApplyResources(SellersListPanel, "SellersListPanel");
             SellersListPanel.Name = "SellersListPanel";
+            // 
+            // productBindingSource1
+            // 
+            productBindingSource1.DataSource = typeof(Class.Product);
+            // 
+            // productHistoryBindingSource
+            // 
+            productHistoryBindingSource.DataSource = typeof(Class.ProductHistory);
+            // 
+            // productBindingSource2
+            // 
+            productBindingSource2.DataSource = typeof(Class.Product);
+            // 
+            // Id
+            // 
+            Id.DataPropertyName = "Id";
+            resources.ApplyResources(Id, "Id");
+            Id.Name = "Id";
+            // 
+            // ProductID
+            // 
+            ProductID.DataPropertyName = "ProductID";
+            resources.ApplyResources(ProductID, "ProductID");
+            ProductID.Name = "ProductID";
+            // 
+            // productNameDataGridViewTextBoxColumn3
+            // 
+            productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn3, "productNameDataGridViewTextBoxColumn3");
+            productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
+            // 
+            // ProductEnterCount
+            // 
+            ProductEnterCount.DataPropertyName = "ProductEnterCount";
+            resources.ApplyResources(ProductEnterCount, "ProductEnterCount");
+            ProductEnterCount.Name = "ProductEnterCount";
+            // 
+            // remainingProductCountDataGridViewTextBoxColumn1
+            // 
+            remainingProductCountDataGridViewTextBoxColumn1.DataPropertyName = "RemainingProductCount";
+            resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn1, "remainingProductCountDataGridViewTextBoxColumn1");
+            remainingProductCountDataGridViewTextBoxColumn1.Name = "remainingProductCountDataGridViewTextBoxColumn1";
+            // 
+            // productPriceDataGridViewTextBoxColumn3
+            // 
+            productPriceDataGridViewTextBoxColumn3.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn3, "productPriceDataGridViewTextBoxColumn3");
+            productPriceDataGridViewTextBoxColumn3.Name = "productPriceDataGridViewTextBoxColumn3";
             // 
             // ManagerForm
             // 
@@ -1375,7 +1664,20 @@
             ((System.ComponentModel.ISupportInitialize)SellerReportOylikDGV).EndInit();
             ProductReportTab.ResumeLayout(false);
             tabControl3.ResumeLayout(false);
+            MonthProductReport.ResumeLayout(false);
+            MonthProductReport.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDGV).EndInit();
+            SanalikProductReport.ResumeLayout(false);
+            SanalikProductReport.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDaysDGV).EndInit();
             SellersListPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)productHistoryBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)productBindingSource2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1544,5 +1846,42 @@
         private Label label17;
         private ComboBox SellerReportOylikYillarCB;
         private Label label19;
+        private DataGridView ProductsAnalizReportDGV;
+        private BindingSource productBindingSource1;
+        private BindingSource productHistoryBindingSource;
+        private Button butAnalizNotSell;
+        private ComboBox comboBoxYearAnaliz;
+        private ComboBox comboBoxMonthAnaliz;
+        private Button butAnalizSell;
+        private Label label22;
+        private Label label21;
+        private BindingSource productBindingSource2;
+        private Label label25;
+        private Label label24;
+        private Label label23;
+        private Button butAnalizSellDay;
+        private Button butAnalizNotSellDay;
+        private DateTimePicker dateTimePickerAnalizBefore;
+        private DateTimePicker dateTimePickerAnalizFrom;
+        private Label label27;
+        private Label label26;
+        private Label label30;
+        private Label label29;
+        private Label label28;
+        private DataGridView ProductsAnalizReportDaysDGV;
+        private Panel panel5;
+        private Label label31;
+        private Panel panel6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn ProductID;
+        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn ProductEnterCount;
+        private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn3;
     }
 }

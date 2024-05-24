@@ -51,7 +51,12 @@ namespace TechnicalProductsStore.Manager
             SellerReportOylikOylarCB.DropDownStyle = ComboBoxStyle.DropDownList;
             SellerReportOylikSellerCB.DropDownStyle = ComboBoxStyle.DropDownList;
             SellerReportOylikYillarCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMonthAnaliz.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxYearAnaliz.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            label23.Text = "";
+            label24.Text = "";
+            label25.Text = "";
 
             string pathUsers = @"../../../DataBase/Users.json";
             string jsonUser = File.ReadAllText(pathUsers);
@@ -73,11 +78,13 @@ namespace TechnicalProductsStore.Manager
             // Инициализация ComboBox для месяцев
             string[] months = new string[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
             comboBoxMonth1.Items.AddRange(months);
+            comboBoxMonthAnaliz.Items.AddRange(months);
 
             // Инициализация ComboBox для годов
             for (int i = 2019; i <= DateTime.Now.Year; i++)
             {
                 comboBoxYear1.Items.Add(i);
+                comboBoxYearAnaliz.Items.Add(i);
             }
         }
 
@@ -745,7 +752,7 @@ namespace TechnicalProductsStore.Manager
                 {
                     if (item.SellerID == UserNameOrqaliIdniOlishKunlik())
                     {
-                        if(item.SellerSaleTotalCount != 0)
+                        if (item.SellerSaleTotalCount != 0)
                         {
                             sortKunlik.Add(item);
                             countKunlik += item.SellerSaleTotalCount.Value;
@@ -755,9 +762,9 @@ namespace TechnicalProductsStore.Manager
                 }
 
                 SellerReportKunlikTotalCountText.Text = "Total Count :";
-                SellerReportKunlikTotalCountValue.Text = countKunlik.ToString();
+                SellerReportKunlikTotalCountValue.Text = countKunlik.ToString() + " ta";
                 SellerReportKunlikTotalPriceText.Text = "Total Price : ";
-                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString();
+                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString() +"$";
                 SellerReportKunlikDGV.DataSource = sortKunlik;
             }
         }
@@ -811,19 +818,19 @@ namespace TechnicalProductsStore.Manager
             {
                 if (item.SellerID == UserNameOrqaliIdniOlishSanalik())
                 {
-                    if(item.SellerSaleTotalCount != 0)
+                    if (item.SellerSaleTotalCount != 0)
                     {
                         sortSanalik.Add(item);
                         count += item.SellerSaleTotalCount.Value;
                         price += item.SellerSaleTotalPrice.Value;
                     }
-                    
+
                 }
             }
             SellerReportSanalikTotalCountText.Text = "Total Count:";
             SellerReportSanalikTotalPriceText.Text = "Total Price:";
-            SellerReportSanalikTotalCountValue.Text = count.ToString();
-            SellerReportSanalikTotalCountValue.Text = price.ToString();
+            SellerReportSanalikTotalCountValue.Text = count.ToString() +" ta";
+            SellerReportSanalikTotalPriceValue.Text = price.ToString() + "$";
 
             SellerReportSanalikDGV.DataSource = sortSanalik;
         }
@@ -916,21 +923,21 @@ namespace TechnicalProductsStore.Manager
 
                         if (signInDate.Month == monthselect && signInDate.Year.ToString() == SellerReportOylikYillarCB.Text && item.SellerSaleTotalCount.Value != 0)
                         {
-                            if(item.SellerSaleTotalCount != 0)
+                            if (item.SellerSaleTotalCount != 0)
                             {
                                 resultDataGridView.Add(item);
                                 productCount += item.SellerSaleTotalCount.Value;
                                 priceValue += item.SellerSaleTotalPrice.Value;
                             }
-                            
+
                         }
                     }
                 }
 
                 SellerReportOylikTotalCountText.Text = "Total Count";
-                SellerReportOylikTotalCountValue.Text = $"{productCount}";
+                SellerReportOylikTotalCountValue.Text = $"{productCount} ta";
                 SellerReportOylikTotalPriceText.Text = "Total Price";
-                SellerReportOylikTotalPriceValue.Text = $"{priceValue}";
+                SellerReportOylikTotalPriceValue.Text = $"{priceValue}$";
                 SellerReportOylikDGV.DataSource = resultDataGridView;
             }
         }
@@ -943,6 +950,303 @@ namespace TechnicalProductsStore.Manager
         private void SellerReportSanalikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void MonthProductReport_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList)
+        {
+            string PathHistorySale = @$"../../../DataBase/History.json";
+            string PathProducts = @$"../../../DataBase/Products.json";
+
+            int selectedMonthAnaliz = comboBoxMonthAnaliz.SelectedIndex + 1; // Индексы месяцев начинаются с 0
+
+            filteredHistory = new List<HistorySale>();
+            productList = new List<Product>();
+
+            if (comboBoxYearAnaliz.SelectedItem != null)
+            {
+                int selectedYearAnaliz = (int)comboBoxYearAnaliz.SelectedItem;
+                string jsonHistory = File.ReadAllText(PathHistorySale);
+                List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
+
+                string jsonProducts = File.ReadAllText(PathProducts);
+                productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
+
+                filteredHistory = historyList.Where(h =>
+                {
+                    DateTime saleTime;
+                    bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+
+                    return saleTimeParsed &&
+                           saleTime.Month == selectedMonthAnaliz && saleTime.Year == selectedYearAnaliz;
+                }).ToList();
+            }
+        }
+
+        private void butAnalizNotSell_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
+            {
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
+
+            var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
+            ProductsAnalizReportDGV.DataSource = filterAnaliz;
+
+            label23.Text = "";
+            label24.Text = "";
+            label25.Text = "";
+
+
+        }
+
+        private void butAnalizSell_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
+            {
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+            AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
+            var filterAnaliz = filteredHistory.Where(p => p.ProductCount > 0).ToList();
+
+            var filteredHistoryWithProductNames = filteredHistory.Join(
+                productList,
+                sale => sale.ProductID,
+                product => product.Id,
+                (sale, product) => new
+                {
+                    product.Id,
+                    sale.ProductID,
+                    product.RemainingProductCount,
+                    product.ProductEnterCount,
+                    product.ProductName,
+                    product.ProductCountry,
+                    sale.ProductCount,
+                    sale.ProductPrice,
+                    sale.ProductSaleTime
+                }).ToList();
+
+            ProductsAnalizReportDGV.DataSource = filteredHistoryWithProductNames;
+            var sortedHistoryByPrice = filteredHistoryWithProductNames.OrderByDescending(item => item.ProductPrice).ToList();
+
+            // Получаем три продукта с наибольшими ценами
+            var top3Products = sortedHistoryByPrice.Take(3).ToList();
+
+            // Выводим информацию о трех продуктах с наибольшими ценами в лейблы
+            if (top3Products.Count >= 1)
+            {
+                label23.Text = $"1. {top3Products[0].ProductName}: {top3Products[0].ProductPrice} $";
+            }
+            if (top3Products.Count >= 2)
+            {
+                label24.Text = $"2. {top3Products[1].ProductName}: {top3Products[1].ProductPrice} $";
+            }
+            if (top3Products.Count >= 3)
+            {
+                label25.Text = $"3. {top3Products[2].ProductName}: {top3Products[2].ProductPrice} $";
+            }
+
+        }
+
+        private void ProductsAnalizReportDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void butAnalizSellDay_Click(object sender, EventArgs e)
+        {
+
+
+        }
+        private void butAnalizNotSellDay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxYearAnaliz_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SanalikProductReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butAnalizSellDay_Click_1(object sender, EventArgs e)
+        {
+            // Пути к JSON файлам
+            string PathHistorySale = @$"../../../DataBase/History.json";
+            string PathProducts = @$"../../../DataBase/Products.json";
+
+            DateTime startDate = dateTimePickerAnalizFrom.Value.Date;
+            DateTime endDate = dateTimePickerAnalizBefore.Value.Date.AddDays(1); // Увеличиваем на 1 день, чтобы включить всю выбранную дату "before"
+
+            if (startDate >= endDate)
+            {
+                // Устанавливаем значения DateTimePicker по умолчанию
+                dateTimePickerAnalizFrom.Value = DateTime.Today;
+                dateTimePickerAnalizBefore.Value = DateTime.Today;
+                MessageBox.Show("Sanani Noto'g'ri kiritdingiz.");
+            }
+            else
+            {
+                // Читаем и десериализуем данные из JSON
+                string jsonHistory = File.ReadAllText(PathHistorySale);
+                List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
+
+                string jsonProducts = File.ReadAllText(PathProducts);
+                List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
+
+                // Проверка десериализации
+                if (historyList == null || productList == null)
+                {
+                    MessageBox.Show("eror json deserelize");
+                    return;
+                }
+
+                // Фильтрация истории по выбранной дате с учетом различных форматов дат
+                List<HistorySale> filteredHistory = historyList.Where(h =>
+                {
+                    DateTime saleTime;
+                    bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+
+                    // Отладочные сообщения для проверки парсинга дат и фильтрации
+                    Console.WriteLine($"saleTimeParsed: {saleTimeParsed}");
+                    if (saleTimeParsed) Console.WriteLine($"saleTime: {saleTime}");
+
+                    return saleTimeParsed && saleTime >= startDate && saleTime < endDate;
+                }).ToList();
+
+                // Проверка наличия данных после фильтрации
+                if (filteredHistory.Count == 0)
+                {
+                    MessageBox.Show("Нет данных для отображения в выбранном диапазоне дат.");
+                    return;
+                }
+
+                var filterAnaliz = filteredHistory.Where(p => p.ProductCount > 0).ToList();
+
+                var filteredHistoryWithProductNames = filteredHistory.Join(
+                    productList,
+                    sale => sale.ProductID,
+                    product => product.Id,
+                    (sale, product) => new
+                    {
+                        sale.ProductID,
+                        product.Id,
+                        product.RemainingProductCount,
+                        product.ProductEnterCount,
+                        product.ProductName,
+                        product.ProductCountry,
+                        sale.ProductCount,
+                        sale.ProductPrice,
+                        sale.ProductSaleTime
+                    }).ToList();
+
+                ProductsAnalizReportDaysDGV.DataSource = filteredHistoryWithProductNames;
+                var sortedHistoryByPrice = filteredHistoryWithProductNames.OrderByDescending(item => item.ProductPrice).ToList();
+
+                // Получаем три продукта с наибольшими ценами
+                var top3Products = sortedHistoryByPrice.Take(3).ToList();
+
+                // Выводим информацию о трех продуктах с наибольшими ценами в лейблы
+                if (top3Products.Count >= 1)
+                {
+                    label28.Text = $"1. {top3Products[0].ProductName}: {top3Products[0].ProductPrice} $";
+                }
+                if (top3Products.Count >= 2)
+                {
+                    label29.Text = $"2. {top3Products[1].ProductName}: {top3Products[1].ProductPrice} $";
+                }
+                if (top3Products.Count >= 3)
+                {
+                    label30.Text = $"3. {top3Products[2].ProductName}: {top3Products[2].ProductPrice} $";
+                }
+
+            }
+        }
+
+        private void butAnalizNotSellDay_Click_1(object sender, EventArgs e)
+        {
+            // Пути к JSON файлам
+            string PathHistorySale = @$"../../../DataBase/History.json";
+            string PathProducts = @$"../../../DataBase/Products.json";
+
+            DateTime startDate = dateTimePickerAnalizFrom.Value.Date;
+            DateTime endDate = dateTimePickerAnalizBefore.Value.Date.AddDays(1); // Увеличиваем на 1 день, чтобы включить всю выбранную дату "before"
+
+            if (startDate >= endDate)
+            {
+                // Устанавливаем значения DateTimePicker по умолчанию
+                dateTimePickerAnalizFrom.Value = DateTime.Today;
+                dateTimePickerAnalizBefore.Value = DateTime.Today;
+                MessageBox.Show("Sanani Noto'g'ri kiritdingiz.");
+            }
+            else
+            {
+                // Читаем и десериализуем данные из JSON
+                string jsonHistory = File.ReadAllText(PathHistorySale);
+                List<HistorySale> historyList = JsonSerializer.Deserialize<List<HistorySale>>(jsonHistory);
+
+                string jsonProducts = File.ReadAllText(PathProducts);
+                List<Product> productList = JsonSerializer.Deserialize<List<Product>>(jsonProducts);
+
+                // Проверка десериализации
+                if (historyList == null || productList == null)
+                {
+                    MessageBox.Show("eror json deserelize");
+                    return;
+                }
+
+                // Фильтрация истории по выбранной дате с учетом различных форматов дат
+                List<HistorySale> filteredHistory = historyList.Where(h =>
+                {
+                    DateTime saleTime;
+                    bool saleTimeParsed = DateTime.TryParseExact(h.ProductSaleTime, new[] { "M/d/yyyy h:mm:ss tt", "dd.MM.yyyy HH:mm:ss" }, null, DateTimeStyles.None, out saleTime);
+
+                    // Отладочные сообщения для проверки парсинга дат и фильтрации
+                    Console.WriteLine($"saleTimeParsed: {saleTimeParsed}");
+                    if (saleTimeParsed) Console.WriteLine($"saleTime: {saleTime}");
+
+                    return saleTimeParsed && saleTime >= startDate && saleTime < endDate;
+                }).ToList();
+
+                // Проверка наличия данных после фильтрации
+                if (filteredHistory.Count == 0)
+                {
+                    MessageBox.Show("Нет данных для отображения в выбранном диапазоне дат.");
+                    return;
+                }
+
+                var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
+                ProductsAnalizReportDaysDGV.DataSource = filterAnaliz;
+
+               
+
+                
+            }
         }
     }
 }

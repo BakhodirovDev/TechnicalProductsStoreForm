@@ -1,177 +1,114 @@
 [
   {
     "SellerID": 6,
-    "ProductID": 3,
-    "ProductCount": 14,
-    "ProductPrice": 1722,
-    "ProductSaleTime": "5/10/2024 6:04:14 PM"
-  },
-  {
-    "SellerID": 6,
     "ProductID": 5,
-    "ProductCount": 32,
-    "ProductPrice": 3936,
-    "ProductSaleTime": "5/10/2024 6:04:14 PM"
-  },
-  {
-    "SellerID": 6,
-    "ProductID": 1,
-    "ProductCount": 54,
-    "ProductPrice": 47304,
-    "ProductSaleTime": "5/10/2024 6:04:14 PM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 3,
-    "ProductCount": 14,
-    "ProductPrice": 1722,
-    "ProductSaleTime": "5/10/2024 6:05:13 PM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 5,
-    "ProductCount": 54,
-    "ProductPrice": 6642,
-    "ProductSaleTime": "5/10/2024 6:05:13 PM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 1,
-    "ProductCount": 32,
-    "ProductPrice": 28032,
-    "ProductSaleTime": "5/10/2024 6:05:13 PM"
-  },
-  {
-    "SellerID": 2,
-    "ProductID": 5,
-    "ProductCount": 36,
-    "ProductPrice": 4428,
-    "ProductSaleTime": "5/10/2024 6:08:58 PM"
-  },
-  {
-    "SellerID": 2,
-    "ProductID": 3,
-    "ProductCount": 50,
-    "ProductPrice": 6150,
-    "ProductSaleTime": "5/10/2024 6:08:58 PM"
-  },
-  {
-    "SellerID": 2,
-    "ProductID": 1,
-    "ProductCount": 14,
-    "ProductPrice": 12264,
-    "ProductSaleTime": "5/10/2024 6:08:58 PM"
-  },
-  {
-    "SellerID": 6,
-    "ProductID": 1,
-    "ProductCount": 1,
-    "ProductPrice": 876,
-    "ProductSaleTime": "5/10/2024 7:41:08 PM"
-  },
-  {
-    "SellerID": 6,
-    "ProductID": 1,
-    "ProductCount": 12,
-    "ProductPrice": 10512,
-    "ProductSaleTime": "5/10/2024 7:59:39 PM"
-  },
-  {
-    "SellerID": 6,
-    "ProductID": 5,
-    "ProductCount": 5,
-    "ProductPrice": 1000,
-    "ProductSaleTime": "10.05.2024 20:09:30"
-  },
-  {
-    "SellerID": 2,
-    "ProductID": 13,
-    "ProductCount": 5,
-    "ProductPrice": 1500,
-    "ProductSaleTime": "5/10/2024 9:45:35 PM"
-  },
-  {
-    "SellerID": 2,
-    "ProductID": 8,
-    "ProductCount": 5,
-    "ProductPrice": 4500,
-    "ProductSaleTime": "5/10/2024 9:45:35 PM"
-  },
-  {
-    "SellerID": 2,
-    "ProductID": 4,
-    "ProductCount": 3,
-    "ProductPrice": 2400,
-    "ProductSaleTime": "5/10/2024 9:45:35 PM"
-  },
-  {
-    "SellerID": 4,
-    "ProductID": 12,
-    "ProductCount": 5,
-    "ProductPrice": 400,
-    "ProductSaleTime": "5/10/2024 9:47:03 PM"
-  },
-  {
-    "SellerID": 4,
-    "ProductID": 10,
-    "ProductCount": 20,
+    "ProductCount": 10,
     "ProductPrice": 2000,
-    "ProductSaleTime": "5/10/2024 9:47:03 PM"
-  },
-  {
-    "SellerID": 7,
-    "ProductID": 1,
-    "ProductCount": 9,
-    "ProductPrice": 9000,
-    "ProductSaleTime": "5/12/2024 12:21:52 AM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 18,
-    "ProductCount": 15,
-    "ProductPrice": 1800,
-    "ProductSaleTime": "5/13/2024 4:59:50 PM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 1,
-    "ProductCount": 1,
-    "ProductPrice": 1000,
-    "ProductSaleTime": "5/13/2024 4:59:50 PM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 10,
-    "ProductCount": 2,
-    "ProductPrice": 200,
-    "ProductSaleTime": "5/13/2024 4:59:50 PM"
-  },
-  {
-    "SellerID": 5,
-    "ProductID": 8,
-    "ProductCount": 5,
-    "ProductPrice": 4500,
-    "ProductSaleTime": "5/13/2024 4:59:50 PM"
+    "ProductSaleTime": "12.04.2024 18:01:30",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
   },
   {
     "SellerID": 6,
-    "ProductID": 14,
+    "ProductID": 3,
+    "ProductCount": 5,
+    "ProductPrice": 2500,
+    "ProductSaleTime": "18.05.2024 18:01:30",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
+  },
+  {
+    "SellerID": 6,
+    "ProductID": 2,
+    "ProductCount": 4,
+    "ProductPrice": 4800,
+    "ProductSaleTime": "24.05.2024 18:01:30",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
+  },
+  {
+    "SellerID": 6,
+    "ProductID": 1,
+    "ProductCount": 5,
+    "ProductPrice": 5000,
+    "ProductSaleTime": "24.05.2024 18:01:30",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
+  },
+  {
+    "SellerID": 6,
+    "ProductID": 8,
     "ProductCount": 3,
-    "ProductPrice": 150,
-    "ProductSaleTime": "20.05.2024 14:28:39"
+    "ProductPrice": 2700,
+    "ProductSaleTime": "24.05.2024 18:07:21",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
   },
   {
-    "SellerID": 2,
-    "ProductID": 16,
-    "ProductCount": 2,
-    "ProductPrice": 500,
-    "ProductSaleTime": "20.05.2024 14:29:43"
+    "SellerID": 6,
+    "ProductID": 7,
+    "ProductCount": 5,
+    "ProductPrice": 750,
+    "ProductSaleTime": "24.05.2024 18:07:21",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
   },
   {
-    "SellerID": 2,
-    "ProductID": 12,
+    "SellerID": 6,
+    "ProductID": 10,
+    "ProductCount": 3,
+    "ProductPrice": 300,
+    "ProductSaleTime": "24.05.2024 18:14:34",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
+  },
+  {
+    "SellerID": 6,
+    "ProductID": 5,
     "ProductCount": 2,
-    "ProductPrice": 160,
-    "ProductSaleTime": "20.05.2024 14:29:43"
+    "ProductPrice": 400,
+    "ProductSaleTime": "24.05.2024 18:14:34",
+    "Id": 0,
+    "ProductName": null,
+    "ProductCountry": null,
+    "ProductDescription": null,
+    "ProductEnterCount": 0,
+    "ProductEnterData": null,
+    "RemainingProductCount": null
   }
 ]
