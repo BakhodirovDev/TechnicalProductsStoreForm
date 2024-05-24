@@ -186,23 +186,26 @@
             ProductReportTab = new TabPage();
             tabControl3 = new TabControl();
             MonthProductReport = new TabPage();
+            panel5 = new Panel();
+            butAnalizSell = new Button();
+            label31 = new Label();
+            comboBoxMonthAnaliz = new ComboBox();
+            comboBoxYearAnaliz = new ComboBox();
+            butAnalizNotSell = new Button();
+            label21 = new Label();
             label25 = new Label();
             label24 = new Label();
             label23 = new Label();
-            butAnalizSell = new Button();
             label22 = new Label();
-            label21 = new Label();
-            butAnalizNotSell = new Button();
-            comboBoxYearAnaliz = new ComboBox();
-            comboBoxMonthAnaliz = new ComboBox();
             ProductsAnalizReportDGV = new DataGridView();
-            productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            Id = new DataGridViewTextBoxColumn();
-            ProductEnterCount = new DataGridViewTextBoxColumn();
-            remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            productCountDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            productPriceDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             SanalikProductReport = new TabPage();
+            panel6 = new Panel();
+            dateTimePickerAnalizBefore = new DateTimePicker();
+            dateTimePickerAnalizFrom = new DateTimePicker();
+            butAnalizNotSellDay = new Button();
+            butAnalizSellDay = new Button();
+            label26 = new Label();
+            label27 = new Label();
             label30 = new Label();
             label29 = new Label();
             label28 = new Label();
@@ -211,23 +214,19 @@
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            label27 = new Label();
-            label26 = new Label();
-            butAnalizSellDay = new Button();
-            butAnalizNotSellDay = new Button();
-            dateTimePickerAnalizBefore = new DateTimePicker();
-            dateTimePickerAnalizFrom = new DateTimePicker();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             SellersListPanel = new Panel();
             productBindingSource1 = new BindingSource(components);
             productHistoryBindingSource = new BindingSource(components);
             productBindingSource2 = new BindingSource(components);
-            label31 = new Label();
-            panel5 = new Panel();
-            panel6 = new Panel();
+            Id = new DataGridViewTextBoxColumn();
+            ProductID = new DataGridViewTextBoxColumn();
+            productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            ProductEnterCount = new DataGridViewTextBoxColumn();
+            remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            productPriceDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -268,15 +267,15 @@
             ProductReportTab.SuspendLayout();
             tabControl3.SuspendLayout();
             MonthProductReport.SuspendLayout();
+            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDGV).BeginInit();
             SanalikProductReport.SuspendLayout();
+            panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDaysDGV).BeginInit();
             SellersListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productHistoryBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource2).BeginInit();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // sellerIDDataGridViewTextBoxColumn
@@ -1337,6 +1336,57 @@
             MonthProductReport.UseVisualStyleBackColor = true;
             MonthProductReport.Click += MonthProductReport_Click;
             // 
+            // panel5
+            // 
+            panel5.BackColor = Color.MidnightBlue;
+            panel5.Controls.Add(butAnalizSell);
+            panel5.Controls.Add(label31);
+            panel5.Controls.Add(comboBoxMonthAnaliz);
+            panel5.Controls.Add(comboBoxYearAnaliz);
+            panel5.Controls.Add(butAnalizNotSell);
+            panel5.Controls.Add(label21);
+            resources.ApplyResources(panel5, "panel5");
+            panel5.Name = "panel5";
+            // 
+            // butAnalizSell
+            // 
+            resources.ApplyResources(butAnalizSell, "butAnalizSell");
+            butAnalizSell.Name = "butAnalizSell";
+            butAnalizSell.UseVisualStyleBackColor = true;
+            butAnalizSell.Click += butAnalizSell_Click;
+            // 
+            // label31
+            // 
+            resources.ApplyResources(label31, "label31");
+            label31.ForeColor = SystemColors.ButtonHighlight;
+            label31.Name = "label31";
+            // 
+            // comboBoxMonthAnaliz
+            // 
+            comboBoxMonthAnaliz.FormattingEnabled = true;
+            resources.ApplyResources(comboBoxMonthAnaliz, "comboBoxMonthAnaliz");
+            comboBoxMonthAnaliz.Name = "comboBoxMonthAnaliz";
+            // 
+            // comboBoxYearAnaliz
+            // 
+            comboBoxYearAnaliz.FormattingEnabled = true;
+            resources.ApplyResources(comboBoxYearAnaliz, "comboBoxYearAnaliz");
+            comboBoxYearAnaliz.Name = "comboBoxYearAnaliz";
+            // 
+            // butAnalizNotSell
+            // 
+            resources.ApplyResources(butAnalizNotSell, "butAnalizNotSell");
+            butAnalizNotSell.Name = "butAnalizNotSell";
+            butAnalizNotSell.UseVisualStyleBackColor = true;
+            butAnalizNotSell.Click += butAnalizNotSell_Click;
+            // 
+            // label21
+            // 
+            resources.ApplyResources(label21, "label21");
+            label21.ForeColor = SystemColors.ButtonHighlight;
+            label21.Name = "label21";
+            label21.Click += label21_Click;
+            // 
             // label25
             // 
             resources.ApplyResources(label25, "label25");
@@ -1352,88 +1402,19 @@
             resources.ApplyResources(label23, "label23");
             label23.Name = "label23";
             // 
-            // butAnalizSell
-            // 
-            resources.ApplyResources(butAnalizSell, "butAnalizSell");
-            butAnalizSell.Name = "butAnalizSell";
-            butAnalizSell.UseVisualStyleBackColor = true;
-            butAnalizSell.Click += butAnalizSell_Click;
-            // 
             // label22
             // 
             resources.ApplyResources(label22, "label22");
             label22.Name = "label22";
             // 
-            // label21
-            // 
-            resources.ApplyResources(label21, "label21");
-            label21.ForeColor = SystemColors.ButtonHighlight;
-            label21.Name = "label21";
-            label21.Click += label21_Click;
-            // 
-            // butAnalizNotSell
-            // 
-            resources.ApplyResources(butAnalizNotSell, "butAnalizNotSell");
-            butAnalizNotSell.Name = "butAnalizNotSell";
-            butAnalizNotSell.UseVisualStyleBackColor = true;
-            butAnalizNotSell.Click += butAnalizNotSell_Click;
-            // 
-            // comboBoxYearAnaliz
-            // 
-            comboBoxYearAnaliz.FormattingEnabled = true;
-            resources.ApplyResources(comboBoxYearAnaliz, "comboBoxYearAnaliz");
-            comboBoxYearAnaliz.Name = "comboBoxYearAnaliz";
-            // 
-            // comboBoxMonthAnaliz
-            // 
-            comboBoxMonthAnaliz.FormattingEnabled = true;
-            resources.ApplyResources(comboBoxMonthAnaliz, "comboBoxMonthAnaliz");
-            comboBoxMonthAnaliz.Name = "comboBoxMonthAnaliz";
-            // 
             // ProductsAnalizReportDGV
             // 
             ProductsAnalizReportDGV.AutoGenerateColumns = false;
             ProductsAnalizReportDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ProductsAnalizReportDGV.Columns.AddRange(new DataGridViewColumn[] { productNameDataGridViewTextBoxColumn3, Id, ProductEnterCount, remainingProductCountDataGridViewTextBoxColumn1, productCountDataGridViewTextBoxColumn2, productPriceDataGridViewTextBoxColumn3 });
+            ProductsAnalizReportDGV.Columns.AddRange(new DataGridViewColumn[] { Id, ProductID, productNameDataGridViewTextBoxColumn3, ProductEnterCount, remainingProductCountDataGridViewTextBoxColumn1, productPriceDataGridViewTextBoxColumn3 });
             ProductsAnalizReportDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(ProductsAnalizReportDGV, "ProductsAnalizReportDGV");
             ProductsAnalizReportDGV.Name = "ProductsAnalizReportDGV";
-            // 
-            // productNameDataGridViewTextBoxColumn3
-            // 
-            productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
-            resources.ApplyResources(productNameDataGridViewTextBoxColumn3, "productNameDataGridViewTextBoxColumn3");
-            productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
-            // 
-            // Id
-            // 
-            Id.DataPropertyName = "Id";
-            resources.ApplyResources(Id, "Id");
-            Id.Name = "Id";
-            // 
-            // ProductEnterCount
-            // 
-            ProductEnterCount.DataPropertyName = "ProductEnterCount";
-            resources.ApplyResources(ProductEnterCount, "ProductEnterCount");
-            ProductEnterCount.Name = "ProductEnterCount";
-            // 
-            // remainingProductCountDataGridViewTextBoxColumn1
-            // 
-            remainingProductCountDataGridViewTextBoxColumn1.DataPropertyName = "RemainingProductCount";
-            resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn1, "remainingProductCountDataGridViewTextBoxColumn1");
-            remainingProductCountDataGridViewTextBoxColumn1.Name = "remainingProductCountDataGridViewTextBoxColumn1";
-            // 
-            // productCountDataGridViewTextBoxColumn2
-            // 
-            productCountDataGridViewTextBoxColumn2.DataPropertyName = "ProductCount";
-            resources.ApplyResources(productCountDataGridViewTextBoxColumn2, "productCountDataGridViewTextBoxColumn2");
-            productCountDataGridViewTextBoxColumn2.Name = "productCountDataGridViewTextBoxColumn2";
-            // 
-            // productPriceDataGridViewTextBoxColumn3
-            // 
-            productPriceDataGridViewTextBoxColumn3.DataPropertyName = "ProductPrice";
-            resources.ApplyResources(productPriceDataGridViewTextBoxColumn3, "productPriceDataGridViewTextBoxColumn3");
-            productPriceDataGridViewTextBoxColumn3.Name = "productPriceDataGridViewTextBoxColumn3";
             // 
             // SanalikProductReport
             // 
@@ -1446,6 +1427,54 @@
             SanalikProductReport.Name = "SanalikProductReport";
             SanalikProductReport.UseVisualStyleBackColor = true;
             SanalikProductReport.Click += SanalikProductReport_Click;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.MidnightBlue;
+            panel6.Controls.Add(dateTimePickerAnalizBefore);
+            panel6.Controls.Add(dateTimePickerAnalizFrom);
+            panel6.Controls.Add(butAnalizNotSellDay);
+            panel6.Controls.Add(butAnalizSellDay);
+            panel6.Controls.Add(label26);
+            panel6.Controls.Add(label27);
+            resources.ApplyResources(panel6, "panel6");
+            panel6.Name = "panel6";
+            // 
+            // dateTimePickerAnalizBefore
+            // 
+            resources.ApplyResources(dateTimePickerAnalizBefore, "dateTimePickerAnalizBefore");
+            dateTimePickerAnalizBefore.Name = "dateTimePickerAnalizBefore";
+            // 
+            // dateTimePickerAnalizFrom
+            // 
+            resources.ApplyResources(dateTimePickerAnalizFrom, "dateTimePickerAnalizFrom");
+            dateTimePickerAnalizFrom.Name = "dateTimePickerAnalizFrom";
+            // 
+            // butAnalizNotSellDay
+            // 
+            resources.ApplyResources(butAnalizNotSellDay, "butAnalizNotSellDay");
+            butAnalizNotSellDay.Name = "butAnalizNotSellDay";
+            butAnalizNotSellDay.UseVisualStyleBackColor = true;
+            butAnalizNotSellDay.Click += butAnalizNotSellDay_Click_1;
+            // 
+            // butAnalizSellDay
+            // 
+            resources.ApplyResources(butAnalizSellDay, "butAnalizSellDay");
+            butAnalizSellDay.Name = "butAnalizSellDay";
+            butAnalizSellDay.UseVisualStyleBackColor = true;
+            butAnalizSellDay.Click += butAnalizSellDay_Click_1;
+            // 
+            // label26
+            // 
+            resources.ApplyResources(label26, "label26");
+            label26.ForeColor = SystemColors.ButtonHighlight;
+            label26.Name = "label26";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(label27, "label27");
+            label27.ForeColor = SystemColors.ButtonHighlight;
+            label27.Name = "label27";
             // 
             // label30
             // 
@@ -1466,20 +1495,20 @@
             // 
             ProductsAnalizReportDaysDGV.AutoGenerateColumns = false;
             ProductsAnalizReportDaysDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ProductsAnalizReportDaysDGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            ProductsAnalizReportDaysDGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn6 });
             ProductsAnalizReportDaysDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(ProductsAnalizReportDaysDGV, "ProductsAnalizReportDaysDGV");
             ProductsAnalizReportDaysDGV.Name = "ProductsAnalizReportDaysDGV";
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            dataGridViewTextBoxColumn1.DataPropertyName = "Id";
             resources.ApplyResources(dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewTextBoxColumn2.DataPropertyName = "Id";
+            dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
             resources.ApplyResources(dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
@@ -1495,53 +1524,11 @@
             resources.ApplyResources(dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.DataPropertyName = "ProductCount";
-            resources.ApplyResources(dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
             // dataGridViewTextBoxColumn6
             // 
             dataGridViewTextBoxColumn6.DataPropertyName = "ProductPrice";
             resources.ApplyResources(dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // label27
-            // 
-            resources.ApplyResources(label27, "label27");
-            label27.ForeColor = SystemColors.ButtonHighlight;
-            label27.Name = "label27";
-            // 
-            // label26
-            // 
-            resources.ApplyResources(label26, "label26");
-            label26.ForeColor = SystemColors.ButtonHighlight;
-            label26.Name = "label26";
-            // 
-            // butAnalizSellDay
-            // 
-            resources.ApplyResources(butAnalizSellDay, "butAnalizSellDay");
-            butAnalizSellDay.Name = "butAnalizSellDay";
-            butAnalizSellDay.UseVisualStyleBackColor = true;
-            butAnalizSellDay.Click += butAnalizSellDay_Click_1;
-            // 
-            // butAnalizNotSellDay
-            // 
-            resources.ApplyResources(butAnalizNotSellDay, "butAnalizNotSellDay");
-            butAnalizNotSellDay.Name = "butAnalizNotSellDay";
-            butAnalizNotSellDay.UseVisualStyleBackColor = true;
-            butAnalizNotSellDay.Click += butAnalizNotSellDay_Click_1;
-            // 
-            // dateTimePickerAnalizBefore
-            // 
-            resources.ApplyResources(dateTimePickerAnalizBefore, "dateTimePickerAnalizBefore");
-            dateTimePickerAnalizBefore.Name = "dateTimePickerAnalizBefore";
-            // 
-            // dateTimePickerAnalizFrom
-            // 
-            resources.ApplyResources(dateTimePickerAnalizFrom, "dateTimePickerAnalizFrom");
-            dateTimePickerAnalizFrom.Name = "dateTimePickerAnalizFrom";
             // 
             // tabPage3
             // 
@@ -1571,35 +1558,41 @@
             // 
             productBindingSource2.DataSource = typeof(Class.Product);
             // 
-            // label31
+            // Id
             // 
-            resources.ApplyResources(label31, "label31");
-            label31.ForeColor = SystemColors.ButtonHighlight;
-            label31.Name = "label31";
+            Id.DataPropertyName = "Id";
+            resources.ApplyResources(Id, "Id");
+            Id.Name = "Id";
             // 
-            // panel5
+            // ProductID
             // 
-            panel5.BackColor = Color.MidnightBlue;
-            panel5.Controls.Add(butAnalizSell);
-            panel5.Controls.Add(label31);
-            panel5.Controls.Add(comboBoxMonthAnaliz);
-            panel5.Controls.Add(comboBoxYearAnaliz);
-            panel5.Controls.Add(butAnalizNotSell);
-            panel5.Controls.Add(label21);
-            resources.ApplyResources(panel5, "panel5");
-            panel5.Name = "panel5";
+            ProductID.DataPropertyName = "ProductID";
+            resources.ApplyResources(ProductID, "ProductID");
+            ProductID.Name = "ProductID";
             // 
-            // panel6
+            // productNameDataGridViewTextBoxColumn3
             // 
-            panel6.BackColor = Color.MidnightBlue;
-            panel6.Controls.Add(dateTimePickerAnalizBefore);
-            panel6.Controls.Add(dateTimePickerAnalizFrom);
-            panel6.Controls.Add(butAnalizNotSellDay);
-            panel6.Controls.Add(butAnalizSellDay);
-            panel6.Controls.Add(label26);
-            panel6.Controls.Add(label27);
-            resources.ApplyResources(panel6, "panel6");
-            panel6.Name = "panel6";
+            productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
+            resources.ApplyResources(productNameDataGridViewTextBoxColumn3, "productNameDataGridViewTextBoxColumn3");
+            productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
+            // 
+            // ProductEnterCount
+            // 
+            ProductEnterCount.DataPropertyName = "ProductEnterCount";
+            resources.ApplyResources(ProductEnterCount, "ProductEnterCount");
+            ProductEnterCount.Name = "ProductEnterCount";
+            // 
+            // remainingProductCountDataGridViewTextBoxColumn1
+            // 
+            remainingProductCountDataGridViewTextBoxColumn1.DataPropertyName = "RemainingProductCount";
+            resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn1, "remainingProductCountDataGridViewTextBoxColumn1");
+            remainingProductCountDataGridViewTextBoxColumn1.Name = "remainingProductCountDataGridViewTextBoxColumn1";
+            // 
+            // productPriceDataGridViewTextBoxColumn3
+            // 
+            productPriceDataGridViewTextBoxColumn3.DataPropertyName = "ProductPrice";
+            resources.ApplyResources(productPriceDataGridViewTextBoxColumn3, "productPriceDataGridViewTextBoxColumn3");
+            productPriceDataGridViewTextBoxColumn3.Name = "productPriceDataGridViewTextBoxColumn3";
             // 
             // ManagerForm
             // 
@@ -1673,18 +1666,18 @@
             tabControl3.ResumeLayout(false);
             MonthProductReport.ResumeLayout(false);
             MonthProductReport.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDGV).EndInit();
             SanalikProductReport.ResumeLayout(false);
             SanalikProductReport.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ProductsAnalizReportDaysDGV).EndInit();
             SellersListPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)productBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)productHistoryBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource2).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1863,12 +1856,6 @@
         private Label label22;
         private Label label21;
         private BindingSource productBindingSource2;
-        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn ProductEnterCount;
-        private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn productCountDataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn3;
         private Label label25;
         private Label label24;
         private Label label23;
@@ -1882,14 +1869,19 @@
         private Label label29;
         private Label label28;
         private DataGridView ProductsAnalizReportDaysDGV;
+        private Panel panel5;
+        private Label label31;
+        private Panel panel6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private Panel panel5;
-        private Label label31;
-        private Panel panel6;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn ProductID;
+        private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn ProductEnterCount;
+        private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn productPriceDataGridViewTextBoxColumn3;
     }
 }

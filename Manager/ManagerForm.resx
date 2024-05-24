@@ -3949,6 +3949,30 @@
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="Id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Id.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Id.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Id.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <metadata name="ProductID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ProductID.HeaderText" xml:space="preserve">
+    <value>ProductID</value>
+  </data>
+  <data name="ProductID.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ProductID.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
   <data name="productNameDataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>ProductName</value>
   </data>
@@ -3957,12 +3981,6 @@
   </data>
   <data name="productNameDataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
     <value>110</value>
-  </data>
-  <data name="Id.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Id.Width" type="System.Int32, mscorlib">
-    <value>125</value>
   </data>
   <metadata name="ProductEnterCount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3984,12 +4002,6 @@
   </data>
   <data name="remainingProductCountDataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
     <value>150</value>
-  </data>
-  <data name="productCountDataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="productCountDataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
-    <value>125</value>
   </data>
   <data name="productPriceDataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>ProductPrice</value>
@@ -4306,20 +4318,26 @@
   <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>ProductName</value>
+    <value>Id</value>
   </data>
   <data name="dataGridViewTextBoxColumn1.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+    <value>125</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>ProductName</value>
   </data>
   <data name="dataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="dataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>110</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4341,12 +4359,6 @@
   </data>
   <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
     <value>150</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn5.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn5.Width" type="System.Int32, mscorlib">
-    <value>125</value>
   </data>
   <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>ProductPrice</value>
@@ -4927,42 +4939,6 @@
   <data name="&gt;&gt;sellerSaleTotalPriceDataGridViewTextBoxColumn4.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;productNameDataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>productNameDataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;productNameDataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Id.Name" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="&gt;&gt;Id.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProductEnterCount.Name" xml:space="preserve">
-    <value>ProductEnterCount</value>
-  </data>
-  <data name="&gt;&gt;ProductEnterCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;remainingProductCountDataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>remainingProductCountDataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;remainingProductCountDataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;productCountDataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>productCountDataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;productCountDataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;productPriceDataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>productPriceDataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;productPriceDataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn1</value>
   </data>
@@ -4985,12 +4961,6 @@
     <value>dataGridViewTextBoxColumn4</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn5</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
@@ -5016,6 +4986,42 @@
   </data>
   <data name="&gt;&gt;productBindingSource2.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Id.Name" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="&gt;&gt;Id.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProductID.Name" xml:space="preserve">
+    <value>ProductID</value>
+  </data>
+  <data name="&gt;&gt;ProductID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;productNameDataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>productNameDataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;productNameDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProductEnterCount.Name" xml:space="preserve">
+    <value>ProductEnterCount</value>
+  </data>
+  <data name="&gt;&gt;ProductEnterCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;remainingProductCountDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>remainingProductCountDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;remainingProductCountDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;productPriceDataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>productPriceDataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;productPriceDataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ManagerForm</value>

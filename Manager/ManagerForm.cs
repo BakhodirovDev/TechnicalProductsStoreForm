@@ -1000,6 +1000,7 @@ namespace TechnicalProductsStore.Manager
                 product => product.Id,
                 (sale, product) => new
                 {
+                    product.Id,
                     sale.ProductID,
                     product.RemainingProductCount,
                     product.ProductEnterCount,
@@ -1133,6 +1134,7 @@ namespace TechnicalProductsStore.Manager
                     (sale, product) => new
                     {
                         sale.ProductID,
+                        product.Id,
                         product.RemainingProductCount,
                         product.ProductEnterCount,
                         product.ProductName,
