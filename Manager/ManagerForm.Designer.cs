@@ -199,10 +199,7 @@
             label22 = new Label();
             ProductsAnalizReportDGV = new DataGridView();
             Id = new DataGridViewTextBoxColumn();
-<<<<<<< HEAD
             ProductID = new DataGridViewTextBoxColumn();
-=======
->>>>>>> 1f26ea73930074c2c371d71bb96bc75736ab7d61
             productNameDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             ProductEnterCount = new DataGridViewTextBoxColumn();
             remainingProductCountDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -1189,7 +1186,6 @@
             resources.ApplyResources(OylikSellerReport, "OylikSellerReport");
             OylikSellerReport.Name = "OylikSellerReport";
             OylikSellerReport.UseVisualStyleBackColor = true;
-            OylikSellerReport.Click += OylikSellerReport_Click;
             // 
             // SellerReportOylikTotalPriceValue
             // 
@@ -1428,15 +1424,12 @@
             resources.ApplyResources(Id, "Id");
             Id.Name = "Id";
             // 
-<<<<<<< HEAD
             // ProductID
             // 
             ProductID.DataPropertyName = "ProductID";
             resources.ApplyResources(ProductID, "ProductID");
             ProductID.Name = "ProductID";
-            // 
-=======
->>>>>>> 1f26ea73930074c2c371d71bb96bc75736ab7d61
+            //
             // productNameDataGridViewTextBoxColumn3
             // 
             productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
@@ -1544,7 +1537,6 @@
             ProductsAnalizReportDaysDGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn6 });
             ProductsAnalizReportDaysDGV.DataSource = historySaleBindingSource;
             ProductsAnalizReportDaysDGV.Name = "ProductsAnalizReportDaysDGV";
-            ProductsAnalizReportDaysDGV.CellContentClick += ProductsAnalizReportDaysDGV_CellContentClick;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1888,6 +1880,7 @@
         private DataGridViewTextBoxColumn productSaleTimeDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn sellerIDDataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn ProductID;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn ProductEnterCount;
         private DataGridViewTextBoxColumn remainingProductCountDataGridViewTextBoxColumn1;
