@@ -1273,7 +1273,9 @@ namespace TechnicalProductsStore.Manager
                 var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
                 ProductsAnalizReportDaysDGV.DataSource = filterAnaliz;
 
-
+                label28.Text = "";
+                label29.Text = "";
+                label30.Text = "";
 
 
             }
