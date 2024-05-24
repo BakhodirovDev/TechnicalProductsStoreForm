@@ -764,7 +764,7 @@ namespace TechnicalProductsStore.Manager
                 SellerReportKunlikTotalCountText.Text = "Total Count :";
                 SellerReportKunlikTotalCountValue.Text = countKunlik.ToString() + " ta";
                 SellerReportKunlikTotalPriceText.Text = "Total Price : ";
-                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString() +"$";
+                SellerReportKunlikTotalPriceValue.Text = priceKunlik.ToString() + "$";
                 SellerReportKunlikDGV.DataSource = sortKunlik;
             }
         }
@@ -829,7 +829,7 @@ namespace TechnicalProductsStore.Manager
             }
             SellerReportSanalikTotalCountText.Text = "Total Count:";
             SellerReportSanalikTotalPriceText.Text = "Total Price:";
-            SellerReportSanalikTotalCountValue.Text = count.ToString() +" ta";
+            SellerReportSanalikTotalCountValue.Text = count.ToString() + " ta";
             SellerReportSanalikTotalPriceValue.Text = price.ToString() + "$";
 
             SellerReportSanalikDGV.DataSource = sortSanalik;
@@ -1007,9 +1007,9 @@ namespace TechnicalProductsStore.Manager
 
         private void butAnalizSell_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
+            if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
             {
-                MessageBox.Show("Ma'lumotlarni to'liq kiriting","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Ma'lumotlarni to'liq kiriting", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
@@ -1243,10 +1243,20 @@ namespace TechnicalProductsStore.Manager
                 var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
                 ProductsAnalizReportDaysDGV.DataSource = filterAnaliz;
 
-               
 
-                
+
+
             }
+        }
+
+        private void ProductsAnalizReportDaysDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void OylikSellerReport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
