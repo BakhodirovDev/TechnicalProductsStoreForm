@@ -556,18 +556,21 @@ namespace TechnicalProductsStore.Manager
 
         private void SellerListDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nameData = $"{SellerListDGV.Columns[e.ColumnIndex].DataPropertyName}";
-            if (SortList == false)
+            if (e.RowIndex == -1)
             {
-                SortList = !SortList;
-                SortListByProperty(users, nameData, SellerListDGV, true);
+                string nameData = $"{SellerListDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(users, nameData, SellerListDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(users, nameData, SellerListDGV, false);
+                }
+                SellerListDGV.Refresh();
             }
-            else
-            {
-                SortList = !SortList;
-                SortListByProperty(users, nameData, SellerListDGV, false);
-            }
-            SellerListDGV.Refresh();
         }
 
         private void ProductLestDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -662,6 +665,7 @@ namespace TechnicalProductsStore.Manager
 
         private void ButSearchSaleOylik_Click(object sender, EventArgs e)
         {
+            SellerReportSanalikDGV.CellDoubleClick += SaleProductMonthDGV_CellContentClick;
             string PathHistorySale = @$"../../../DataBase/History.json";
             string PathProducts = @$"../../../DataBase/Products.json";
 
@@ -721,18 +725,21 @@ namespace TechnicalProductsStore.Manager
 
         private void SaleProductDayDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nameData = $"{SaleProductDayDGV.Columns[e.ColumnIndex].DataPropertyName}";
-            if (SortList == false)
+            if (e.RowIndex == -1)
             {
-                SortList = !SortList;
-                SortListByProperty(historySaleskunlik, nameData, SaleProductDayDGV, true);
+                string nameData = $"{SaleProductDayDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(historySaleskunlik, nameData, SaleProductDayDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(historySaleskunlik, nameData, SaleProductDayDGV, false);
+                }
+                SaleProductDayDGV.Refresh();
             }
-            else
-            {
-                SortList = !SortList;
-                SortListByProperty(historySaleskunlik, nameData, SaleProductDayDGV, false);
-            }
-            SaleProductDayDGV.Refresh();
         }
 
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
@@ -794,7 +801,7 @@ namespace TechnicalProductsStore.Manager
         public List<HistoryWorking> sortSanalik = new List<HistoryWorking>();
         private void SellerReportSanalikSearchBTN_Click(object sender, EventArgs e)
         {
-            SellerReportKunlikDGV.CellDoubleClick += SellerReportSanalikDGV_CellContentClick;
+            SellerReportSanalikDGV.CellDoubleClick += SellerReportSanalikDGV_CellContentClick;
             string PathHistoryWoking = @$"../../../DataBase/TotalHistory.json";
 
             int count = 0;
@@ -973,19 +980,21 @@ namespace TechnicalProductsStore.Manager
 
         private void SellerReportSanalikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            string nameData = $"{SellerReportSanalikDGV.Columns[e.ColumnIndex].DataPropertyName}";
-            if (SortList == false)
+            if (e.RowIndex == -1)
             {
-                SortList = !SortList;
-                SortListByProperty(sortSanalik, nameData, SellerReportSanalikDGV, true);
+                string nameData = $"{SellerReportSanalikDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(sortSanalik, nameData, SellerReportSanalikDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(sortSanalik, nameData, SellerReportSanalikDGV, false);
+                }
+                SellerReportSanalikDGV.Refresh();
             }
-            else
-            {
-                SortList = !SortList;
-                SortListByProperty(sortSanalik, nameData, SellerReportSanalikDGV, false);
-            }
-            SellerReportSanalikDGV.Refresh();
         }
 
         private void MonthProductReport_Click(object sender, EventArgs e)
@@ -1035,7 +1044,6 @@ namespace TechnicalProductsStore.Manager
             List<Product> filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
             analizNotSell.AddRange(filterAnaliz);
 
-
             ProductsAnalizReportDGV.DataSource = filterAnaliz;
 
             label23.Text = "";
@@ -1049,6 +1057,7 @@ namespace TechnicalProductsStore.Manager
         List<HistorySaleList> analizsellOylik = new List<HistorySaleList>();
         private void butAnalizSell_Click(object sender, EventArgs e)
         {
+            ProductsAnalizReportDGV.CellDoubleClick += ProductsAnalizReportDGV_CellContentClick_1;
             if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
             {
                 MessageBox.Show("Ma'lumotlarni to'liq kiriting", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1137,6 +1146,7 @@ namespace TechnicalProductsStore.Manager
         List<HistorySaleList> analizSellDay = new List<HistorySaleList>();
         private void butAnalizSellDay_Click_1(object sender, EventArgs e)
         {
+            ProductsAnalizReportDaysDGV.CellDoubleClick += ProductsAnalizReportDaysDGV_CellContentClick_1;
             // Пути к JSON файлам
             string PathHistorySale = @$"../../../DataBase/History.json";
             string PathProducts = @$"../../../DataBase/Products.json";
@@ -1229,6 +1239,7 @@ namespace TechnicalProductsStore.Manager
         List<Product> analizNotSellDay = new List<Product>();
         private void butAnalizNotSellDay_Click_1(object sender, EventArgs e)
         {
+            ProductsAnalizReportDaysDGV.CellDoubleClick += ProductsAnalizReportDaysDGV_CellContentClick_2;
             // Пути к JSON файлам
             string PathHistorySale = @$"../../../DataBase/History.json";
             string PathProducts = @$"../../../DataBase/Products.json";
@@ -1293,54 +1304,67 @@ namespace TechnicalProductsStore.Manager
         }
         private void SellerReportKunlikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nameData = $"{SellerReportKunlikDGV.Columns[e.ColumnIndex].DataPropertyName}";
-            if (SortList == false)
+            if (e.RowIndex == -1)
             {
-                SortList = !SortList;
-                SortListByProperty(sortKunlik, nameData, SellerReportKunlikDGV, true);
+                string nameData = $"{SellerReportKunlikDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(sortKunlik, nameData, SellerReportKunlikDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(sortKunlik, nameData, SellerReportKunlikDGV, false);
+                }
+                SellerReportKunlikDGV.Refresh();
             }
-            else
-            {
-                SortList = !SortList;
-                SortListByProperty(sortKunlik, nameData, SellerReportKunlikDGV, false);
-            }
-            SellerReportKunlikDGV.Refresh();
         }
 
         private void SellerReportOylikDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nameData = $"{SellerReportOylikDGV.Columns[e.ColumnIndex].DataPropertyName}";
-            if (SortList == false)
+            if (e.RowIndex == -1)
             {
-                SortList = !SortList;
-                SortListByProperty(resultDataGridView, nameData, SellerReportOylikDGV, true);
+                string nameData = $"{SellerReportOylikDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(resultDataGridView, nameData, SellerReportOylikDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(resultDataGridView, nameData, SellerReportOylikDGV, false);
+                }
+                SellerReportOylikDGV.Refresh();
             }
-            else
-            {
-                SortList = !SortList;
-                SortListByProperty(resultDataGridView, nameData, SellerReportOylikDGV, false);
-            }
-            SellerReportOylikDGV.Refresh();
         }
 
         public static void SortListByProperty<T>(List<T> list, string propertyName, DataGridView dataGridView, bool rostmi) where T : class
         {
-            PropertyInfo propInfo = typeof(T).GetProperty(propertyName);
-            if (propInfo == null)
+            try
             {
-                throw new ArgumentException($"Property '{propertyName}' not found on type '{typeof(T).Name}'");
+                PropertyInfo propInfo = typeof(T).GetProperty(propertyName);
+                if (propInfo == null)
+                {
+                    throw new ArgumentException($"Property '{propertyName}' not found on type '{typeof(T).Name}'");
+                }
+                list.Sort((x, y) =>
+                {
+                    object valueX = propInfo.GetValue(x);
+                    object valueY = propInfo.GetValue(y);
+                    return ((IComparable)valueX).CompareTo(valueY);
+                });
+                if (rostmi == true)
+                {
+                    list.Reverse();
+                }
+                dataGridView.DataSource = list;
             }
-            list.Sort((x, y) =>
+            catch
             {
-                object valueX = propInfo.GetValue(x);
-                object valueY = propInfo.GetValue(y);
-                return ((IComparable)valueX).CompareTo(valueY);
-            });
-            if (rostmi == true)
-            {
-                list.Reverse();
+                MessageBox.Show("Xatolik yuz berdi","Warning");
             }
-            dataGridView.DataSource = list;
         }
         private void ProductsAnalizReportDaysDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1359,18 +1383,21 @@ namespace TechnicalProductsStore.Manager
 
         private void ProductLestDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nameData = $"{ProductLestDGV.Columns[e.ColumnIndex].DataPropertyName}";
-            if (SortList == false)
+            if (e.RowIndex == -1)
             {
-                SortList = !SortList;
-                SortListByProperty(product, nameData, ProductLestDGV, true);
+                string nameData = $"{ProductLestDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(product, nameData, ProductLestDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(product, nameData, ProductLestDGV, false);
+                }
+                ProductLestDGV.Refresh();
             }
-            else
-            {
-                SortList = !SortList;
-                SortListByProperty(product, nameData, ProductLestDGV, false);
-            }
-            ProductLestDGV.Refresh();
         }
 
         private void SaleProductDayDGV_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1381,6 +1408,39 @@ namespace TechnicalProductsStore.Manager
         private void KunlikSellerReport_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ProductsAnalizReportDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void ProductsAnalizReportDaysDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void SaleProductMonthDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                string nameData = $"{SaleProductMonthDGV.Columns[e.ColumnIndex].DataPropertyName}";
+                if (SortList == false)
+                {
+                    SortList = !SortList;
+                    SortListByProperty(historySalesOylik, nameData, SaleProductMonthDGV, true);
+                }
+                else
+                {
+                    SortList = !SortList;
+                    SortListByProperty(historySalesOylik, nameData, SaleProductMonthDGV, false);
+                }
+                SaleProductMonthDGV.Refresh();
+            }
+        }
+        private void ProductsAnalizReportDaysDGV_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

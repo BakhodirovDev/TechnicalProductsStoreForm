@@ -168,6 +168,37 @@
     <value>Top, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CloseBTN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        8SMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="CloseBTN.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <data name="CloseBTN.Location" type="System.Drawing.Point, System.Drawing">
     <value>1487, 9</value>
   </data>
@@ -2276,7 +2307,7 @@
     <value>2</value>
   </data>
   <data name="OylikSalesReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 36</value>
+    <value>4, 29</value>
   </data>
   <data name="OylikSalesReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -2285,7 +2316,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="OylikSalesReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1461, 622</value>
+    <value>1458, 624</value>
   </data>
   <data name="OylikSalesReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3104,7 +3135,7 @@
     <value>51</value>
   </data>
   <data name="SellerReportSanalikDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 617</value>
+    <value>922, 619</value>
   </data>
   <data name="SellerReportSanalikDGV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3122,7 +3153,7 @@
     <value>5</value>
   </data>
   <data name="SanalikSellerReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 36</value>
+    <value>4, 29</value>
   </data>
   <data name="SanalikSellerReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -3131,7 +3162,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SanalikSellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1461, 622</value>
+    <value>1458, 624</value>
   </data>
   <data name="SanalikSellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3593,7 +3624,7 @@
     <value>51</value>
   </data>
   <data name="SellerReportOylikDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 648</value>
+    <value>922, 650</value>
   </data>
   <data name="SellerReportOylikDGV.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3611,7 +3642,7 @@
     <value>5</value>
   </data>
   <data name="OylikSellerReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 36</value>
+    <value>4, 29</value>
   </data>
   <data name="OylikSellerReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -3620,7 +3651,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="OylikSellerReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1461, 622</value>
+    <value>1458, 624</value>
   </data>
   <data name="OylikSellerReport.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4418,7 +4449,7 @@
     <value>51</value>
   </data>
   <data name="ProductsAnalizReportDaysDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 611</value>
+    <value>924, 618</value>
   </data>
   <data name="ProductsAnalizReportDaysDGV.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -4436,7 +4467,7 @@
     <value>4</value>
   </data>
   <data name="SanalikProductReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 36</value>
+    <value>4, 29</value>
   </data>
   <data name="SanalikProductReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4445,7 +4476,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="SanalikProductReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1458, 617</value>
+    <value>1458, 624</value>
   </data>
   <data name="SanalikProductReport.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

@@ -550,6 +550,7 @@
             ProductLestDGV.DataSource = productBindingSource;
             resources.ApplyResources(ProductLestDGV, "ProductLestDGV");
             ProductLestDGV.Name = "ProductLestDGV";
+            ProductLestDGV.ReadOnly = true;
             ProductLestDGV.CellContentClick += ProductLestDGV_CellContentClick;
             ProductLestDGV.CellFormatting += ProductLestDGV_CellFormatting;
             ProductLestDGV.DoubleClick += ProductLestDGV_DoubleClick;
@@ -559,48 +560,56 @@
             idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             resources.ApplyResources(idDataGridViewTextBoxColumn, "idDataGridViewTextBoxColumn");
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
             productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
             resources.ApplyResources(productNameDataGridViewTextBoxColumn, "productNameDataGridViewTextBoxColumn");
             productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            productNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productCountryDataGridViewTextBoxColumn
             // 
             productCountryDataGridViewTextBoxColumn.DataPropertyName = "ProductCountry";
             resources.ApplyResources(productCountryDataGridViewTextBoxColumn, "productCountryDataGridViewTextBoxColumn");
             productCountryDataGridViewTextBoxColumn.Name = "productCountryDataGridViewTextBoxColumn";
+            productCountryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productPriceDataGridViewTextBoxColumn
             // 
             productPriceDataGridViewTextBoxColumn.DataPropertyName = "ProductPrice";
             resources.ApplyResources(productPriceDataGridViewTextBoxColumn, "productPriceDataGridViewTextBoxColumn");
             productPriceDataGridViewTextBoxColumn.Name = "productPriceDataGridViewTextBoxColumn";
+            productPriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productDescriptionDataGridViewTextBoxColumn
             // 
             productDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ProductDescription";
             resources.ApplyResources(productDescriptionDataGridViewTextBoxColumn, "productDescriptionDataGridViewTextBoxColumn");
             productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
+            productDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productEnterCountDataGridViewTextBoxColumn
             // 
             productEnterCountDataGridViewTextBoxColumn.DataPropertyName = "ProductEnterCount";
             resources.ApplyResources(productEnterCountDataGridViewTextBoxColumn, "productEnterCountDataGridViewTextBoxColumn");
             productEnterCountDataGridViewTextBoxColumn.Name = "productEnterCountDataGridViewTextBoxColumn";
+            productEnterCountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productEnterDataDataGridViewTextBoxColumn
             // 
             productEnterDataDataGridViewTextBoxColumn.DataPropertyName = "ProductEnterData";
             resources.ApplyResources(productEnterDataDataGridViewTextBoxColumn, "productEnterDataDataGridViewTextBoxColumn");
             productEnterDataDataGridViewTextBoxColumn.Name = "productEnterDataDataGridViewTextBoxColumn";
+            productEnterDataDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // remainingProductCountDataGridViewTextBoxColumn
             // 
             remainingProductCountDataGridViewTextBoxColumn.DataPropertyName = "RemainingProductCount";
             resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn, "remainingProductCountDataGridViewTextBoxColumn");
             remainingProductCountDataGridViewTextBoxColumn.Name = "remainingProductCountDataGridViewTextBoxColumn";
+            remainingProductCountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // SellerListDGV
             // 
@@ -610,6 +619,7 @@
             SellerListDGV.DataSource = usersBindingSource;
             resources.ApplyResources(SellerListDGV, "SellerListDGV");
             SellerListDGV.Name = "SellerListDGV";
+            SellerListDGV.ReadOnly = true;
             SellerListDGV.CellContentClick += SellerListDGV_CellContentClick;
             // 
             // iDDataGridViewTextBoxColumn1
@@ -617,36 +627,42 @@
             iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
             resources.ApplyResources(iDDataGridViewTextBoxColumn1, "iDDataGridViewTextBoxColumn1");
             iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            iDDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // fullNameDataGridViewTextBoxColumn
             // 
             fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
             resources.ApplyResources(fullNameDataGridViewTextBoxColumn, "fullNameDataGridViewTextBoxColumn");
             fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            fullNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
             phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
             resources.ApplyResources(phoneNumberDataGridViewTextBoxColumn, "phoneNumberDataGridViewTextBoxColumn");
             phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userNameDataGridViewTextBoxColumn
             // 
             userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
             resources.ApplyResources(userNameDataGridViewTextBoxColumn, "userNameDataGridViewTextBoxColumn");
             userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            userNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
             passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
             resources.ApplyResources(passwordDataGridViewTextBoxColumn, "passwordDataGridViewTextBoxColumn");
             passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            passwordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // roleDataGridViewTextBoxColumn
             // 
             roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
             resources.ApplyResources(roleDataGridViewTextBoxColumn, "roleDataGridViewTextBoxColumn");
             roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            roleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usersBindingSource
             // 
@@ -759,6 +775,7 @@
             SaleProductDayDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(SaleProductDayDGV, "SaleProductDayDGV");
             SaleProductDayDGV.Name = "SaleProductDayDGV";
+            SaleProductDayDGV.ReadOnly = true;
             SaleProductDayDGV.CellContentClick += SaleProductDayDGV_CellContentClick;
             SaleProductDayDGV.CellContentDoubleClick += SaleProductDayDGV_CellContentDoubleClick;
             // 
@@ -767,36 +784,42 @@
             productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
             resources.ApplyResources(productIDDataGridViewTextBoxColumn, "productIDDataGridViewTextBoxColumn");
             productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            productIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productNameDataGridViewTextBoxColumn1
             // 
             productNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
             resources.ApplyResources(productNameDataGridViewTextBoxColumn1, "productNameDataGridViewTextBoxColumn1");
             productNameDataGridViewTextBoxColumn1.Name = "productNameDataGridViewTextBoxColumn1";
+            productNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // productCountDataGridViewTextBoxColumn
             // 
             productCountDataGridViewTextBoxColumn.DataPropertyName = "ProductCount";
             resources.ApplyResources(productCountDataGridViewTextBoxColumn, "productCountDataGridViewTextBoxColumn");
             productCountDataGridViewTextBoxColumn.Name = "productCountDataGridViewTextBoxColumn";
+            productCountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productPriceDataGridViewTextBoxColumn1
             // 
             productPriceDataGridViewTextBoxColumn1.DataPropertyName = "ProductPrice";
             resources.ApplyResources(productPriceDataGridViewTextBoxColumn1, "productPriceDataGridViewTextBoxColumn1");
             productPriceDataGridViewTextBoxColumn1.Name = "productPriceDataGridViewTextBoxColumn1";
+            productPriceDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // productSaleTimeDataGridViewTextBoxColumn
             // 
             productSaleTimeDataGridViewTextBoxColumn.DataPropertyName = "ProductSaleTime";
             resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn, "productSaleTimeDataGridViewTextBoxColumn");
             productSaleTimeDataGridViewTextBoxColumn.Name = "productSaleTimeDataGridViewTextBoxColumn";
+            productSaleTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sellerIDDataGridViewTextBoxColumn2
             // 
             sellerIDDataGridViewTextBoxColumn2.DataPropertyName = "SellerID";
             resources.ApplyResources(sellerIDDataGridViewTextBoxColumn2, "sellerIDDataGridViewTextBoxColumn2");
             sellerIDDataGridViewTextBoxColumn2.Name = "sellerIDDataGridViewTextBoxColumn2";
+            sellerIDDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // OylikSalesReport
             // 
@@ -877,42 +900,50 @@
             SaleProductMonthDGV.DataSource = historySaleBindingSource;
             resources.ApplyResources(SaleProductMonthDGV, "SaleProductMonthDGV");
             SaleProductMonthDGV.Name = "SaleProductMonthDGV";
+            SaleProductMonthDGV.ReadOnly = true;
+            SaleProductMonthDGV.CellContentClick += SaleProductMonthDGV_CellContentClick;
             // 
             // productIDDataGridViewTextBoxColumn1
             // 
             productIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
             resources.ApplyResources(productIDDataGridViewTextBoxColumn1, "productIDDataGridViewTextBoxColumn1");
             productIDDataGridViewTextBoxColumn1.Name = "productIDDataGridViewTextBoxColumn1";
+            productIDDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // productNameDataGridViewTextBoxColumn2
             // 
             productNameDataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
             resources.ApplyResources(productNameDataGridViewTextBoxColumn2, "productNameDataGridViewTextBoxColumn2");
             productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
+            productNameDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // productCountDataGridViewTextBoxColumn1
             // 
             productCountDataGridViewTextBoxColumn1.DataPropertyName = "ProductCount";
             resources.ApplyResources(productCountDataGridViewTextBoxColumn1, "productCountDataGridViewTextBoxColumn1");
             productCountDataGridViewTextBoxColumn1.Name = "productCountDataGridViewTextBoxColumn1";
+            productCountDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // productPriceDataGridViewTextBoxColumn2
             // 
             productPriceDataGridViewTextBoxColumn2.DataPropertyName = "ProductPrice";
             resources.ApplyResources(productPriceDataGridViewTextBoxColumn2, "productPriceDataGridViewTextBoxColumn2");
             productPriceDataGridViewTextBoxColumn2.Name = "productPriceDataGridViewTextBoxColumn2";
+            productPriceDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // productSaleTimeDataGridViewTextBoxColumn1
             // 
             productSaleTimeDataGridViewTextBoxColumn1.DataPropertyName = "ProductSaleTime";
             resources.ApplyResources(productSaleTimeDataGridViewTextBoxColumn1, "productSaleTimeDataGridViewTextBoxColumn1");
             productSaleTimeDataGridViewTextBoxColumn1.Name = "productSaleTimeDataGridViewTextBoxColumn1";
+            productSaleTimeDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // sellerIDDataGridViewTextBoxColumn3
             // 
             sellerIDDataGridViewTextBoxColumn3.DataPropertyName = "SellerID";
             resources.ApplyResources(sellerIDDataGridViewTextBoxColumn3, "sellerIDDataGridViewTextBoxColumn3");
             sellerIDDataGridViewTextBoxColumn3.Name = "sellerIDDataGridViewTextBoxColumn3";
+            sellerIDDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // SellerReportTab
             // 
@@ -1016,6 +1047,7 @@
             SellerReportKunlikDGV.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn4, sellerSignInTimeDataGridViewTextBoxColumn2, sellerSignOutTimeDataGridViewTextBoxColumn2, sellerSaleTotalCountDataGridViewTextBoxColumn2, sellerSaleTotalPriceDataGridViewTextBoxColumn2 });
             SellerReportKunlikDGV.DataSource = historyWorkingBindingSource1;
             SellerReportKunlikDGV.Name = "SellerReportKunlikDGV";
+            SellerReportKunlikDGV.ReadOnly = true;
             SellerReportKunlikDGV.CellContentClick += SellerReportKunlikDGV_CellContentClick;
             // 
             // sellerIDDataGridViewTextBoxColumn4
@@ -1023,30 +1055,35 @@
             sellerIDDataGridViewTextBoxColumn4.DataPropertyName = "SellerID";
             resources.ApplyResources(sellerIDDataGridViewTextBoxColumn4, "sellerIDDataGridViewTextBoxColumn4");
             sellerIDDataGridViewTextBoxColumn4.Name = "sellerIDDataGridViewTextBoxColumn4";
+            sellerIDDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // sellerSignInTimeDataGridViewTextBoxColumn2
             // 
             sellerSignInTimeDataGridViewTextBoxColumn2.DataPropertyName = "SellerSignInTime";
             resources.ApplyResources(sellerSignInTimeDataGridViewTextBoxColumn2, "sellerSignInTimeDataGridViewTextBoxColumn2");
             sellerSignInTimeDataGridViewTextBoxColumn2.Name = "sellerSignInTimeDataGridViewTextBoxColumn2";
+            sellerSignInTimeDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // sellerSignOutTimeDataGridViewTextBoxColumn2
             // 
             sellerSignOutTimeDataGridViewTextBoxColumn2.DataPropertyName = "SellerSignOutTime";
             resources.ApplyResources(sellerSignOutTimeDataGridViewTextBoxColumn2, "sellerSignOutTimeDataGridViewTextBoxColumn2");
             sellerSignOutTimeDataGridViewTextBoxColumn2.Name = "sellerSignOutTimeDataGridViewTextBoxColumn2";
+            sellerSignOutTimeDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // sellerSaleTotalCountDataGridViewTextBoxColumn2
             // 
             sellerSaleTotalCountDataGridViewTextBoxColumn2.DataPropertyName = "SellerSaleTotalCount";
             resources.ApplyResources(sellerSaleTotalCountDataGridViewTextBoxColumn2, "sellerSaleTotalCountDataGridViewTextBoxColumn2");
             sellerSaleTotalCountDataGridViewTextBoxColumn2.Name = "sellerSaleTotalCountDataGridViewTextBoxColumn2";
+            sellerSaleTotalCountDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // sellerSaleTotalPriceDataGridViewTextBoxColumn2
             // 
             sellerSaleTotalPriceDataGridViewTextBoxColumn2.DataPropertyName = "SellerSaleTotalPrice";
             resources.ApplyResources(sellerSaleTotalPriceDataGridViewTextBoxColumn2, "sellerSaleTotalPriceDataGridViewTextBoxColumn2");
             sellerSaleTotalPriceDataGridViewTextBoxColumn2.Name = "sellerSaleTotalPriceDataGridViewTextBoxColumn2";
+            sellerSaleTotalPriceDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // SanalikSellerReport
             // 
@@ -1147,6 +1184,7 @@
             SellerReportSanalikDGV.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn5, sellerSignInTimeDataGridViewTextBoxColumn3, sellerSignOutTimeDataGridViewTextBoxColumn3, sellerSaleTotalCountDataGridViewTextBoxColumn3, sellerSaleTotalPriceDataGridViewTextBoxColumn3 });
             SellerReportSanalikDGV.DataSource = historyWorkingBindingSource1;
             SellerReportSanalikDGV.Name = "SellerReportSanalikDGV";
+            SellerReportSanalikDGV.ReadOnly = true;
             SellerReportSanalikDGV.CellContentClick += SellerReportSanalikDGV_CellContentClick;
             // 
             // sellerIDDataGridViewTextBoxColumn5
@@ -1154,30 +1192,35 @@
             sellerIDDataGridViewTextBoxColumn5.DataPropertyName = "SellerID";
             resources.ApplyResources(sellerIDDataGridViewTextBoxColumn5, "sellerIDDataGridViewTextBoxColumn5");
             sellerIDDataGridViewTextBoxColumn5.Name = "sellerIDDataGridViewTextBoxColumn5";
+            sellerIDDataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // sellerSignInTimeDataGridViewTextBoxColumn3
             // 
             sellerSignInTimeDataGridViewTextBoxColumn3.DataPropertyName = "SellerSignInTime";
             resources.ApplyResources(sellerSignInTimeDataGridViewTextBoxColumn3, "sellerSignInTimeDataGridViewTextBoxColumn3");
             sellerSignInTimeDataGridViewTextBoxColumn3.Name = "sellerSignInTimeDataGridViewTextBoxColumn3";
+            sellerSignInTimeDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // sellerSignOutTimeDataGridViewTextBoxColumn3
             // 
             sellerSignOutTimeDataGridViewTextBoxColumn3.DataPropertyName = "SellerSignOutTime";
             resources.ApplyResources(sellerSignOutTimeDataGridViewTextBoxColumn3, "sellerSignOutTimeDataGridViewTextBoxColumn3");
             sellerSignOutTimeDataGridViewTextBoxColumn3.Name = "sellerSignOutTimeDataGridViewTextBoxColumn3";
+            sellerSignOutTimeDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // sellerSaleTotalCountDataGridViewTextBoxColumn3
             // 
             sellerSaleTotalCountDataGridViewTextBoxColumn3.DataPropertyName = "SellerSaleTotalCount";
             resources.ApplyResources(sellerSaleTotalCountDataGridViewTextBoxColumn3, "sellerSaleTotalCountDataGridViewTextBoxColumn3");
             sellerSaleTotalCountDataGridViewTextBoxColumn3.Name = "sellerSaleTotalCountDataGridViewTextBoxColumn3";
+            sellerSaleTotalCountDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // sellerSaleTotalPriceDataGridViewTextBoxColumn3
             // 
             sellerSaleTotalPriceDataGridViewTextBoxColumn3.DataPropertyName = "SellerSaleTotalPrice";
             resources.ApplyResources(sellerSaleTotalPriceDataGridViewTextBoxColumn3, "sellerSaleTotalPriceDataGridViewTextBoxColumn3");
             sellerSaleTotalPriceDataGridViewTextBoxColumn3.Name = "sellerSaleTotalPriceDataGridViewTextBoxColumn3";
+            sellerSaleTotalPriceDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // OylikSellerReport
             // 
@@ -1282,6 +1325,7 @@
             SellerReportOylikDGV.Columns.AddRange(new DataGridViewColumn[] { sellerIDDataGridViewTextBoxColumn6, sellerSignInTimeDataGridViewTextBoxColumn4, sellerSignOutTimeDataGridViewTextBoxColumn4, sellerSaleTotalCountDataGridViewTextBoxColumn4, sellerSaleTotalPriceDataGridViewTextBoxColumn4 });
             SellerReportOylikDGV.DataSource = historyWorkingBindingSource1;
             SellerReportOylikDGV.Name = "SellerReportOylikDGV";
+            SellerReportOylikDGV.ReadOnly = true;
             SellerReportOylikDGV.CellContentClick += SellerReportOylikDGV_CellContentClick;
             // 
             // sellerIDDataGridViewTextBoxColumn6
@@ -1289,30 +1333,35 @@
             sellerIDDataGridViewTextBoxColumn6.DataPropertyName = "SellerID";
             resources.ApplyResources(sellerIDDataGridViewTextBoxColumn6, "sellerIDDataGridViewTextBoxColumn6");
             sellerIDDataGridViewTextBoxColumn6.Name = "sellerIDDataGridViewTextBoxColumn6";
+            sellerIDDataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // sellerSignInTimeDataGridViewTextBoxColumn4
             // 
             sellerSignInTimeDataGridViewTextBoxColumn4.DataPropertyName = "SellerSignInTime";
             resources.ApplyResources(sellerSignInTimeDataGridViewTextBoxColumn4, "sellerSignInTimeDataGridViewTextBoxColumn4");
             sellerSignInTimeDataGridViewTextBoxColumn4.Name = "sellerSignInTimeDataGridViewTextBoxColumn4";
+            sellerSignInTimeDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // sellerSignOutTimeDataGridViewTextBoxColumn4
             // 
             sellerSignOutTimeDataGridViewTextBoxColumn4.DataPropertyName = "SellerSignOutTime";
             resources.ApplyResources(sellerSignOutTimeDataGridViewTextBoxColumn4, "sellerSignOutTimeDataGridViewTextBoxColumn4");
             sellerSignOutTimeDataGridViewTextBoxColumn4.Name = "sellerSignOutTimeDataGridViewTextBoxColumn4";
+            sellerSignOutTimeDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // sellerSaleTotalCountDataGridViewTextBoxColumn4
             // 
             sellerSaleTotalCountDataGridViewTextBoxColumn4.DataPropertyName = "SellerSaleTotalCount";
             resources.ApplyResources(sellerSaleTotalCountDataGridViewTextBoxColumn4, "sellerSaleTotalCountDataGridViewTextBoxColumn4");
             sellerSaleTotalCountDataGridViewTextBoxColumn4.Name = "sellerSaleTotalCountDataGridViewTextBoxColumn4";
+            sellerSaleTotalCountDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // sellerSaleTotalPriceDataGridViewTextBoxColumn4
             // 
             sellerSaleTotalPriceDataGridViewTextBoxColumn4.DataPropertyName = "SellerSaleTotalPrice";
             resources.ApplyResources(sellerSaleTotalPriceDataGridViewTextBoxColumn4, "sellerSaleTotalPriceDataGridViewTextBoxColumn4");
             sellerSaleTotalPriceDataGridViewTextBoxColumn4.Name = "sellerSaleTotalPriceDataGridViewTextBoxColumn4";
+            sellerSaleTotalPriceDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // ProductReportTab
             // 
@@ -1421,36 +1470,43 @@
             ProductsAnalizReportDGV.Columns.AddRange(new DataGridViewColumn[] { Id, productNameDataGridViewTextBoxColumn3, ProductEnterCount, remainingProductCountDataGridViewTextBoxColumn1, productPriceDataGridViewTextBoxColumn3 });
             ProductsAnalizReportDGV.DataSource = historySaleBindingSource;
             ProductsAnalizReportDGV.Name = "ProductsAnalizReportDGV";
+            ProductsAnalizReportDGV.ReadOnly = true;
+            ProductsAnalizReportDGV.CellContentClick += ProductsAnalizReportDGV_CellContentClick_1;
             // 
             // Id
             // 
             Id.DataPropertyName = "Id";
             resources.ApplyResources(Id, "Id");
             Id.Name = "Id";
+            Id.ReadOnly = true;
             // 
             // productNameDataGridViewTextBoxColumn3
             // 
             productNameDataGridViewTextBoxColumn3.DataPropertyName = "ProductName";
             resources.ApplyResources(productNameDataGridViewTextBoxColumn3, "productNameDataGridViewTextBoxColumn3");
             productNameDataGridViewTextBoxColumn3.Name = "productNameDataGridViewTextBoxColumn3";
+            productNameDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // ProductEnterCount
             // 
             ProductEnterCount.DataPropertyName = "ProductEnterCount";
             resources.ApplyResources(ProductEnterCount, "ProductEnterCount");
             ProductEnterCount.Name = "ProductEnterCount";
+            ProductEnterCount.ReadOnly = true;
             // 
             // remainingProductCountDataGridViewTextBoxColumn1
             // 
             remainingProductCountDataGridViewTextBoxColumn1.DataPropertyName = "RemainingProductCount";
             resources.ApplyResources(remainingProductCountDataGridViewTextBoxColumn1, "remainingProductCountDataGridViewTextBoxColumn1");
             remainingProductCountDataGridViewTextBoxColumn1.Name = "remainingProductCountDataGridViewTextBoxColumn1";
+            remainingProductCountDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // productPriceDataGridViewTextBoxColumn3
             // 
             productPriceDataGridViewTextBoxColumn3.DataPropertyName = "ProductPrice";
             resources.ApplyResources(productPriceDataGridViewTextBoxColumn3, "productPriceDataGridViewTextBoxColumn3");
             productPriceDataGridViewTextBoxColumn3.Name = "productPriceDataGridViewTextBoxColumn3";
+            productPriceDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // SanalikProductReport
             // 
@@ -1535,36 +1591,43 @@
             ProductsAnalizReportDaysDGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn6 });
             ProductsAnalizReportDaysDGV.DataSource = historySaleBindingSource;
             ProductsAnalizReportDaysDGV.Name = "ProductsAnalizReportDaysDGV";
+            ProductsAnalizReportDaysDGV.ReadOnly = true;
+            ProductsAnalizReportDaysDGV.CellContentClick += ProductsAnalizReportDaysDGV_CellContentClick_1;
             // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.DataPropertyName = "Id";
             resources.ApplyResources(dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
             resources.ApplyResources(dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             dataGridViewTextBoxColumn3.DataPropertyName = "ProductEnterCount";
             resources.ApplyResources(dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             dataGridViewTextBoxColumn4.DataPropertyName = "RemainingProductCount";
             resources.ApplyResources(dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             dataGridViewTextBoxColumn6.DataPropertyName = "ProductPrice";
             resources.ApplyResources(dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // ProductID
             // 
