@@ -1035,6 +1035,7 @@ namespace TechnicalProductsStore.Manager
             List<Product> filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
             analizNotSell.AddRange(filterAnaliz);
 
+
             ProductsAnalizReportDGV.DataSource = filterAnaliz;
 
             label23.Text = "";
