@@ -1,18 +1,18 @@
-﻿    using Microsoft.VisualBasic;
-    using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.Drawing.Drawing2D;
-    using System.Globalization;
-    using System.Linq;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Globalization;
+using System.Linq;
 using System.Reflection;
 using System.Text;
-    using System.Text.Json;
-    using System.Threading.Tasks;
-    using System.Windows.Forms;
-    using TechnicalProductsStore.Class;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using TechnicalProductsStore.Class;
 
 namespace TechnicalProductsStore.Manager
 {
@@ -55,6 +55,8 @@ namespace TechnicalProductsStore.Manager
             SellerReportOylikYillarCB.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxMonthAnaliz.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxYearAnaliz.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMonth1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxYear1.DropDownStyle = ComboBoxStyle.DropDownList;
 
             label23.Text = "";
             label24.Text = "";
@@ -584,7 +586,9 @@ namespace TechnicalProductsStore.Manager
                 }
             }
         }
-        List<HistorySaleList> historySales = new List<HistorySaleList>();
+
+
+        List<HistorySaleList> historySaleskunlik = new List<HistorySaleList>();
         private void ButSearchSaleKunlik_Click(object sender, EventArgs e)
         {
             SaleProductDayDGV.CellDoubleClick += SaleProductDayDGV_CellContentClick;
@@ -629,11 +633,11 @@ namespace TechnicalProductsStore.Manager
                     return;
                 }
 
-                var filteredHistoryWithProductNames = filteredHistory.Join(
+                List<HistorySaleList> filteredHistoryWithProductNames = filteredHistory.Join(
                     productList,
                     sale => sale.ProductID,
                     product => product.Id,
-                    (sale, product) => new HistorySale
+                    (sale, product) => new HistorySaleList
                     {
                         SellerID = sale.SellerID,
                         ProductID = sale.ProductID,
@@ -642,7 +646,7 @@ namespace TechnicalProductsStore.Manager
                         ProductPrice = sale.ProductPrice,
                         ProductSaleTime = sale.ProductSaleTime
                     }).ToList();
-
+                historySaleskunlik.AddRange(filteredHistoryWithProductNames);
 
                 SaleProductDayDGV.DataSource = filteredHistoryWithProductNames;
 
@@ -653,6 +657,8 @@ namespace TechnicalProductsStore.Manager
                 label10.Text = $"Days Profit = {totalSalePrice} $";
             }
         }
+
+        List<HistorySaleList> historySalesOylik = new List<HistorySaleList>();
 
         private void ButSearchSaleOylik_Click(object sender, EventArgs e)
         {
@@ -680,20 +686,20 @@ namespace TechnicalProductsStore.Manager
                 }).ToList();
 
                 // Объединение данных о продажах с именами продуктов
-                var filteredHistoryWithProductNames = filteredHistory.Join(
+                List<HistorySaleList> filteredHistoryWithProductNames = filteredHistory.Join(
                     productList,
                     sale => sale.ProductID,
                     product => product.Id,
-                    (sale, product) => new
+                    (sale, product) => new HistorySaleList
                     {
-                        sale.SellerID,
-                        sale.ProductID,
-                        product.ProductName,
-                        product.ProductCountry,
-                        sale.ProductCount,
-                        sale.ProductPrice,
-                        sale.ProductSaleTime
+                        SellerID = sale.SellerID,
+                        ProductID = sale.ProductID,
+                        ProductName = product.ProductName,
+                        ProductCount = sale.ProductCount,
+                        ProductPrice = sale.ProductPrice,
+                        ProductSaleTime = sale.ProductSaleTime
                     }).ToList();
+                historySalesOylik.AddRange(filteredHistoryWithProductNames);
 
 
                 SaleProductMonthDGV.DataSource = filteredHistoryWithProductNames;
@@ -719,12 +725,12 @@ namespace TechnicalProductsStore.Manager
             if (SortList == false)
             {
                 SortList = !SortList;
-                SortListByProperty(historySales, nameData, SaleProductDayDGV, true);
+                SortListByProperty(historySaleskunlik, nameData, SaleProductDayDGV, true);
             }
             else
             {
                 SortList = !SortList;
-                SortListByProperty(historySales, nameData, SaleProductDayDGV, false);
+                SortListByProperty(historySaleskunlik, nameData, SaleProductDayDGV, false);
             }
             SaleProductDayDGV.Refresh();
         }
@@ -1016,6 +1022,7 @@ namespace TechnicalProductsStore.Manager
             }
         }
 
+        List<Product> analizNotSell = new List<Product>();
         private void butAnalizNotSell_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
@@ -1025,7 +1032,9 @@ namespace TechnicalProductsStore.Manager
             }
             AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
 
-            var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
+            List<Product> filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
+            analizNotSell.AddRange(filterAnaliz);
+
             ProductsAnalizReportDGV.DataSource = filterAnaliz;
 
             label23.Text = "";
@@ -1035,6 +1044,8 @@ namespace TechnicalProductsStore.Manager
 
         }
 
+
+        List<HistorySaleList> analizsellOylik = new List<HistorySaleList>();
         private void butAnalizSell_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(comboBoxMonthAnaliz.Text) || string.IsNullOrEmpty(comboBoxYearAnaliz.Text))
@@ -1045,22 +1056,20 @@ namespace TechnicalProductsStore.Manager
             AnalizReport(out List<HistorySale> filteredHistory, out List<Product> productList);
             var filterAnaliz = filteredHistory.Where(p => p.ProductCount > 0).ToList();
 
-            var filteredHistoryWithProductNames = filteredHistory.Join(
+            List<HistorySaleList> filteredHistoryWithProductNames = filteredHistory.Join(
                 productList,
                 sale => sale.ProductID,
                 product => product.Id,
-                (sale, product) => new
+                (sale, product) => new HistorySaleList
                 {
-                    product.Id,
-                    sale.ProductID,
-                    product.RemainingProductCount,
-                    product.ProductEnterCount,
-                    product.ProductName,
-                    product.ProductCountry,
-                    sale.ProductCount,
-                    sale.ProductPrice,
-                    sale.ProductSaleTime
+                    SellerID = sale.SellerID,
+                    ProductID = sale.ProductID,
+                    ProductName = product.ProductName,
+                    ProductCount = sale.ProductCount,
+                    ProductPrice = sale.ProductPrice,
+                    ProductSaleTime = sale.ProductSaleTime
                 }).ToList();
+            analizsellOylik.AddRange(filteredHistoryWithProductNames);
 
             ProductsAnalizReportDGV.DataSource = filteredHistoryWithProductNames;
             var sortedHistoryByPrice = filteredHistoryWithProductNames.OrderByDescending(item => item.ProductPrice).ToList();
@@ -1124,6 +1133,7 @@ namespace TechnicalProductsStore.Manager
 
         }
 
+        List<HistorySaleList> analizSellDay = new List<HistorySaleList>();
         private void butAnalizSellDay_Click_1(object sender, EventArgs e)
         {
             // Пути к JSON файлам
@@ -1176,24 +1186,20 @@ namespace TechnicalProductsStore.Manager
                     return;
                 }
 
-                var filterAnaliz = filteredHistory.Where(p => p.ProductCount > 0).ToList();
-
-                var filteredHistoryWithProductNames = filteredHistory.Join(
+                List<HistorySaleList> filteredHistoryWithProductNames = filteredHistory.Join(
                     productList,
                     sale => sale.ProductID,
                     product => product.Id,
-                    (sale, product) => new
+                    (sale, product) => new HistorySaleList
                     {
-                        sale.ProductID,
-                        product.Id,
-                        product.RemainingProductCount,
-                        product.ProductEnterCount,
-                        product.ProductName,
-                        product.ProductCountry,
-                        sale.ProductCount,
-                        sale.ProductPrice,
-                        sale.ProductSaleTime
+                        SellerID = sale.SellerID,
+                        ProductID = sale.ProductID,
+                        ProductName = product.ProductName,
+                        ProductCount = sale.ProductCount,
+                        ProductPrice = sale.ProductPrice,
+                        ProductSaleTime = sale.ProductSaleTime
                     }).ToList();
+                analizSellDay.AddRange(filteredHistoryWithProductNames);
 
                 ProductsAnalizReportDaysDGV.DataSource = filteredHistoryWithProductNames;
                 var sortedHistoryByPrice = filteredHistoryWithProductNames.OrderByDescending(item => item.ProductPrice).ToList();
@@ -1218,6 +1224,8 @@ namespace TechnicalProductsStore.Manager
             }
         }
 
+
+        List<Product> analizNotSellDay = new List<Product>();
         private void butAnalizNotSellDay_Click_1(object sender, EventArgs e)
         {
             // Пути к JSON файлам
@@ -1270,7 +1278,9 @@ namespace TechnicalProductsStore.Manager
                     return;
                 }
 
-                var filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
+                List<Product> filterAnaliz = productList.Where(p => p.ProductEnterCount == p.RemainingProductCount).ToList();
+                analizNotSellDay.AddRange(filterAnaliz);
+
                 ProductsAnalizReportDaysDGV.DataSource = filterAnaliz;
 
                 label28.Text = "";
